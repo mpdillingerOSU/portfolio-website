@@ -80,3 +80,62 @@
 .selected-nav-text-button:hover {
     color: #eceef3;
 }
+
+.hexagon-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    height: calc(180px * 2 * 1.1547005 - 36px);
+    margin-top: 96px;
+}
+
+.top-hexagon-row,
+.bottom-hexagon-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-hexagon-row {
+    position: absolute;
+    top: 0;
+}
+
+.bottom-hexagon-row {
+    position: absolute;
+    bottom: 0;
+}
+
+.outer-hexagon,
+.inner-hexagon {
+    aspect-ratio: 1 / 1.1547005;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.outer-hexagon {
+    width: 180px;
+    background-color: #9355f5;
+    background-image: linear-gradient(30deg, #9355f5 45%, #509ffc);
+    margin: 0 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-hexagon {
+    width: calc(100% - 12px);
+    background-color: var(--standard-background);
+    margin-top: .5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

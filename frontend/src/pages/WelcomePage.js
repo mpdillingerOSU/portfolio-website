@@ -7,7 +7,49 @@ function WelcomePage() {
     }, []);
 
     return (
-        <div id="welcome-page" />
+        <div id="welcome-page">
+            <div className="hexagon-container">
+                <div className="top-hexagon-row">
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                </div>
+                <div className="bottom-hexagon-row">
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                    <div className="outer-hexagon">
+                        <div className="inner-hexagon">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 
