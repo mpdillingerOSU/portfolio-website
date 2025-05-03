@@ -12,7 +12,7 @@ function WelcomePage() {
                 <div className="top-hexagon-row">
                     <div className="outer-hexagon">
                         <div className="inner-hexagon">
-
+                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/tcg-maker-logo.png")} alt="tcg maker" />
                         </div>
                     </div>
                     <div className="outer-hexagon">

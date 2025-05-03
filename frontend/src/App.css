@@ -139,3 +139,12 @@
     align-items: center;
     justify-content: center;
 }
+
+.hexagon-project-logo {
+    width: 80%;
+    object-fit: cover;
+}
+
+.tcg-maker-hexagon-project-logo {
+    margin-bottom: 4%;
+}
