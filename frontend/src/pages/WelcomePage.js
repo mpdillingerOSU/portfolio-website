@@ -12,12 +12,12 @@ function WelcomePage() {
                 <div className="top-hexagon-row">
                     <div className="outer-hexagon">
                         <div className="inner-hexagon">
-                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/tcg-maker-logo.png")} alt="tcg maker" />
+                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/tcg-maker-logo.png")} alt="trading card game maker" />
                         </div>
                     </div>
                     <div className="outer-hexagon">
                         <div className="inner-hexagon">
-
+                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/ptcgp-sim-logo.png")} alt="pokemon trading card game pocket simulator" />
                         </div>
                     </div>
                     <div className="outer-hexagon">
