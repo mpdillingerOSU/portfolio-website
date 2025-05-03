@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import WelcomePage from './pages/WelcomePage';
 import NavigationBar from './components/NavigationBar';
 import ProjectsPage from './pages/ProjectsPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<WelcomePage />} />
                         <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/about" element={<AboutPage />} />
                     </Routes>
                 </Router>
             </header>

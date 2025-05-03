@@ -12,6 +12,10 @@ function NavigationBar() {
         navigate("/projects");
     }
 
+    const toAbout = () => {
+        navigate("/about");
+    }
+
     return (
         <nav id="navbar" className="navbar">
             <span className="nav-name-text">
@@ -20,7 +24,7 @@ function NavigationBar() {
             <div className="nav-text-buttons-container">
                 <button id="nav-home" className="nav-text-button" onClick={() => toHome()}>HOME</button>
                 <button id="nav-projects" className="nav-text-button" onClick={() => toProjects()}>PROJECTS</button>
-                <button id="nav-about" className="nav-text-button" onClick={() => {}}>ABOUT</button>
+                <button id="nav-about" className="nav-text-button" onClick={() => toAbout()}>ABOUT</button>
                 <button id="nav-contact" className="nav-text-button" onClick={() => {}}>CONTACT</button>
             </div>
         </nav>
