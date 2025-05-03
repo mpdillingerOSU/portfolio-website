@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { highlightNavButton } from '../scripts/NavigationActions';
+import FeaturedProject from '../components/FeaturedProject';
 
 function WelcomePage() {
     useEffect(() => {
@@ -11,45 +12,17 @@ function WelcomePage() {
             <div className="featured-projects-header">
                 Featured Projects
             </div>
-            <div className="hexagon-container">
-                <div className="top-hexagon-row">
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/tcg-maker-logo.png")} alt="trading card game maker" />
-                        </div>
-                    </div>
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/celtic-tactics-logo.png")} alt="celtic tactics" />
-                        </div>
-                    </div>
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/ptcgp-sim-logo.png")} alt="pokemon trading card game pocket simulator" />
-                        </div>
-                    </div>
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/range-ds-logo.png")} alt="range data structure" />
-                        </div>
-                    </div>
+            <div className="featured-projects-container">
+                <div className="top-featured-projects-row">
+                    <FeaturedProject imgSrc={require("../images/tcg-maker-logo.png")} alt="trading card game maker" />
+                    <FeaturedProject imgSrc={require("../images/celtic-tactics-logo.png")} alt="celtic tactics" />
+                    <FeaturedProject imgSrc={require("../images/ptcgp-sim-logo.png")} alt="pokemon trading card game pocket simulator" />
+                    <FeaturedProject imgSrc={require("../images/range-ds-logo.png")} alt="range data structure" />
                 </div>
-                <div className="bottom-hexagon-row">
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-
-                        </div>
-                    </div>
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-
-                        </div>
-                    </div>
-                    <div className="outer-hexagon">
-                        <div className="inner-hexagon">
-
-                        </div>
-                    </div>
+                <div className="bottom-featured-projects-row">
+                    <FeaturedProject />
+                    <FeaturedProject />
+                    <FeaturedProject />
                 </div>
             </div>
         </div>

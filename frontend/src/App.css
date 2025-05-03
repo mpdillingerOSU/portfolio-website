@@ -90,7 +90,7 @@
     margin: 64px 0 40px 0;
 }
 
-.hexagon-container {
+.featured-projects-container {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -98,20 +98,20 @@
     height: calc(180px * 2 * 1.1547005 - 36px);
 }
 
-.top-hexagon-row,
-.bottom-hexagon-row {
+.top-featured-projects-row,
+.bottom-featured-projects-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.top-hexagon-row {
+.top-featured-projects-row {
     position: absolute;
     top: 0;
 }
 
-.bottom-hexagon-row {
+.bottom-featured-projects-row {
     position: absolute;
     bottom: 0;
 }
@@ -147,11 +147,8 @@
     justify-content: center;
 }
 
-.hexagon-project-logo {
+.featured-project-logo {
     width: 80%;
     object-fit: cover;
-}
-
-.tcg-maker-hexagon-project-logo {
     margin-bottom: 4%;
 }
