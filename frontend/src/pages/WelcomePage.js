@@ -30,7 +30,7 @@ function WelcomePage() {
                     </div>
                     <div className="outer-hexagon">
                         <div className="inner-hexagon">
-
+                            <img className="hexagon-project-logo tcg-maker-hexagon-project-logo" src={require("../images/range-ds-logo.png")} alt="range data structure" />
                         </div>
                     </div>
                 </div>
