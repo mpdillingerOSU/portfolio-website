@@ -18,6 +18,8 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--standard-background);
+    background-image: url("images/star-background.png");
+    background-repeat: repeat;
 }
 
 .navbar {
