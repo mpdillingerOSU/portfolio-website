@@ -16,6 +16,10 @@ function NavigationBar() {
         navigate("/about");
     }
 
+    const toContact = () => {
+        navigate("/contact");
+    }
+
     return (
         <nav id="navbar" className="navbar">
             <span className="nav-name-text">
@@ -25,7 +29,7 @@ function NavigationBar() {
                 <button id="nav-home" className="nav-text-button" onClick={() => toHome()}>HOME</button>
                 <button id="nav-projects" className="nav-text-button" onClick={() => toProjects()}>PROJECTS</button>
                 <button id="nav-about" className="nav-text-button" onClick={() => toAbout()}>ABOUT</button>
-                <button id="nav-contact" className="nav-text-button" onClick={() => {}}>CONTACT</button>
+                <button id="nav-contact" className="nav-text-button" onClick={() => toContact()}>CONTACT</button>
             </div>
         </nav>
   );
