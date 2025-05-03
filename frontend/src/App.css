@@ -1,5 +1,5 @@
 :root {
-    --standard-background: #2c2e31;
+    --standard-background: #17191b;
 }
 
 .app {
@@ -18,4 +18,65 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--standard-background);
+}
+
+.navbar {
+    padding: 5px 9%;
+    width: 100%;
+    background-color: var(--standard-background);
+    box-shadow: var(--standard-shadow);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 10;
+    border-bottom: solid 2px darkblue;
+}
+
+.nav-name-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #7c7be2;
+}
+
+.nav-text-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.nav-text-button {
+    padding: 0 12px;
+    margin: 0;
+    position: relative;
+    color: #637cb8;
+    background-color: transparent;
+    height: 48px;
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.nav-text-button:hover {
+    color: #8ba4df;
+}
+
+.selected-nav-text-button {
+    color: #eceef3;
+}
+
+.selected-nav-text-button:hover {
+    color: #eceef3;
 }
