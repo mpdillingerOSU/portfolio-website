@@ -8,6 +8,9 @@ function WelcomePage() {
 
     return (
         <div id="welcome-page">
+            <div className="featured-projects-header">
+                Featured Projects
+            </div>
             <div className="hexagon-container">
                 <div className="top-hexagon-row">
                     <div className="outer-hexagon">

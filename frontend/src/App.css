@@ -81,14 +81,19 @@
     color: #eceef3;
 }
 
+.featured-projects-header {
+    font-size: 40px;
+    font-weight: 700;
+    color: #22b9f5;
+    margin: 64px 0 40px 0;
+}
+
 .hexagon-container {
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
-    background-color: red;
     height: calc(180px * 2 * 1.1547005 - 36px);
-    margin-top: 96px;
 }
 
 .top-hexagon-row,
