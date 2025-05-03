@@ -20,8 +20,8 @@ function WelcomePage() {
                     <FeaturedProject imgSrc={require("../images/range-ds-logo.png")} alt="range data structure" />
                 </div>
                 <div className="bottom-featured-projects-row">
-                    <FeaturedProject imgSrc={require("../images/koala-toolkit-logo.png")} alt="koala toolkit"  />
-                    <FeaturedProject />
+                    <FeaturedProject imgSrc={require("../images/koala-toolkit-logo.png")} alt="koala toolkit" />
+                    <FeaturedProject imgSrc={require("../images/block-breaker-logo.png")} alt="block breaker" />
                     <FeaturedProject />
                 </div>
             </div>
