@@ -149,7 +149,16 @@
 }
 
 .featured-project-logo {
-    width: 80%;
+    width: 70%;
     object-fit: cover;
     margin-bottom: 4%;
+}
+
+.outer-hexagon:hover .inner-hexagon {
+    width: calc(100% - 16px);
+    background-color: rgb(16, 18, 43)
+}
+
+.outer-hexagon:hover .featured-project-logo {
+    width: 85%;
 }
