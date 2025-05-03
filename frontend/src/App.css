@@ -20,6 +20,7 @@
     background-color: var(--standard-background);
     background-image: url("images/star-background.png");
     background-repeat: repeat;
+    background-position: center top;
 }
 
 .navbar {
