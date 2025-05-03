@@ -22,7 +22,7 @@ function WelcomePage() {
                 <div className="bottom-featured-projects-row">
                     <FeaturedProject imgSrc={require("../images/koala-toolkit-logo.png")} alt="koala toolkit" />
                     <FeaturedProject imgSrc={require("../images/block-breaker-logo.png")} alt="block breaker" />
-                    <FeaturedProject />
+                    <FeaturedProject imgSrc={require("../images/game-engine-logo.png")} alt="game engine" />
                 </div>
             </div>
         </div>
