@@ -117,6 +117,13 @@
     bottom: 0;
 }
 
+.featured-project {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 10px;
+}
+
 .outer-hexagon,
 .inner-hexagon {
     aspect-ratio: 1 / 1.1547005;
@@ -127,10 +134,10 @@
 }
 
 .outer-hexagon {
+    position: relative;
     width: 180px;
     background-color: #9355f5;
     background-image: linear-gradient(30deg, #9355f5 45%, #509ffc);
-    margin: 0 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -161,4 +168,41 @@
 
 .outer-hexagon:hover .featured-project-logo {
     width: 85%;
+}
+
+.outer-hexagon:hover + .featured-project-name-outer-container {
+    visibility: visible;
+}
+
+.featured-project-name-outer-container {
+    position: absolute;
+    visibility: hidden;
+    bottom: -10px;
+    left: -10px;
+    height: 50px;
+    width: calc(100% + 20px);
+    background-image: linear-gradient(30deg, #9355f5 45%, #509ffc);
+    border-radius: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 5;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-project-name-inner-container {
+    width: calc(100% - 9px);
+    height: calc(100% - 9px);
+    background-color: rgb(16, 18, 43);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
 }
