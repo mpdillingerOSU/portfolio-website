@@ -1,5 +1,6 @@
 :root {
     --standard-background: #17191b;
+    --featured-project-transition: all 0.15s linear;
 }
 
 .app {
@@ -143,6 +144,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: var(--featured-project-transition);
+    -webkit-transition: var(--featured-project-transition); /** Chrome; Safari **/
+    -ms-transition: var(--featured-project-transition); /** Opera **/
 }
 
 .inner-hexagon {
@@ -153,17 +157,23 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: var(--featured-project-transition);
+    -webkit-transition: var(--featured-project-transition); /** Chrome; Safari **/
+    -ms-transition: var(--featured-project-transition); /** Opera **/
 }
 
 .featured-project-logo {
     width: 70%;
     object-fit: cover;
     margin-bottom: 4%;
+    transition: var(--featured-project-transition);
+    -webkit-transition: var(--featured-project-transition); /** Chrome; Safari **/
+    -ms-transition: var(--featured-project-transition); /** Opera **/
 }
 
 .outer-hexagon:hover .inner-hexagon {
     width: calc(100% - 16px);
-    background-color: rgb(16, 18, 43)
+    background-color: rgb(16, 18, 43);
 }
 
 .outer-hexagon:hover .featured-project-logo {
@@ -171,12 +181,12 @@
 }
 
 .outer-hexagon:hover + .featured-project-name-outer-container {
-    visibility: visible;
+    opacity: 100%;
 }
 
 .featured-project-name-outer-container {
     position: absolute;
-    visibility: hidden;
+    opacity: 0%;
     bottom: -10px;
     left: -10px;
     height: 50px;
@@ -192,6 +202,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: var(--featured-project-transition);
+    -webkit-transition: var(--featured-project-transition); /** Chrome; Safari **/
+    -ms-transition: var(--featured-project-transition); /** Opera **/
 }
 
 .featured-project-name-inner-container {
