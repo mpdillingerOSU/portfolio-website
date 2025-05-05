@@ -1,5 +1,6 @@
 :root {
     --standard-background: #17191b;
+    --page-background: linear-gradient(to bottom, #17191b 55%, rgb(10, 5, 67));
     --featured-project-transition: all 0.15s linear;
 }
 
@@ -20,6 +21,7 @@
     align-items: center;
     background-color: var(--standard-background);
     background-image: url("images/star-background.png");
+    background-image: url("images/star-background.png"), var(--page-background);
     background-repeat: repeat;
     background-position: center top;
 }
