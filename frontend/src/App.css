@@ -86,10 +86,31 @@
 }
 
 .featured-projects-header {
+    position: relative;
     font-size: 40px;
     font-weight: 700;
     color: #22b9f5;
+    padding: 17px 27px;
     margin: 64px 0 40px 0;
+}
+
+.featured-projects-header-top-left-corner,
+.featured-projects-header-bottom-right-corner {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url("images/feature-projects-header-corner.png");
+}
+
+.featured-projects-header-top-left-corner {
+    top: 0;
+    left: 0;
+}
+
+.featured-projects-header-bottom-right-corner {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
 }
 
 .featured-projects-container {

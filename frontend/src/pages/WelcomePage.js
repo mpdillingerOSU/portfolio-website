@@ -10,7 +10,9 @@ function WelcomePage() {
     return (
         <div id="welcome-page">
             <div className="featured-projects-header">
-                Featured Projects
+                <span>Featured Projects</span>
+                <div className="featured-projects-header-top-left-corner" />
+                <div className="featured-projects-header-bottom-right-corner" />
             </div>
             <div className="featured-projects-container">
                 <div className="top-featured-projects-row">
