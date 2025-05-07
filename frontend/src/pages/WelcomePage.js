@@ -9,7 +9,7 @@ function WelcomePage() {
     }, []);
 
     return (
-        <div id="welcome-page">
+        <div id="welcome-page" className="page">
             <div className="featured-projects-header">
                 <span>Featured Projects</span>
                 <div className="featured-projects-header-top-left-corner" />

@@ -1,5 +1,6 @@
 :root {
     --standard-background: #17191b;
+    --dark-emboss: #1a2038;
     --page-background: linear-gradient(to bottom, #17191b 55%, rgb(10, 5, 67));
     --featured-project-transition: all 0.15s linear;
 }
@@ -85,6 +86,16 @@
 
 .selected-nav-text-button:hover {
     color: #eceef3;
+}
+
+.page {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .featured-projects-header {
@@ -248,4 +259,94 @@
     transition: var(--featured-project-transition);
     -webkit-transition: var(--featured-project-transition); /** Chrome; Safari **/
     -ms-transition: var(--featured-project-transition); /** Opera **/
+}
+
+.projects-list {
+    margin: 32px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.project-container {
+    width: 750px;
+    max-width: 80%;
+    aspect-ratio: 4;
+    padding: 20px 30px;
+    border-style: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+    background-color: var(--dark-emboss);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.project-container-logo {
+    width: 12%;
+    aspect-ratio: 1;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: white;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.project-container-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+}
+
+.project-container-name {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.project-skills-row,
+.project-languages-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 8px 8px;
+    flex-wrap: wrap;
+}
+
+.project-skill {
+    color: white;
+    padding: 4px 16px;
+    background-color: #22b9f5;
+    border-radius: 50vh;
+}
+
+.project-language {
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-language-icon {
+    padding: 6px;
+    height: 18px;
+    width: 18px;
 }
