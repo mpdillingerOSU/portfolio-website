@@ -260,7 +260,7 @@ export const projectDict = {
     "tqiwpjt0oof5o4cm9lcewomi":{
         index: 7,
         projectID: "tqiwpjt0oof5o4cm9lcewomi",
-        public: false,
+        public: true,
         name: "Portfolio Website",
         logo: require("../images/portfolio-website-logo.png"),
         logoAlt: "portfolio website",
