@@ -262,7 +262,7 @@ export const projectDict = {
         projectID: "tqiwpjt0oof5o4cm9lcewomi",
         public: false,
         name: "Portfolio Website",
-        logo: "",
+        logo: require("../images/portfolio-website-logo.png"),
         logoAlt: "portfolio website",
         subprojects: [
             {
