@@ -336,6 +336,10 @@
     border-radius: 50vh;
 }
 
+.project-language-container {
+    position: relative;
+}
+
 .project-language {
     border-radius: 50%;
     color: white;
@@ -343,10 +347,63 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 .project-language-icon {
     padding: 6px;
     height: 18px;
     width: 18px;
+}
+
+.project-language-popup-container {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+
+    /* Next two lines combine to allow us to center an absolutely positioned child element to parent */
+    left: 50%; /*positions left-side horizontally centered in parent element*/
+    transform: translateX(-50%); /* moves element left by 50% of its own width */
+
+
+    z-index: 2;
+    background-color: transparent;
+    padding: 0 0 8px 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.project-language:hover + .project-language-popup-container {
+    visibility: visible;
+}
+
+.project-language-popup {
+    position: relative;
+    width: fit-content;
+    background-color: var(--dark-emboss);
+    color: white;
+    text-align: left;
+    border-radius: 6px;
+    padding: 8px;
+    white-space: pre-line;
+    border: solid 2px white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.project-language-popup::after {
+    --bump-size: 5px;
+
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: calc(50% - var(--bump-size));
+    margin-left: calc(-1 * var(--bump-size));
+    border-width: var(--bump-size);
+    border-style: solid;
+    border-color: white transparent transparent transparent;
 }

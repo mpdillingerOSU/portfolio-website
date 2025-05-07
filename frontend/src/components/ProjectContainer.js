@@ -72,8 +72,13 @@ function ProjectContainer({projectID}) {
                 </div>
                 <div className="project-languages-row">
                     {Array.from({ length: projectLanguages.length }, (_, i) => (
-                        <div className="project-language" style={{backgroundColor: getLanguageColor(projectLanguages[i])}}>
-                            {getLanguageIcon(projectLanguages[i])}
+                        <div className="project-language-container">
+                            <div className="project-language" style={{backgroundColor: getLanguageColor(projectLanguages[i])}}>
+                                {getLanguageIcon(projectLanguages[i])}
+                            </div>
+                            <div className="project-language-popup-container">
+                                <div className="project-language-popup">{projectLanguages[i]}</div>
+                            </div>
                         </div>
                     ))}
                 </div>
