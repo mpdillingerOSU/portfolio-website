@@ -3,14 +3,48 @@ import { highlightNavButton } from '../scripts/NavigationActions';
 import { projectList } from '../data/ProjectData';
 import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
+import Toggle from '../components/Toggle';
 
 function ProjectsPage() {
     const [sortType, setSortType] = useState("featured");
+    const [isSortInversed, setIsSortInversed] = useState(false);
     const [projects, setProjects] = useState([...projectList]);
 
     useEffect(() => {
         highlightNavButton("projects");
     }, []);
+
+    useEffect(() => {
+        const newProjects = [...projects];
+        
+        if(sortType === "featured"){
+            if(isSortInversed){
+                newProjects.sort((a, b) => b.index - a.index);
+            } else {
+                newProjects.sort((a, b) => a.index - b.index);
+            }
+        } else if(sortType === "alphabetic"){
+            if(isSortInversed){
+                newProjects.sort((a, b) => b.name.localeCompare(a.name));
+            } else {
+                newProjects.sort((a, b) => a.name.localeCompare(b.name));
+            }
+        } else if(sortType === "languages"){
+            if(isSortInversed){
+                newProjects.sort((a, b) => attributeCount(a, "languages") - attributeCount(b, "languages"));
+            } else {
+                newProjects.sort((a, b) => attributeCount(b, "languages") - attributeCount(a, "languages"));
+            }
+        } else if(sortType === "skills"){
+            if(isSortInversed){
+                newProjects.sort((a, b) => attributeCount(a, "skills") - attributeCount(b, "skills"));
+            } else {
+                newProjects.sort((a, b) => attributeCount(b, "skills") - attributeCount(a, "skills"));
+            }
+        }
+
+        setProjects(newProjects);
+    }, [sortType, isSortInversed]);
 
     const attributeCount = (project, attribute) => {
         const arr = [];
@@ -27,16 +61,10 @@ function ProjectsPage() {
 
     const updateSortType = (type) => {
         setSortType(type);
+    }
 
-        if(type === "featured"){
-            projects.sort((a, b) => a.index - b.index);
-        } else if(type === "alphabetic"){
-            projects.sort((a, b) => a.name.localeCompare(b.name));
-        } else if(type === "languages"){
-            projects.sort((a, b) => attributeCount(b, "languages") - attributeCount(a, "languages"));
-        } else if(type === "skills"){
-            projects.sort((a, b) => attributeCount(b, "skills") - attributeCount(a, "skills"));
-        }
+    const updateSortDirection = (isInversed) => {
+        setIsSortInversed(isInversed);
     }
 
     return (
@@ -46,6 +74,7 @@ function ProjectsPage() {
                     <span className="input-lead-text">Sort</span>
                     <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["languages", "# of Languages"], ["skills", "# of Skills"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
                 </div>
+                <Toggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} header={"Reverse"} />
             </div>
             <div className="projects-list">
                 {Array.from({ length: projects.length }, (_, i) => (

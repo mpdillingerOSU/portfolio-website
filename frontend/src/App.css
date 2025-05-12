@@ -1,6 +1,7 @@
 :root {
     --standard-background: #17191b;
     --dark-emboss: #1a2038;
+    --purple-accent: #607DFF;
     --page-background: linear-gradient(to bottom, #17191b 55%, rgb(10, 5, 67));
     --featured-project-transition: all 0.15s linear;
 }
@@ -410,6 +411,11 @@
 
 .filters-section {
     margin-top: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 24px;
 }
 
 .input-container {
@@ -482,4 +488,85 @@
 
 .selection-option:hover {
     background-color: #9cacc6;
+}
+
+.toggle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle-header {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.inactive-toggle-header {
+    color: rgb(145, 149, 163);
+}
+
+.toggle-container {
+    width: 56px;
+    height: 28px;
+    position: relative;
+    display: inline-block;
+    border: solid;
+    border-color: rgb(145, 149, 163);
+    border-radius: 28px;
+}
+
+.toggle-container:has(> input:checked) {
+    border-color: white;
+}
+  
+.hidden-element {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+}
+  
+.toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--standard-background);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 28px;
+    cursor: pointer;
+}
+  
+.toggle:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(145, 149, 163);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px;
+}
+  
+input:checked + .toggle {
+    background-color: var(--purple-accent);
+}
+
+input:checked + .toggle::before {
+    background-color: white;
+}
+  
+input:focus + .toggle {
+    box-shadow: 0 0 1px var(--purple-accent);
+}
+  
+input:checked + .toggle:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
