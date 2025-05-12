@@ -113,11 +113,15 @@ function ProjectsPage() {
                 </div>
             </div>
             <div className="filter-divider" />
-            <div className="projects-list">
-                {Array.from({ length: projects.length }, (_, i) => (
-                    <ProjectContainer projectID={projects[i].projectID} />
-                ))}
-            </div>
+            {projects.length > 0 ? (
+                <div className="projects-list">
+                    {Array.from({ length: projects.length }, (_, i) => (
+                        <ProjectContainer projectID={projects[i].projectID} />
+                    ))}
+                </div>
+            ) : (
+                <span>No projects fit the specified filters.</span>
+            )}
         </div>
     );
 }
