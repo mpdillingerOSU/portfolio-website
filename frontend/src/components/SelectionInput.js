@@ -35,14 +35,14 @@ function SelectionInput({options, value, onChange}) {
     }, []);
 
     return (
-        <div class="selection-input-container" onClick={() => updateOptionsVisibility(!displayOptions)}>
-            <button class="selection-input" ref={selectionRef}>
+        <div className="selection-input-container" onClick={() => updateOptionsVisibility(!displayOptions)}>
+            <button className="selection-input" ref={selectionRef}>
                 <span>
                     {selection !== undefined ? selection[1] : "Select an Option"}
                 </span>
                 <RxCaretDown />
             </button>
-            <div class={"selection-options-container" + (displayOptions ? " selection-options-container-displayed" : "")} ref={optionsRef}>
+            <div className={"selection-options-container" + (displayOptions ? " selection-options-container-displayed" : "")} ref={optionsRef}>
                 {Array.from({ length: options.length }, (_, i) => (
                     <button className="selection-option" onClick={() => updateSelection(options[i])}>{options[i][1]}</button>
                 ))}
