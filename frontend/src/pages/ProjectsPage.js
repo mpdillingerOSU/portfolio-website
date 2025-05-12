@@ -4,6 +4,7 @@ import { projectList } from '../data/ProjectData';
 import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
 import Toggle from '../components/Toggle';
+import SortDirectionToggle from '../components/SortDirectionToggle';
 
 function ProjectsPage() {
     const [sortType, setSortType] = useState("featured");
@@ -74,7 +75,7 @@ function ProjectsPage() {
                     <span className="input-lead-text">Sort</span>
                     <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["languages", "# of Languages"], ["skills", "# of Skills"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
                 </div>
-                <Toggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} header={"Reverse"} />
+                <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
             </div>
             <div className="projects-list">
                 {Array.from({ length: projects.length }, (_, i) => (
