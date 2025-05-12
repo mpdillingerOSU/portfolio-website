@@ -3,7 +3,6 @@ import { highlightNavButton } from '../scripts/NavigationActions';
 import { projectList } from '../data/ProjectData';
 import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
-import Toggle from '../components/Toggle';
 import SortDirectionToggle from '../components/SortDirectionToggle';
 import LanguageFilter from '../components/LanguageFilter';
 
@@ -113,6 +112,7 @@ function ProjectsPage() {
                     <LanguageFilter activeLanguages={activeLanguages} onChange={(activeLanguages) => setActiveLanguages(activeLanguages)} />
                 </div>
             </div>
+            <div className="filter-divider" />
             <div className="projects-list">
                 {Array.from({ length: projects.length }, (_, i) => (
                     <ProjectContainer projectID={projects[i].projectID} />

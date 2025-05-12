@@ -627,3 +627,11 @@ input:checked + .toggle:before {
 .language-filter-button {
     cursor: pointer;
 }
+
+.filter-divider {
+    width: 55%;
+    height: 2px;
+    background-color: #7c7be2;
+    opacity: .6;
+    margin: 32px 0 24px 0;
+}
