@@ -435,7 +435,7 @@
     width: 180px;
     margin: 0px;
     padding: 5px 5px 5px 15px;
-    background-color: transparent;
+    background-color: var(--standard-background);
     box-sizing: border-box;
     border: solid;
     border-color: white;
