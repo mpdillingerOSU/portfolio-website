@@ -1,6 +1,6 @@
 import React from 'react';
 import { projectDict } from '../data/ProjectData';
-import LanguageIcon from './LanguageIcon';
+import LanguageButton from './LanguageButton';
 
 function ProjectContainer({projectID}) {
     const project = projectDict[projectID];
@@ -35,7 +35,7 @@ function ProjectContainer({projectID}) {
                 </div>
                 <div className="project-languages-row">
                     {Array.from({ length: projectLanguages.length }, (_, i) => (
-                        <LanguageIcon language={projectLanguages[i]}/>
+                        <LanguageButton language={projectLanguages[i]}/>
                     ))}
                 </div>
             </div>

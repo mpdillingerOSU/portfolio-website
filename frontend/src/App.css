@@ -394,6 +394,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    filter: brightness(100%);
 }
 
 .project-language-popup::after {
@@ -409,13 +410,13 @@
     border-color: white transparent transparent transparent;
 }
 
-.filters-section {
+.sort-and-filters-section {
     margin-top: 32px;
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: start;
     justify-content: center;
-    gap: 6px;
+    gap: 24px;
 }
 
 .sort-section {
@@ -601,4 +602,28 @@ input:checked + .toggle:before {
 
 .inactive-sort-direction {
     color: rgb(145, 149, 163);
+}
+
+.language-filter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.language-filter-lead-text {
+    font-size: 16px;
+    margin: 0 0 12px 3px;
+}
+
+.language-filter-options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.language-filter-button {
+    cursor: pointer;
 }

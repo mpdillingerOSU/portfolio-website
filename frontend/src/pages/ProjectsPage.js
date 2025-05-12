@@ -5,10 +5,21 @@ import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
 import Toggle from '../components/Toggle';
 import SortDirectionToggle from '../components/SortDirectionToggle';
+import LanguageFilter from '../components/LanguageFilter';
 
 function ProjectsPage() {
     const [sortType, setSortType] = useState("featured");
     const [isSortInversed, setIsSortInversed] = useState(false);
+    const [activeLanguages, setActiveLanguages] = useState(
+        {
+            "HTML": true,
+            "CSS": true,
+            "Javascript": true,
+            "Java": true,
+            "SQL": true,
+            "Dart": true
+        }
+    );
     const [projects, setProjects] = useState([...projectList]);
 
     useEffect(() => {
@@ -16,7 +27,27 @@ function ProjectsPage() {
     }, []);
 
     useEffect(() => {
-        const newProjects = [...projects];
+        const newProjects = [];
+
+        for(let project of projectList){
+            let hasLanguage = false;
+            for(let subproject of project.subprojects){
+                for(let language of subproject.languages){
+                    if(activeLanguages[language]){
+                        hasLanguage = true;
+                        break;
+                    }
+                }
+
+                if(hasLanguage){
+                    break;
+                }
+            }
+
+            if(hasLanguage){
+                newProjects.push(project);
+            }
+        }
         
         if(sortType === "featured"){
             if(isSortInversed){
@@ -45,7 +76,7 @@ function ProjectsPage() {
         }
 
         setProjects(newProjects);
-    }, [sortType, isSortInversed]);
+    }, [sortType, isSortInversed, activeLanguages]);
 
     const attributeCount = (project, attribute) => {
         const arr = [];
@@ -70,13 +101,16 @@ function ProjectsPage() {
 
     return (
         <div id="projects-page" className="page">
-            <div className="filters-section">
+            <div className="sort-and-filters-section">
                 <div className="sort-section">
                     <div className="input-container">
                         <span className="input-lead-text">Sort</span>
                         <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["languages", "# of Languages"], ["skills", "# of Skills"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
                     </div>
                     <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
+                </div>
+                <div className="sort-section">
+                    <LanguageFilter activeLanguages={activeLanguages} onChange={(activeLanguages) => setActiveLanguages(activeLanguages)} />
                 </div>
             </div>
             <div className="projects-list">

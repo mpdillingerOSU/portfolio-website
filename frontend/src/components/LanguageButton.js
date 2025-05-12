@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHtml5, FaCss3Alt, FaJava, FaJsSquare, FaDatabase, FaQuestion } from "react-icons/fa";
 import { SiDart } from "react-icons/si";
 
-function LanguageIcon({language}) {
+function LanguageButton({language, onToggle}) {
+    const [isInactive, setIsInactive] = useState(false);
+    
+    const toggleIsInactive = (e) => {
+        e.preventDefault();
+
+        if(onToggle !== undefined){
+            const newIsInactive = !isInactive;
+            setIsInactive(newIsInactive);
+        }
+    }
+
+    useEffect(() => {
+        if(onToggle !== undefined){
+            onToggle(isInactive);
+        }
+    }, [isInactive]); 
+
     const getLanguageColor = (language) => {
         if(language === "HTML"){
             return "#ff5700"
@@ -40,8 +57,8 @@ function LanguageIcon({language}) {
     }
 
     return (
-        <div className="project-language-container">
-            <div className="project-language" style={{backgroundColor: getLanguageColor(language)}}>
+        <div className="project-language-container" onClick={(e) => onToggle(e)}>
+            <div className="project-language" style={{backgroundColor: getLanguageColor(language), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
                 {getLanguageIcon(language)}
             </div>
             <div className="project-language-popup-container">
@@ -51,4 +68,4 @@ function LanguageIcon({language}) {
     );
 }
 
-export default LanguageIcon;
+export default LanguageButton;
