@@ -71,11 +71,13 @@ function ProjectsPage() {
     return (
         <div id="projects-page" className="page">
             <div className="filters-section">
-                <div className="input-container">
-                    <span className="input-lead-text">Sort</span>
-                    <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["languages", "# of Languages"], ["skills", "# of Skills"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
+                <div className="sort-section">
+                    <div className="input-container">
+                        <span className="input-lead-text">Sort</span>
+                        <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["languages", "# of Languages"], ["skills", "# of Skills"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
+                    </div>
+                    <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
                 </div>
-                <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
             </div>
             <div className="projects-list">
                 {Array.from({ length: projects.length }, (_, i) => (
