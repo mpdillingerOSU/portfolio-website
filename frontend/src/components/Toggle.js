@@ -8,10 +8,10 @@ function Toggle({isOn, onToggle, header}) {
     }, [isOn]); 
 
     
-    const toggle = async () => {
+    const toggle = () => {
         const newToggleState = !isToggleOn;  
         setIsToggleOn(newToggleState);
-        
+
         onToggle(newToggleState);
     };
 
@@ -20,7 +20,7 @@ function Toggle({isOn, onToggle, header}) {
             <div className={"toggle-header" + (isToggleOn ? "" : " inactive-toggle-header")}>{header}</div>
             <label className="toggle-container">
                 <input type="checkbox" className="hidden-element" checked={isToggleOn} readOnly onClick={(e) => toggle()}/>
-                <span className="toggle"></span>
+                <span className="toggle" />
             </label>
         </div>
     );
