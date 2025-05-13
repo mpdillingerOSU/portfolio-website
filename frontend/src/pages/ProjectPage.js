@@ -15,7 +15,11 @@ function ProjectPage() {
 
     return (
         <div id="project-page" className="page">
-            Project Page: {project.name}
+            <div className="project-page-header">
+                <div className="project-page-header-title">
+                    {project.name}
+                </div>
+            </div>
         </div>
     );
 }

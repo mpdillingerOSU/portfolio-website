@@ -942,3 +942,13 @@ input:checked + .toggle:before {
     height: 50%;
     width: auto;
 }
+
+.project-page-header {
+    margin-top: 24px;
+}
+
+.project-page-header-title {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+}
