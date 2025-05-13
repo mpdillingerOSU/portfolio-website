@@ -21,10 +21,14 @@ export const projectDict = {
                     "HTML", "CSS", "Javascript", "Java", "SQL"
                 ],
                 skills: [
-                    "Web Development - Frontend",
-                    "Web Development - Backend",
-                    "Databases",
-                    "Game Development"
+                    "Prototyping Tool Development",
+                    "Game Development",
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend",
+                    "Backend",
+                    "Fullstack",
+                    "Databases"
                 ],
                 quickDescription: "",
                 description: []
@@ -43,7 +47,9 @@ export const projectDict = {
                     "HTML", "CSS", "Javascript"
                 ],
                 skills: [
-                    "Web Development - Frontend"
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
                 ],
                 quickDescription: "",
                 description: []
@@ -70,7 +76,8 @@ export const projectDict = {
                     "Java"
                 ],
                 skills: [
-                    "Game Development"
+                    "Game Development",
+                    "UI/UX Design"
                 ],
                 quickDescription: "",
                 description: []
@@ -89,7 +96,9 @@ export const projectDict = {
                     "HTML", "CSS", "Javascript"
                 ],
                 skills: [
-                    "Web Development - Frontend"
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
                 ],
                 quickDescription: "",
                 description: []
@@ -136,7 +145,9 @@ export const projectDict = {
                 ],
                 skills: [
                     "Simulator Analysis",
-                    "Web Development- Frontend"
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
                 ],
                 quickDescription: "",
                 description: []
@@ -192,6 +203,7 @@ export const projectDict = {
                 skills: [
                     "Mobile App Development",
                     "Dev Tool Development",
+                    "UI/UX Design",
                     "Database Management"
                 ],
                 quickDescription: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
@@ -208,7 +220,7 @@ export const projectDict = {
         logoAlt: "block breaker",
         subprojects: [
             {
-                name: "",
+                name: "Program",
                 version: "v0.0.0-alpha",
                 urls: [
                     "GitHub",
@@ -222,6 +234,29 @@ export const projectDict = {
                     "Procedural Generation"
                 ],
                 quickDescription: "Software intended to break through writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master - with the assistance of procedural generation in order to brainstorm ideas for either entire characters, or for specific character elements.",
+                description: []
+            },
+            {
+                name: "Website",
+                version: "v0.0.0-alpha",
+                urls: [
+                    "Website",
+                    "",
+                    "GitHub",
+                    ""
+                ],
+                developmentPlatform: "Visual Studio Code",
+                languages: [
+                    "HTML", "CSS", "Javascript", "Java"
+                ],
+                skills: [
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend",
+                    "Backend",
+                    "Fullstack"
+                ],
+                quickDescription: "",
                 description: []
             }
         ],
@@ -279,7 +314,9 @@ export const projectDict = {
                     "CSS", "HTML", "Javascript"
                 ],
                 skills: [
-                    "Web Development - Frontend"
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
                 ],
                 quickDescription: "",
                 description: []
@@ -308,7 +345,9 @@ export const projectDict = {
                     "CSS", "HTML", "Javascript"
                 ],
                 skills: [
-                    "Web Development - Frontend"
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
                 ],
                 quickDescription: "",
                 description: []
@@ -335,7 +374,8 @@ export const projectDict = {
                     "C#"
                 ],
                 skills: [
-                    "Game Development"
+                    "Game Development",
+                    "UI/UX Design"
                 ],
                 quickDescription: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
                 description: []
@@ -364,7 +404,8 @@ export const projectDict = {
                 skills: [
                     "Dev Tool Development",
                     "Game Development",
-                    "Procedural Generation"
+                    "Procedural Generation",
+                    "UI/UX Design"
                 ],
                 quickDescription: "",
                 description: [
@@ -394,7 +435,10 @@ export const projectDict = {
                     "Dart"
                 ],
                 skills: [
-                    "Mobile App Development", "Educational Technology", "Procedural Generation"
+                    "Mobile App Development",
+                    "UI/UX Design",
+                    "Educational Technology",
+                    "Procedural Generation"
                 ],
                 quickDescription: "",
                 description: []
@@ -421,7 +465,10 @@ export const projectDict = {
                     "Dart"
                 ],
                 skills: [
-                    "Mobile App Development", "Educational Technology", "Procedural Generation"
+                    "Mobile App Development",
+                    "UI/UX Design",
+                    "Educational Technology",
+                    "Procedural Generation"
                 ],
                 quickDescription: "",
                 description: []
@@ -471,7 +518,8 @@ export const projectDict = {
                     "Dart"
                 ],
                 skills: [
-                    "Mobile App Development"
+                    "Mobile App Development",
+                    "UI/UX Design",
                 ],
                 quickDescription: "Takes food, and randomly generated a different version of it using procedural generation... So, you want beef tacos, but with Indian flavors... can even be used to also say you want a certain food but in less time... then this may be able to do that...",
                 description: []
