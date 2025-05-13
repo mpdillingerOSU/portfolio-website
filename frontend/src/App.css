@@ -661,13 +661,13 @@ input:checked + .toggle:before {
 }
 
 .contact-header {
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .contact-header-text {
-    margin-top: 48px;
     font-size: 56px;
     font-weight: 700;
     padding: 0 24px;
