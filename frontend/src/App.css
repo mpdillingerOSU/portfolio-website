@@ -543,8 +543,9 @@
     right: 0;
     bottom: 0;
     background-color: var(--standard-background);
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear; /** Chrome; Safari **/
+    -ms-transition: all 0.4s linear; /** Opera **/
     border-radius: 28px;
     cursor: pointer;
 }
@@ -557,8 +558,9 @@
     left: 4px;
     bottom: 4px;
     background-color: rgb(145, 149, 163);
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear; /** Chrome; Safari **/
+    -ms-transition: all 0.4s linear; /** Opera **/
     border-radius: 10px;
 }
   
