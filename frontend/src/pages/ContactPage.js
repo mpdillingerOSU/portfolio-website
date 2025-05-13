@@ -11,6 +11,7 @@ function ContactPage() {
     const [hasEmailFormatError, setHasEmailFormatError] = useState(false);
     const [message, setMessage] = useState("");
     const [hasMessageFormatError, setHasMessageFormatError] = useState(false);
+    const [messageSent, setMessageSent] = useState(true);
 
     const form = useRef(null);
     const initialFormElement = useRef(null);
@@ -46,7 +47,10 @@ function ContactPage() {
             })
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    setMessageSent(true);
+                    setName("");
+                    setEmail("");
+                    setMessage("");
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
@@ -121,40 +125,52 @@ function ContactPage() {
             <div className="contact-subheader">
                 Have any questions, or possibly want to work together? Just leave me a quick message, and I'll get back to you as soon as possible.
             </div>
-            <form className="contact-form" ref={form} onSubmit={e => onSubmit(e)}>
-                <div className="focus-guard" tabIndex="1" onFocus={() => focusOnFinal()} />
-                <fieldset className="contact-fieldset">
-                    <TextInput tabIndex="2" id="name" name={"name"} inputRef={initialFormElement} title={"NAME"} value={name} onChange={e => updateName(e.target.value)} onEnter={e => onSubmit(e)} isErrored={hasNameFormatError}/>
-                    {hasNameFormatError && (
-                        <div className="input-warning">
-                            <TiWarningOutline className="input-warning-icon"/>
-                            <span className="input-warning-text">Please enter your name.</span>
-                        </div>
-                    )}
-                    <TextInput tabIndex="3" id="email" name={"email"} title={"EMAIL"} value={email} onChange={e => updateEmail(e.target.value)} onEnter={e => onSubmit(e)} isErrored={hasEmailFormatError}/>
-                    {hasEmailFormatError && (
-                        <div className="input-warning">
-                            <TiWarningOutline className="input-warning-icon"/>
-                            <span className="input-warning-text">Hmm, this email address doesn't look right.</span>
-                        </div>
-                    )}
-                    <TextInput tabIndex="4" id="message" name={"message"} title={"MESSAGE"} value={message} onChange={e => updateMessage(e.target.value)} onEnter={e => onSubmit(e)} isErrored={hasMessageFormatError} isTextArea={true}/>
-                    {hasMessageFormatError && (
-                        <div className="input-warning">
-                            <TiWarningOutline className="input-warning-icon"/>
-                            <span className="input-warning-text">Please enter a message.</span>
-                        </div>
-                    )}
-                </fieldset>
-                <div className="contact-submit-button-container">
-                    <button tabIndex="5" className="contact-submit-button" type="submit" ref={finalFormElement}>
-                        <div className="contact-submit-button-content">
-                            <div className="contact-submit-button-text">SUBMIT</div>
-                        </div>
+            { messageSent ? (
+                <div className="contact-success-container">
+                    <img className="contact-success-icon" src={require("../images/contact-success-icon.png")} alt="checkmark inside of a circle" />
+                    <div className="contact-success-text">
+                        Message sent!
+                    </div>
+                    <button className="contact-success-new-message-button" onClick={(e) => {e.preventDefault(); setMessageSent(false); }}>
+                        New Message
                     </button>
                 </div>
-                <div className="focus-guard" tabIndex="6" onFocus={() => focusOnInitial()} />
-            </form>
+            ) : (
+                <form className="contact-form" ref={form} onSubmit={e => onSubmit(e)}>
+                    <div className="focus-guard" tabIndex="1" onFocus={() => focusOnFinal()} />
+                    <fieldset className="contact-fieldset">
+                        <TextInput tabIndex="2" id="name" name={"name"} inputRef={initialFormElement} title={"NAME"} value={name} onChange={e => updateName(e.target.value)} onEnter={e => onSubmit(e)} isErrored={hasNameFormatError}/>
+                        {hasNameFormatError && (
+                            <div className="input-warning">
+                                <TiWarningOutline className="input-warning-icon"/>
+                                <span className="input-warning-text">Please enter your name.</span>
+                            </div>
+                        )}
+                        <TextInput tabIndex="3" id="email" name={"email"} title={"EMAIL"} value={email} onChange={e => updateEmail(e.target.value)} onEnter={e => onSubmit(e)} isErrored={hasEmailFormatError}/>
+                        {hasEmailFormatError && (
+                            <div className="input-warning">
+                                <TiWarningOutline className="input-warning-icon"/>
+                                <span className="input-warning-text">Hmm, this email address doesn't look right.</span>
+                            </div>
+                        )}
+                        <TextInput tabIndex="4" id="message" name={"message"} title={"MESSAGE"} value={message} onChange={e => updateMessage(e.target.value)} onEnter={e => onSubmit(e)} isErrored={hasMessageFormatError} isTextArea={true}/>
+                        {hasMessageFormatError && (
+                            <div className="input-warning">
+                                <TiWarningOutline className="input-warning-icon"/>
+                                <span className="input-warning-text">Please enter a message.</span>
+                            </div>
+                        )}
+                    </fieldset>
+                    <div className="contact-submit-button-container">
+                        <button tabIndex="5" className="contact-submit-button" type="submit" ref={finalFormElement}>
+                            <div className="contact-submit-button-content">
+                                <div className="contact-submit-button-text">SUBMIT</div>
+                            </div>
+                        </button>
+                    </div>
+                    <div className="focus-guard" tabIndex="6" onFocus={() => focusOnInitial()} />
+                </form>
+            )}
         </div>
     );
 }

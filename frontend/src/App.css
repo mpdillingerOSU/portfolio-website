@@ -792,3 +792,43 @@ input:checked + .toggle:before {
     font-weight: 700;
     z-index: 2;
 }
+
+.contact-success-container {
+    padding: 32px 72px;
+    background-color: rgb(113, 217, 113);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 4px white;
+    border-radius: 24px;
+    box-shadow: var(--standard-shadow);
+}
+
+.contact-success-icon {
+    width: 96px;
+    aspect-ratio: 1;
+}
+
+.contact-success-text {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.contact-success-new-message-button {
+    margin: 0;
+    padding: 6px 9px;
+    border: solid 4px white;
+    border-radius: 6px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-success-new-message-button:hover {
+    background-color: rgb(33, 164, 33);
+}
