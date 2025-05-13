@@ -11,7 +11,7 @@ function ContactPage() {
     const [hasEmailFormatError, setHasEmailFormatError] = useState(false);
     const [message, setMessage] = useState("");
     const [hasMessageFormatError, setHasMessageFormatError] = useState(false);
-    const [messageSent, setMessageSent] = useState(true);
+    const [messageSent, setMessageSent] = useState(false);
 
     const form = useRef(null);
     const initialFormElement = useRef(null);
