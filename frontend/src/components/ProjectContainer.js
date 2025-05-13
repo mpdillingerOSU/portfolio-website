@@ -1,8 +1,11 @@
 import React from 'react';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from './LanguageButton';
+import { useNavigate } from 'react-router-dom';
 
 function ProjectContainer({projectID}) {
+    const navigate = useNavigate();
+
     const project = projectDict[projectID];
 
     const projectLanguages = [];
@@ -21,8 +24,12 @@ function ProjectContainer({projectID}) {
         }
     }
 
+    const toProject = (projectID) => {
+        navigate(`/projects/${projectID}`);
+    }
+
     return (
-        <button className="project-container">
+        <button className="project-container" onClick={(e) => toProject(projectID)}>
             <img className="project-container-logo" src={project.logo} alt={project.logoAlt} />
             <div className="project-container-info">
                 <span className="project-container-name">{project.name}</span>
