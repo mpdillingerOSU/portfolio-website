@@ -40,29 +40,31 @@ function LanguageButton({language, onToggle}) {
 
     const getIcon = (language) => {
         if(language === "HTML"){
-            return <FaHtml5 className="project-language-icon" />
+            return <FaHtml5 className="project-feature-icon" />
         } else if(language === "CSS"){
-            return <FaCss3Alt className="project-language-icon" />
+            return <FaCss3Alt className="project-feature-icon" />
         } else if(language === "Javascript"){
-            return <FaJsSquare className="project-language-icon" />
+            return <FaJsSquare className="project-feature-icon" />
         } else if(language === "Java"){
-            return <FaJava className="project-language-icon" />
+            return <FaJava className="project-feature-icon" />
         } else if(language === "SQL"){
-            return <FaDatabase className="project-language-icon" />
+            return <FaDatabase className="project-feature-icon" />
         } else if(language === "Dart"){
-            return <SiDart className="project-language-icon" />
+            return <SiDart className="project-feature-icon" />
         }
 
-        return <FaQuestion className="project-language-icon" />
+        return <FaQuestion className="project-feature-icon" />
     }
 
     return (
-        <div className="project-language-container" onClick={(e) => onToggle(e)}>
-            <div className="project-language" style={{backgroundColor: getColor(language), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
+        <div className="project-feature-container" onClick={(e) => onToggle(e)}>
+            <div className="project-feature" style={{backgroundColor: getColor(language), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
                 {getIcon(language)}
             </div>
-            <div className="project-language-popup-container">
-                <div className="project-language-popup">{language}</div>
+            <div className="project-feature-popup-container">
+                <div className="project-feature-popup">
+                    {language}
+                </div>
             </div>
         </div>
     );

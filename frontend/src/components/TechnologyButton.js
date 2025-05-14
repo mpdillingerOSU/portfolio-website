@@ -58,45 +58,47 @@ function TechnologyButton({technology, onToggle}) {
 
     const getIcon = (language) => {
         if(language === "React"){
-            return <FaReact className="project-language-icon" />
+            return <FaReact className="project-feature-icon" />
         } else if(language === "Next.js"){
-            return <SiNextdotjs className="project-language-icon" />
+            return <SiNextdotjs className="project-feature-icon" />
         } else if(language === "Bootstrap"){
-            return <FaBootstrap className="project-language-icon" />
+            return <FaBootstrap className="project-feature-icon" />
         } else if(language === "Node.js"){
-            return <FaNodeJs className="project-language-icon" />
+            return <FaNodeJs className="project-feature-icon" />
         } else if(language === "Express"){
-            return <SiExpress className="project-language-icon" />
+            return <SiExpress className="project-feature-icon" />
         } else if(language === "Spring"){
-            return <SiSpring className="project-language-icon" />
+            return <SiSpring className="project-feature-icon" />
         } else if(language === "VS Code"){
-            return <BiLogoVisualStudio className="project-language-icon" />
+            return <BiLogoVisualStudio className="project-feature-icon" />
         } else if(language === "Flutter"){
-            return <SiFlutter className="project-language-icon" />
+            return <SiFlutter className="project-feature-icon" />
         } else if(language === "IntelliJ"){
-            return <SiIntellijidea className="project-language-icon" />
+            return <SiIntellijidea className="project-feature-icon" />
         } else if(language === "Unity"){
-            return <FaUnity className="project-language-icon" />
+            return <FaUnity className="project-feature-icon" />
         } else if(language === "VS"){
-            return <DiVisualstudio className="project-language-icon" />
+            return <DiVisualstudio className="project-feature-icon" />
         } else if(language === "MySQL"){
-            return <DiMysql className="project-language-icon" />
+            return <DiMysql className="project-feature-icon" />
         } else if(language === "MongoDB"){
-            return <SiMongodb className="project-language-icon" />
+            return <SiMongodb className="project-feature-icon" />
         } else if(language === "Git"){
-            return <FaGitAlt className="project-language-icon" />
+            return <FaGitAlt className="project-feature-icon" />
         }
 
-        return <FaQuestion className="project-language-icon" />
+        return <FaQuestion className="project-feature-icon" />
     }
 
     return (
-        <div className="project-language-container" onClick={(e) => onToggle(e)}>
-            <div className="project-language" style={{backgroundColor: getColor(technology), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
+        <div className="project-feature-container" onClick={(e) => onToggle(e)}>
+            <div className="project-feature" style={{backgroundColor: getColor(technology), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
                 {getIcon(technology)}
             </div>
-            <div className="project-language-popup-container">
-                <div className="project-language-popup">{technology}</div>
+            <div className="project-feature-popup-container">
+                <div className="project-feature-popup">
+                    {technology}
+                </div>
             </div>
         </div>
     );
