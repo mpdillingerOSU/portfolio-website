@@ -6,6 +6,7 @@ export const projectDict = {
         name: "TCG Maker",
         logo: require("../images/tcg-maker-logo.png"),
         logoAlt: "trading card game maker",
+        quickDescription: "",
         subprojects: [
             {
                 name: "Initial Prototype",
@@ -28,7 +29,6 @@ export const projectDict = {
                     "Fullstack",
                     "Databases"
                 ],
-                quickDescription: "",
                 description: []
             },
             {
@@ -47,7 +47,6 @@ export const projectDict = {
                     "Web Development",
                     "Frontend"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -59,6 +58,7 @@ export const projectDict = {
         name: "Celtic Tactics",
         logo: require("../images/celtic-tactics-logo.png"),
         logoAlt: "celtic tactics",
+        quickDescription: "",
         subprojects: [
             {
                 name: "Game Prototype",
@@ -74,7 +74,6 @@ export const projectDict = {
                     "Game Development",
                     "UI/UX Design"
                 ],
-                quickDescription: "",
                 description: []
             },
             {
@@ -93,7 +92,6 @@ export const projectDict = {
                     "Web Development",
                     "Frontend"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -105,6 +103,7 @@ export const projectDict = {
         name: "PTCGP Simulator",
         logo: require("../images/ptcgp-sim-logo.png"),
         logoAlt: "pokemon trading card game simulator",
+        quickDescription: "",
         subprojects: [
             {
                 name: "Simulator",
@@ -119,7 +118,6 @@ export const projectDict = {
                 skills: [
                     "Simulators"
                 ],
-                quickDescription: "",
                 description: []
             },
             {
@@ -139,7 +137,6 @@ export const projectDict = {
                     "Web Development",
                     "Frontend"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -151,6 +148,7 @@ export const projectDict = {
         name: "Range Data Structures",
         logo: require("../images/range-ds-logo.png"),
         logoAlt: "range data structures",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -165,7 +163,6 @@ export const projectDict = {
                 skills: [
                     "Data Structure Development"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -177,6 +174,7 @@ export const projectDict = {
         name: "Koala Toolkit",
         logo: require("../images/koala-toolkit-logo.png"),
         logoAlt: "koala toolkit",
+        quickDescription: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
         subprojects: [
             {
                 name: "",
@@ -194,7 +192,6 @@ export const projectDict = {
                     "UI/UX Design",
                     "Database Management"
                 ],
-                quickDescription: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
                 description: []
             }
         ],
@@ -206,6 +203,7 @@ export const projectDict = {
         name: "Block Breaker",
         logo: require("../images/block-breaker-logo.png"),
         logoAlt: "block breaker",
+        quickDescription: "Software intended to break through writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master - with the assistance of procedural generation in order to brainstorm ideas for either entire characters, or for specific character elements.",
         subprojects: [
             {
                 name: "Program",
@@ -220,7 +218,6 @@ export const projectDict = {
                 skills: [
                     "Procedural Generation"
                 ],
-                quickDescription: "Software intended to break through writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master - with the assistance of procedural generation in order to brainstorm ideas for either entire characters, or for specific character elements.",
                 description: []
             },
             {
@@ -241,7 +238,6 @@ export const projectDict = {
                     "Backend",
                     "Fullstack"
                 ],
-                quickDescription: "",
                 description: []
             }
         ],
@@ -253,6 +249,7 @@ export const projectDict = {
         name: "Java Game Engine",
         logo: require("../images/java-game-engine-logo.png"),
         logoAlt: "java game engine",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -268,7 +265,6 @@ export const projectDict = {
                     "Game Engine Development",
                     "Game Development"
                 ],
-                quickDescription: "",
                 description: [
                     "The game engine used for this tactics game was personally crafted entirely from the ground up - from the rendering and the coding of the UI objects and their interactions, to the execution of the game cycle. The lone exception to this was creation of the window itself. However, any interactions with this window, such as rendering and display, were done by the game engine's own code, and not from outside libraries. Additionally, while still rudimentary, the game engine provides all necessary capabilities needed for a simple game loop, UI system, and game objects.",
                     "Built using this engine was the tactics game, which although low in fidelity, has a high level of depth in regards to combat move type, movement types, destruction of the environment, and more."
@@ -283,6 +279,7 @@ export const projectDict = {
         name: "Portfolio Website",
         logo: require("../images/portfolio-website-logo.png"),
         logoAlt: "portfolio website",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -300,7 +297,6 @@ export const projectDict = {
                     "Web Development",
                     "Frontend"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -312,6 +308,7 @@ export const projectDict = {
         name: "Procedural Generation Website",
         logo: "",
         logoAlt: "procedural generation website",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -329,7 +326,6 @@ export const projectDict = {
                     "Web Development",
                     "Frontend"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -341,6 +337,7 @@ export const projectDict = {
         name: "Shooter Game Prototype",
         logo: "",
         logoAlt: "shooter game prototype",
+        quickDescription: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
         subprojects: [
             {
                 name: "",
@@ -356,7 +353,6 @@ export const projectDict = {
                     "Game Development",
                     "UI/UX Design"
                 ],
-                quickDescription: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
                 description: []
             }
         ]
@@ -368,6 +364,7 @@ export const projectDict = {
         name: "FieldSense (+ Scavenger Hunt Game)",
         logo: "",
         logoAlt: "field sense",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -385,7 +382,6 @@ export const projectDict = {
                     "Procedural Generation",
                     "UI/UX Design"
                 ],
-                quickDescription: "",
                 description: [
                     "FieldSense is a node-based system that allows for objects to not only understand their environment from a spatial perspective, but also from a contextual and descriptive perspective. In essence, this would mean that not only could the A.I. in the game manuever around the environment from Point A to Point B, but that they could essentially describe the environment around themselves as they pass from Point A to Point B. A bard could know that the leaves of the tree are red, or that the grass is wet, and sing a fabulous tale about the actual journey in detail. It could sense that a bird is chirping, or a squirrel is eating. While a relatively small subset of games fudge the previous examples as cute points of interaction within given locations, the fact that they only occur in these set locations makes them static, rather than dynamic. You can only do it at precise locations, and the types of relationships to the possible interaction are also static. It is because of this static nature that it would be impossible to dynamically create a scavenger hunt for players to do. Scavenger hunts are about riddles. To make a riddle for an environment, there needs to be a system that can intelligently describe not only objects, but how they relate to the other objects around them. In fact, if you want any procedurally-generated task or quest to feel authentic, then the environment must be authentically understood. Introducing FieldSence.",
                     "This is done by establishing each object defined within the FieldSense system as being a node, and then establishing parameters by which they can be described. This is especially helpful for procedurally generating descriptions of an environment in a more dynamic. In fact, other systems that procedurally generate maps either focus on the spatial perspective (i.e., the most simple versions being mazes), or reduce themselves to very general static concepts which state that people live in a given constructed town and a cave was built specifically because we want a quest to be built there. However, outside of these static parameters defined by the algorithm that generated the actual map, there lacks a system that allows for either the world to be dynamically described, or for dynamic creation of tasks or quests who creation are based solely on the nodes of the objects/characters in the gameworld, rather than a static script of required quests.but also generate nodes that provide details for describing specific locations relative to others… this provides for storytelling elements, treasure hunts, etc."
@@ -400,6 +396,7 @@ export const projectDict = {
         name: "Algebra Max",
         logo: "",
         logoAlt: "algebra max",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -417,7 +414,6 @@ export const projectDict = {
                     "Educational Technology",
                     "Procedural Generation"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -429,6 +425,7 @@ export const projectDict = {
         name: "Not to Bot",
         logo: "",
         logoAlt: "not to bot",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -446,7 +443,6 @@ export const projectDict = {
                     "Educational Technology",
                     "Procedural Generation"
                 ],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -458,6 +454,7 @@ export const projectDict = {
         name: "Smizer",
         logo: "",
         logoAlt: "smizer",
+        quickDescription: "Smizer is a smooth resizing tool for pixel art. Smooth + resizer = Smizer. My drawing app idea where we can make quality resizing of smaller pixel art images",
         subprojects: [
             {
                 name: "",
@@ -468,7 +465,6 @@ export const projectDict = {
                 developmentPlatform: "",
                 languages: [],
                 skills: [],
-                quickDescription: "Smizer is a smooth resizing tool for pixel art. Smooth + resizer = Smizer. My drawing app idea where we can make quality resizing of smaller pixel art images",
                 description: []
             }
         ]
@@ -480,6 +476,7 @@ export const projectDict = {
         name: "Mix 'n' Mash",
         logo: "",
         logoAlt: "mix 'n' mash",
+        quickDescription: "Takes food, and randomly generated a different version of it using procedural generation... So, you want beef tacos, but with Indian flavors... can even be used to also say you want a certain food but in less time... then this may be able to do that...",
         subprojects: [
             {
                 name: "",
@@ -495,7 +492,6 @@ export const projectDict = {
                     "Mobile App Development",
                     "UI/UX Design",
                 ],
-                quickDescription: "Takes food, and randomly generated a different version of it using procedural generation... So, you want beef tacos, but with Indian flavors... can even be used to also say you want a certain food but in less time... then this may be able to do that...",
                 description: []
             }
         ]
@@ -507,6 +503,7 @@ export const projectDict = {
         name: "Calendar Generator",
         logo: "",
         logoAlt: "calendar generator",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -517,7 +514,6 @@ export const projectDict = {
                 developmentPlatform: "",
                 languages: [],
                 skills: [],
-                quickDescription: "",
                 description: []
             }
         ] 
@@ -529,6 +525,7 @@ export const projectDict = {
         name: "Language Constructor",
         logo: "",
         logoAlt: "language constructor",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -539,7 +536,6 @@ export const projectDict = {
                 developmentPlatform: "",
                 languages: [],
                 skills: [],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -551,6 +547,7 @@ export const projectDict = {
         name: "Dialogue Tree Package",
         logo: "",
         logoAlt: "dialogue tree package",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -561,7 +558,6 @@ export const projectDict = {
                 developmentPlatform: "",
                 languages: [],
                 skills: [],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -573,6 +569,7 @@ export const projectDict = {
         name: "Paper on Procedural Generation Language",
         logo: "",
         logoAlt: "paper on procedural generation language",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
@@ -583,7 +580,6 @@ export const projectDict = {
                 developmentPlatform: "",
                 languages: [],
                 skills: [],
-                quickDescription: "",
                 description: []
             }
         ]
@@ -595,17 +591,18 @@ export const projectDict = {
         name: "Java Basics Website",
         logo: "",
         logoAlt: "java basics website",
+        quickDescription: "",
         subprojects: [
             {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["GitHub", ""]
+                    "GitHub",
+                    ""
                 ],
                 developmentPlatform: "",
                 languages: [],
                 skills: [],
-                quickDescription: "",
                 description: []
             }
         ]
