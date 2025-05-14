@@ -17,8 +17,13 @@ function ProjectPage() {
     return (
         <div id="project-page" className="page">
             <div className="project-page-header">
-                <div className="project-page-header-title">
-                    {project.name}
+                <div className="project-page-header-text">
+                    <div className="project-page-title">
+                        {project.name}
+                    </div>
+                    <div className="project-page-quick-description">
+                        "{project.quickDescription}"
+                    </div>
                 </div>
             </div>
             <div className="subprojects-column">

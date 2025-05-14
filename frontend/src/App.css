@@ -945,12 +945,31 @@ input:checked + .toggle:before {
 
 .project-page-header {
     margin-top: 24px;
+    width: 960px;
+    max-width: 85vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
 
-.project-page-header-title {
+.project-page-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.project-page-title {
     color: white;
     font-size: 48px;
     font-weight: 700;
+}
+
+.project-page-quick-description {
+    color: white;
+    font-size: 16px;
+    font-style: italic;
 }
 
 .subprojects-column {
