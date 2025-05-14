@@ -85,6 +85,31 @@ function AboutPage() {
                     <div className="about-knowledge-section">
                         <div className="about-knowledge-header">
                             <div className="about-knowledge-header-text">
+                                Development Platforms
+                            </div>
+                            <div className="about-knowledge-header-underline" />
+                        </div>
+                        <div className="about-knowledge-icon-row">
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/vs-code-about-icon.png")} alt="vs code icon" />
+                            </div>
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/flutter-about-icon.png")} alt="flutter icon" />
+                            </div>
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/intellij-about-icon.png")} alt="intellij icon" />
+                            </div>
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/unity-about-icon.png")} alt="unity icon" />
+                            </div>
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/vs-about-icon.png")} alt="vs icon" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="about-knowledge-section">
+                        <div className="about-knowledge-header">
+                            <div className="about-knowledge-header-text">
                                 Other Technologies
                             </div>
                             <div className="about-knowledge-header-underline" />
