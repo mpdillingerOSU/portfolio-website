@@ -37,7 +37,8 @@ export const projectDict = {
                     "Next.js",
                     "Spring",
                     "MySQL",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             },
@@ -61,7 +62,8 @@ export const projectDict = {
                 technologies: [
                     "React",
                     "Next.js",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             }
@@ -90,7 +92,8 @@ export const projectDict = {
                     "Java"
                 ],
                 technologies: [
-                    "IntelliJ"
+                    "IntelliJ",
+                    "Git"
                 ],
                 description: []
             },
@@ -114,7 +117,8 @@ export const projectDict = {
                 technologies: [
                     "React",
                     "Next.js",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             }
@@ -142,7 +146,8 @@ export const projectDict = {
                     "Java"
                 ],
                 technologies: [
-                    "IntelliJ"
+                    "IntelliJ",
+                    "Git"
                 ],
                 description: []
             },
@@ -167,7 +172,8 @@ export const projectDict = {
                 technologies: [
                     "React",
                     "Next.js",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             }
@@ -195,7 +201,8 @@ export const projectDict = {
                     "Java"
                 ],
                 technologies: [
-                    "IntelliJ"
+                    "IntelliJ",
+                    "Git"
                 ],
                 description: []
             }
@@ -227,7 +234,8 @@ export const projectDict = {
                     "SQL"
                 ],
                 technologies: [
-                    "Flutter"
+                    "Flutter",
+                    "Git"
                 ],
                 description: []
             }
@@ -255,7 +263,8 @@ export const projectDict = {
                     "Java"
                 ],
                 technologies: [
-                    "IntelliJ"
+                    "IntelliJ",
+                    "Git"
                 ],
                 description: []
             },
@@ -283,7 +292,8 @@ export const projectDict = {
                     "React",
                     "Next.js",
                     "Spring",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             }
@@ -312,7 +322,8 @@ export const projectDict = {
                     "Java"
                 ],
                 technologies: [
-                    "IntelliJ"
+                    "IntelliJ",
+                    "Git"
                 ],
                 description: [
                     "The game engine used for this tactics game was personally crafted entirely from the ground up - from the rendering and the coding of the UI objects and their interactions, to the execution of the game cycle. The lone exception to this was creation of the window itself. However, any interactions with this window, such as rendering and display, were done by the game engine's own code, and not from outside libraries. Additionally, while still rudimentary, the game engine provides all necessary capabilities needed for a simple game loop, UI system, and game objects.",
@@ -350,7 +361,8 @@ export const projectDict = {
                 technologies: [
                     "React",
                     "Next.js",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             }
@@ -385,7 +397,8 @@ export const projectDict = {
                 technologies: [
                     "React",
                     "Next.js",
-                    "VS Code"
+                    "VS Code",
+                    "Git"
                 ],
                 description: []
             }
@@ -415,7 +428,8 @@ export const projectDict = {
                 ],
                 technologies: [
                     "Unity",
-                    "VS"
+                    "VS",
+                    "Git"
                 ],
                 description: []
             }
@@ -447,7 +461,8 @@ export const projectDict = {
                 ],
                 technologies: [
                     "Unity",
-                    "VS"
+                    "VS",
+                    "Git"
                 ],
                 description: [
                     "FieldSense is a node-based system that allows for objects to not only understand their environment from a spatial perspective, but also from a contextual and descriptive perspective. In essence, this would mean that not only could the A.I. in the game manuever around the environment from Point A to Point B, but that they could essentially describe the environment around themselves as they pass from Point A to Point B. A bard could know that the leaves of the tree are red, or that the grass is wet, and sing a fabulous tale about the actual journey in detail. It could sense that a bird is chirping, or a squirrel is eating. While a relatively small subset of games fudge the previous examples as cute points of interaction within given locations, the fact that they only occur in these set locations makes them static, rather than dynamic. You can only do it at precise locations, and the types of relationships to the possible interaction are also static. It is because of this static nature that it would be impossible to dynamically create a scavenger hunt for players to do. Scavenger hunts are about riddles. To make a riddle for an environment, there needs to be a system that can intelligently describe not only objects, but how they relate to the other objects around them. In fact, if you want any procedurally-generated task or quest to feel authentic, then the environment must be authentically understood. Introducing FieldSence.",
@@ -482,7 +497,8 @@ export const projectDict = {
                     "SQL"
                 ],
                 technologies: [
-                    "Flutter"
+                    "Flutter",
+                    "Git"
                 ],
                 description: []
             }
@@ -514,7 +530,8 @@ export const projectDict = {
                     "SQL"
                 ],
                 technologies: [
-                    "Flutter"
+                    "Flutter",
+                    "Git"
                 ],
                 description: []
             }
@@ -537,7 +554,9 @@ export const projectDict = {
                 ],
                 skills: [],
                 languages: [],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ]
@@ -564,7 +583,9 @@ export const projectDict = {
                 languages: [
                     "Dart"
                 ],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ]
@@ -586,7 +607,9 @@ export const projectDict = {
                 ],
                 skills: [],
                 languages: [],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ] 
@@ -608,7 +631,9 @@ export const projectDict = {
                 ],
                 skills: [],
                 languages: [],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ]
@@ -630,7 +655,9 @@ export const projectDict = {
                 ],
                 skills: [],
                 languages: [],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ]
@@ -652,7 +679,9 @@ export const projectDict = {
                 ],
                 skills: [],
                 languages: [],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ]
@@ -675,7 +704,9 @@ export const projectDict = {
                 ],
                 skills: [],
                 languages: [],
-                technologies: [],
+                technologies: [
+                    "Git"
+                ],
                 description: []
             }
         ]
