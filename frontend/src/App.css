@@ -91,6 +91,7 @@
 }
 
 .page {
+    position: relative;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -1044,4 +1045,30 @@ input:checked + .toggle:before {
 .subproject-url-link {
     color: white;
     font-size: 16px;
+}
+
+.project-page-back-button {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    z-index: 10;
+    margin: 0;
+    padding: 6px 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border: solid 2px white;
+    border-radius: 10px;
+    background-color: var(--standard-background);
+    cursor: pointer;
+}
+
+.project-page-back-button-icon {
+    color: white;
+}
+
+.project-page-back-button-text {
+    color: white;
 }

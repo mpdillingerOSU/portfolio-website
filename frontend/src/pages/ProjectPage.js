@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { highlightNavButton } from '../scripts/NavigationActions';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from '../components/LanguageButton';
 import ProjectHexagon from '../components/ProjectHexagon';
+import { IoReturnUpBack } from "react-icons/io5";
 
 function ProjectPage() {
+    const navigate = useNavigate();
+
     const splitPath = useLocation().pathname.split("/");
     const projectID = splitPath[splitPath.length - 1];
 
@@ -14,6 +17,10 @@ function ProjectPage() {
     useEffect(() => {
         highlightNavButton("projects");
     }, []);
+
+    const toProjects = () => {
+        navigate("/projects");
+    }
 
     return (
         <div id="project-page" className="page">
@@ -75,6 +82,10 @@ function ProjectPage() {
                     </div>
                 ))}
             </div>
+            <button className="project-page-back-button" onClick={(e) => toProjects()}>
+                <IoReturnUpBack className="project-page-back-button-icon"/>
+                <span className="project-page-back-button-text">Projects</span>
+            </button>
         </div>
     );
 }
