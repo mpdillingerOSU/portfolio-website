@@ -11,10 +11,8 @@ export const projectDict = {
                 name: "Initial Prototype",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    ""
+                    ["Website", ""],
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -37,10 +35,8 @@ export const projectDict = {
                 name: "Advanced Welcome Page",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    "https://github.com/mpdillingerOSU/tcg-maker"
+                    ["Website", ""],
+                    ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -68,8 +64,7 @@ export const projectDict = {
                 name: "Game Prototype",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "IntelliJ",
                 languages: [
@@ -86,10 +81,8 @@ export const projectDict = {
                 name: "Game Website",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    "https://github.com/mpdillingerOSU/celtic-tactics-website"
+                    ["Website", ""],
+                    ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -117,8 +110,7 @@ export const projectDict = {
                 name: "Simulator",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "IntelliJ",
                 languages: [
@@ -134,10 +126,8 @@ export const projectDict = {
                 name: "Simulator Analysis Website",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    ""
+                    ["Website", ""],
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -166,8 +156,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "IntelliJ",
                 languages: [
@@ -193,8 +182,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    "https://github.com/mpdillingerOSU/koala-toolkit"
+                    ["GitHub", "https://github.com/mpdillingerOSU/koala-toolkit"]
                 ],
                 developmentPlatform: "Flutter",
                 languages: [
@@ -223,8 +211,7 @@ export const projectDict = {
                 name: "Program",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    "https://github.com/mpdillingerOSU/block-breaker"
+                    ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
                 ],
                 developmentPlatform: "IntelliJ",
                 languages: [
@@ -240,10 +227,8 @@ export const projectDict = {
                 name: "Website",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    ""
+                    ["Website", ""],
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -273,8 +258,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.3.1-alpha",
                 urls: [
-                    "GitHub",
-                    "https://github.com/mpdillingerOSU/koala-engine"
+                    ["GitHub", "https://github.com/mpdillingerOSU/koala-engine"]
                 ],
                 developmentPlatform: "IntelliJ",
                 languages: [
@@ -304,10 +288,8 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    ""
+                    ["Website", ""],
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -335,10 +317,8 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "Website",
-                    "",
-                    "GitHub",
-                    ""
+                    ["Website", ""],
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -366,8 +346,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.1.8-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Unity",
                 languages: [
@@ -394,8 +373,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Unity",
                 languages: [
@@ -427,8 +405,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Flutter",
                 languages: [
@@ -457,8 +434,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Flutter",
                 languages: [
@@ -487,8 +463,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "",
                 languages: [],
@@ -510,8 +485,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "Flutter",
                 languages: [
@@ -538,8 +512,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "",
                 languages: [],
@@ -561,8 +534,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "",
                 languages: [],
@@ -584,8 +556,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "",
                 languages: [],
@@ -607,8 +578,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "",
                 languages: [],
@@ -630,8 +600,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
                 developmentPlatform: "",
                 languages: [],
