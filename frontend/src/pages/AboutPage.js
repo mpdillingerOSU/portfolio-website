@@ -36,11 +36,14 @@ function AboutPage() {
                             <div className="about-knowledge-icon-container">
                                 <img className="about-knowledge-icon" src={require("../images/about-icons/java-about-icon.png")} alt="java icon" />
                             </div>
-                                <div className="about-knowledge-icon-container">
-                            <img className="about-knowledge-icon" src={require("../images/about-icons/sql-about-icon.png")} alt="sql icon" />
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/sql-about-icon.png")} alt="sql icon" />
                             </div>
                             <div className="about-knowledge-icon-container">
                                 <img className="about-knowledge-icon" src={require("../images/about-icons/dart-about-icon.png")} alt="dart icon" />
+                            </div>
+                            <div className="about-knowledge-icon-container">
+                                <img className="about-knowledge-icon" src={require("../images/about-icons/c-sharp-about-icon.png")} alt="c-sharp icon" />
                             </div>
                         </div>
                     </div>
