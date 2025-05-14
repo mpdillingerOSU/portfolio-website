@@ -13,7 +13,7 @@ export const projectDict = {
                 version: "v0.0.0-alpha",
                 urls: [
                     ["Website", ""],
-                    ["GitHub", ""]
+                    ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -125,7 +125,7 @@ export const projectDict = {
                 version: "v0.0.0-alpha",
                 urls: [
                     ["Website", ""],
-                    ["GitHub", ""]
+                    ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
@@ -286,7 +286,7 @@ export const projectDict = {
                 version: "v0.0.0-alpha",
                 urls: [
                     ["Website", ""],
-                    ["GitHub", ""]
+                    ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
                 ],
                 developmentPlatform: "Visual Studio Code",
                 languages: [
