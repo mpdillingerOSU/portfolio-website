@@ -37,6 +37,7 @@ function ProjectPage() {
                     </div>
                 </div>
             </div>
+            <div className="project-page-header-underline" />
             <div className="subprojects-column">
                 {Array.from({ length: project.subprojects.length }, (_, i) => (
                     <div className="subproject-section">
