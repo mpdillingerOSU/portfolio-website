@@ -5,6 +5,7 @@ import { projectDict } from '../data/ProjectData';
 import LanguageButton from '../components/LanguageButton';
 import ProjectHexagon from '../components/ProjectHexagon';
 import { IoReturnUpBack } from "react-icons/io5";
+import TechnologyButton from '../components/TechnologyButton';
 
 function ProjectPage() {
     const navigate = useNavigate();
@@ -64,6 +65,16 @@ function ProjectPage() {
                                 <div className="subproject-details-row">
                                     {Array.from({ length: project.subprojects[i].languages.length }, (_, j) => (
                                         <LanguageButton language={project.subprojects[i].languages[j]}/>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="subproject-details">
+                                <div className="subproject-details-lead-text">
+                                    Technologies
+                                </div>
+                                <div className="subproject-details-row">
+                                    {Array.from({ length: project.subprojects[i].technologies.length }, (_, j) => (
+                                        <TechnologyButton technology={project.subprojects[i].technologies[j]}/>
                                     ))}
                                 </div>
                             </div>
