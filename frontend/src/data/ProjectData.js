@@ -15,7 +15,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "Prototyping Tool Development",
                     "Game Development",
@@ -49,7 +48,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -84,7 +82,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "IntelliJ",
                 skills: [
                     "Game Development",
                     "UI/UX Design"
@@ -104,7 +101,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -139,7 +135,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "IntelliJ",
                 skills: [
                     "Simulators"
                 ],
@@ -158,7 +153,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "Simulator Analysis",
                     "UI/UX Design",
@@ -194,7 +188,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "IntelliJ",
                 skills: [
                     "Data Structure Development"
                 ],
@@ -223,7 +216,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/koala-toolkit"]
                 ],
-                developmentPlatform: "Flutter",
                 skills: [
                     "Mobile App Development",
                     "Dev Tool Development",
@@ -256,7 +248,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
                 ],
-                developmentPlatform: "IntelliJ",
                 skills: [
                     "Procedural Generation"
                 ],
@@ -275,7 +266,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -314,7 +304,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/koala-engine"]
                 ],
-                developmentPlatform: "IntelliJ",
                 skills: [
                     "Game Engine Development",
                     "Game Development"
@@ -348,7 +337,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -384,7 +372,6 @@ export const projectDict = {
                     ["Website", ""],
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Visual Studio Code",
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -419,7 +406,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Unity",
                 skills: [
                     "Game Development",
                     "UI/UX Design"
@@ -450,7 +436,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Unity",
                 skills: [
                     "Dev Tool Development",
                     "Game Development",
@@ -486,7 +471,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Flutter",
                 skills: [
                     "Mobile App Development",
                     "UI/UX Design",
@@ -519,7 +503,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Flutter",
                 skills: [
                     "Mobile App Development",
                     "UI/UX Design",
@@ -552,7 +535,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "",
                 skills: [],
                 languages: [],
                 technologies: [],
@@ -575,7 +557,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "Flutter",
                 skills: [
                     "Mobile App Development",
                     "UI/UX Design",
@@ -603,7 +584,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "",
                 skills: [],
                 languages: [],
                 technologies: [],
@@ -626,7 +606,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "",
                 skills: [],
                 languages: [],
                 technologies: [],
@@ -649,7 +628,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "",
                 skills: [],
                 languages: [],
                 technologies: [],
@@ -672,7 +650,6 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
-                developmentPlatform: "",
                 skills: [],
                 languages: [],
                 technologies: [],
@@ -696,7 +673,6 @@ export const projectDict = {
                     "GitHub",
                     ""
                 ],
-                developmentPlatform: "",
                 skills: [],
                 languages: [],
                 technologies: [],
