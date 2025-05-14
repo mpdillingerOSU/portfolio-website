@@ -952,3 +952,64 @@ input:checked + .toggle:before {
     font-size: 48px;
     font-weight: 700;
 }
+
+.subprojects-column {
+    width: 960px;
+    max-width: 85vw;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.subproject-section {
+    width: 100%;
+}
+
+.subproject-header {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.subproject-overview {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subproject-details-lead-text {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.subproject-details-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 8px 8px;
+}
+
+.subproject-url-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.subproject-url-header {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.subproject-url-link {
+    color: white;
+    font-size: 16px;
+}
