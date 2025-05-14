@@ -20,7 +20,7 @@ function LanguageButton({language, onToggle}) {
         }
     }, [isInactive]); 
 
-    const getLanguageColor = (language) => {
+    const getColor = (language) => {
         if(language === "HTML"){
             return "#ff5700"
         } else if(language === "CSS"){
@@ -38,7 +38,7 @@ function LanguageButton({language, onToggle}) {
         return "red";
     }
 
-    const getLanguageIcon = (language) => {
+    const getIcon = (language) => {
         if(language === "HTML"){
             return <FaHtml5 className="project-language-icon" />
         } else if(language === "CSS"){
@@ -58,8 +58,8 @@ function LanguageButton({language, onToggle}) {
 
     return (
         <div className="project-language-container" onClick={(e) => onToggle(e)}>
-            <div className="project-language" style={{backgroundColor: getLanguageColor(language), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
-                {getLanguageIcon(language)}
+            <div className="project-language" style={{backgroundColor: getColor(language), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
+                {getIcon(language)}
             </div>
             <div className="project-language-popup-container">
                 <div className="project-language-popup">{language}</div>
