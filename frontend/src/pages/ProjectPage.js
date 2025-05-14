@@ -3,6 +3,7 @@ import { highlightNavButton } from '../scripts/NavigationActions';
 import { useLocation } from 'react-router-dom';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from '../components/LanguageButton';
+import ProjectHexagon from '../components/ProjectHexagon';
 
 function ProjectPage() {
     const splitPath = useLocation().pathname.split("/");
@@ -17,6 +18,9 @@ function ProjectPage() {
     return (
         <div id="project-page" className="page">
             <div className="project-page-header">
+                <div className="project-logo-container">
+                    <ProjectHexagon projectID={projectID} />
+                </div>
                 <div className="project-page-header-text">
                     <div className="project-page-title">
                         {project.name}
