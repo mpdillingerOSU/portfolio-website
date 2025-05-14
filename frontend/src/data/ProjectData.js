@@ -6,7 +6,7 @@ export const projectDict = {
         name: "TCG Maker",
         logo: require("../images/tcg-maker-logo.png"),
         logoAlt: "trading card game maker",
-        quickDescription: "",
+        quickDescription: "TCG Maker is a platform that allows users to create, customize, and play their own trading card games. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides both professionals and hobbyists with the creative freedom to design their own rulesets, craft unique cards, and play their own creations.",
         subprojects: [
             {
                 name: "Initial Prototype",
@@ -58,7 +58,7 @@ export const projectDict = {
         name: "Celtic Tactics",
         logo: require("../images/celtic-tactics-logo.png"),
         logoAlt: "celtic tactics",
-        quickDescription: "",
+        quickDescription: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         subprojects: [
             {
                 name: "Game Prototype",
@@ -103,7 +103,7 @@ export const projectDict = {
         name: "PTCGP Simulator",
         logo: require("../images/ptcgp-sim-logo.png"),
         logoAlt: "pokemon trading card game simulator",
-        quickDescription: "",
+        quickDescription: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. In addition to this, a website was also created in order to share and analyze the data that was obtained from these simulations. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
         subprojects: [
             {
                 name: "Simulator",
@@ -148,7 +148,7 @@ export const projectDict = {
         name: "Range Data Structures",
         logo: require("../images/range-ds-logo.png"),
         logoAlt: "range data structures",
-        quickDescription: "",
+        quickDescription: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
         subprojects: [
             {
                 name: "",
@@ -203,7 +203,7 @@ export const projectDict = {
         name: "Block Breaker",
         logo: require("../images/block-breaker-logo.png"),
         logoAlt: "block breaker",
-        quickDescription: "Software intended to break through writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master - with the assistance of procedural generation in order to brainstorm ideas for either entire characters, or for specific character elements.",
+        quickDescription: "Block Breaker is a program intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description.",
         subprojects: [
             {
                 name: "Program",
@@ -249,7 +249,7 @@ export const projectDict = {
         name: "Java Game Engine",
         logo: require("../images/java-game-engine-logo.png"),
         logoAlt: "java game engine",
-        quickDescription: "",
+        quickDescription: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games to be run locally on a device.",
         subprojects: [
             {
                 name: "",
@@ -279,7 +279,7 @@ export const projectDict = {
         name: "Portfolio Website",
         logo: require("../images/portfolio-website-logo.png"),
         logoAlt: "portfolio website",
-        quickDescription: "",
+        quickDescription: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
         subprojects: [
             {
                 name: "",
