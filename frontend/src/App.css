@@ -341,6 +341,7 @@
     padding: 4px 16px;
     background-color: #22b9f5;
     border-radius: 50vh;
+    box-shadow: var(--standard-shadow);
 }
 
 .project-feature-container {
