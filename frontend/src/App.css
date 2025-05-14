@@ -355,6 +355,7 @@
     justify-content: center;
     width: fit-content;
     height: fit-content;
+    box-shadow: var(--standard-shadow);
 }
 
 .project-language-icon {
