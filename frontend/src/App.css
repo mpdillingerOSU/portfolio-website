@@ -1062,6 +1062,7 @@ input:checked + .toggle:before {
     border: solid 2px white;
     border-radius: 10px;
     background-color: var(--standard-background);
+    box-shadow: var(--standard-shadow);
     cursor: pointer;
 }
 
