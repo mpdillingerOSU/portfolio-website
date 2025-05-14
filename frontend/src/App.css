@@ -372,8 +372,8 @@
     left: 50%; /*positions left-side horizontally centered in parent element*/
     transform: translateX(-50%); /* moves element left by 50% of its own width */
 
-
     z-index: 2;
+    width: max-content;
     background-color: transparent;
     padding: 0 0 8px 0;
     margin: 0;
