@@ -315,7 +315,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     gap: 12px;
 }
 
@@ -329,7 +329,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 8px 8px;
 }
@@ -338,7 +338,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     gap: 32px;
 }
 
@@ -432,7 +432,7 @@
     margin-top: 32px;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     gap: 24px;
 }
@@ -440,7 +440,7 @@
 .sort-section {
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
     gap: 6px;
 }
@@ -448,7 +448,7 @@
 .input-container {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -462,7 +462,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 6px;
 }
 
@@ -648,7 +648,7 @@ input:checked + .toggle:before {
 .language-filter-container {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -725,7 +725,7 @@ input:checked + .toggle:before {
     width: 540px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -771,7 +771,7 @@ input:checked + .toggle:before {
 .contact-submit-button-container {
     width: 540px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-top: 24px;
 }
 
@@ -856,7 +856,7 @@ input:checked + .toggle:before {
     margin: 72px 0;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-around;
     gap: 96px 0;
     flex-wrap: wrap;
@@ -900,7 +900,7 @@ input:checked + .toggle:before {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     gap: 16px;
 }
@@ -908,7 +908,7 @@ input:checked + .toggle:before {
 .about-knowledge-header {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .about-knowledge-header-text {
@@ -932,7 +932,7 @@ input:checked + .toggle:before {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -967,8 +967,8 @@ input:checked + .toggle:before {
     max-width: 85vw;
     display: flex;
     flex-direction: row;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 64px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -982,8 +982,8 @@ input:checked + .toggle:before {
 .project-page-header-text {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 12px;
 }
 
@@ -1045,7 +1045,7 @@ input:checked + .toggle:before {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 8px 8px;
 }
