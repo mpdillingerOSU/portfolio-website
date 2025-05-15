@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { highlightNavButton } from '../scripts/NavigationActions';
+import FeatureAboutIcon from '../components/FeatureAboutIcon';
 
 function AboutPage() {
     useEffect(() => {
@@ -24,27 +25,13 @@ function AboutPage() {
                             <div className="about-knowledge-header-underline" />
                         </div>
                         <div className="about-knowledge-icon-row">
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/html-about-icon.png")} alt="html icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/css-about-icon.png")} alt="css icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/javascript-about-icon.png")} alt="javascript icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/java-about-icon.png")} alt="java icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/sql-about-icon.png")} alt="sql icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/dart-about-icon.png")} alt="dart icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/c-sharp-about-icon.png")} alt="c-sharp icon" />
-                            </div>
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/html-about-icon.png")} imgAlt="html icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/css-about-icon.png")} imgAlt="css icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/javascript-about-icon.png")} imgAlt="javascript icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/java-about-icon.png")} imgAlt="java icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/sql-about-icon.png")} imgAlt="sql icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/dart-about-icon.png")} imgAlt="dart icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/c-sharp-about-icon.png")} imgAlt="c-sharp icon" />
                         </div>
                     </div>
                     <div className="about-knowledge-section">
@@ -55,15 +42,9 @@ function AboutPage() {
                             <div className="about-knowledge-header-underline" />
                         </div>
                         <div className="about-knowledge-icon-row">
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/react-about-icon.png")} alt="react icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/next-about-icon.png")} alt="next icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/bootstrap-about-icon.png")} alt="bootstrap icon" />
-                            </div>
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/react-about-icon.png")} imgAlt="react icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/next-about-icon.png")} imgAlt="next icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/bootstrap-about-icon.png")} imgAlt="bootstrap icon" />
                         </div>
                     </div>
                     <div className="about-knowledge-section">
@@ -74,15 +55,9 @@ function AboutPage() {
                             <div className="about-knowledge-header-underline" />
                         </div>
                         <div className="about-knowledge-icon-row">
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/node-about-icon.png")} alt="node icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/express-about-icon.png")} alt="express icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/spring-about-icon.png")} alt="spring icon" />
-                            </div>
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/node-about-icon.png")} imgAlt="node icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/express-about-icon.png")} imgAlt="express icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/spring-about-icon.png")} imgAlt="spring icon" />
                         </div>
                     </div>
                     <div className="about-knowledge-section">
@@ -93,21 +68,11 @@ function AboutPage() {
                             <div className="about-knowledge-header-underline" />
                         </div>
                         <div className="about-knowledge-icon-row">
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/vs-code-about-icon.png")} alt="vs code icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/flutter-about-icon.png")} alt="flutter icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/intellij-about-icon.png")} alt="intellij icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/unity-about-icon.png")} alt="unity icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/vs-about-icon.png")} alt="vs icon" />
-                            </div>
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/vs-code-about-icon.png")} imgAlt="vs code icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/flutter-about-icon.png")} imgAlt="flutter icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/intellij-about-icon.png")} imgAlt="intellij icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/unity-about-icon.png")} imgAlt="unity icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/vs-about-icon.png")} imgAlt="vs icon" />
                         </div>
                     </div>
                     <div className="about-knowledge-section">
@@ -118,15 +83,9 @@ function AboutPage() {
                             <div className="about-knowledge-header-underline" />
                         </div>
                         <div className="about-knowledge-icon-row">
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/mysql-about-icon.png")} alt="mysql icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/mongodb-about-icon.png")} alt="mongodb icon" />
-                            </div>
-                            <div className="about-knowledge-icon-container">
-                                <img className="about-knowledge-icon" src={require("../images/about-icons/git-about-icon.png")} alt="git icon" />
-                            </div>
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/mysql-about-icon.png")} imgAlt="mysql icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/mongodb-about-icon.png")} imgAlt="mongodb icon" />
+                            <FeatureAboutIcon imgSrc={require("../images/about-icons/git-about-icon.png")} imgAlt="git icon" />
                         </div>
                     </div>
                 </div>
