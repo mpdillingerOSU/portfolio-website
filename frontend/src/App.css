@@ -325,15 +325,25 @@
     font-weight: 600;
 }
 
-.project-skills-row,
-.project-languages-row,
-.project-technologies-row {
+.project-features-row {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: start;
     flex-wrap: wrap;
     gap: 8px 8px;
+}
+
+.project-container-split-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 32px;
+}
+
+.project-container-split-row .project-feature-row {
+    width: calc(50% - 16px);
 }
 
 .project-skill {
