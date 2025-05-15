@@ -15,7 +15,9 @@ function SortDirectionToggle({isOn, onToggle}) {
         const newToggleState = !isToggleOn;  
         setIsToggleOn(newToggleState);
         
-        onToggle(newToggleState);
+        if(onToggle !== undefined){
+            onToggle(newToggleState);
+        }
     };
 
     return (
