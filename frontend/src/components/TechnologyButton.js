@@ -91,7 +91,7 @@ function TechnologyButton({technology, onToggle}) {
     }
 
     return (
-        <div className="project-feature-container" onClick={(e) => onToggle(e)}>
+        <div className="project-feature-container" onClick={(e) =>{if(onToggle !== undefined){onToggle(e);}}}>
             <div className="project-feature" style={{backgroundColor: getColor(technology), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
                 {getIcon(technology)}
             </div>
