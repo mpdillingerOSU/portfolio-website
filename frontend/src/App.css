@@ -1102,6 +1102,7 @@ input:checked + .toggle:before {
 
 .subproject-description {
     margin-top: 24px;
+    margin-bottom: 72px;
     display: flex;
     flex-direction: column;
 }
