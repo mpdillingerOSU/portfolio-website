@@ -6,3 +6,7 @@ export function highlightNavButton(val){
 
     document.getElementById("nav-" + val).classList.add("selected-nav-text-button");
 }
+
+export function backToTop(){
+    document.getElementById("navbar").scrollIntoView({behavior: "instant", block: "start", inline: "nearest"});
+}

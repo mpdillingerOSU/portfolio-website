@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { highlightNavButton } from '../scripts/NavigationActions';
+import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import FeatureAboutIcon from '../components/FeatureAboutIcon';
 
 function AboutPage() {
     useEffect(() => {
         highlightNavButton("about");
+        backToTop();
     }, []);
 
     return (

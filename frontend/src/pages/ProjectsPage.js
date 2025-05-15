@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { highlightNavButton } from '../scripts/NavigationActions';
+import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import { projectList } from '../data/ProjectData';
 import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
@@ -36,6 +36,7 @@ function ProjectsPage() {
 
     useEffect(() => {
         highlightNavButton("projects");
+        backToTop();
     }, []);
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { highlightNavButton } from '../scripts/NavigationActions';
+import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from '../components/LanguageButton';
@@ -17,6 +17,7 @@ function ProjectPage() {
 
     useEffect(() => {
         highlightNavButton("projects");
+        backToTop();
     }, []);
 
     const toProjects = () => {

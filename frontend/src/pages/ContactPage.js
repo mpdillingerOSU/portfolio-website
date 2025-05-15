@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { highlightNavButton } from '../scripts/NavigationActions';
+import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import TextInput from '../components/TextInput';
 import { TiWarningOutline } from "react-icons/ti";
 import emailjs from '@emailjs/browser';
@@ -19,6 +19,7 @@ function ContactPage() {
 
     useEffect(() => {
         highlightNavButton("contact");
+        backToTop();
     }, []);
 
     const onSubmit = async (e) => {

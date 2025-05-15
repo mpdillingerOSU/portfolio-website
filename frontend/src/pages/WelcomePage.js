@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-import { highlightNavButton } from '../scripts/NavigationActions';
+import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import FeaturedProject from '../components/FeaturedProject';
 import { projectList } from '../data/ProjectData';
 
 function WelcomePage() {
     useEffect(() => {
         highlightNavButton("home");
+        backToTop();
     }, []);
 
     return (
