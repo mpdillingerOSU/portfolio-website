@@ -91,6 +91,13 @@ function ProjectPage() {
                                 ))}
                             </div>
                         </div>
+                        <div className="subproject-description">
+                            {Array.from({ length: project.subprojects[i].description.length }, (_, j) => (
+                                <div className="subproject-description-paragraph">
+                                    {project.subprojects[i].description[j]}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 ))}
             </div>

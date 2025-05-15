@@ -1099,6 +1099,18 @@ input:checked + .toggle:before {
     font-size: 16px;
 }
 
+.subproject-description {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subproject-description-paragraph {
+    color: white;
+    font-size: 16px;
+}
+
 .project-page-back-button {
     position: absolute;
     top: 36px;
