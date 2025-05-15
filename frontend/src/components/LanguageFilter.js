@@ -23,9 +23,9 @@ function LanguageFilter({activeLanguages, onChange}) {
     }, [isHtmlInactive, isCssInactive, isJavascriptInactive, isJavaInactive, isSqlInactive, isDartInactive]);
 
     return (
-        <div className="language-filter-container">
-            <span className="language-filter-lead-text">Languages</span>
-            <div className="language-filter-options">
+        <div className="feature-filter-container">
+            <span className="feature-filter-lead-text">Languages</span>
+            <div className="feature-filter-options">
                 <LanguageButton language={"HTML"} onToggle={(isInactive) => setIsHtmlInactive(isInactive)} />
                 <LanguageButton language={"CSS"} onToggle={(isInactive) => setIsCssInactive(isInactive)} />
                 <LanguageButton language={"Javascript"} onToggle={(isInactive) => setIsJavascriptInactive(isInactive)} />

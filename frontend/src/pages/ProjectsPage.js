@@ -5,6 +5,7 @@ import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
 import SortDirectionToggle from '../components/SortDirectionToggle';
 import LanguageFilter from '../components/LanguageFilter';
+import TechnologyFilter from '../components/TechnologyFilter';
 
 function ProjectsPage() {
     const [sortType, setSortType] = useState("featured");
@@ -19,6 +20,18 @@ function ProjectsPage() {
             "Dart": true
         }
     );
+    const [activeTechnologies, setActiveTechnologies] = useState(
+        {
+            "React": true,
+            "Next.js": true,
+            "Spring": true,
+            "VS Code": true,
+            "Flutter": true,
+            "IntelliJ": true,
+            "MySQL": true,
+            "Git": true
+        }
+    );
     const [projects, setProjects] = useState([...projectList]);
 
     useEffect(() => {
@@ -30,7 +43,12 @@ function ProjectsPage() {
 
         for(let project of projectList){
             let hasLanguage = false;
+            let hasTechnology = false;
             for(let subproject of project.subprojects){
+                if(hasLanguage && hasTechnology){
+                    break;
+                }
+
                 for(let language of subproject.languages){
                     if(activeLanguages[language]){
                         hasLanguage = true;
@@ -38,12 +56,15 @@ function ProjectsPage() {
                     }
                 }
 
-                if(hasLanguage){
-                    break;
+                for(let technology of subproject.technologies){
+                    if(activeTechnologies[technology]){
+                        hasTechnology = true;
+                        break;
+                    }
                 }
             }
 
-            if(hasLanguage){
+            if(hasLanguage && hasTechnology){
                 newProjects.push(project);
             }
         }
@@ -60,22 +81,28 @@ function ProjectsPage() {
             } else {
                 newProjects.sort((a, b) => a.name.localeCompare(b.name));
             }
-        } else if(sortType === "languages"){
-            if(isSortInversed){
-                newProjects.sort((a, b) => attributeCount(a, "languages") - attributeCount(b, "languages"));
-            } else {
-                newProjects.sort((a, b) => attributeCount(b, "languages") - attributeCount(a, "languages"));
-            }
         } else if(sortType === "skills"){
             if(isSortInversed){
                 newProjects.sort((a, b) => attributeCount(a, "skills") - attributeCount(b, "skills"));
             } else {
                 newProjects.sort((a, b) => attributeCount(b, "skills") - attributeCount(a, "skills"));
             }
+        } else if(sortType === "languages"){
+            if(isSortInversed){
+                newProjects.sort((a, b) => attributeCount(a, "languages") - attributeCount(b, "languages"));
+            } else {
+                newProjects.sort((a, b) => attributeCount(b, "languages") - attributeCount(a, "languages"));
+            }
+        } else if(sortType === "technologies"){
+            if(isSortInversed){
+                newProjects.sort((a, b) => attributeCount(a, "technologies") - attributeCount(b, "technologies"));
+            } else {
+                newProjects.sort((a, b) => attributeCount(b, "technologies") - attributeCount(a, "technologies"));
+            }
         }
 
         setProjects(newProjects);
-    }, [sortType, isSortInversed, activeLanguages]);
+    }, [sortType, isSortInversed, activeLanguages, activeTechnologies]);
 
     const attributeCount = (project, attribute) => {
         const arr = [];
@@ -104,12 +131,15 @@ function ProjectsPage() {
                 <div className="sort-section">
                     <div className="input-container">
                         <span className="input-lead-text">Sort</span>
-                        <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["languages", "# of Languages"], ["skills", "# of Skills"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
+                        <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["skills", "# of Skills"], ["languages", "# of Languages"], ["technologies", "# of Technologies"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
                     </div>
                     <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
                 </div>
                 <div className="sort-section">
                     <LanguageFilter activeLanguages={activeLanguages} onChange={(activeLanguages) => setActiveLanguages(activeLanguages)} />
+                </div>
+                <div className="sort-section">
+                    <TechnologyFilter activeTechnologies={activeTechnologies} onChange={(activeTechnologies) => setActiveTechnologies(activeTechnologies)} />
                 </div>
             </div>
             <div className="filter-divider" />
