@@ -6,7 +6,7 @@ export const projectDict = {
         name: "TCG Maker",
         logo: require("../images/tcg-maker-logo.png"),
         logoAlt: "trading card game maker",
-        quickDescription: "TCG Maker is a platform that allows users to create, customize, and play their own trading card games. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides both professionals and hobbyists with the creative freedom to design their own rulesets, craft unique cards, and play their own creations.",
+        abstract: "TCG Maker is a platform that allows users to create, customize, and play their own trading card games. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides both professionals and hobbyists with the creative freedom to design their own rulesets, craft unique cards, and play their own creations.",
         subprojects: [
             {
                 name: "Initial Prototype",
@@ -76,7 +76,7 @@ export const projectDict = {
         name: "Celtic Tactics",
         logo: require("../images/celtic-tactics-logo.png"),
         logoAlt: "celtic tactics",
-        quickDescription: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
+        abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         subprojects: [
             {
                 name: "Game Prototype",
@@ -131,7 +131,7 @@ export const projectDict = {
         name: "PTCGP Simulator",
         logo: require("../images/ptcgp-sim-logo.png"),
         logoAlt: "pokemon trading card game simulator",
-        quickDescription: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. In addition to this, a website was also created in order to share and analyze the data that was obtained from these simulations. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
+        abstract: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. In addition to this, a website was also created in order to share and analyze the data that was obtained from these simulations. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
         subprojects: [
             {
                 name: "Simulator",
@@ -186,7 +186,7 @@ export const projectDict = {
         name: "Range Data Structures",
         logo: require("../images/range-ds-logo.png"),
         logoAlt: "range data structures",
-        quickDescription: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
+        abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
         subprojects: [
             {
                 name: "",
@@ -215,7 +215,7 @@ export const projectDict = {
         name: "Koala Toolkit",
         logo: require("../images/koala-toolkit-logo.png"),
         logoAlt: "koala toolkit",
-        quickDescription: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
+        abstract: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
         subprojects: [
             {
                 name: "",
@@ -248,7 +248,7 @@ export const projectDict = {
         name: "Block Breaker",
         logo: require("../images/block-breaker-logo.png"),
         logoAlt: "block breaker",
-        quickDescription: "Block Breaker is a program intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description.",
+        abstract: "Block Breaker is a program intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description.",
         subprojects: [
             {
                 name: "Program",
@@ -306,7 +306,7 @@ export const projectDict = {
         name: "Java Game Engine",
         logo: require("../images/java-game-engine-logo.png"),
         logoAlt: "java game engine",
-        quickDescription: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games to be run locally on a device.",
+        abstract: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games to be run locally on a device.",
         subprojects: [
             {
                 name: "",
@@ -339,7 +339,7 @@ export const projectDict = {
         name: "Portfolio Website",
         logo: require("../images/portfolio-website-logo.png"),
         logoAlt: "portfolio website",
-        quickDescription: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
+        abstract: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
         subprojects: [
             {
                 name: "",
@@ -375,7 +375,7 @@ export const projectDict = {
         name: "Procedural Generation Website",
         logo: "",
         logoAlt: "procedural generation website",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -411,7 +411,7 @@ export const projectDict = {
         name: "Shooter Game Prototype",
         logo: "",
         logoAlt: "shooter game prototype",
-        quickDescription: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
+        abstract: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
         subprojects: [
             {
                 name: "",
@@ -442,7 +442,7 @@ export const projectDict = {
         name: "FieldSense (+ Scavenger Hunt Game)",
         logo: "",
         logoAlt: "field sense",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -478,7 +478,7 @@ export const projectDict = {
         name: "Algebra Max",
         logo: "",
         logoAlt: "algebra max",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -511,7 +511,7 @@ export const projectDict = {
         name: "Not to Bot",
         logo: "",
         logoAlt: "not to bot",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -544,7 +544,7 @@ export const projectDict = {
         name: "Smizer",
         logo: "",
         logoAlt: "smizer",
-        quickDescription: "Smizer is a smooth resizing tool for pixel art. Smooth + resizer = Smizer. My drawing app idea where we can make quality resizing of smaller pixel art images",
+        abstract: "Smizer is a smooth resizing tool for pixel art. Smooth + resizer = Smizer. My drawing app idea where we can make quality resizing of smaller pixel art images",
         subprojects: [
             {
                 name: "",
@@ -568,7 +568,7 @@ export const projectDict = {
         name: "Mix 'n' Mash",
         logo: "",
         logoAlt: "mix 'n' mash",
-        quickDescription: "Takes food, and randomly generated a different version of it using procedural generation... So, you want beef tacos, but with Indian flavors... can even be used to also say you want a certain food but in less time... then this may be able to do that...",
+        abstract: "Takes food, and randomly generated a different version of it using procedural generation... So, you want beef tacos, but with Indian flavors... can even be used to also say you want a certain food but in less time... then this may be able to do that...",
         subprojects: [
             {
                 name: "",
@@ -597,7 +597,7 @@ export const projectDict = {
         name: "Calendar Generator",
         logo: "",
         logoAlt: "calendar generator",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -621,7 +621,7 @@ export const projectDict = {
         name: "Language Constructor",
         logo: "",
         logoAlt: "language constructor",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -645,7 +645,7 @@ export const projectDict = {
         name: "Dialogue Tree Package",
         logo: "",
         logoAlt: "dialogue tree package",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -669,7 +669,7 @@ export const projectDict = {
         name: "Paper on Procedural Generation Language",
         logo: "",
         logoAlt: "paper on procedural generation language",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",
@@ -693,7 +693,7 @@ export const projectDict = {
         name: "Java Basics Website",
         logo: "",
         logoAlt: "java basics website",
-        quickDescription: "",
+        abstract: "",
         subprojects: [
             {
                 name: "",

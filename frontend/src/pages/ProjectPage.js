@@ -34,7 +34,7 @@ function ProjectPage() {
                         {project.name}
                     </div>
                     <div className="project-page-quick-description">
-                        "{project.quickDescription}"
+                        "{project.abstract}"
                     </div>
                 </div>
             </div>
