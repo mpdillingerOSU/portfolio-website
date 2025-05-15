@@ -1063,7 +1063,8 @@ input:checked + .toggle:before {
     gap: 24px;
 }
 
-.subproject-details-lead-text {
+.subproject-details-lead-text,
+.subproject-description-header {
     color: white;
     font-size: 20px;
     font-weight: 700;
@@ -1101,6 +1102,11 @@ input:checked + .toggle:before {
 
 .subproject-description {
     margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subproject-description-text {
     display: flex;
     flex-direction: column;
     gap: 24px;
