@@ -221,7 +221,7 @@ export const projectDict = {
         name: "Koala Toolkit",
         logo: require("../images/koala-toolkit-logo.png"),
         logoAlt: "koala toolkit",
-        abstract: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
+        abstract: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a spreadsheet, JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
         subprojects: [
             {
                 name: "",
@@ -243,7 +243,10 @@ export const projectDict = {
                     "Flutter",
                     "Git"
                 ],
-                description: []
+                description: [
+                    "The Koala Toolkit is a stand-alone mobile app designed using the Flutter development platform, and is intended to help in the creation of characters and their movesets in video games. To do this, it attempts to solve two problems within one app. The first is that it removes the need for extensive spreadsheets, which are heavily used by game studios in order to store and collaborate on information. However, as these spreadsheets grow, they can often become hard to navigate. The Koala Toolkit fixes this issue by allowing the data to easily be editable and maintainable through the app, and scaling to your needs. The second problem is that it is often very hard to switch from one coding language to another after starting the process of coding a game. As such, the Koala Toolkit auto-generates the code for the user in their programming language of choice. So, even if other parts outside of character creation still need to be rewritten, the core code for characters is just a few clicks away.",
+                    "Upon using the app, a user must first create a project - either as an empty template, or based on one of the pre-made templates (high fantasy, sci-fi, western, etc.). This project will then hold together all related characters and movesets. Inside of each project, users are then able to create combat moves, such as attacks or support moves. They are given a variety of ways in which they can customize the moves, as well as being capable of adding a description. Additionally, users are also able to create characters, who can be given their own attributes and descriptions, along with any combat moves that have already been created within the project. Finally, as necessary, users may be able to download the project - or, if needed, only part of the project - in a variety of formats. These include both spreadsheets and JSON files, as well as code files in a variety of languages - such as C#, Python, Java, and Dart."
+                ]
             }
         ],
     },
