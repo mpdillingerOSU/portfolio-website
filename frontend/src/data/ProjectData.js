@@ -137,7 +137,7 @@ export const projectDict = {
                 name: "Simulator",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["GitHub", ""]
+                    ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator"]
                 ],
                 skills: [
                     "Simulators"
