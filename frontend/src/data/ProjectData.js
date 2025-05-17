@@ -257,7 +257,7 @@ export const projectDict = {
         name: "Block Breaker",
         logo: require("../images/block-breaker-logo.png"),
         logoAlt: "block breaker",
-        abstract: "Block Breaker is a program intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description.",
+        abstract: "Block Breaker is a library that procedurally generates character descriptions. As such, it has two major use cases. The first is the ability to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. The second major use case is the ability to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         subprojects: [
             {
                 name: "Program",
