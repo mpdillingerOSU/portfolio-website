@@ -260,7 +260,7 @@ export const projectDict = {
         abstract: "Block Breaker is a library that procedurally generates character descriptions. As such, it has two major use cases. The first is the ability to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. The second major use case is the ability to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         subprojects: [
             {
-                name: "Program",
+                name: "Program Library",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
@@ -275,10 +275,15 @@ export const projectDict = {
                     "IntelliJ",
                     "Git"
                 ],
-                description: []
+                description: [
+                    "While generative AI has become an important feature recently within the tech sphere, procedural generation serves just as important of a purpose. As compared to generative AI, the use of controlled algorithms allow procedural generation to be better positioned at resolving possible inconsistencies and ensuring that accidental erasures do not occur during automated updates to a set of information. Additionally, one can have full confidence and control over how those algorithms are shaped. The trade off is that procedural generation cannot scale as easily as generative AI, as humans have to essentially establish each connection themselves. However, for many programs, the increased consistency and control is well worth it in the long-term.",
+                    "With this in mind, Blocker Breaker is a library that has positioned itself as an assistive tool for procedurally generating character descriptions - whether entire or partial, as determined by the user. As such, the user can quickly create character descriptions to be used within a variety of products. The use of Java as the language of choice for the project was also two-pronged. The first was to create compability with a Spring-based backend for web apps, while the second made it compatible with my personally-crafted Java Game Engine - which can also be found in this portfolio. As such, it helped place itself within the larger project ecosystem that I have already started to create.",
+                    "Overall, there are two main categories of products that could benefit from the use of this library. The first category are those products that can assist users with breaking through writer's block. Writer's block - and, in extension, creator's block - is all too common an occurence. It doesn't matter if you are a novelist, screenwriter, game designer, or dungeon master - there is always going to be a time where you get stumped. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description. As such, this product can help users with a variety fo related tasks. In fact, this attempt at assisting with breaking through writer's block is the use case of the live demo of this product used in the portfolio (linked in the subproject below).",
+                    "The second main category for use of this library is also its greatest advantage over generative AI. This is because, unlike generative AI, procedural generation can be used within video games and other interactive programs, and thus allow for high-quality emergent experiences. This advantage is extremely important in such a sphere, because emergent experiences adapt their generation to the actions of the user. As such, the node system of information used by the library allows one to prune and grow characters depending on those actions - all the while ensuring consistency and avoiding accidental erasure of details."
+                ]
             },
             {
-                name: "Website",
+                name: "Character Generator Website",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["Website", ""],
@@ -304,7 +309,9 @@ export const projectDict = {
                     "VS Code",
                     "Git"
                 ],
-                description: []
+                description: [
+                    "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the Block Breaker library. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
+                ]
             }
         ],
     },
