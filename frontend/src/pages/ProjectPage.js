@@ -91,6 +91,23 @@ function ProjectPage() {
                                     </div>
                                 ))}
                             </div>
+                            {project.subprojects[i].relatedProjects.length > 0 && (
+                                <div className="related-projects-row">
+                                    <div className="related-projects-header">
+                                        Related Projects:
+                                    </div>
+                                    {Array.from({ length: project.subprojects[i].relatedProjects.length }, (_, j) => (
+                                        <>
+                                            {j > 0 && (
+                                                <span>, </span>
+                                            )}
+                                            <a className="related-projects-link" href={`/projects/${project.subprojects[i].relatedProjects[j]}`}>
+                                                {projectDict[project.subprojects[i].relatedProjects[j]].name}
+                                            </a>
+                                        </>
+                                    ))}
+                                </div>
+                            )}
                         </div>
                         <div className="subproject-description">
                             <div className="subproject-description-header">

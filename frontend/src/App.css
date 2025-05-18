@@ -1080,7 +1080,8 @@ input:checked + .toggle:before {
     gap: 8px 8px;
 }
 
-.subproject-url-row {
+.subproject-url-row,
+.related-projects-row {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1089,13 +1090,15 @@ input:checked + .toggle:before {
     gap: 8px;
 }
 
-.subproject-url-header {
+.subproject-url-header,
+.related-projects-header {
     color: white;
     font-size: 20px;
     font-weight: 700;
 }
 
-.subproject-url-link {
+.subproject-url-link,
+.related-projects-link {
     color: white;
     font-size: 16px;
 }
