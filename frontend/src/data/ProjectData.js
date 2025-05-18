@@ -18,6 +18,7 @@ export const projectDict = {
                 skills: [
                     "Prototyping Tool Development",
                     "Game Development",
+                    "Game AI",
                     "UI/UX Design",
                     "Web Development",
                     "Frontend",
@@ -101,6 +102,7 @@ export const projectDict = {
                 ],
                 skills: [
                     "Game Development",
+                    "Game AI",
                     "UI/UX Design",
                     "Procedural Generation"
                 ],
