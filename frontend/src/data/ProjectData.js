@@ -15,6 +15,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Prototyping Tool Development",
                     "Game Development",
@@ -56,6 +57,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -100,6 +102,9 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [
+                    "f0htbt1xaye2aebjv5bcizvf"
+                ],
                 skills: [
                     "Game Development",
                     "Game AI",
@@ -126,6 +131,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -167,6 +173,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Simulators"
                 ],
@@ -190,6 +197,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Simulator Analysis",
                     "UI/UX Design",
@@ -229,6 +237,9 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
                 ],
+                relatedProjects: [
+                    "mx02wdoi7vxbvy75t2kk39h1"
+                ],
                 skills: [
                     "Data Structure Development"
                 ],
@@ -264,6 +275,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/koala-toolkit"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Mobile App Development",
                     "Dev Tool Development",
@@ -300,6 +312,9 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
                 ],
+                relatedProjects: [
+                    "iri9r76qdpfi0iqmywcr8308"
+                ],
                 skills: [
                     "Procedural Generation"
                 ],
@@ -324,6 +339,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -365,6 +381,9 @@ export const projectDict = {
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/koala-engine"]
                 ],
+                relatedProjects: [
+                    "nl1gx1y68jxy5c8t3gu84wip"
+                ],
                 skills: [
                     "Game Engine Development",
                     "Game Development"
@@ -401,6 +420,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
                 ],
+                relatedProjects: [],
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -444,6 +464,7 @@ export const projectDict = {
                     ["Live Demo", ""],
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "UI/UX Design",
                     "Web Development",
@@ -479,6 +500,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Game Development",
                     "UI/UX Design"
@@ -510,6 +532,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Dev Tool Development",
                     "Game Development",
@@ -546,6 +569,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Mobile App Development",
                     "UI/UX Design",
@@ -579,6 +603,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Mobile App Development",
                     "UI/UX Design",
@@ -612,6 +637,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [],
                 languages: [],
                 technologies: [
@@ -636,6 +662,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [
                     "Mobile App Development",
                     "UI/UX Design",
@@ -665,6 +692,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [],
                 languages: [],
                 technologies: [
@@ -689,6 +717,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [],
                 languages: [],
                 technologies: [
@@ -713,6 +742,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [],
                 languages: [],
                 technologies: [
@@ -737,6 +767,7 @@ export const projectDict = {
                 urls: [
                     ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [],
                 languages: [],
                 technologies: [
@@ -759,9 +790,9 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    "GitHub",
-                    ""
+                    ["GitHub", ""]
                 ],
+                relatedProjects: [],
                 skills: [],
                 languages: [],
                 technologies: [
