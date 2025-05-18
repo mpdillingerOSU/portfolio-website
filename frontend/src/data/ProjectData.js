@@ -86,7 +86,8 @@ export const projectDict = {
                 ],
                 skills: [
                     "Game Development",
-                    "UI/UX Design"
+                    "UI/UX Design",
+                    "Procedural Generation"
                 ],
                 languages: [
                     "Java"
