@@ -12,7 +12,7 @@ export const projectDict = {
                 name: "Initial Prototype",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
                 ],
                 skills: [
@@ -53,7 +53,7 @@ export const projectDict = {
                 name: "Advanced Welcome Page",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
                 ],
                 skills: [
@@ -123,7 +123,7 @@ export const projectDict = {
                 name: "Game Website",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
                 ],
                 skills: [
@@ -187,7 +187,7 @@ export const projectDict = {
                 name: "Simulator Analysis Website",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
                 ],
                 skills: [
@@ -321,7 +321,7 @@ export const projectDict = {
                 name: "Character Generator Website",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", ""]
                 ],
                 skills: [
@@ -398,7 +398,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
                 ],
                 skills: [
@@ -441,7 +441,7 @@ export const projectDict = {
                 name: "",
                 version: "v0.0.0-alpha",
                 urls: [
-                    ["Website", ""],
+                    ["Live Demo", ""],
                     ["GitHub", ""]
                 ],
                 skills: [
