@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import FeatureAboutIcon from '../components/FeatureAboutIcon';
+import AppFooter from '../components/AppFooter';
 
 function AboutPage() {
     useEffect(() => {
@@ -91,6 +92,7 @@ function AboutPage() {
                     </div>
                 </div>
             </div>
+            <AppFooter />
         </div>
     );
 }

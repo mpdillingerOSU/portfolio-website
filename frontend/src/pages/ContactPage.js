@@ -3,6 +3,7 @@ import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import TextInput from '../components/TextInput';
 import { TiWarningOutline } from "react-icons/ti";
 import emailjs from '@emailjs/browser';
+import AppFooter from '../components/AppFooter';
 
 function ContactPage() {
     const [name, setName] = useState("");
@@ -126,7 +127,7 @@ function ContactPage() {
             <div className="contact-subheader">
                 Have any questions, or possibly want to work together? Just leave me a quick message, and I'll get back to you as soon as possible.
             </div>
-            { messageSent ? (
+            {messageSent ? (
                 <div className="contact-success-container">
                     <img className="contact-success-icon" src={require("../images/contact-success-icon.png")} alt="checkmark inside of a circle" />
                     <div className="contact-success-text">
@@ -172,6 +173,7 @@ function ContactPage() {
                     <div className="focus-guard" tabIndex="6" onFocus={() => focusOnInitial()} />
                 </form>
             )}
+            <AppFooter />
         </div>
     );
 }

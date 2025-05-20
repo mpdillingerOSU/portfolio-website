@@ -6,6 +6,7 @@ import SelectionInput from '../components/SelectionInput';
 import SortDirectionToggle from '../components/SortDirectionToggle';
 import LanguageFilter from '../components/LanguageFilter';
 import TechnologyFilter from '../components/TechnologyFilter';
+import AppFooter from '../components/AppFooter';
 
 function ProjectsPage() {
     const [sortType, setSortType] = useState("featured");
@@ -153,6 +154,7 @@ function ProjectsPage() {
             ) : (
                 <span>No projects fit the specified filters.</span>
             )}
+            <AppFooter />
         </div>
     );
 }

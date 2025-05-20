@@ -6,6 +6,7 @@ import LanguageButton from '../components/LanguageButton';
 import ProjectHexagon from '../components/ProjectHexagon';
 import { IoReturnUpBack } from "react-icons/io5";
 import TechnologyButton from '../components/TechnologyButton';
+import AppFooter from '../components/AppFooter';
 
 function ProjectPage() {
     const navigate = useNavigate();
@@ -128,6 +129,7 @@ function ProjectPage() {
                 <IoReturnUpBack className="project-page-back-button-icon"/>
                 <span className="project-page-back-button-text">Projects</span>
             </button>
+            <AppFooter />
         </div>
     );
 }

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import FeaturedProject from '../components/FeaturedProject';
 import { projectList } from '../data/ProjectData';
+import AppFooter from '../components/AppFooter';
 
 function WelcomePage() {
     useEffect(() => {
@@ -29,6 +30,7 @@ function WelcomePage() {
                     <FeaturedProject projectID={projectList[6].projectID} />
                 </div>
             </div>
+            <AppFooter />
         </div>
     );
 }
