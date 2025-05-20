@@ -43,7 +43,7 @@ function ProjectPage() {
             <div className="project-page-header-underline" />
             <div className="subprojects-column">
                 {Array.from({ length: project.subprojects.length }, (_, i) => (
-                    <div className="subproject-section">
+                    <div key={i} className="subproject-section">
                         <div className="subproject-header">
                             {project.subprojects[i].name}
                         </div>
@@ -54,7 +54,7 @@ function ProjectPage() {
                                 </div>
                                 <div className="subproject-details-row">
                                     {Array.from({ length: project.subprojects[i].skills.length }, (_, j) => (
-                                        <div className="project-skill">
+                                        <div key={j} className="project-skill">
                                             {project.subprojects[i].skills[j]}
                                         </div>
                                     ))}
@@ -66,7 +66,7 @@ function ProjectPage() {
                                 </div>
                                 <div className="subproject-details-row">
                                     {Array.from({ length: project.subprojects[i].languages.length }, (_, j) => (
-                                        <LanguageButton language={project.subprojects[i].languages[j]}/>
+                                        <LanguageButton key={j} language={project.subprojects[i].languages[j]}/>
                                     ))}
                                 </div>
                             </div>
@@ -76,13 +76,13 @@ function ProjectPage() {
                                 </div>
                                 <div className="subproject-details-row">
                                     {Array.from({ length: project.subprojects[i].technologies.length }, (_, j) => (
-                                        <TechnologyButton technology={project.subprojects[i].technologies[j]}/>
+                                        <TechnologyButton key={j} technology={project.subprojects[i].technologies[j]}/>
                                     ))}
                                 </div>
                             </div>
                             <div className="subproject-urls">
                                 {Array.from({ length: project.subprojects[i].urls.length }, (_, j) => (
-                                    <div className="subproject-url-row">
+                                    <div key={j} className="subproject-url-row">
                                         <div className="subproject-url-header">
                                             {project.subprojects[i].urls[j][0]}:
                                         </div>
@@ -98,14 +98,14 @@ function ProjectPage() {
                                         Related Projects:
                                     </div>
                                     {Array.from({ length: project.subprojects[i].relatedProjects.length }, (_, j) => (
-                                        <>
+                                        <span key={j}>
                                             {j > 0 && (
                                                 <span>, </span>
                                             )}
                                             <a className="related-projects-link" href={`/projects/${project.subprojects[i].relatedProjects[j]}`}>
                                                 {projectDict[project.subprojects[i].relatedProjects[j]].name}
                                             </a>
-                                        </>
+                                        </span>
                                     ))}
                                 </div>
                             )}
@@ -116,7 +116,7 @@ function ProjectPage() {
                             </div>
                             <div className="subproject-description-text">
                                 {Array.from({ length: project.subprojects[i].description.length }, (_, j) => (
-                                    <div className="subproject-description-paragraph">
+                                    <div key={j} className="subproject-description-paragraph">
                                         {project.subprojects[i].description[j]}
                                     </div>
                                 ))}

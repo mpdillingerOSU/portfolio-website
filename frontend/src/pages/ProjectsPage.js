@@ -148,7 +148,7 @@ function ProjectsPage() {
             {projects.length > 0 ? (
                 <div className="projects-list">
                     {Array.from({ length: projects.length }, (_, i) => (
-                        <ProjectContainer projectID={projects[i].projectID} />
+                        <ProjectContainer key={i} projectID={projects[i].projectID} />
                     ))}
                 </div>
             ) : (

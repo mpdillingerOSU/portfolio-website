@@ -43,7 +43,7 @@ function ProjectContainer({projectID}) {
                 <span className="project-container-name">{project.name}</span>
                 <div className="project-features-row">
                     {Array.from({ length: projectSkills.length }, (_, i) => (
-                        <div className="project-skill">
+                        <div key={i} className="project-skill">
                             {projectSkills[i]}
                         </div>
                     ))}
@@ -51,12 +51,12 @@ function ProjectContainer({projectID}) {
                 <div className="project-container-split-row">
                     <div className="project-features-row">
                         {Array.from({ length: projectLanguages.length }, (_, i) => (
-                            <LanguageButton language={projectLanguages[i]}/>
+                            <LanguageButton key={i} language={projectLanguages[i]}/>
                         ))}
                     </div>
                     <div className="project-features-row">
                         {Array.from({ length: projectTechnologies.length }, (_, i) => (
-                            <TechnologyButton technology={projectTechnologies[i]}/>
+                            <TechnologyButton key={i} technology={projectTechnologies[i]}/>
                         ))}
                     </div>
                 </div>

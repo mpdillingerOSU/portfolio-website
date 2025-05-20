@@ -44,7 +44,7 @@ function SelectionInput({options, value, onChange}) {
             </button>
             <div className={"selection-options-container" + (displayOptions ? " selection-options-container-displayed" : "")} ref={optionsRef}>
                 {Array.from({ length: options.length }, (_, i) => (
-                    <button className="selection-option" onClick={() => updateSelection(options[i])}>{options[i][1]}</button>
+                    <button key={i} className="selection-option" onClick={() => updateSelection(options[i])}>{options[i][1]}</button>
                 ))}
             </div>
         </div>
