@@ -780,8 +780,9 @@ input:checked + .toggle:before {
     gap: 8px;
 }
 
-.filter-divider {
-    width: 55%;
+.projects-page-filter-underline {
+    width: 845px;
+    max-width: 90vw;
     height: 2px;
     background-color: #7c7be2;
     opacity: .6;

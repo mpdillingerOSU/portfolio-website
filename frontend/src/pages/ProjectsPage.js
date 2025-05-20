@@ -144,7 +144,7 @@ function ProjectsPage() {
                     <TechnologyFilter activeTechnologies={activeTechnologies} onChange={(activeTechnologies) => setActiveTechnologies(activeTechnologies)} />
                 </div>
             </div>
-            <div className="filter-divider" />
+            <div className="projects-page-filter-underline" />
             {projects.length > 0 ? (
                 <div className="projects-list">
                     {Array.from({ length: projects.length }, (_, i) => (
