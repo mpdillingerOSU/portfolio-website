@@ -353,8 +353,9 @@
 .project-container {
     width: 750px;
     max-width: 80%;
-    aspect-ratio: 4;
-    padding: 1.5% 3%;
+    height: fit-content;
+    min-height: 187.5px;
+    padding: 36px;
     border-style: none;
     border-radius: 20px;
     overflow: hidden;
@@ -362,7 +363,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 36px;
+    flex-wrap: wrap;
+    gap: 24px 36px;
     background-color: var(--dark-emboss);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -370,8 +372,18 @@
     cursor: pointer;
 }
 
+.project-container-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .project-container-logo {
-    width: 12%;
+    width: 82px;
     aspect-ratio: 1;
     border-style: solid;
     border-width: 2px;
@@ -390,12 +402,24 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .project-container-name {
     color: white;
     font-size: 24px;
     font-weight: 600;
+    text-align: left;
+}
+
+.project-container-header .project-container-name {
+    display: none;
+}
+
+.project-container-info .project-container-name {
+    display: block;
 }
 
 .project-features-row {
@@ -499,6 +523,25 @@
     border-width: var(--bump-size);
     border-style: solid;
     border-color: white transparent transparent transparent;
+}
+
+@media only screen and (max-width: 827.2px) {
+    .project-container-header .project-container-name {
+        display: block;
+        width: calc(100% - 112px); /*112px is based on width of logo and gap between header elements*/
+    }
+
+    .project-container-info .project-container-name {
+        display: none;
+    }
+
+    .project-container-header {
+        width: 100%;
+    }
+
+    .project-container-info {
+        width: 100%;
+    }
 }
 
 .sort-and-filters-section {

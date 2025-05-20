@@ -38,7 +38,10 @@ function ProjectContainer({projectID}) {
 
     return (
         <button className="project-container" onClick={(e) => toProject(projectID)}>
-            <img className="project-container-logo" src={project.logo} alt={project.logoAlt} />
+            <div className="project-container-header">
+                <img className="project-container-logo" src={project.logo} alt={project.logoAlt} />
+                <span className="project-container-name">{project.name}</span>
+            </div>
             <div className="project-container-info">
                 <span className="project-container-name">{project.name}</span>
                 <div className="project-features-row">
