@@ -59,7 +59,8 @@
     gap: 32px;
 }
 
-.nav-text-button {
+.nav-text-button,
+.nav-hamburger-button {
     padding: 0 12px;
     margin: 0;
     position: relative;
@@ -71,14 +72,28 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
     font-weight: 500;
     align-content: center;
     justify-content: center;
     overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.nav-text-button:hover {
+.nav-text-button {
+    display: block;
+    font-size: 15px;
+}
+
+.nav-hamburger-button {
+    display: none;
+    font-size: 28px;
+    padding-top: 4px;
+}
+
+.nav-text-button:hover,
+.nav-hamburger-button:hover {
     color: #8ba4df;
 }
 
@@ -88,6 +103,16 @@
 
 .selected-nav-text-button:hover {
     color: #eceef3;
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-hamburger-button {
+        display: block;
+    }
+
+    .nav-text-button {
+        display: none;
+    }
 }
 
 .page {

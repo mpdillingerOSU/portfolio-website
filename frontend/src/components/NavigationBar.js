@@ -1,4 +1,5 @@
 import React from 'react';
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
 
 function NavigationBar() {
@@ -30,6 +31,9 @@ function NavigationBar() {
                 <button id="nav-projects" className="nav-text-button" onClick={() => toProjects()}>PROJECTS</button>
                 <button id="nav-about" className="nav-text-button" onClick={() => toAbout()}>ABOUT</button>
                 <button id="nav-contact" className="nav-text-button" onClick={() => toContact()}>CONTACT</button>
+                <button className="nav-hamburger-button" onClick={() => toContact()}>
+                    <GiHamburgerMenu />
+                </button>
             </div>
         </nav>
   );
