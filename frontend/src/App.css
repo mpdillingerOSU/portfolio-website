@@ -591,7 +591,8 @@
     box-sizing: border-box;
 }
 
-.project-feature:hover + .project-feature-popup-container {
+.project-feature:hover + .project-feature-popup-container,
+.feature-about-icon-container-pseudo-border:hover .project-feature-popup-container {
     visibility: visible;
 }
 
@@ -1187,6 +1188,7 @@ input:checked + .toggle:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    position: relative;
 }
 
 .feature-about-icon-container {
