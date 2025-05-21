@@ -64,12 +64,13 @@ export const projectDict = {
         abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         subprojects: [
             {
-                name: "Game Prototype",
+                name: "",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["GitHub", ""]
                 ],
                 relatedProjects: [
+                    "ecs7ospx0apqw3zkv8mzvoag",
                     "f0htbt1xaye2aebjv5bcizvf"
                 ],
                 skills: [
@@ -89,38 +90,6 @@ export const projectDict = {
                     "The game prototype for Celtic Tactics is focused exclusively on the tactics-based combat intended for the final product. It was crafted using the Java game engine project - also included in this portfolio. In its current state, the graphics are very pixelated and simplistic, as the focus for this project is on the actual gameplay. The initial screen allows the player to choose whether or not to play against another player or against a CPU opponent, and then allows for the player(s) to choose their units. Afterwards, the actual combat begins.",
                     "The gameplay takes place on a procedurally generated grid, which allows for the combat to take place on a unique map every single time. Each space can be either grass (a space that any unit can move onto), a stone wall (a space that no unit can move onto), or a chasm (a space that only certain units can move onto). Additionally, it's possible for a grass space to have a wooden box on top of it, and which can be moved or destroyed. Lastly, the procedural generation also ensures that there is always a path where units are able to reach each other - and thus can engage in combat.",
                     "Combat is then based on 6v6 combat within this grid. However, each team may only have 3 combat units on the field at any given time. Once a unit is exhausted (upon losing all HP), then a different remaining unit in the troop may be placed onto the field to replace them. Additionally, a unit may be swapped out for another during that given unit's turn. Overall, combat takes place over a series of rounds. Each unit has a given priority - based on their stats - with a unit of higher priority going first in that round. During a unit's turn for that round, they have a given amount of movement points (which allow them to move around the grid) and action points (which allow them to use combat moves). Rounds then continue to progress until either - or both - parties have no units remaining."
-                ]
-            },
-            {
-                name: "Game Website",
-                version: "v0.0.0-alpha",
-                urls: [
-                    ["Live Demo", ""],
-                    ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
-                ],
-                relatedProjects: [],
-                skills: [
-                    "UI/UX Design",
-                    "Web Development",
-                    "Frontend"
-                ],
-                languages: [
-                    "HTML",
-                    "CSS",
-                    "Javascript"
-                ],
-                technologies: [
-                    "React",
-                    "Next.js",
-                    "VS Code",
-                    "Git"
-                ],
-                description: [
-                    "The game website for Celtic Tactics is a fully-crafted landing page that uses mockup images to represent a hypothetical end result product for Celtic Tactics. As such, it is used to demonstrate my skills at crafting a landing page for a product, and ensuring that all vital information is presented well, and in an engaging manner. As such, a lot of effort went into ensuring an appropriate aesthetic, with the majority of the information appearing to take place on a medieval manuscript that has marginalia text and images on the edges - similar to those found on actual medieval manuscripts. Additionally, while no other pages currently exist for the website, this was intentional so that the focus would be on my abilities of crafting a singular highly-detailed webpage. Not only that, but a landing page was chosen in particular, due to its importance of engaging users and drawing them into the product. Thus, a lot of information has to be presented in an engaging and simplified manner.",
-                    "Upon opening the landing page, the entire screen is taken up by a singular image, with Celtic warriors on the left, and monsters on the right. As such, it quickly demonstrates the main struggle in the game: a battle between humans and monsters. Additionally, between them is the title text for the game. Of critical importance is how this main image and title text were set up. Due to various screen and window sizes, it was important to ensure that the title text was always centered on the screen, while the main image always took up the entire width and length. As such, not only does the main image adjust in size, but also only shows a limited scope of the image in order to maintain the intended effect - all while keeping it centered. Additionally, the main image and title text were also kept separate, as well, in order to maintain this effect.",
-                    "At the top of the landing page is also a navigation bar, with buttons that hypothetically link to other pages. Each of these links will glow green when hovered over - with the color green being chosen due to the Celtic aesthetic. Additionally, the game's logo is placed at the center of the navigation bar in order to center the game's imagery. Finally, the background color of the navigation bar is partially transparent, which allows for part of the main image to still be seen behind it - and thus fulfilling the visual effect of the main image taking up the entire screen. If one has not yet scrolled, they will also notice a different bar at the bottom of the screen, which provides buttons that link to various purchase options for the game. Similar to the navigation bar, the background color is partially transparent, and its button options also glow green when hovered over in order to maintain the same aesthetic throughout.",
-                    "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
-                    "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
                 ]
             }
         ]
@@ -414,6 +383,51 @@ export const projectDict = {
                     "Below this Get Started section is an Information section. There are a couple of visual dividers here to also break up the visual monotony between the Get Started and Information sections, and to make a clear visual distinction between them - a darkening of the background, along with an actual decorative divider. This Information section then presents three main ideas, each with a header, descriptive text, images, and a hypothetical link to a page related to the idea. At the end of the Information section are the same visual dividers as at the top of the section, which is then followed by the Features section.",
                     "This Features section then provides a glimpse for the user to the most important features of the web platform, displayed in a grid. In order to keep a simplified look, only the icon for each feature has a distinct background color behind it. However, hovering over the specific feature has the entire feature become more visually distinct. This provides both a small level of dynamicism for the user, and increased visual focus for each feature.",
                     "Finally, at the end of the page is a footer. This provides links to many of the pages, similar to the dropdown menus in the navigation bar - along with additional links. They are categorized, but the links are visual distinct from the category headers by the headers being in all uppercase and the links being slightly darker. Also in this footer are icon buttons that link to social media pages, and a select element in order to change the language of the app."
+                ]
+            }
+        ]
+    },
+    "ecs7ospx0apqw3zkv8mzvoag": {
+        index: 8,
+        projectID: "ecs7ospx0apqw3zkv8mzvoag",
+        public: true,
+        name: "Celtic Tactics - Game Website",
+        logo: require("../images/celtic-tactics-logo.png"),
+        logoAlt: "celtic tactics game website",
+        abstract: "The Game Website for Celtic Tactics is an attempt at representing a production-ready version of the landing page for the Celtics Tactics video game - which is also contained inside of this portfolio. As such, it is meant as a means of quickly providing quality information to the user in an engaging manner, and to then entice the user into purchasing the video game. A huge focus was placed onto the Celtic-styled aesthetic of the webpage, with the webpage itself also providing everything from a video and screenshots to links for soundtracks and merchandise.",
+        subprojects: [
+            {
+                name: "",
+                version: "v0.0.0-alpha",
+                urls: [
+                    ["Live Demo", ""],
+                    ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
+                ],
+                relatedProjects: [
+                    "nl1gx1y68jxy5c8t3gu84wip"
+                ],
+                skills: [
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
+                ],
+                languages: [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                technologies: [
+                    "React",
+                    "Next.js",
+                    "VS Code",
+                    "Git"
+                ],
+                description: [
+                    "The Game Website for Celtic Tactics is a fully-crafted landing page that uses mockup images to represent a hypothetical end result product for Celtic Tactics - which can also be found inside of this portfolio. As such, it is used to demonstrate my skills at crafting a landing page for a product, and ensuring that all vital information is presented well, and in an engaging manner. As such, a lot of effort went into ensuring an appropriate aesthetic, with the majority of the information appearing to take place on a medieval manuscript that has marginalia text and images on the edges - similar to those found on actual medieval manuscripts. Additionally, while no other pages currently exist for the website, this was intentional so that the focus would be on my abilities of crafting a singular highly-detailed webpage. Not only that, but a landing page was chosen in particular, due to its importance of engaging users and drawing them into the product. Thus, a lot of information has to be presented in an engaging and simplified manner.",
+                    "Upon opening the landing page, the entire screen is taken up by a singular image, with Celtic warriors on the left, and monsters on the right. As such, it quickly demonstrates the main struggle in the game: a battle between humans and monsters. Additionally, between them is the title text for the game. Of critical importance is how this main image and title text were set up. Due to various screen and window sizes, it was important to ensure that the title text was always centered on the screen, while the main image always took up the entire width and length. As such, not only does the main image adjust in size, but also only shows a limited scope of the image in order to maintain the intended effect - all while keeping it centered. Additionally, the main image and title text were also kept separate, as well, in order to maintain this effect.",
+                    "At the top of the landing page is also a navigation bar, with buttons that hypothetically link to other pages. Each of these links will glow green when hovered over - with the color green being chosen due to the Celtic aesthetic. Additionally, the game's logo is placed at the center of the navigation bar in order to center the game's imagery. Finally, the background color of the navigation bar is partially transparent, which allows for part of the main image to still be seen behind it - and thus fulfilling the visual effect of the main image taking up the entire screen. If one has not yet scrolled, they will also notice a different bar at the bottom of the screen, which provides buttons that link to various purchase options for the game. Similar to the navigation bar, the background color is partially transparent, and its button options also glow green when hovered over in order to maintain the same aesthetic throughout.",
+                    "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
+                    "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
                 ]
             }
         ]
