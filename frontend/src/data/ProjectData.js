@@ -381,7 +381,7 @@ export const projectDict = {
         abstract: "The Advanced Welcome Page is an attempt to create a much more production-ready version of the welcome page for the TCG Maker project - which can also be found in this portfolio. As such, the page has been much more greatly developed in order to show the expectations for the final product, and to also demonstrate skills related to creating a more complex page that engages the user. Additionally, by focusing on a single page, the project is better at demonstrating my ability to focus in on the small details of UI/UX design and frontend development that were not possible in the initial prototype - due to its larger scope.",
         subprojects: [
             {
-                name: "Advanced Welcome Page",
+                name: "",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["Live Demo", ""],
