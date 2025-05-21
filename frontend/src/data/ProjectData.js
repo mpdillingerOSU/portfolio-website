@@ -3,7 +3,7 @@ export const projectDict = {
         index: 0,
         projectID: "liaohblsgg7xgw4e1d46ogea",
         public: true,
-        name: "TCG Maker - Initial Prototype",
+        name: "TCG Maker",
         logo: require("../images/tcg-maker-logo.png"),
         logoAlt: "trading card game maker",
         abstract: "TCG Maker is a platform that allows users to create, customize, and play their own trading card games. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides both professionals and hobbyists with the creative freedom to design their own rulesets, craft unique cards, and play their own creations.",
