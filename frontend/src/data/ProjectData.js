@@ -3,19 +3,21 @@ export const projectDict = {
         index: 0,
         projectID: "liaohblsgg7xgw4e1d46ogea",
         public: true,
-        name: "TCG Maker",
+        name: "TCG Maker - Initial Prototype",
         logo: require("../images/tcg-maker-logo.png"),
         logoAlt: "trading card game maker",
         abstract: "TCG Maker is a platform that allows users to create, customize, and play their own trading card games. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides both professionals and hobbyists with the creative freedom to design their own rulesets, craft unique cards, and play their own creations.",
         subprojects: [
             {
-                name: "Initial Prototype",
+                name: "",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["Live Demo", ""],
                     ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
                 ],
-                relatedProjects: [],
+                relatedProjects: [
+                    "c91f92cj77yo7nv5t5vyg761"
+                ],
                 skills: [
                     "Prototyping Tool Development",
                     "Game Development",
@@ -48,41 +50,6 @@ export const projectDict = {
                     "When first visiting the website, a user will be greeted by the Welcome page. On this page, the user is provided two options: they can either log in to the site using an existing account, or they can create a new account. Upon successfully logging in, the user will be redirected to the Portal page, which acts as the root of the platform’s ecosystem. On this page, the user has access to the My Games page via a button, where they can edit their own games. Below this, they can then see two rows of games. The Library row allows a user to play their own games, while the Discover row allows a user to play the games of other users.",
                     "Let us assume that this prospective user will click on the My Games button, and land on the My Games page. Here, a user will see a list of their games, with each game displaying the game icon, the game name, the player count, the favorite count, a quick toggle for publishing/unpublishing their game, and a quick button to delete their game. At the top of the page is also a Create button, which will display an overlay for entering a name and selecting a template before continuing. Upon creating a new game or choosing to edit an existing one, the user will be redirected to the Workshop Page. On this page, the user is able to edit the details of the game, as well as the ruleset for the game. There are also options to publish/unpublish, delete, save, and view a preview of the Game Overview page from the perspective of other users. From here, a user can also select their cards, and either edit or delete them. If they choose to edit a card, they will be taken to the Edit Card page, where they can then edit the details specific to that game.",
                     "Back on the Portal page, if a user selects a game from either the Library or Discover row, they will be redirected to the Game Overview page. Here, users can see all of the details of the game, the cards of the game, and also the ruleset (which has been generated in a prose style based on the attributes of the game itself). From here, they can select the Play button at the top of the screen, which will then take the user to the Play page. On this page, a user can select from three buttons: to battle, check out the game’s collection of cards, and to view the ruleset of the game. Once our hypothetical user has seen all of the cards in the game and checked out the ruleset, they will then choose to battle. On the Battle page, there are options for both Solo (single-player) and Versus (multiplayer) modes. As of right now, multiplayer is not yet available, so let us assume that the player chooses Solo. From here, the user can choose either a random match, or choose to play a campaign. However, similar to multiplayer, campaigns are also not yet available. As such, upon selecting a random match, a player will have a deck constructed for them, which uses basic procedural generation in order to ensure proper card type ratios and a single energy type. The user can then play against an AI opponent, until either they themself or the AI has zero life points remaining, or they have reached the maximum number of turns."
-                ]
-            },
-            {
-                name: "Advanced Welcome Page",
-                version: "v0.0.0-alpha",
-                urls: [
-                    ["Live Demo", ""],
-                    ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
-                ],
-                relatedProjects: [],
-                skills: [
-                    "UI/UX Design",
-                    "Web Development",
-                    "Frontend"
-                ],
-                languages: [
-                    "HTML",
-                    "CSS",
-                    "Javascript"
-                ],
-                technologies: [
-                    "React",
-                    "Next.js",
-                    "VS Code",
-                    "Git"
-                ],
-                description: [
-                    "The advanced welcome page is an attempt to create a much more production-ready version of the welcome page for the TCG Maker project above. As such, the page has been much more greatly developed in order to show the expectations for the final product, and to also demonstrate skills related to creating a more complex page that engages the user. Additionally, by focusing on a single page, the project is better at demonstrating my ability to focus in on the small details of UI/UX design and frontend development that were not possible in the previous functional product above - due to its larger scope.",
-                    "Overall, the welcome page was crafted using a native dark theme, with a blue and purple color palette that has small accents of white and pink for color balancing. Additionally, the overwhelming majority of imagery lack any borders. This limited color palette and lack of borders allows everything to have a softer look, and ensures that the only details that pop out to the user are intentional.",
-                    "At the top of this page is a navigation bar. Of particular interest are the dropdown menu buttons. Due to the application being a prototyping tool, there is a very large collection of pages that would be expected in the final product. As such, in order to simplify the navigation of these various links, the buttons here work as categories. These dropdown menus then open up when hovered over by a cursor. However, in order to be functional for mobile users, they can also be opened and closed upon clicking on them. Now, when these types of dropdown menus are typically opened, it is common for other websites to place the necessary links in a listed format. However, lists of texts are often hard to navigate, and malaise can easily set in for a user. As such, in order to keep user attention, differing block patterns are used for the menu options - which vary both vertically and horizontally.",
-                    "Also on the right side of the navigation bar are buttons that open up overlays for both logging in and creating a new account. The use of overlays here, instead of navigating to new pages, simplifies navigation and creates a more seamless experience for the user, as they are able to stay on the same page - and are thus kept navigationally centered. Each of these overlays also have underlined text buttons that switch to the other account-based overlay, with the log in overlay also providing a means of switching to a reset password overlay. The buttons for submitting forms are also made to be distinct, larger, and with a blue background color, so as not to have the user confuse them with the text buttons that switch overlays.",
-                    "For the actual page itself, the first portion visible is the Get Started section. On this page, there are a couple of larger slogans, along with subtext for them that allow for the user to easily understand the purpose of the web platform. Underneath these slogans in a button that states \"Get started for free\", which opens up the overlay in order to create an account. It should be noted that the text itself - \"Get started for free\" - was intentional. This was because there is a pricing button on the navigation bar, which signals that there are purchasing tiers for the product. However, the \"for free\" on the \"Get started for free\" button allows the user to quickly know that they can initially use the platform for free. To the right of the slogans and get started button is then an image. This image has some medieval aesthetic - stone building and hooded figure - but mixed into it is also some factory aesthetics - gears and conveyor belt. These mixture of aesthetics represent that most TCGs have a high fantasy theme, while also mixing in factory aesthetics to represent the web platform as a factory that produces cards.",
-                    "Below this Get Started section is an Information section. There are a couple of visual dividers here to also break up the visual monotony between the Get Started and Information sections, and to make a clear visual distinction between them - a darkening of the background, along with an actual decorative divider. This Information section then presents three main ideas, each with a header, descriptive text, images, and a hypothetical link to a page related to the idea. At the end of the Information section are the same visual dividers as at the top of the section, which is then followed by the Features section.",
-                    "This Features section then provides a glimpse for the user to the most important features of the web platform, displayed in a grid. In order to keep a simplified look, only the icon for each feature has a distinct background color behind it. However, hovering over the specific feature has the entire feature become more visually distinct. This provides both a small level of dynamicism for the user, and increased visual focus for each feature.",
-                    "Finally, at the end of the page is a footer. This provides links to many of the pages, similar to the dropdown menus in the navigation bar - along with additional links. They are categorized, but the links are visual distinct from the category headers by the headers being in all uppercase and the links being slightly darker. Also in this footer are icon buttons that link to social media pages, and a select element in order to change the language of the app."
                 ]
             }
         ]
@@ -216,7 +183,7 @@ export const projectDict = {
                     "Git"
                 ],
                 description: [
-                    "The simulator analysis website provides an analysis of the ethics related to the gatcha mechanics of the Pokemon Trading Card Game Pocket mobile game. The data analyzed was obtained from the simulations ran by the simulation program described above. As such, it serves as a means for determining my ability to analyze data generated by simulators. In particular, the analysis attempts to frame the analysis as a report from a business perspective, and as a means to determine how ethical the gatcha practices are - a heavy correlative for user retention.",
+                    "The simulator analysis website provides an analysis of the ethics related to the gatcha mechanics of the Pokemon Trading Card Game Pocket mobile game. The data analyzed was obtained from the simulations ran by the PTCGP Simulator program - a project also in this portfolio. As such, it serves as a means for determining my ability to analyze data generated by simulators. In particular, the analysis attempts to frame the analysis as a report from a business perspective, and as a means to determine how ethical the gatcha practices are - a heavy correlative for user retention.",
                     "The website itself is rather simple, and more or less has the appearance of a report. However, UI/UX and frontend skills were demonstrated in how the data from the results of the simulations were presented. It uses both a tab and checkbox system, allowing a user to seamlessly shift between the many various results and graphs - all while ensuring that the user is not overloaded by too much data all at once."
                 ]
             }
@@ -404,8 +371,55 @@ export const projectDict = {
             }
         ]
     },
-    "tqiwpjt0oof5o4cm9lcewomi":{
+    "c91f92cj77yo7nv5t5vyg761":{
         index: 7,
+        projectID: "c91f92cj77yo7nv5t5vyg761",
+        public: true,
+        name: "TCG Maker - Advanced Welcome Page",
+        logo: require("../images/tcg-maker-logo.png"),
+        logoAlt: "trading card game maker advanced welcome page",
+        abstract: "The Advanced Welcome Page is an attempt to create a much more production-ready version of the welcome page for the TCG Maker project - which can also be found in this portfolio. As such, the page has been much more greatly developed in order to show the expectations for the final product, and to also demonstrate skills related to creating a more complex page that engages the user. Additionally, by focusing on a single page, the project is better at demonstrating my ability to focus in on the small details of UI/UX design and frontend development that were not possible in the initial prototype - due to its larger scope.",
+        subprojects: [
+            {
+                name: "Advanced Welcome Page",
+                version: "v0.0.0-alpha",
+                urls: [
+                    ["Live Demo", ""],
+                    ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
+                ],
+                relatedProjects: [
+                    "liaohblsgg7xgw4e1d46ogea"
+                ],
+                skills: [
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
+                ],
+                languages: [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                technologies: [
+                    "React",
+                    "Next.js",
+                    "VS Code",
+                    "Git"
+                ],
+                description: [
+                    "Overall, the welcome page was crafted using a native dark theme, with a blue and purple color palette that has small accents of white and pink for color balancing. Additionally, the overwhelming majority of imagery lack any borders. This limited color palette and lack of borders allows everything to have a softer look, and ensures that the only details that pop out to the user are intentional.",
+                    "At the top of this page is a navigation bar. Of particular interest are the dropdown menu buttons. Due to the application being a prototyping tool, there is a very large collection of pages that would be expected in the final product. As such, in order to simplify the navigation of these various links, the buttons here work as categories. These dropdown menus then open up when hovered over by a cursor. However, in order to be functional for mobile users, they can also be opened and closed upon clicking on them. Now, when these types of dropdown menus are typically opened, it is common for other websites to place the necessary links in a listed format. However, lists of texts are often hard to navigate, and malaise can easily set in for a user. As such, in order to keep user attention, differing block patterns are used for the menu options - which vary both vertically and horizontally.",
+                    "Also on the right side of the navigation bar are buttons that open up overlays for both logging in and creating a new account. The use of overlays here, instead of navigating to new pages, simplifies navigation and creates a more seamless experience for the user, as they are able to stay on the same page - and are thus kept navigationally centered. Each of these overlays also have underlined text buttons that switch to the other account-based overlay, with the log in overlay also providing a means of switching to a reset password overlay. The buttons for submitting forms are also made to be distinct, larger, and with a blue background color, so as not to have the user confuse them with the text buttons that switch overlays.",
+                    "For the actual page itself, the first portion visible is the Get Started section. On this page, there are a couple of larger slogans, along with subtext for them that allow for the user to easily understand the purpose of the web platform. Underneath these slogans in a button that states \"Get started for free\", which opens up the overlay in order to create an account. It should be noted that the text itself - \"Get started for free\" - was intentional. This was because there is a pricing button on the navigation bar, which signals that there are purchasing tiers for the product. However, the \"for free\" on the \"Get started for free\" button allows the user to quickly know that they can initially use the platform for free. To the right of the slogans and get started button is then an image. This image has some medieval aesthetic - stone building and hooded figure - but mixed into it is also some factory aesthetics - gears and conveyor belt. These mixture of aesthetics represent that most TCGs have a high fantasy theme, while also mixing in factory aesthetics to represent the web platform as a factory that produces cards.",
+                    "Below this Get Started section is an Information section. There are a couple of visual dividers here to also break up the visual monotony between the Get Started and Information sections, and to make a clear visual distinction between them - a darkening of the background, along with an actual decorative divider. This Information section then presents three main ideas, each with a header, descriptive text, images, and a hypothetical link to a page related to the idea. At the end of the Information section are the same visual dividers as at the top of the section, which is then followed by the Features section.",
+                    "This Features section then provides a glimpse for the user to the most important features of the web platform, displayed in a grid. In order to keep a simplified look, only the icon for each feature has a distinct background color behind it. However, hovering over the specific feature has the entire feature become more visually distinct. This provides both a small level of dynamicism for the user, and increased visual focus for each feature.",
+                    "Finally, at the end of the page is a footer. This provides links to many of the pages, similar to the dropdown menus in the navigation bar - along with additional links. They are categorized, but the links are visual distinct from the category headers by the headers being in all uppercase and the links being slightly darker. Also in this footer are icon buttons that link to social media pages, and a select element in order to change the language of the app."
+                ]
+            }
+        ]
+    },
+    "tqiwpjt0oof5o4cm9lcewomi":{
+        index: 11,
         projectID: "tqiwpjt0oof5o4cm9lcewomi",
         public: true,
         name: "Portfolio Website",
@@ -449,7 +463,7 @@ export const projectDict = {
         ]
     },
     "h38lrj52215uz4fyx813yfzk": {
-        index: 8,
+        index: 12,
         projectID: "h38lrj52215uz4fyx813yfzk",
         public: false,
         name: "Procedural Generation Website",
@@ -486,7 +500,7 @@ export const projectDict = {
         ]
     },
     "j6yd609g44vvektcqcs5d53z": {
-        index: 9,
+        index: 13,
         projectID: "j6yd609g44vvektcqcs5d53z",
         public: false,
         name: "Shooter Game Prototype",
@@ -518,7 +532,7 @@ export const projectDict = {
         ]
     },
     "b9pelpnv77mnuaxhsfjw2vhd": {
-        index: 10,
+        index: 14,
         projectID: "b9pelpnv77mnuaxhsfjw2vhd",
         public: false,
         name: "FieldSense (+ Scavenger Hunt Game)",
@@ -555,7 +569,7 @@ export const projectDict = {
         ]  
     },
     "ecg616r9zadf9qawliaohbls": {
-        index: 11,
+        index: 15,
         projectID: "ecg616r9zadf9qawliaohbls",
         public: false,
         name: "Algebra Max",
@@ -589,7 +603,7 @@ export const projectDict = {
         ]
     },
     "gg7xgw4e1d46ogeanl1gx1y6": {
-        index: 12,
+        index: 16,
         projectID: "gg7xgw4e1d46ogeanl1gx1y6",
         public: false,
         name: "Not to Bot",
@@ -623,7 +637,7 @@ export const projectDict = {
         ]
     },
     "8jxy5c8t3gu84wipporhch2b": {
-        index: 13,
+        index: 17,
         projectID: "8jxy5c8t3gu84wipporhch2b",
         public: false,
         name: "Smizer",
@@ -648,7 +662,7 @@ export const projectDict = {
         ]
     },
     "bmoqk2c7wklzjmw3iri9r76q": {
-        index: 14,
+        index: 18,
         projectID: "bmoqk2c7wklzjmw3iri9r76q",
         public: false,
         name: "Mix 'n' Mash",
@@ -678,7 +692,7 @@ export const projectDict = {
         ]
     },
     "dpfi0iqmywcr8308ku907nk4": {
-        index: 15,
+        index: 19,
         projectID: "dpfi0iqmywcr8308ku907nk4",
         public: false,
         name: "Calendar Generator",
@@ -703,7 +717,7 @@ export const projectDict = {
         ] 
     },
     "5s6af8u00z3jnsdmmx02wdoi": {
-        index: 16,
+        index: 20,
         projectID: "5s6af8u00z3jnsdmmx02wdoi",
         public: false,
         name: "Language Constructor",
@@ -728,7 +742,7 @@ export const projectDict = {
         ]
     },
     "7vxbvy75t2kk39h1f0htbt1x": {
-        index: 17,
+        index: 21,
         projectID: "7vxbvy75t2kk39h1f0htbt1x",
         public: false,
         name: "Dialogue Tree Package",
@@ -753,7 +767,7 @@ export const projectDict = {
         ]
     },
     "aye2aebjv5bcizvfh38lrj52": {
-        index: 18,
+        index: 22,
         projectID: "aye2aebjv5bcizvfh38lrj52",
         public: false,
         name: "Paper on Procedural Generation Language",
@@ -778,7 +792,7 @@ export const projectDict = {
         ]
     },
     "215uz4fyx813yfzkj6yd609g": {
-        index: 19,
+        index: 23,
         projectID: "215uz4fyx813yfzkj6yd609g",
         public: false,
         name: "Java Basics Website",
