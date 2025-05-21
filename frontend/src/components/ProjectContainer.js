@@ -3,6 +3,7 @@ import { projectDict } from '../data/ProjectData';
 import LanguageButton from './LanguageButton';
 import { useNavigate } from 'react-router-dom';
 import TechnologyButton from './TechnologyButton';
+import ProjectHexagon from './ProjectHexagon';
 
 function ProjectContainer({projectID}) {
     const navigate = useNavigate();
@@ -39,7 +40,7 @@ function ProjectContainer({projectID}) {
     return (
         <button className="project-container" onClick={(e) => toProject(projectID)}>
             <div className="project-container-header">
-                <img className="project-container-logo" src={project.logo} alt={project.logoAlt} />
+                <ProjectHexagon projectID={projectID} width="96px" borderWidth={4} />
                 <span className="project-container-name">{project.name}</span>
             </div>
             <div className="project-container-info">
