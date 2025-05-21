@@ -45,23 +45,25 @@ function ProjectContainer({projectID}) {
             </div>
             <div className="project-container-info">
                 <span className="project-container-name">{project.name}</span>
-                <div className="project-features-row">
-                    {Array.from({ length: projectSkills.length }, (_, i) => (
-                        <div key={i} className="project-skill">
-                            {projectSkills[i]}
-                        </div>
-                    ))}
-                </div>
-                <div className="project-container-split-row">
+                <div className="project-container-features">
                     <div className="project-features-row">
-                        {Array.from({ length: projectLanguages.length }, (_, i) => (
-                            <LanguageButton key={i} language={projectLanguages[i]}/>
+                        {Array.from({ length: projectSkills.length }, (_, i) => (
+                            <div key={i} className="project-skill">
+                                {projectSkills[i]}
+                            </div>
                         ))}
                     </div>
-                    <div className="project-features-row">
-                        {Array.from({ length: projectTechnologies.length }, (_, i) => (
-                            <TechnologyButton key={i} technology={projectTechnologies[i]}/>
-                        ))}
+                    <div className="project-container-split-row">
+                        <div className="project-features-row">
+                            {Array.from({ length: projectLanguages.length }, (_, i) => (
+                                <LanguageButton key={i} language={projectLanguages[i]}/>
+                            ))}
+                        </div>
+                        <div className="project-features-row">
+                            {Array.from({ length: projectTechnologies.length }, (_, i) => (
+                                <TechnologyButton key={i} technology={projectTechnologies[i]}/>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -450,10 +450,10 @@
 }
 
 .project-container {
-    width: 750px;
+    width: 798px;
     max-width: 80%;
     height: fit-content;
-    min-height: 187.5px;
+    min-height: 286.8px;
     padding: 36px;
     border-style: none;
     border-radius: 20px;
@@ -500,7 +500,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 24px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -519,6 +519,20 @@
 
 .project-container-info .project-container-name {
     display: block;
+}
+
+.project-container-features {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: var(--standard-background);
+    padding: 32px;
+    border-radius: 16px;
 }
 
 .project-features-row {
@@ -625,10 +639,10 @@
     border-color: white transparent transparent transparent;
 }
 
-@media only screen and (max-width: 827.2px) {
+@media only screen and (max-width: 915px) {
     .project-container-header .project-container-name {
         display: block;
-        width: calc(100% - 112px); /*112px is based on width of logo and gap between header elements*/
+        width: calc(100% - 126px); /*126px is based on width of logo and gap between header elements*/
     }
 
     .project-container-info .project-container-name {
@@ -637,6 +651,7 @@
 
     .project-container-header {
         width: 100%;
+        padding-left: 12px;
     }
 
     .project-container-info {
