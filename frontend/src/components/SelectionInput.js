@@ -40,7 +40,7 @@ function SelectionInput({options, value, onChange}) {
                 <span>
                     {selection !== undefined ? selection[1] : "Select an Option"}
                 </span>
-                <RxCaretDown />
+                <RxCaretDown className={"selection-input-caret" + (displayOptions ? " rotated-selection-input-caret" : "")}/>
             </button>
             <div className={"selection-options-container" + (displayOptions ? " selection-options-container-displayed" : "")} ref={optionsRef}>
                 {Array.from({ length: options.length }, (_, i) => (

@@ -721,6 +721,18 @@
     justify-content: space-between;
 }
 
+.selection-input-caret {
+    transition: transform .20s ease-in-out;
+    -webkit-transition: transform .20s ease-in-out; /** Chrome; Safari **/
+    -ms-transition: transform .20s ease-in-out; /** Opera **/
+}
+
+.rotated-selection-input-caret {
+    -ms-transform: rotate(-180deg); /* IE 9 */
+    -webkit-transform: rotate(-180deg); /* Safari */
+    transform: rotate(-180deg);
+}
+
 .selection-options-container {
     position: absolute;
     visibility: hidden;
