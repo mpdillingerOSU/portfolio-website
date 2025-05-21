@@ -644,7 +644,7 @@
 }
 
 .sort-and-filters-section {
-    margin-top: 32px;
+    margin-top: 56px;
     width: 778px;
     max-width: 80vw;
     display: flex;
@@ -888,7 +888,7 @@ input:checked + .toggle:before {
     height: 2px;
     background-color: #7c7be2;
     opacity: .6;
-    margin: 32px 0 24px 0;
+    margin: 52px 0 32px 0;
 }
 
 .contact-header {
