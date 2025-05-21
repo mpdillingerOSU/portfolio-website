@@ -1140,9 +1140,10 @@ input:checked + .toggle:before {
     color: white;
     font-size: 48px;
     font-weight: 700;
+    text-align: start;
 }
 
-.project-page-quick-description {
+.project-page-abstract {
     color: white;
     font-size: 16px;
     font-style: italic;
@@ -1156,6 +1157,24 @@ input:checked + .toggle:before {
     margin-bottom: 40px;
     background-color: #7c7be2;
     opacity: .6;
+}
+
+@media only screen and (max-width: 650px) {
+    .project-page-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .project-page-header-text {
+        gap: 18px;
+    }
+
+    .project-page-title {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .subprojects-column {
