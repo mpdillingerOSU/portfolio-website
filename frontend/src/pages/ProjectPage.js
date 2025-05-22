@@ -25,6 +25,13 @@ function ProjectPage() {
         navigate("/projects");
     }
 
+    const toProject = (e, projectID) => {
+        e.preventDefault();
+        
+        navigate(`/projects/${projectID}`);
+        backToTop();
+    }
+
     return (
         <div id="project-page" className="page">
             <div className="project-page-header">
@@ -94,9 +101,9 @@ function ProjectPage() {
                             </div>
                             {Array.from({ length: project.relatedProjects.length }, (_, i) => (
                                 <span key={i}>
-                                    <a className="related-projects-link" href={`/projects/${project.relatedProjects[i]}`}>
+                                    <button className="related-projects-link" onClick={(e) => toProject(e, project.relatedProjects[i])}>
                                         {projectDict[project.relatedProjects[i]].name}
-                                    </a>
+                                    </button>
                                     {i < project.relatedProjects.length - 1 && (
                                         <span>, </span>
                                     )}
