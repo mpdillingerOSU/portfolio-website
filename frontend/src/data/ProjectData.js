@@ -47,7 +47,8 @@ export const projectDict = {
             "When first visiting the website, a user will be greeted by the Welcome page. On this page, the user is provided two options: they can either log in to the site using an existing account, or they can create a new account. Upon successfully logging in, the user will be redirected to the Portal page, which acts as the root of the platform’s ecosystem. On this page, the user has access to the My Games page via a button, where they can edit their own games. Below this, they can then see two rows of games. The Library row allows a user to play their own games, while the Discover row allows a user to play the games of other users.",
             "Let us assume that this prospective user will click on the My Games button, and land on the My Games page. Here, a user will see a list of their games, with each game displaying the game icon, the game name, the player count, the favorite count, a quick toggle for publishing/unpublishing their game, and a quick button to delete their game. At the top of the page is also a Create button, which will display an overlay for entering a name and selecting a template before continuing. Upon creating a new game or choosing to edit an existing one, the user will be redirected to the Workshop Page. On this page, the user is able to edit the details of the game, as well as the ruleset for the game. There are also options to publish/unpublish, delete, save, and view a preview of the Game Overview page from the perspective of other users. From here, a user can also select their cards, and either edit or delete them. If they choose to edit a card, they will be taken to the Edit Card page, where they can then edit the details specific to that game.",
             "Back on the Portal page, if a user selects a game from either the Library or Discover row, they will be redirected to the Game Overview page. Here, users can see all of the details of the game, the cards of the game, and also the ruleset (which has been generated in a prose style based on the attributes of the game itself). From here, they can select the Play button at the top of the screen, which will then take the user to the Play page. On this page, a user can select from three buttons: to battle, check out the game’s collection of cards, and to view the ruleset of the game. Once our hypothetical user has seen all of the cards in the game and checked out the ruleset, they will then choose to battle. On the Battle page, there are options for both Solo (single-player) and Versus (multiplayer) modes. As of right now, multiplayer is not yet available, so let us assume that the player chooses Solo. From here, the user can choose either a random match, or choose to play a campaign. However, similar to multiplayer, campaigns are also not yet available. As such, upon selecting a random match, a player will have a deck constructed for them, which uses basic procedural generation in order to ensure proper card type ratios and a single energy type. The user can then play against an AI opponent, until either they themself or the AI has zero life points remaining, or they have reached the maximum number of turns."
-        ]
+        ],
+        screenshots: []
     },
     "nl1gx1y68jxy5c8t3gu84wip": {
         index: 1,
@@ -83,7 +84,8 @@ export const projectDict = {
             "The game prototype for Celtic Tactics is focused exclusively on the tactics-based combat intended for the final product. It was crafted using the <rp>f0htbt1xaye2aebjv5bcizvf</rp> project - also included in this portfolio. In its current state, the graphics are very pixelated and simplistic, as the focus for this project is on the actual gameplay. The initial screen allows the player to choose whether or not to play against another player or against a CPU opponent, and then allows for the player(s) to choose their units. Afterwards, the actual combat begins.",
             "The gameplay takes place on a procedurally generated grid, which allows for the combat to take place on a unique map every single time. Each space can be either grass (a space that any unit can move onto), a stone wall (a space that no unit can move onto), or a chasm (a space that only certain units can move onto). Additionally, it's possible for a grass space to have a wooden box on top of it, and which can be moved or destroyed. Lastly, the procedural generation also ensures that there is always a path where units are able to reach each other - and thus can engage in combat.",
             "Combat is then based on 6v6 combat within this grid. However, each team may only have 3 combat units on the field at any given time. Once a unit is exhausted (upon losing all HP), then a different remaining unit in the troop may be placed onto the field to replace them. Additionally, a unit may be swapped out for another during that given unit's turn. Overall, combat takes place over a series of rounds. Each unit has a given priority - based on their stats - with a unit of higher priority going first in that round. During a unit's turn for that round, they have a given amount of movement points (which allow them to move around the grid) and action points (which allow them to use combat moves). Rounds then continue to progress until either - or both - parties have no units remaining."
-        ]
+        ],
+        screenshots: []
     },
     "porhch2bbmoqk2c7wklzjmw3": {
         index: 2,
@@ -115,7 +117,8 @@ export const projectDict = {
             "Pokemon Trading Card Game Pocket is a mobile video game centered around collecting and battling using trading cards that represent monsters, trainers, and more within the Pokemon universe. Due to the nature of this game, most users will attempt to collect all of the cards that the game has to offer. However, for games of this style, there is a consistent trend: new cards are initially easy to obtain, but become harder and harder to obtain as you obtain more of them. This is simply due to the fact that you are more likely to obtain duplicates as you open more packs, and less likely to obtain new cards. This means that your rate of obtaining new cards is not linear, but rather polynomial. Add in the use of other systems to obtain cards other than packs (i.e., Pack Points, Wonder Picks, and trading), and it becomes much more difficult to determine the range of standard expectation for obtaining all of the cards in any given expansion.",
             "As such, I created a simulator to help determine the standard range of expectation for obtaining all cards within any given expansion - with all current expansions available to be simulated. The simulator allows you to run individual simulations that only use only packs, but also allows you to opt into using optimized strategies for both Pack Points and Wonder Picks within the simulations, as well. The user may also select how many individual simulations to run for a given set. Once a set of simulations has completed running, the user is provided data for the 5th, 50th, and 95th percentiles for obtaining all cards of each rarity, as well as the same 5th, 50th, and 95th percentiles for obtaining a given percentage of a collection (done in increments of 10%). These percentiles are each represented as packs having been opened, as this is the base means of obtaining cards, while Pack Points and Wonder Picks are meant as assistive means. As with any simulator, there is bound to be slight deviations from one set of simulations to another. However, at 100,000 simulations per set, those deviations are within 1 pack of each other. As such, the results of these simulations are very consistent between individually ran sets.",
             "Overall, the results obtained from these simulations are helpful both from a end user perspective, and from a business perspective. For the user, it helps to understand just how obtainable the cards within the game are, and thus helps to set realistic expectations based on a player's monetary category (free-to-play, Premium Pass-only, dolphin, whale, etc.). Conversely, from a business perspective, such simulations are important to determine where the sweet spot is for balancing enjoyment of the users with profitability - and thus ensuring user retention. Each of these can thus relate to the ethics of the game, and are discussed more fully in the <rp>gfj838t22dfhct3ynbcraenu</rp> project, where I analyzed the results of the simulations."
-        ]
+        ],
+        screenshots: []
     },
     "iri9r76qdpfi0iqmywcr8308": {
         index: 3,
@@ -150,7 +153,8 @@ export const projectDict = {
             "Getting further into the details, it must be understood that in order to create a range, the expected order of elements must be understood. This is because a range truly only has start and end points, and does not store the values in between. As such, there are Orderable and Oderator classes to help with this, which allow a user to create a custom set of rules of ordering for their own classes. However, this would be quite frustrating to do with primitive data types, such as integers. As such, there are static factory methods that help to construct ranges for the wrapper classes of primitive data types - as well as for enums. By doing so, a user only has to call the factory method and provide start and end points for the range, without having to create or provide their own Orderator. However, as previously alluded to, creating instances of the Orderator interface will allow you to also use any custom classes within ranges, as well.",
             "As with other data structures, this library allows us to determine the size of the range, the index that a value would be within a range, whether the range contains a specific value, and many more. Additionally, both single and multi-ranges are iterable via the Java standard library Iterable interface. However, more range-specific methods are also included, such as unions and intersections, along with other various methods such as creating splices of ranges before and after certain values.",
             "A great example of the use of this library is the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> project - also found within this portfolio - which uses procedural generation in order to create character descriptions. Due to the extensive amount of factors used for the procedural generation within the project, dozens of ranges had to be used - thus, helping to save an extensive amount of time, and significantly reducing repeated code."
-        ]
+        ],
+        screenshots: []
     },
     "ku907nk45s6af8u00z3jnsdm": {
         index: 4,
@@ -183,7 +187,8 @@ export const projectDict = {
         description: [
             "The Koala Toolkit is a stand-alone mobile app designed using the Flutter development platform, and is intended to help in the creation of characters and their movesets in video games. To do this, it attempts to solve two problems within one app. The first is that it removes the need for extensive spreadsheets, which are heavily used by game studios in order to store and collaborate on information. However, as these spreadsheets grow, they can often become hard to navigate. The Koala Toolkit fixes this issue by allowing the data to easily be editable and maintainable through the app, and scaling to your needs. The second problem is that it is often very hard to switch from one coding language to another after starting the process of coding a game. As such, the Koala Toolkit auto-generates the code for the user in their programming language of choice. So, even if other parts outside of character creation still need to be rewritten, the core code for characters is just a few clicks away.",
             "Upon using the app, a user must first create a project - either as an empty template, or based on one of the pre-made templates (high fantasy, sci-fi, western, etc.). This project will then hold together all related characters and movesets. Inside of each project, users are then able to create combat moves, such as attacks or support moves. They are given a variety of ways in which they can customize the moves, as well as being capable of adding a description. Additionally, users are also able to create characters, who can be given their own attributes and descriptions, along with any combat moves that have already been created within the project. Finally, as necessary, users may be able to download the project - or, if needed, only part of the project - in a variety of formats. These include both spreadsheets and JSON files, as well as code files in a variety of languages - such as C#, Python, Java, and Dart."
-        ]
+        ],
+        screenshots: []
     },
     "mx02wdoi7vxbvy75t2kk39h1": {
         index: 5,
@@ -218,7 +223,8 @@ export const projectDict = {
             "With this in mind, Blocker Breaker is a library that has positioned itself as an assistive tool for procedurally generating character descriptions - whether entire or partial, as determined by the user. As such, the user can quickly create character descriptions to be used within a variety of products. The use of Java as the language of choice for the project was also two-pronged. The first was to create compability with a Spring-based backend for web apps, while the second made it compatible with my personally-crafted Java Game Engine - which can also be found in this portfolio. As such, it helped place itself within the larger project ecosystem that I have already started to create.",
             "Overall, there are two main categories of products that could benefit from the use of this library. The first category are those products that can assist users with breaking through writer's block. Writer's block - and, in extension, creator's block - is all too common an occurence. It doesn't matter if you are a novelist, screenwriter, game designer, or dungeon master - there is always going to be a time where you get stumped. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description. As such, this product can help users with a variety fo related tasks. In fact, this attempt at assisting with breaking through writer's block is the use case of the <rp>9i90jyxh4g69r9hdpn3izurz</rp> that is also located in this portfolio.",
             "The second main category for use of this library is also its greatest advantage over generative AI. This is because, unlike generative AI, procedural generation can be used within video games and other interactive programs, and thus allow for high-quality emergent experiences. This advantage is extremely important in such a sphere, because emergent experiences adapt their generation to the actions of the user. As such, the node system of information used by the library allows one to prune and grow characters depending on those actions - all the while ensuring consistency and avoiding accidental erasure of details."
-        ]
+        ],
+        screenshots: []
     },
     "f0htbt1xaye2aebjv5bcizvf": {
         index: 6,
@@ -252,7 +258,8 @@ export const projectDict = {
             "As such, this project represents a strong example of attempting to understand the game logic that occurs deep behind the scenes of video games, and to then emulate this same logic when crafting the engine. It's a knowledge and understanding that would simply not be possible by only using a readily available game engine, such as Unreal, Unity, or Godot. As such, my own knowledge of video games was greatly strengthened due to working at the very base of video game production.",
             "The game engine itself is intended to be downloaded as a library, or used as module that the game is dependent upon. As it currently stands, the development of the engine is still in the earlier stages. However, as previously mentioned, there is still a large amount of depth currently within the project - with everything being built from the ground up. The interactions take place in Theatres, where the objects placed into them are divided into being either GameObjects or UIObjects - with GameObjects being placed directly into the Theatres themselves, while the UIObjects are overlaid onto the screen. In fact, this separation of GameObject and UIObject objects also makes it much easier to also use the engine purely for its UI elements, such as building an app - with much of the UI design being based on the principles of web design itself.",
             "As an extra aside, it should be noted that the <rp>nl1gx1y68jxy5c8t3gu84wip</rp> project within this portfolio was actually built using this game engine - which, although low in fidelity, has a high level of depth in regards to combat move type, movement types, destruction of the environment, and much more."
-        ]
+        ],
+        screenshots: []
     },
     "c91f92cj77yo7nv5t5vyg761":{
         index: 7,
@@ -294,7 +301,8 @@ export const projectDict = {
             "Below this Get Started section is an Information section. There are a couple of visual dividers here to also break up the visual monotony between the Get Started and Information sections, and to make a clear visual distinction between them - a darkening of the background, along with an actual decorative divider. This Information section then presents three main ideas, each with a header, descriptive text, images, and a hypothetical link to a page related to the idea. At the end of the Information section are the same visual dividers as at the top of the section, which is then followed by the Features section.",
             "This Features section then provides a glimpse for the user to the most important features of the web platform, displayed in a grid. In order to keep a simplified look, only the icon for each feature has a distinct background color behind it. However, hovering over the specific feature has the entire feature become more visually distinct. This provides both a small level of dynamicism for the user, and increased visual focus for each feature.",
             "Finally, at the end of the page is a footer. This provides links to many of the pages, similar to the dropdown menus in the navigation bar - along with additional links. They are categorized, but the links are visual distinct from the category headers by the headers being in all uppercase and the links being slightly darker. Also in this footer are icon buttons that link to social media pages, and a select element in order to change the language of the app."
-        ]
+        ],
+        screenshots: []
     },
     "ecs7ospx0apqw3zkv8mzvoag": {
         index: 8,
@@ -334,7 +342,8 @@ export const projectDict = {
             "At the top of the landing page is also a navigation bar, with buttons that hypothetically link to other pages. Each of these links will glow green when hovered over - with the color green being chosen due to the Celtic aesthetic. Additionally, the game's logo is placed at the center of the navigation bar in order to center the game's imagery. Finally, the background color of the navigation bar is partially transparent, which allows for part of the main image to still be seen behind it - and thus fulfilling the visual effect of the main image taking up the entire screen. If one has not yet scrolled, they will also notice a different bar at the bottom of the screen, which provides buttons that link to various purchase options for the game. Similar to the navigation bar, the background color is partially transparent, and its button options also glow green when hovered over in order to maintain the same aesthetic throughout.",
             "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
             "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
-        ]
+        ],
+        screenshots: []
     },
     "gfj838t22dfhct3ynbcraenu": {
         index: 9,
@@ -372,7 +381,8 @@ export const projectDict = {
         description: [
             "The simulator analysis website provides an analysis of the ethics related to the gatcha mechanics of the Pokemon Trading Card Game Pocket mobile game. The data analyzed was obtained from the simulations ran by the <rp>porhch2bbmoqk2c7wklzjmw3</rp> program - a project also in this portfolio. As such, it serves as a means for determining my ability to analyze data generated by simulators. In particular, the analysis attempts to frame the analysis as a report from a business perspective, and as a means to determine how ethical the gatcha practices are - a heavy correlative for user retention.",
             "The website itself is rather simple, and more or less has the appearance of a report. However, UI/UX and frontend skills were demonstrated in how the data from the results of the simulations were presented. It uses both a tab and checkbox system, allowing a user to seamlessly shift between the many various results and graphs - all while ensuring that the user is not overloaded by too much data all at once."
-        ]
+        ],
+        screenshots: []
     },
     "9i90jyxh4g69r9hdpn3izurz": {
         index: 10,
@@ -410,7 +420,8 @@ export const projectDict = {
         ],
         description: [
             "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> library - a project which can also be found inside of this portfolio. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
-        ]
+        ],
+        screenshots: []
     },
     "tqiwpjt0oof5o4cm9lcewomi":{
         index: 11,
@@ -449,7 +460,8 @@ export const projectDict = {
             "When visiting the projects page via the associated navigation bar button, you will then notice an increase in complexity - with various text, colors, and icons used throughout. This is because each project has a container that contains an overview of the features and characteristics for the given project, as it is important for others to be able to quickly distinguish between these features and characteristics. However, even with that said, an attempt at simplicity is still readily recognizable on this page. For example, each language and technology used by a project is still only represented by a white icon inside of a container that has a color associated with that feature. Those who know the feature will thus be able to quickly recognize it, without being overloaded by text. Additionally, for those who do not recognize the icons, hovering over the icon does create a popup to display the name of the associated feature. A similar attempt at icons was also made regarding the skills used for a given project. However, the lack of universal symbols for most of these would have created issues - and could have also possibly created an icon overload itself - so simplified naming conventions were used, instead. Other than that, the only text found inside of each project container is the title of the project itself. Finally, at the very top of page, the user is presented with a means for sorting and filtering through projects.",
             "If one were to then click on either a featured project from the landing page or a project container from the projects page, you would then be taken to the individual project page for that specific project - with each project having a specific ID that can be found in its URL. Once here, you will notice many of the same details that have already been noted beforehand, with the project title, logo, skills, languages, and technologies all being present - though accompanied by headers. However, in addition to these previous details, there is also an abstract for each project, links to both GitHub repositories and live versions of each project, and a description of the project (such as the one that you have been reading). Each description is then provided as a means for breaking down the most important elements of each project, while also providing some insight into my own thoughts and design process. In the top-left corner of each page is then a button to quickly return to the projects page - even if having come from the landing page, direct link, or otherwise.",
             "The last two pages are then quite simple. The about page provides a quick blurb about my work ethos and background, while also listing all relevant languages and technologies that I am adept at using. As with the other pages, there is an attempt at simplicity. However, because the emphasis is now specifically on my skillset, each language and technology is shown via a larger and more complete logo. Finally, the contact page allows for an easy means of contacting me via a simple message form directly built into the website itself. That being said, if the information is incomplete - or an email is formatted incorrectly - then error messages that have been individualized for each input field will appear upon clicking the submit button. However, in order to maintain the simplified and unassuming aesthetic of the website, the overall appearance of the color red was minimized for warnings, by only having it shown on the left border of the errored field, along with the small red warning icon. Lastly, the submit button was designed in a simple - yet dynamic - manner, by having its underlined appearance shift to a complete background upon hovering over the button."
-        ]
+        ],
+        screenshots: []
     },
     "h38lrj52215uz4fyx813yfzk": {
         index: 12,
@@ -481,7 +493,8 @@ export const projectDict = {
             "VS Code",
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "j6yd609g44vvektcqcs5d53z": {
         index: 13,
@@ -509,7 +522,8 @@ export const projectDict = {
             "VS",
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "b9pelpnv77mnuaxhsfjw2vhd": {
         index: 14,
@@ -543,7 +557,8 @@ export const projectDict = {
         description: [
             "FieldSense is a node-based system that allows for objects to not only understand their environment from a spatial perspective, but also from a contextual and descriptive perspective. In essence, this would mean that not only could the A.I. in the game manuever around the environment from Point A to Point B, but that they could essentially describe the environment around themselves as they pass from Point A to Point B. A bard could know that the leaves of the tree are red, or that the grass is wet, and sing a fabulous tale about the actual journey in detail. It could sense that a bird is chirping, or a squirrel is eating. While a relatively small subset of games fudge the previous examples as cute points of interaction within given locations, the fact that they only occur in these set locations makes them static, rather than dynamic. You can only do it at precise locations, and the types of relationships to the possible interaction are also static. It is because of this static nature that it would be impossible to dynamically create a scavenger hunt for players to do. Scavenger hunts are about riddles. To make a riddle for an environment, there needs to be a system that can intelligently describe not only objects, but how they relate to the other objects around them. In fact, if you want any procedurally-generated task or quest to feel authentic, then the environment must be authentically understood. Introducing FieldSence.",
             "This is done by establishing each object defined within the FieldSense system as being a node, and then establishing parameters by which they can be described. This is especially helpful for procedurally generating descriptions of an environment in a more dynamic. In fact, other systems that procedurally generate maps either focus on the spatial perspective (i.e., the most simple versions being mazes), or reduce themselves to very general static concepts which state that people live in a given constructed town and a cave was built specifically because we want a quest to be built there. However, outside of these static parameters defined by the algorithm that generated the actual map, there lacks a system that allows for either the world to be dynamically described, or for dynamic creation of tasks or quests who creation are based solely on the nodes of the objects/characters in the gameworld, rather than a static script of required quests.but also generate nodes that provide details for describing specific locations relative to others… this provides for storytelling elements, treasure hunts, etc."
-        ] 
+        ],
+        screenshots: []
     },
     "ecg616r9zadf9qawliaohbls": {
         index: 15,
@@ -573,7 +588,8 @@ export const projectDict = {
             "Flutter",
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "gg7xgw4e1d46ogeanl1gx1y6": {
         index: 16,
@@ -603,7 +619,8 @@ export const projectDict = {
             "Flutter",
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "8jxy5c8t3gu84wipporhch2b": {
         index: 17,
@@ -624,7 +641,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "bmoqk2c7wklzjmw3iri9r76q": {
         index: 18,
@@ -650,7 +668,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "dpfi0iqmywcr8308ku907nk4": {
         index: 19,
@@ -673,7 +692,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "5s6af8u00z3jnsdmmx02wdoi": {
         index: 20,
@@ -696,7 +716,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "7vxbvy75t2kk39h1f0htbt1x": {
         index: 21,
@@ -719,7 +740,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "aye2aebjv5bcizvfh38lrj52": {
         index: 22,
@@ -740,7 +762,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     },
     "215uz4fyx813yfzkj6yd609g": {
         index: 23,
@@ -761,7 +784,8 @@ export const projectDict = {
         technologies: [
             "Git"
         ],
-        description: []
+        description: [],
+        screenshots: []
     }
 };
 
