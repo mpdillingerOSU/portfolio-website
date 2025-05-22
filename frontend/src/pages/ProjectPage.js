@@ -32,6 +32,50 @@ function ProjectPage() {
         backToTop();
     }
 
+    const generateParagraph = (project, i) => {
+        const arr = [];
+        let start = 0;
+        let end = start;
+        let isParsingRelatedProject = false;
+        for(; end < project.description[i].length;){
+            if(isParsingRelatedProject){
+                if(project.description[i].slice(end, end + 5) === "</rp>"){
+                    const relatedProjectID = project.description[i].slice(start, end);
+                    arr.push(
+                        <button className="related-projects-link" onClick={(e) => toProject(e, relatedProjectID)}>
+                            {projectDict[relatedProjectID].name}
+                        </button>
+                    );
+                    isParsingRelatedProject = false;
+                    end += 5;
+                    start = end;
+                } else {
+                    end++;
+                }  
+            } else if(project.description[i].slice(end, end + 4) === "<rp>"){
+                if(start !== end){
+                    arr.push(<span>{project.description[i].slice(start, end)}</span>);
+                }
+
+                isParsingRelatedProject = true;
+                end += 4;
+                start = end;
+            } else {
+                end++;
+            }
+        }
+
+        if(start < project.description[i].length){
+            arr.push(<span>{project.description[i].slice(start, end)}</span>);
+        }
+
+        return <div key={i} className="project-page-description-paragraph">
+            {Array.from({ length: arr.length }, (_, j) => (
+                <span key={j}>{arr[j]}</span>
+            ))}
+        </div>
+    }
+
     return (
         <div id="project-page" className="page">
             <div className="project-page-header">
@@ -118,9 +162,7 @@ function ProjectPage() {
                     </div>
                     <div className="project-page-description-text">
                         {Array.from({ length: project.description.length }, (_, i) => (
-                            <div key={i} className="project-page-description-paragraph">
-                                {project.description[i]}
-                            </div>
+                            generateParagraph(project, i)
                         ))}
                     </div>
                 </div>
