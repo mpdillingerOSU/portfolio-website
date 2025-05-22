@@ -131,7 +131,8 @@ export const projectDict = {
             "mx02wdoi7vxbvy75t2kk39h1"
         ],
         skills: [
-            "Data Structure Development"
+            "Data Structure Development",
+            "Custom Libraries"
         ],
         languages: [
             "Java"
@@ -197,7 +198,8 @@ export const projectDict = {
             "iri9r76qdpfi0iqmywcr8308"
         ],
         skills: [
-            "Procedural Generation"
+            "Procedural Generation",
+            "Custom Libraries"
         ],
         languages: [
             "Java"
@@ -517,6 +519,7 @@ export const projectDict = {
         relatedProjects: [],
         skills: [
             "Dev Tool Development",
+            "Custom Libraries",
             "Game Development",
             "Procedural Generation",
             "UI/UX Design"
@@ -650,7 +653,9 @@ export const projectDict = {
             ["GitHub", ""]
         ],
         relatedProjects: [],
-        skills: [],
+        skills: [
+            "Custom Libraries"
+        ],
         languages: [],
         technologies: [
             "Git"
@@ -670,7 +675,9 @@ export const projectDict = {
             ["GitHub", ""]
         ],
         relatedProjects: [],
-        skills: [],
+        skills: [
+            "Custom Libraries"
+        ],
         languages: [],
         technologies: [
             "Git"
@@ -681,16 +688,18 @@ export const projectDict = {
         index: 21,
         projectID: "7vxbvy75t2kk39h1f0htbt1x",
         public: false,
-        name: "Dialogue Tree Package",
+        name: "Dialogue Tree Library",
         logo: "",
-        logoAlt: "dialogue tree package",
+        logoAlt: "dialogue tree library",
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
             ["GitHub", ""]
         ],
         relatedProjects: [],
-        skills: [],
+        skills: [
+            "Custom Libraries"
+        ],
         languages: [],
         technologies: [
             "Git"
