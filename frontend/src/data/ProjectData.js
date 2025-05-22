@@ -101,15 +101,17 @@ export const projectDict = {
         name: "PTCGP Simulator",
         logo: require("../images/ptcgp-sim-logo.png"),
         logoAlt: "pokemon trading card game simulator",
-        abstract: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. In addition to this, a website was also created in order to share and analyze the data that was obtained from these simulations. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
+        abstract: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. It does so by allowing the user to control various factors: the specific expansion to be simulated, the number of simulations to be made for a given set, whether or not to use Pack Points, and whether or not to use Wonder Picks. Upon completion of a set of simulations, the user is then able to see results as it relates to the completion milestones for the specified expansion.",
         subprojects: [
             {
-                name: "Simulator",
+                name: "",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator"]
                 ],
-                relatedProjects: [],
+                relatedProjects: [
+                    "gfj838t22dfhct3ynbcraenu"
+                ],
                 skills: [
                     "Simulators"
                 ],
@@ -124,36 +126,6 @@ export const projectDict = {
                     "Pokemon Trading Card Game Pocket is a mobile video game centered around collecting and battling using trading cards that represent monsters, trainers, and more within the Pokemon universe. Due to the nature of this game, most users will attempt to collect all of the cards that the game has to offer. However, for games of this style, there is a consistent trend: new cards are initially easy to obtain, but become harder and harder to obtain as you obtain more of them. This is simply due to the fact that you are more likely to obtain duplicates as you open more packs, and less likely to obtain new cards. This means that your rate of obtaining new cards is not linear, but rather polynomial. Add in the use of other systems to obtain cards other than packs (i.e., Pack Points, Wonder Picks, and trading), and it becomes much more difficult to determine the range of standard expectation for obtaining all of the cards in any given expansion.",
                     "As such, I created a simulator to help determine the standard range of expectation for obtaining all cards within any given expansion - with all current expansions available to be simulated. The simulator allows you to run individual simulations that only use only packs, but also allows you to opt into using optimized strategies for both Pack Points and Wonder Picks within the simulations, as well. The user may also select how many individual simulations to run for a given set. Once a set of simulations has completed running, the user is provided data for the 5th, 50th, and 95th percentiles for obtaining all cards of each rarity, as well as the same 5th, 50th, and 95th percentiles for obtaining a given percentage of a collection (done in increments of 10%). These percentiles are each represented as packs having been opened, as this is the base means of obtaining cards, while Pack Points and Wonder Picks are meant as assistive means. As with any simulator, there is bound to be slight deviations from one set of simulations to another. However, at 100,000 simulations per set, those deviations are within 1 pack of each other. As such, the results of these simulations are very consistent between individually ran sets.",
                     "Overall, the results obtained from these simulations are helpful both from a end user perspective, and from a business perspective. For the user, it helps to understand just how obtainable the cards within the game are, and thus helps to set realistic expectations based on a player's monetary category (free-to-play, Premium Pass-only, dolphin, whale, etc.). Conversely, from a business perspective, such simulations are important to determine where the sweet spot is for balancing enjoyment of the users with profitability - and thus ensuring user retention. Each of these can thus relate to the ethics of the game, and are discussed more fully in the website project below, where I analyzed the results of the simulations."
-                ]
-            },
-            {
-                name: "Simulator Analysis Website",
-                version: "v0.0.0-alpha",
-                urls: [
-                    ["Live Demo", ""],
-                    ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
-                ],
-                relatedProjects: [],
-                skills: [
-                    "Simulator Analysis",
-                    "UI/UX Design",
-                    "Web Development",
-                    "Frontend"
-                ],
-                languages: [
-                    "HTML",
-                    "CSS",
-                    "Javascript"
-                ],
-                technologies: [
-                    "React",
-                    "Next.js",
-                    "VS Code",
-                    "Git"
-                ],
-                description: [
-                    "The simulator analysis website provides an analysis of the ethics related to the gatcha mechanics of the Pokemon Trading Card Game Pocket mobile game. The data analyzed was obtained from the simulations ran by the PTCGP Simulator program - a project also in this portfolio. As such, it serves as a means for determining my ability to analyze data generated by simulators. In particular, the analysis attempts to frame the analysis as a report from a business perspective, and as a means to determine how ethical the gatcha practices are - a heavy correlative for user retention.",
-                    "The website itself is rather simple, and more or less has the appearance of a report. However, UI/UX and frontend skills were demonstrated in how the data from the results of the simulations were presented. It uses both a tab and checkbox system, allowing a user to seamlessly shift between the many various results and graphs - all while ensuring that the user is not overloaded by too much data all at once."
                 ]
             }
         ]
@@ -428,6 +400,49 @@ export const projectDict = {
                     "At the top of the landing page is also a navigation bar, with buttons that hypothetically link to other pages. Each of these links will glow green when hovered over - with the color green being chosen due to the Celtic aesthetic. Additionally, the game's logo is placed at the center of the navigation bar in order to center the game's imagery. Finally, the background color of the navigation bar is partially transparent, which allows for part of the main image to still be seen behind it - and thus fulfilling the visual effect of the main image taking up the entire screen. If one has not yet scrolled, they will also notice a different bar at the bottom of the screen, which provides buttons that link to various purchase options for the game. Similar to the navigation bar, the background color is partially transparent, and its button options also glow green when hovered over in order to maintain the same aesthetic throughout.",
                     "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
                     "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
+                ]
+            }
+        ]
+    },
+    "gfj838t22dfhct3ynbcraenu": {
+        index: 9,
+        projectID: "gfj838t22dfhct3ynbcraenu",
+        public: true,
+        name: "PTCGP Simulator - Analysis Website",
+        logo: require("../images/ptcgp-sim-logo.png"),
+        logoAlt: "pokemon trading card game simulator analysis website",
+        abstract: "The Analysis Website for the PTCGP Simulator project was created in order to share and analyze the data that was obtained from the simulations for the PTCGP Simulator - which can also be found in this portfolio. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
+        subprojects: [
+            {
+                name: "",
+                version: "v0.0.0-alpha",
+                urls: [
+                    ["Live Demo", ""],
+                    ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
+                ],
+                relatedProjects: [
+                    "porhch2bbmoqk2c7wklzjmw3"
+                ],
+                skills: [
+                    "Simulator Analysis",
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend"
+                ],
+                languages: [
+                    "HTML",
+                    "CSS",
+                    "Javascript"
+                ],
+                technologies: [
+                    "React",
+                    "Next.js",
+                    "VS Code",
+                    "Git"
+                ],
+                description: [
+                    "The simulator analysis website provides an analysis of the ethics related to the gatcha mechanics of the Pokemon Trading Card Game Pocket mobile game. The data analyzed was obtained from the simulations ran by the PTCGP Simulator program - a project also in this portfolio. As such, it serves as a means for determining my ability to analyze data generated by simulators. In particular, the analysis attempts to frame the analysis as a report from a business perspective, and as a means to determine how ethical the gatcha practices are - a heavy correlative for user retention.",
+                    "The website itself is rather simple, and more or less has the appearance of a report. However, UI/UX and frontend skills were demonstrated in how the data from the results of the simulations were presented. It uses both a tab and checkbox system, allowing a user to seamlessly shift between the many various results and graphs - all while ensuring that the user is not overloaded by too much data all at once."
                 ]
             }
         ]
