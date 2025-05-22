@@ -99,12 +99,12 @@ function ProjectPage() {
                                     </div>
                                     {Array.from({ length: project.subprojects[i].relatedProjects.length }, (_, j) => (
                                         <span key={j}>
-                                            {j > 0 && (
-                                                <span>, </span>
-                                            )}
                                             <a className="related-projects-link" href={`/projects/${project.subprojects[i].relatedProjects[j]}`}>
                                                 {projectDict[project.subprojects[i].relatedProjects[j]].name}
                                             </a>
+                                            {j < project.subprojects[i].relatedProjects.length - 1 && (
+                                                <span>, </span>
+                                            )}
                                         </span>
                                     ))}
                                 </div>
