@@ -44,9 +44,6 @@ function ProjectPage() {
             <div className="subprojects-column">
                 {Array.from({ length: project.subprojects.length }, (_, i) => (
                     <div key={i} className="subproject-section">
-                        <div className="subproject-header">
-                            {project.subprojects[i].name}
-                        </div>
                         <div className="subproject-overview">
                             <div className="subproject-details">
                                 <div className="subproject-details-lead-text">

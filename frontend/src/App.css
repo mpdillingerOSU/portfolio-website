@@ -1311,12 +1311,6 @@ input:checked + .toggle:before {
     width: 100%;
 }
 
-.subproject-header {
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
-}
-
 .subproject-overview {
     margin-top: 8px;
     display: flex;
