@@ -2,6 +2,7 @@
     --standard-background: #17191b;
     --dark-emboss: #1a2038;
     --purple-accent: #607DFF;
+    --link-color: #879dff;
     --red-warning: #EF2929;
     --page-background: linear-gradient(to bottom, #17191b 55%, rgb(10, 5, 67));
     --featured-project-transition: all 0.15s linear;
@@ -1355,14 +1356,14 @@ input:checked + .toggle:before {
 }
 
 .project-page-url-link {
-    color: white;
+    color: var(--link-color);
     font-size: 16px;
 }
 
 .related-projects-link {
     padding: 0;
     margin: 0;
-    color: white;
+    color: var(--link-color);
     font-size: 16px;
     text-decoration: underline;
     background-color: transparent;
