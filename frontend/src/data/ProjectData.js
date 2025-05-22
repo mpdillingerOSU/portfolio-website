@@ -212,15 +212,16 @@ export const projectDict = {
         name: "Block Breaker",
         logo: require("../images/block-breaker-logo.png"),
         logoAlt: "block breaker",
-        abstract: "Block Breaker is a library that procedurally generates character descriptions. As such, it has two major use cases. The first is the ability to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. The second major use case is the ability to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
+        abstract: "Block Breaker is a library that procedurally generates character descriptions, and maintains the information via a node tree - which then allows for changes to be made and properly adapted to. As such, it has two major use cases. The first is the ability to make use of the character generation itself in order to create character sheets. As such, one can generate multiple characters that fit within the specified restrictions, and then use these for creative purposes. However, the second - and more important - use case is the ability for the library to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         subprojects: [
             {
-                name: "Program Library",
+                name: "",
                 version: "v0.0.0-alpha",
                 urls: [
                     ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
                 ],
                 relatedProjects: [
+                    "9i90jyxh4g69r9hdpn3izurz",
                     "iri9r76qdpfi0iqmywcr8308"
                 ],
                 skills: [
@@ -238,38 +239,6 @@ export const projectDict = {
                     "With this in mind, Blocker Breaker is a library that has positioned itself as an assistive tool for procedurally generating character descriptions - whether entire or partial, as determined by the user. As such, the user can quickly create character descriptions to be used within a variety of products. The use of Java as the language of choice for the project was also two-pronged. The first was to create compability with a Spring-based backend for web apps, while the second made it compatible with my personally-crafted Java Game Engine - which can also be found in this portfolio. As such, it helped place itself within the larger project ecosystem that I have already started to create.",
                     "Overall, there are two main categories of products that could benefit from the use of this library. The first category are those products that can assist users with breaking through writer's block. Writer's block - and, in extension, creator's block - is all too common an occurence. It doesn't matter if you are a novelist, screenwriter, game designer, or dungeon master - there is always going to be a time where you get stumped. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description. As such, this product can help users with a variety fo related tasks. In fact, this attempt at assisting with breaking through writer's block is the use case of the live demo of this product used in the portfolio (linked in the subproject below).",
                     "The second main category for use of this library is also its greatest advantage over generative AI. This is because, unlike generative AI, procedural generation can be used within video games and other interactive programs, and thus allow for high-quality emergent experiences. This advantage is extremely important in such a sphere, because emergent experiences adapt their generation to the actions of the user. As such, the node system of information used by the library allows one to prune and grow characters depending on those actions - all the while ensuring consistency and avoiding accidental erasure of details."
-                ]
-            },
-            {
-                name: "Character Generator Website",
-                version: "v0.0.0-alpha",
-                urls: [
-                    ["Live Demo", ""],
-                    ["GitHub", ""]
-                ],
-                relatedProjects: [],
-                skills: [
-                    "UI/UX Design",
-                    "Web Development",
-                    "Frontend",
-                    "Backend",
-                    "Fullstack"
-                ],
-                languages: [
-                    "HTML",
-                    "CSS",
-                    "Javascript",
-                    "Java"
-                ],
-                technologies: [
-                    "React",
-                    "Next.js",
-                    "Spring",
-                    "VS Code",
-                    "Git"
-                ],
-                description: [
-                    "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the Block Breaker library. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
                 ]
             }
         ],
@@ -446,6 +415,49 @@ export const projectDict = {
                 ]
             }
         ]
+    },
+    "9i90jyxh4g69r9hdpn3izurz": {
+        index: 10,
+        projectID: "9i90jyxh4g69r9hdpn3izurz",
+        public: true,
+        name: "Character Generator Website",
+        logo: require("../images/block-breaker-logo.png"),
+        logoAlt: "character generator website",
+        abstract: "The Character Generator Website is a project intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. It does so by using the Block Breaker library - also found in this portfolio - in order to generate those descriptions on the backend.",
+        subprojects: [
+            {
+                name: "",
+                version: "v0.0.0-alpha",
+                urls: [
+                    ["Live Demo", ""],
+                    ["GitHub", ""]
+                ],
+                relatedProjects: [],
+                skills: [
+                    "UI/UX Design",
+                    "Web Development",
+                    "Frontend",
+                    "Backend",
+                    "Fullstack"
+                ],
+                languages: [
+                    "HTML",
+                    "CSS",
+                    "Javascript",
+                    "Java"
+                ],
+                technologies: [
+                    "React",
+                    "Next.js",
+                    "Spring",
+                    "VS Code",
+                    "Git"
+                ],
+                description: [
+                    "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the Block Breaker library. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
+                ]
+            }
+        ],
     },
     "tqiwpjt0oof5o4cm9lcewomi":{
         index: 11,
