@@ -59,6 +59,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [
@@ -94,6 +95,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. It does so by allowing the user to control various factors: the specific expansion to be simulated, the number of simulations to be made for a given set, whether or not to use Pack Points, and whether or not to use Wonder Picks. Upon completion of a set of simulations, the user is then able to see results as it relates to the completion milestones for the specified expansion.",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator"]
         ],
         relatedProjects: [
@@ -125,6 +127,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
         ],
         relatedProjects: [
@@ -159,6 +162,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a spreadsheet, JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
         urls: [
+            ["App Store", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/koala-toolkit"]
         ],
         relatedProjects: [],
@@ -191,6 +195,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Block Breaker is a library that procedurally generates character descriptions, and maintains the information via a node tree - which then allows for changes to be made and properly adapted to. As such, it has two major use cases. The first is the ability to make use of the character generation itself in order to create character sheets. As such, one can generate multiple characters that fit within the specified restrictions, and then use these for creative purposes. However, the second - and more important - use case is the ability for the library to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
         ],
         relatedProjects: [
@@ -225,6 +230,7 @@ export const projectDict = {
         version: "v0.3.1-alpha",
         abstract: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games to be run locally on a device.",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/koala-engine"]
         ],
         relatedProjects: [
@@ -487,6 +493,7 @@ export const projectDict = {
         version: "v0.1.8-alpha",
         abstract: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
         urls: [
+            ["Live Demo", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -514,6 +521,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["Live Demo", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -547,6 +555,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["App Store", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -576,6 +585,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["App Store", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -605,6 +615,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Smizer is a smooth resizing tool for pixel art. Smooth + resizer = Smizer. My drawing app idea where we can make quality resizing of smaller pixel art images",
         urls: [
+            ["Live Demo", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -625,6 +636,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Takes food, and randomly generated a different version of it using procedural generation... So, you want beef tacos, but with Indian flavors... can even be used to also say you want a certain food but in less time... then this may be able to do that...",
         urls: [
+            ["App Store", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -650,6 +662,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -672,6 +685,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -694,6 +708,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -716,6 +731,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["Direct Download", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
@@ -736,6 +752,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
+            ["Live Demo", ""],
             ["GitHub", ""]
         ],
         relatedProjects: [],
