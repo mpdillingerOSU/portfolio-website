@@ -40,33 +40,31 @@ function ProjectsPage() {
         backToTop();
     }, []);
 
+    const projectHasLanguage = (project) => {
+        for(let language of project.languages){
+            if(activeLanguages[language]){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    const projectHasTechnology = (project) => {
+        for(let technology of project.technologies){
+            if(activeTechnologies[technology]){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     useEffect(() => {
         const newProjects = [];
 
         for(let project of projectList){
-            let hasLanguage = false;
-            let hasTechnology = false;
-            for(let subproject of project.subprojects){
-                if(hasLanguage && hasTechnology){
-                    break;
-                }
-
-                for(let language of subproject.languages){
-                    if(activeLanguages[language]){
-                        hasLanguage = true;
-                        break;
-                    }
-                }
-
-                for(let technology of subproject.technologies){
-                    if(activeTechnologies[technology]){
-                        hasTechnology = true;
-                        break;
-                    }
-                }
-            }
-
-            if(hasLanguage && hasTechnology){
+            if(projectHasLanguage(project) && projectHasTechnology(project)){
                 newProjects.push(project);
             }
         }
@@ -85,39 +83,26 @@ function ProjectsPage() {
             }
         } else if(sortType === "skills"){
             if(isSortInversed){
-                newProjects.sort((a, b) => attributeCount(a, "skills") - attributeCount(b, "skills"));
+                newProjects.sort((a, b) => a["skills"].length - b["skills"].length);
             } else {
-                newProjects.sort((a, b) => attributeCount(b, "skills") - attributeCount(a, "skills"));
+                newProjects.sort((a, b) => b["skills"].length - a["skills"].length);
             }
         } else if(sortType === "languages"){
             if(isSortInversed){
-                newProjects.sort((a, b) => attributeCount(a, "languages") - attributeCount(b, "languages"));
+                newProjects.sort((a, b) => a["languages"].length - b["languages"].length);
             } else {
-                newProjects.sort((a, b) => attributeCount(b, "languages") - attributeCount(a, "languages"));
+                newProjects.sort((a, b) => b["languages"].length - a["languages"].length);
             }
         } else if(sortType === "technologies"){
             if(isSortInversed){
-                newProjects.sort((a, b) => attributeCount(a, "technologies") - attributeCount(b, "technologies"));
+                newProjects.sort((a, b) => a["technologies"].length - b["technologies"].length);
             } else {
-                newProjects.sort((a, b) => attributeCount(b, "technologies") - attributeCount(a, "technologies"));
+                newProjects.sort((a, b) => b["technologies"].length - a["technologies"].length);
             }
         }
 
         setProjects(newProjects);
     }, [sortType, isSortInversed, activeLanguages, activeTechnologies]);
-
-    const attributeCount = (project, attribute) => {
-        const arr = [];
-        for(let subproject of project.subprojects){
-            for(let val of subproject[attribute]){
-                if(!arr.includes(val)){
-                    arr.push(val);
-                }
-            }
-        }
-
-        return arr.length;
-    }
 
     const updateSortType = (type) => {
         setSortType(type);
