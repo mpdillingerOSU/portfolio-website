@@ -60,7 +60,7 @@ export const projectDict = {
         abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         urls: [
             ["Direct Download", ""],
-            ["GitHub", ""]
+            ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics"]
         ],
         relatedProjects: [
             "ecs7ospx0apqw3zkv8mzvoag",
