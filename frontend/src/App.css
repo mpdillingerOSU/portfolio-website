@@ -1299,34 +1299,36 @@ input:checked + .toggle:before {
     }
 }
 
-.subprojects-column {
+.project-page-body {
     width: 960px;
     max-width: 85vw;
     display: flex;
     flex-direction: column;
-    gap: 36px;
 }
 
-.subproject-section {
-    width: 100%;
-}
-
-.subproject-overview {
+.project-page-overview {
     margin-top: 8px;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.subproject-details-lead-text,
-.subproject-description-header {
+.project-page-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.project-page-details-lead-text,
+.project-page-description-header {
     color: white;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 8px;
 }
 
-.subproject-details-row {
+.project-page-details-row {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1335,7 +1337,7 @@ input:checked + .toggle:before {
     gap: 8px 8px;
 }
 
-.subproject-url-row,
+.project-page-url-row,
 .related-projects-row {
     width: 100%;
     display: flex;
@@ -1345,33 +1347,33 @@ input:checked + .toggle:before {
     gap: 8px;
 }
 
-.subproject-url-header,
+.project-page-url-header,
 .related-projects-header {
     color: white;
     font-size: 20px;
     font-weight: 700;
 }
 
-.subproject-url-link,
+.project-page-url-link,
 .related-projects-link {
     color: white;
     font-size: 16px;
 }
 
-.subproject-description {
+.project-page-description {
     margin-top: 24px;
     margin-bottom: 72px;
     display: flex;
     flex-direction: column;
 }
 
-.subproject-description-text {
+.project-page-description-text {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.subproject-description-paragraph {
+.project-page-description-paragraph {
     color: white;
     font-size: 16px;
 }

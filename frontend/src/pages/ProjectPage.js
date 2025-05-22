@@ -41,86 +41,82 @@ function ProjectPage() {
                 </div>
             </div>
             <div className="project-page-header-underline" />
-            <div className="subprojects-column">
-                {Array.from({ length: project.subprojects.length }, (_, i) => (
-                    <div key={i} className="subproject-section">
-                        <div className="subproject-overview">
-                            <div className="subproject-details">
-                                <div className="subproject-details-lead-text">
-                                    Skills
-                                </div>
-                                <div className="subproject-details-row">
-                                    {Array.from({ length: project.subprojects[i].skills.length }, (_, j) => (
-                                        <div key={j} className="project-skill">
-                                            {project.subprojects[i].skills[j]}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="subproject-details">
-                                <div className="subproject-details-lead-text">
-                                    Languages
-                                </div>
-                                <div className="subproject-details-row">
-                                    {Array.from({ length: project.subprojects[i].languages.length }, (_, j) => (
-                                        <LanguageButton key={j} language={project.subprojects[i].languages[j]}/>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="subproject-details">
-                                <div className="subproject-details-lead-text">
-                                    Technologies
-                                </div>
-                                <div className="subproject-details-row">
-                                    {Array.from({ length: project.subprojects[i].technologies.length }, (_, j) => (
-                                        <TechnologyButton key={j} technology={project.subprojects[i].technologies[j]}/>
-                                    ))}
-                                </div>
-                            </div>
-                            <div className="subproject-urls">
-                                {Array.from({ length: project.subprojects[i].urls.length }, (_, j) => (
-                                    <div key={j} className="subproject-url-row">
-                                        <div className="subproject-url-header">
-                                            {project.subprojects[i].urls[j][0]}:
-                                        </div>
-                                        <a className="subproject-url-link" href={project.subprojects[i].urls[j][1]} target="_blank" rel="noopener noreferrer">
-                                            {project.subprojects[i].urls[j][1]}
-                                        </a>
-                                    </div>
-                                ))}
-                            </div>
-                            {project.subprojects[i].relatedProjects.length > 0 && (
-                                <div className="related-projects-row">
-                                    <div className="related-projects-header">
-                                        Related Projects:
-                                    </div>
-                                    {Array.from({ length: project.subprojects[i].relatedProjects.length }, (_, j) => (
-                                        <span key={j}>
-                                            <a className="related-projects-link" href={`/projects/${project.subprojects[i].relatedProjects[j]}`}>
-                                                {projectDict[project.subprojects[i].relatedProjects[j]].name}
-                                            </a>
-                                            {j < project.subprojects[i].relatedProjects.length - 1 && (
-                                                <span>, </span>
-                                            )}
-                                        </span>
-                                    ))}
-                                </div>
-                            )}
+            <div className="project-page-body">
+                <div className="project-page-overview">
+                    <div className="project-page-details">
+                        <div className="project-page-details-lead-text">
+                            Skills
                         </div>
-                        <div className="subproject-description">
-                            <div className="subproject-description-header">
-                                Description
-                            </div>
-                            <div className="subproject-description-text">
-                                {Array.from({ length: project.subprojects[i].description.length }, (_, j) => (
-                                    <div key={j} className="subproject-description-paragraph">
-                                        {project.subprojects[i].description[j]}
-                                    </div>
-                                ))}
-                            </div>
+                        <div className="project-page-details-row">
+                            {Array.from({ length: project.skills.length }, (_, i) => (
+                                <div key={i} className="project-skill">
+                                    {project.skills[i]}
+                                </div>
+                            ))}
                         </div>
                     </div>
-                ))}
+                    <div className="project-page-details">
+                        <div className="project-page-details-lead-text">
+                            Languages
+                        </div>
+                        <div className="project-page-details-row">
+                            {Array.from({ length: project.languages.length }, (_, i) => (
+                                <LanguageButton key={i} language={project.languages[i]}/>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="project-page-details">
+                        <div className="project-page-details-lead-text">
+                            Technologies
+                        </div>
+                        <div className="project-page-details-row">
+                            {Array.from({ length: project.technologies.length }, (_, i) => (
+                                <TechnologyButton key={i} technology={project.technologies[i]}/>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="project-page-urls">
+                        {Array.from({ length: project.urls.length }, (_, i) => (
+                            <div key={i} className="project-page-url-row">
+                                <div className="project-page-url-header">
+                                    {project.urls[i][0]}:
+                                </div>
+                                <a className="project-page-url-link" href={project.urls[i][1]} target="_blank" rel="noopener noreferrer">
+                                    {project.urls[i][1]}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                    {project.relatedProjects.length > 0 && (
+                        <div className="related-projects-row">
+                            <div className="related-projects-header">
+                                Related Projects:
+                            </div>
+                            {Array.from({ length: project.relatedProjects.length }, (_, i) => (
+                                <span key={i}>
+                                    <a className="related-projects-link" href={`/projects/${project.relatedProjects[i]}`}>
+                                        {projectDict[project.relatedProjects[i]].name}
+                                    </a>
+                                    {i < project.relatedProjects.length - 1 && (
+                                        <span>, </span>
+                                    )}
+                                </span>
+                            ))}
+                        </div>
+                    )}
+                </div>
+                <div className="project-page-description">
+                    <div className="project-page-description-header">
+                        Description
+                    </div>
+                    <div className="project-page-description-text">
+                        {Array.from({ length: project.description.length }, (_, i) => (
+                            <div key={i} className="project-page-description-paragraph">
+                                {project.description[i]}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
             <button className="project-page-back-button" onClick={(e) => toProjects()}>
                 <IoReturnUpBack className="project-page-back-button-icon"/>
