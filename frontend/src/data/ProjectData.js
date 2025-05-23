@@ -461,7 +461,13 @@ export const projectDict = {
             "If one were to then click on either a featured project from the landing page or a project container from the projects page, you would then be taken to the individual project page for that specific project - with each project having a specific ID that can be found in its URL. Once here, you will notice many of the same details that have already been noted beforehand, with the project title, logo, skills, languages, and technologies all being present - though accompanied by headers. However, in addition to these previous details, there is also an abstract for each project, links to both GitHub repositories and live versions of each project, and a description of the project (such as the one that you have been reading). Each description is then provided as a means for breaking down the most important elements of each project, while also providing some insight into my own thoughts and design process. In the top-left corner of each page is then a button to quickly return to the projects page - even if having come from the landing page, direct link, or otherwise.",
             "The last two pages are then quite simple. The about page provides a quick blurb about my work ethos and background, while also listing all relevant languages and technologies that I am adept at using. As with the other pages, there is an attempt at simplicity. However, because the emphasis is now specifically on my skillset, each language and technology is shown via a larger and more complete logo. Finally, the contact page allows for an easy means of contacting me via a simple message form directly built into the website itself. That being said, if the information is incomplete - or an email is formatted incorrectly - then error messages that have been individualized for each input field will appear upon clicking the submit button. However, in order to maintain the simplified and unassuming aesthetic of the website, the overall appearance of the color red was minimized for warnings, by only having it shown on the left border of the errored field, along with the small red warning icon. Lastly, the submit button was designed in a simple - yet dynamic - manner, by having its underlined appearance shift to a complete background upon hovering over the button."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/portfolio-website-0.png"),
+            require("../images/screenshots/portfolio-website-1.png"),
+            require("../images/screenshots/portfolio-website-2.png"),
+            require("../images/screenshots/portfolio-website-3.png"),
+            require("../images/screenshots/portfolio-website-4.png")
+        ]
     },
     "h38lrj52215uz4fyx813yfzk": {
         index: 12,
