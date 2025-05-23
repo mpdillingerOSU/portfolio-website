@@ -1285,12 +1285,12 @@ input:checked + .toggle:before {
 .project-page-body {
     width: 960px;
     max-width: 85vw;
+    margin-top: 42px;
     display: flex;
     flex-direction: column;
 }
 
 .project-page-overview {
-    margin-top: 8px;
     display: flex;
     flex-direction: column;
     gap: var(--project-page-gap);
@@ -1416,7 +1416,7 @@ input:checked + .toggle:before {
     width: 100%;
     height: fit-content;
     margin-top: 56px;
-    margin-bottom: 42px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
