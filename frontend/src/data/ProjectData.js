@@ -302,7 +302,13 @@ export const projectDict = {
             "This Features section then provides a glimpse for the user to the most important features of the web platform, displayed in a grid. In order to keep a simplified look, only the icon for each feature has a distinct background color behind it. However, hovering over the specific feature has the entire feature become more visually distinct. This provides both a small level of dynamicism for the user, and increased visual focus for each feature.",
             "Finally, at the end of the page is a footer. This provides links to many of the pages, similar to the dropdown menus in the navigation bar - along with additional links. They are categorized, but the links are visual distinct from the category headers by the headers being in all uppercase and the links being slightly darker. Also in this footer are icon buttons that link to social media pages, and a select element in order to change the language of the app."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/tcg-maker-advanced-welcome-page-0.png"),
+            require("../images/screenshots/tcg-maker-advanced-welcome-page-1.png"),
+            require("../images/screenshots/tcg-maker-advanced-welcome-page-2.png"),
+            require("../images/screenshots/tcg-maker-advanced-welcome-page-3.png"),
+            require("../images/screenshots/tcg-maker-advanced-welcome-page-4.png")
+        ]
     },
     "ecs7ospx0apqw3zkv8mzvoag": {
         index: 8,
