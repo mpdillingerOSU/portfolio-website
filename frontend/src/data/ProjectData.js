@@ -343,7 +343,13 @@ export const projectDict = {
             "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
             "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/celtic-tactics-game-website-0.png"),
+            require("../images/screenshots/celtic-tactics-game-website-1.png"),
+            require("../images/screenshots/celtic-tactics-game-website-2.png"),
+            require("../images/screenshots/celtic-tactics-game-website-3.png"),
+            require("../images/screenshots/celtic-tactics-game-website-4.png")
+        ]
     },
     "gfj838t22dfhct3ynbcraenu": {
         index: 9,
