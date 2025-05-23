@@ -6,6 +6,7 @@
     --red-warning: #EF2929;
     --page-background: linear-gradient(to bottom, #17191b 55%, rgb(10, 5, 67));
     --featured-project-transition: all 0.15s linear;
+    --project-page-gap: 24px;
 }
 
 .app {
@@ -1281,24 +1282,6 @@ input:checked + .toggle:before {
     opacity: .6;
 }
 
-@media only screen and (max-width: 650px) {
-    .project-page-header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-    }
-
-    .project-page-header-text {
-        gap: 18px;
-    }
-
-    .project-page-title {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 .project-page-body {
     width: 960px;
     max-width: 85vw;
@@ -1310,7 +1293,7 @@ input:checked + .toggle:before {
     margin-top: 8px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: var(--project-page-gap);
 }
 
 .project-page-details {
@@ -1337,6 +1320,18 @@ input:checked + .toggle:before {
     gap: 8px 8px;
 }
 
+.project-page-languages-and-technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+}
+
+.project-page-languages-and-technologies .project-page-details {
+    width: calc(50% - 16px); /* The 16px is half of the gap */
+}
+
 .project-page-url-row,
 .related-projects-row {
     width: 100%;
@@ -1357,6 +1352,34 @@ input:checked + .toggle:before {
 .project-page-url-link {
     color: var(--link-color);
     font-size: 16px;
+}
+
+@media only screen and (max-width: 650px) {
+    .project-page-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .project-page-header-text {
+        gap: 18px;
+    }
+
+    .project-page-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-page-languages-and-technologies {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--project-page-gap);
+    }
+
+    .project-page-languages-and-technologies .project-page-details {
+        width: fit-content;
+    }
 }
 
 .related-projects-link {

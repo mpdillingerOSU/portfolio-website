@@ -109,24 +109,26 @@ function ProjectPage() {
                             ))}
                         </div>
                     </div>
-                    <div className="project-page-details">
-                        <div className="project-page-details-lead-text">
-                            Languages
+                    <div className="project-page-languages-and-technologies">
+                        <div className="project-page-details">
+                            <div className="project-page-details-lead-text">
+                                Languages
+                            </div>
+                            <div className="project-page-details-row">
+                                {Array.from({ length: project.languages.length }, (_, i) => (
+                                    <LanguageButton key={i} language={project.languages[i]}/>
+                                ))}
+                            </div>
                         </div>
-                        <div className="project-page-details-row">
-                            {Array.from({ length: project.languages.length }, (_, i) => (
-                                <LanguageButton key={i} language={project.languages[i]}/>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="project-page-details">
-                        <div className="project-page-details-lead-text">
-                            Technologies
-                        </div>
-                        <div className="project-page-details-row">
-                            {Array.from({ length: project.technologies.length }, (_, i) => (
-                                <TechnologyButton key={i} technology={project.technologies[i]}/>
-                            ))}
+                        <div className="project-page-details">
+                            <div className="project-page-details-lead-text">
+                                Technologies
+                            </div>
+                            <div className="project-page-details-row">
+                                {Array.from({ length: project.technologies.length }, (_, i) => (
+                                    <TechnologyButton key={i} technology={project.technologies[i]}/>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div className="project-page-urls">
