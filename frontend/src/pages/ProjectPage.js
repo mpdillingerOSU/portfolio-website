@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { projectDict } from '../data/ProjectData';
@@ -7,13 +7,13 @@ import ProjectHexagon from '../components/ProjectHexagon';
 import { IoReturnUpBack } from "react-icons/io5";
 import TechnologyButton from '../components/TechnologyButton';
 import AppFooter from '../components/AppFooter';
+import ScreenshotCarousel from '../components/ScreenshotCarousel';
 
 function ProjectPage() {
     const navigate = useNavigate();
 
     const splitPath = useLocation().pathname.split("/");
     const projectID = splitPath[splitPath.length - 1];
-
     const project = projectDict[projectID];
 
     useEffect(() => {
@@ -92,6 +92,9 @@ function ProjectPage() {
                 </div>
             </div>
             <div className="project-page-header-underline" />
+            {project.screenshots.length > 0 && (
+                <ScreenshotCarousel projectID={projectID} />
+            )}
             <div className="project-page-body">
                 <div className="project-page-overview">
                     <div className="project-page-details">
