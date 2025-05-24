@@ -194,7 +194,13 @@ export const projectDict = {
             "The Koala Toolkit is a stand-alone mobile app designed using the Flutter development platform, and is intended to help in the creation of characters and their movesets in video games. To do this, it attempts to solve two problems within one app. The first is that it removes the need for extensive spreadsheets, which are heavily used by game studios in order to store and collaborate on information. However, as these spreadsheets grow, they can often become hard to navigate. The Koala Toolkit fixes this issue by allowing the data to easily be editable and maintainable through the app, and scaling to your needs. The second problem is that it is often very hard to switch from one coding language to another after starting the process of coding a game. As such, the Koala Toolkit auto-generates the code for the user in their programming language of choice. So, even if other parts outside of character creation still need to be rewritten, the core code for characters is just a few clicks away.",
             "Upon using the app, a user must first create a project - either as an empty template, or based on one of the pre-made templates (high fantasy, sci-fi, western, etc.). This project will then hold together all related characters and movesets. Inside of each project, users are then able to create combat moves, such as attacks or support moves. They are given a variety of ways in which they can customize the moves, as well as being capable of adding a description. Additionally, users are also able to create characters, who can be given their own attributes and descriptions, along with any combat moves that have already been created within the project. Finally, as necessary, users may be able to download the project - or, if needed, only part of the project - in a variety of formats. These include both spreadsheets and JSON files, as well as code files in a variety of languages - such as C#, Python, Java, and Dart."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/koala-toolkit-0.png"),
+            require("../images/screenshots/koala-toolkit-1.png"),
+            require("../images/screenshots/koala-toolkit-2.png"),
+            require("../images/screenshots/koala-toolkit-3.png"),
+            require("../images/screenshots/koala-toolkit-4.png")
+        ]
     },
     "mx02wdoi7vxbvy75t2kk39h1": {
         index: 5,
