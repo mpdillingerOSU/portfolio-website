@@ -85,7 +85,13 @@ export const projectDict = {
             "The gameplay takes place on a procedurally generated grid, which allows for the combat to take place on a unique map every single time. Each space can be either grass (a space that any unit can move onto), a stone wall (a space that no unit can move onto), or a chasm (a space that only certain units can move onto). Additionally, it's possible for a grass space to have a wooden box on top of it, and which can be moved or destroyed. Lastly, the procedural generation also ensures that there is always a path where units are able to reach each other - and thus can engage in combat.",
             "Combat is then based on 6v6 combat within this grid. However, each team may only have 3 combat units on the field at any given time. Once a unit is exhausted (upon losing all HP), then a different remaining unit in the troop may be placed onto the field to replace them. Additionally, a unit may be swapped out for another during that given unit's turn. Overall, combat takes place over a series of rounds. Each unit has a given priority - based on their stats - with a unit of higher priority going first in that round. During a unit's turn for that round, they have a given amount of movement points (which allow them to move around the grid) and action points (which allow them to use combat moves). Rounds then continue to progress until either - or both - parties have no units remaining."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/celtic-tactics-0.png"),
+            require("../images/screenshots/celtic-tactics-1.png"),
+            require("../images/screenshots/celtic-tactics-2.png"),
+            require("../images/screenshots/celtic-tactics-3.png"),
+            require("../images/screenshots/celtic-tactics-4.png")
+        ]
     },
     "porhch2bbmoqk2c7wklzjmw3": {
         index: 2,
