@@ -124,7 +124,13 @@ export const projectDict = {
             "As such, I created a simulator to help determine the standard range of expectation for obtaining all cards within any given expansion - with all current expansions available to be simulated. The simulator allows you to run individual simulations that only use only packs, but also allows you to opt into using optimized strategies for both Pack Points and Wonder Picks within the simulations, as well. The user may also select how many individual simulations to run for a given set. Once a set of simulations has completed running, the user is provided data for the 5th, 50th, and 95th percentiles for obtaining all cards of each rarity, as well as the same 5th, 50th, and 95th percentiles for obtaining a given percentage of a collection (done in increments of 10%). These percentiles are each represented as packs having been opened, as this is the base means of obtaining cards, while Pack Points and Wonder Picks are meant as assistive means. As with any simulator, there is bound to be slight deviations from one set of simulations to another. However, at 100,000 simulations per set, those deviations are within 1 pack of each other. As such, the results of these simulations are very consistent between individually ran sets.",
             "Overall, the results obtained from these simulations are helpful both from a end user perspective, and from a business perspective. For the user, it helps to understand just how obtainable the cards within the game are, and thus helps to set realistic expectations based on a player's monetary category (free-to-play, Premium Pass-only, dolphin, whale, etc.). Conversely, from a business perspective, such simulations are important to determine where the sweet spot is for balancing enjoyment of the users with profitability - and thus ensuring user retention. Each of these can thus relate to the ethics of the game, and are discussed more fully in the <rp>gfj838t22dfhct3ynbcraenu</rp> project, where I analyzed the results of the simulations."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/ptcgp-simulator-0.png"),
+            require("../images/screenshots/ptcgp-simulator-1.png"),
+            require("../images/screenshots/ptcgp-simulator-2.png"),
+            require("../images/screenshots/ptcgp-simulator-3.png"),
+            require("../images/screenshots/ptcgp-simulator-4.png")
+        ]
     },
     "iri9r76qdpfi0iqmywcr8308": {
         index: 3,
