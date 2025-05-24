@@ -1,6 +1,7 @@
 :root {
     --standard-background: #17191b;
     --dark-emboss: #1a2038;
+    --standard-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     --purple-accent: #607DFF;
     --link-color: #879dff;
     --red-warning: #EF2929;
@@ -465,7 +466,7 @@
     border-style: none;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--standard-shadow);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -753,7 +754,7 @@
     width: 100%;
     background-color: #eef1f4;
     overflow: hidden;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--standard-shadow);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1491,7 +1492,7 @@ input:checked + .toggle:before {
     justify-content: center;
     background-color: var(--dark-emboss);
     border-radius: 25px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: var(--standard-shadow);
     cursor: auto;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
