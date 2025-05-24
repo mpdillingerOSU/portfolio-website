@@ -242,7 +242,13 @@ export const projectDict = {
             "Overall, there are two main categories of products that could benefit from the use of this library. The first category are those products that can assist users with breaking through writer's block. Writer's block - and, in extension, creator's block - is all too common an occurence. It doesn't matter if you are a novelist, screenwriter, game designer, or dungeon master - there is always going to be a time where you get stumped. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description. As such, this product can help users with a variety fo related tasks. In fact, this attempt at assisting with breaking through writer's block is the use case of the <rp>9i90jyxh4g69r9hdpn3izurz</rp> that is also located in this portfolio.",
             "The second main category for use of this library is also its greatest advantage over generative AI. This is because, unlike generative AI, procedural generation can be used within video games and other interactive programs, and thus allow for high-quality emergent experiences. This advantage is extremely important in such a sphere, because emergent experiences adapt their generation to the actions of the user. As such, the node system of information used by the library allows one to prune and grow characters depending on those actions - all the while ensuring consistency and avoiding accidental erasure of details."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/block-breaker-0.png"),
+            require("../images/screenshots/block-breaker-1.png"),
+            require("../images/screenshots/block-breaker-2.png"),
+            require("../images/screenshots/block-breaker-3.png"),
+            require("../images/screenshots/block-breaker-4.png")
+        ]
     },
     "f0htbt1xaye2aebjv5bcizvf": {
         index: 6,
