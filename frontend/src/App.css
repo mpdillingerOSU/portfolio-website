@@ -1349,8 +1349,13 @@ input:checked + .toggle:before {
     font-weight: 700;
 }
 
-.project-page-url-link {
+.project-page-public-url-link {
     color: var(--link-color);
+    font-size: 16px;
+}
+
+.project-page-private-url-link {
+    color: white;
     font-size: 16px;
 }
 
