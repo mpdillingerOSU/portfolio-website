@@ -58,7 +58,7 @@ export const projectDict = {
         logo: require("../images/character-generator-logo.png"),
         logoAlt: "character generator",
         version: "v0.0.0-alpha",
-        abstract: "The Character Generator project is a website intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. It does so by using the Block Breaker library - also found in this portfolio - in order to generate those descriptions on the backend.",
+        abstract: "The Character Generator project is a website intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. As such, this project is an assistive tool that is able to eleveate some of the pressures on the creative side for many projects.",
         urls: [
             ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/character-generator-website"]
