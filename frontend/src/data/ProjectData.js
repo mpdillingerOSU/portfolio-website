@@ -281,7 +281,8 @@ export const projectDict = {
         ],
         skills: [
             "Game Engine Development",
-            "Game Development"
+            "Game Development",
+            "Custom Libraries"
         ],
         languages: [
             "Java"
