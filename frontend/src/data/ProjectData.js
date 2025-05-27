@@ -463,7 +463,13 @@ export const projectDict = {
         description: [
             "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> library - a project which can also be found inside of this portfolio. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/character-generator-website-0.png"),
+            require("../images/screenshots/character-generator-website-1.png"),
+            require("../images/screenshots/character-generator-website-2.png"),
+            require("../images/screenshots/character-generator-website-3.png"),
+            require("../images/screenshots/character-generator-website-4.png")
+        ]
     },
     "tqiwpjt0oof5o4cm9lcewomi":{
         index: 11,
