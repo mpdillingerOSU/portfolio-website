@@ -146,7 +146,8 @@ export const projectDict = {
             ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
         ],
         relatedProjects: [
-            "mx02wdoi7vxbvy75t2kk39h1"
+            "mx02wdoi7vxbvy75t2kk39h1",
+            "5s6af8u00z3jnsdmmx02wdoi"
         ],
         skills: [
             "Data Structure Development",
@@ -439,7 +440,10 @@ export const projectDict = {
             ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/character-generator-website"]
         ],
-        relatedProjects: [],
+        relatedProjects: [
+            "mx02wdoi7vxbvy75t2kk39h1",
+            "5s6af8u00z3jnsdmmx02wdoi"
+        ],
         skills: [
             "UI/UX Design",
             "Web Development",
@@ -471,8 +475,51 @@ export const projectDict = {
             require("../images/screenshots/character-generator-website-4.png")
         ]
     },
-    "tqiwpjt0oof5o4cm9lcewomi":{
+    "5s6af8u00z3jnsdmmx02wdoi": {
         index: 11,
+        projectID: "5s6af8u00z3jnsdmmx02wdoi",
+        public: true,
+        name: "Language Constructor",
+        logo: require("../images/language-constructor-logo.png"),
+        logoAlt: "language constructor",
+        version: "v0.0.0-alpha",
+        abstract: "The Language Constructor project is a library that allows for the procedural generation of written text through natural language generation. At the most basic level, it allows for a user to create their own language, and to then provide the rules for their language - or, if desired, to emulate an existing language. Of particular interest, however, is that the library also makes use of the Interpretable interface that any other class can inherit from, and then allows the user to create custom algorithms in order to control the possibilities for how to interpret a given object. As such, rather than focusing on the writing itself, a user only needs to focus on the aspects of the object that are to be represented.",
+        urls: [
+            ["Direct Download", ""],
+            ["GitHub", ""]
+        ],
+        relatedProjects: [
+            "9i90jyxh4g69r9hdpn3izurz",
+            "iri9r76qdpfi0iqmywcr8308"
+        ],
+        skills: [
+            "Procedural Generation",
+            "Natural Language Generation",
+            "Custom Libraries"
+        ],
+        languages: [
+            "Java"
+        ],
+        technologies: [
+            "IntelliJ",
+            "Git"
+        ],
+        description: [
+            "Natural language generation is important in any procedural generation context where one wishes for the actual object that has been procedurally generated to be described. This is because procedurally generation - especially those done for visual aspects - often fall short of then providing a proper description that can be interacted with. For example, let us imagine that a character in a video game has been procedurally generated, and looks quite spiffy. They have an interesting appeal to them, in many ways. However, you will notice that - other than gender - it is rare that any of the procedurally generated physical description is used to affect the text. Why can something as basic as their size not be mentioned? Let alone the pattern on their clothes, or the color of their eyes. Additionally, it is difficult to find any libraries that provide this level of interpretion that are not generalized and bogged down by natural language understanding, and which can be integrated easily into another program. As such, many use cases for natural language generation require a bespoke, streamlined approach to creating descriptions that can be generated quickly and which feel authentic and personalized. And, of course, this is not limited to only video games. Anything with immersion - such as interactive novels, educational technology, dev tools, and much more - can make use of this second layer of procedural generation in order to increase the desired immersion.",
+            "To that end, the basic layer of the Language Constructor library allows for a user to create and define the rules for a given language - but also currently comes with a basic version of American English. As such, because the rules of a langauge are abstracted out, it is possible to even modify existing languages to match specific dialects. Additionally, a user is also able to define the dictionary, which also enables the grammar to appear more stylized based on era, region, culture, etc. This is especially important if you want to use the same language, but change how certain characters speak or are described.",
+            "Once a language has been selected or created, a user then simply needs to have a given class inherit from the Interpretable interface, and define the algorithm for choosing the attributes that will be described. This often makes use of the <rp>iri9r76qdpfi0iqmywcr8308</rp> library in order to define the ranges for which a certain word may be appropriate to use. For example, we can have an absolute value for height (i.e., 1.85m), and then interpret that in order to generate a relative value (i.e, short, average height, tall, etc.). Of course, we can also feed in personal perspective - such as how tall somebody must be in order to be considered tall - in order to influence descriptions even further. Or, as a more complex example, what makes something personally beautiful to one character, but not to another.",
+            "All of this then helps to create fuller descriptions for objects that can vary even when all of the absolute values of the data being interpreted remain unchanged. As such, none of the original object that was procedurally generated has to be changed. This library simply acts as an extra layer to allow for creating descriptions that interpret the same object differently, or when data is unknown by the user beforehand. Of course, this library can also be used to describe objects that were not procedurally generated. For example, you have statically-created objects that you want to be dynamically described. This library will then provide you then means for doing so - even if it is not at the same level of necessity as it would be for procedurally-generated content."
+        ],
+        screenshots: [
+            require("../images/screenshots/language-constructor-0.png"),
+            require("../images/screenshots/language-constructor-1.png"),
+            require("../images/screenshots/language-constructor-2.png"),
+            require("../images/screenshots/language-constructor-3.png"),
+            require("../images/screenshots/language-constructor-4.png")
+        ]
+    },
+    "tqiwpjt0oof5o4cm9lcewomi":{
+        index: 12,
         projectID: "tqiwpjt0oof5o4cm9lcewomi",
         public: true,
         name: "Portfolio Website",
@@ -518,7 +565,7 @@ export const projectDict = {
         ]
     },
     "h38lrj52215uz4fyx813yfzk": {
-        index: 12,
+        index: 13,
         projectID: "h38lrj52215uz4fyx813yfzk",
         public: false,
         name: "Procedural Generation Website",
@@ -551,7 +598,7 @@ export const projectDict = {
         screenshots: []
     },
     "j6yd609g44vvektcqcs5d53z": {
-        index: 13,
+        index: 14,
         projectID: "j6yd609g44vvektcqcs5d53z",
         public: false,
         name: "Shooter Game Prototype",
@@ -580,7 +627,7 @@ export const projectDict = {
         screenshots: []
     },
     "b9pelpnv77mnuaxhsfjw2vhd": {
-        index: 14,
+        index: 15,
         projectID: "b9pelpnv77mnuaxhsfjw2vhd",
         public: false,
         name: "FieldSense (+ Scavenger Hunt Game)",
@@ -615,7 +662,7 @@ export const projectDict = {
         screenshots: []
     },
     "ecg616r9zadf9qawliaohbls": {
-        index: 15,
+        index: 16,
         projectID: "ecg616r9zadf9qawliaohbls",
         public: false,
         name: "Algebra Max",
@@ -646,7 +693,7 @@ export const projectDict = {
         screenshots: []
     },
     "gg7xgw4e1d46ogeanl1gx1y6": {
-        index: 16,
+        index: 17,
         projectID: "gg7xgw4e1d46ogeanl1gx1y6",
         public: false,
         name: "Not to Bot",
@@ -677,7 +724,7 @@ export const projectDict = {
         screenshots: []
     },
     "8jxy5c8t3gu84wipporhch2b": {
-        index: 17,
+        index: 18,
         projectID: "8jxy5c8t3gu84wipporhch2b",
         public: false,
         name: "Smizer",
@@ -699,7 +746,7 @@ export const projectDict = {
         screenshots: []
     },
     "bmoqk2c7wklzjmw3iri9r76q": {
-        index: 18,
+        index: 19,
         projectID: "bmoqk2c7wklzjmw3iri9r76q",
         public: false,
         name: "Mix 'n' Mash",
@@ -726,36 +773,12 @@ export const projectDict = {
         screenshots: []
     },
     "dpfi0iqmywcr8308ku907nk4": {
-        index: 19,
+        index: 20,
         projectID: "dpfi0iqmywcr8308ku907nk4",
         public: false,
         name: "Calendar Generator",
         logo: "",
         logoAlt: "calendar generator",
-        version: "v0.0.0-alpha",
-        abstract: "",
-        urls: [
-            ["Direct Download", ""],
-            ["GitHub", ""]
-        ],
-        relatedProjects: [],
-        skills: [
-            "Custom Libraries"
-        ],
-        languages: [],
-        technologies: [
-            "Git"
-        ],
-        description: [],
-        screenshots: []
-    },
-    "5s6af8u00z3jnsdmmx02wdoi": {
-        index: 20,
-        projectID: "5s6af8u00z3jnsdmmx02wdoi",
-        public: false,
-        name: "Language Constructor",
-        logo: "",
-        logoAlt: "language constructor",
         version: "v0.0.0-alpha",
         abstract: "",
         urls: [
