@@ -234,7 +234,7 @@ export const projectDict = {
         logo: require("../images/project-logos/range-ds-logo.png"),
         logoAlt: "range data structures",
         version: "v0.0.0-alpha",
-        abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
+        abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially those relying heavily on procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for any such program that may need the extra complexity that this library provides.",
         urls: [
             ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
