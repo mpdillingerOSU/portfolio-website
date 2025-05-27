@@ -50,51 +50,103 @@ export const projectDict = {
         ],
         screenshots: []
     },
-    "nl1gx1y68jxy5c8t3gu84wip": {
+    "9i90jyxh4g69r9hdpn3izurz": {
         index: 1,
-        projectID: "nl1gx1y68jxy5c8t3gu84wip",
+        projectID: "9i90jyxh4g69r9hdpn3izurz",
         public: true,
-        name: "Celtic Tactics",
-        logo: require("../images/celtic-tactics-logo.png"),
-        logoAlt: "celtic tactics",
+        name: "Character Generator Website",
+        logo: require("../images/character-generator-website-logo.png"),
+        logoAlt: "character generator website",
         version: "v0.0.0-alpha",
-        abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
+        abstract: "The Character Generator Website is a project intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. It does so by using the Block Breaker library - also found in this portfolio - in order to generate those descriptions on the backend.",
         urls: [
-            ["Direct Download", ""],
-            ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics"]
+            ["Live Demo", ""],
+            ["GitHub", "https://github.com/mpdillingerOSU/character-generator-website"]
         ],
         relatedProjects: [
-            "ecs7ospx0apqw3zkv8mzvoag",
-            "f0htbt1xaye2aebjv5bcizvf"
+            "mx02wdoi7vxbvy75t2kk39h1",
+            "5s6af8u00z3jnsdmmx02wdoi"
         ],
         skills: [
-            "Game Development",
-            "Game AI",
             "UI/UX Design",
-            "Procedural Generation"
+            "Web Development",
+            "Frontend",
+            "Backend",
+            "Fullstack"
         ],
         languages: [
+            "HTML",
+            "CSS",
+            "Javascript",
             "Java"
         ],
         technologies: [
-            "IntelliJ",
+            "React",
+            "Next.js",
+            "Spring",
+            "VS Code",
             "Git"
         ],
         description: [
-            "The game prototype for Celtic Tactics is focused exclusively on the tactics-based combat intended for the final product. It was crafted using the <rp>f0htbt1xaye2aebjv5bcizvf</rp> project - also included in this portfolio. In its current state, the graphics are very pixelated and simplistic, as the focus for this project is on the actual gameplay. The initial screen allows the player to choose whether or not to play against another player or against a CPU opponent, and then allows for the player(s) to choose their units. Afterwards, the actual combat begins.",
-            "The gameplay takes place on a procedurally generated grid, which allows for the combat to take place on a unique map every single time. Each space can be either grass (a space that any unit can move onto), a stone wall (a space that no unit can move onto), or a chasm (a space that only certain units can move onto). Additionally, it's possible for a grass space to have a wooden box on top of it, and which can be moved or destroyed. Lastly, the procedural generation also ensures that there is always a path where units are able to reach each other - and thus can engage in combat.",
-            "Combat is then based on 6v6 combat within this grid. However, each team may only have 3 combat units on the field at any given time. Once a unit is exhausted (upon losing all HP), then a different remaining unit in the troop may be placed onto the field to replace them. Additionally, a unit may be swapped out for another during that given unit's turn. Overall, combat takes place over a series of rounds. Each unit has a given priority - based on their stats - with a unit of higher priority going first in that round. During a unit's turn for that round, they have a given amount of movement points (which allow them to move around the grid) and action points (which allow them to use combat moves). Rounds then continue to progress until either - or both - parties have no units remaining."
+            "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> library - a project which can also be found inside of this portfolio. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
         ],
         screenshots: [
-            require("../images/screenshots/celtic-tactics-0.png"),
-            require("../images/screenshots/celtic-tactics-1.png"),
-            require("../images/screenshots/celtic-tactics-2.png"),
-            require("../images/screenshots/celtic-tactics-3.png"),
-            require("../images/screenshots/celtic-tactics-4.png")
+            require("../images/screenshots/character-generator-website-0.png"),
+            require("../images/screenshots/character-generator-website-1.png"),
+            require("../images/screenshots/character-generator-website-2.png"),
+            require("../images/screenshots/character-generator-website-3.png"),
+            require("../images/screenshots/character-generator-website-4.png")
+        ]
+    },
+    "ecs7ospx0apqw3zkv8mzvoag": {
+        index: 2,
+        projectID: "ecs7ospx0apqw3zkv8mzvoag",
+        public: true,
+        name: "Celtic Tactics - Game Website",
+        logo: require("../images/celtic-tactics-logo.png"),
+        logoAlt: "celtic tactics game website",
+        version: "v0.0.0-alpha",
+        abstract: "The Game Website for Celtic Tactics is an attempt at representing a production-ready version of the landing page for the Celtics Tactics video game - which is also contained inside of this portfolio. As such, it is meant as a means of quickly providing quality information to the user in an engaging manner, and to then entice the user into purchasing the video game. A huge focus was placed onto the Celtic-styled aesthetic of the webpage, with the webpage itself also providing everything from a video and screenshots to links for soundtracks and merchandise.",
+        urls: [
+            ["Live Demo", ""],
+            ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
+        ],
+        relatedProjects: [
+            "nl1gx1y68jxy5c8t3gu84wip"
+        ],
+        skills: [
+            "UI/UX Design",
+            "Web Development",
+            "Frontend"
+        ],
+        languages: [
+            "HTML",
+            "CSS",
+            "Javascript"
+        ],
+        technologies: [
+            "React",
+            "Next.js",
+            "VS Code",
+            "Git"
+        ],
+        description: [
+            "The Game Website for Celtic Tactics is a fully-crafted landing page that uses mockup images to represent a hypothetical end result product for the <rp>nl1gx1y68jxy5c8t3gu84wip</rp> project - which can also be found inside of this portfolio. As such, it is used to demonstrate my skills at crafting a landing page for a product, and ensuring that all vital information is presented well, and in an engaging manner. As such, a lot of effort went into ensuring an appropriate aesthetic, with the majority of the information appearing to take place on a medieval manuscript that has marginalia text and images on the edges - similar to those found on actual medieval manuscripts. Additionally, while no other pages currently exist for the website, this was intentional so that the focus would be on my abilities of crafting a singular highly-detailed webpage. Not only that, but a landing page was chosen in particular, due to its importance of engaging users and drawing them into the product. Thus, a lot of information has to be presented in an engaging and simplified manner.",
+            "Upon opening the landing page, the entire screen is taken up by a singular image, with Celtic warriors on the left, and monsters on the right. As such, it quickly demonstrates the main struggle in the game: a battle between humans and monsters. Additionally, between them is the title text for the game. Of critical importance is how this main image and title text were set up. Due to various screen and window sizes, it was important to ensure that the title text was always centered on the screen, while the main image always took up the entire width and length. As such, not only does the main image adjust in size, but also only shows a limited scope of the image in order to maintain the intended effect - all while keeping it centered. Additionally, the main image and title text were also kept separate, as well, in order to maintain this effect.",
+            "At the top of the landing page is also a navigation bar, with buttons that hypothetically link to other pages. Each of these links will glow green when hovered over - with the color green being chosen due to the Celtic aesthetic. Additionally, the game's logo is placed at the center of the navigation bar in order to center the game's imagery. Finally, the background color of the navigation bar is partially transparent, which allows for part of the main image to still be seen behind it - and thus fulfilling the visual effect of the main image taking up the entire screen. If one has not yet scrolled, they will also notice a different bar at the bottom of the screen, which provides buttons that link to various purchase options for the game. Similar to the navigation bar, the background color is partially transparent, and its button options also glow green when hovered over in order to maintain the same aesthetic throughout.",
+            "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
+            "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
+        ],
+        screenshots: [
+            require("../images/screenshots/celtic-tactics-game-website-0.png"),
+            require("../images/screenshots/celtic-tactics-game-website-1.png"),
+            require("../images/screenshots/celtic-tactics-game-website-2.png"),
+            require("../images/screenshots/celtic-tactics-game-website-3.png"),
+            require("../images/screenshots/celtic-tactics-game-website-4.png")
         ]
     },
     "porhch2bbmoqk2c7wklzjmw3": {
-        index: 2,
+        index: 3,
         projectID: "porhch2bbmoqk2c7wklzjmw3",
         public: true,
         name: "PTCGP Simulator",
@@ -131,43 +183,6 @@ export const projectDict = {
             require("../images/screenshots/ptcgp-simulator-3.png"),
             require("../images/screenshots/ptcgp-simulator-4.png")
         ]
-    },
-    "iri9r76qdpfi0iqmywcr8308": {
-        index: 3,
-        projectID: "iri9r76qdpfi0iqmywcr8308",
-        public: true,
-        name: "Range Data Structures",
-        logo: require("../images/range-ds-logo.png"),
-        logoAlt: "range data structures",
-        version: "v0.0.0-alpha",
-        abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
-        urls: [
-            ["Direct Download", ""],
-            ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
-        ],
-        relatedProjects: [
-            "mx02wdoi7vxbvy75t2kk39h1",
-            "5s6af8u00z3jnsdmmx02wdoi"
-        ],
-        skills: [
-            "Data Structure Development",
-            "Custom Libraries"
-        ],
-        languages: [
-            "Java"
-        ],
-        technologies: [
-            "IntelliJ",
-            "Git"
-        ],
-        description: [
-            "While creating projects that relied on procedural generation within the Java-based backend, it became apparent that much of the repeated code could be reused under a specified range-based class. However, when looking for such an external library to use, all of the available options proved to be limited. In fact, while attempting to build upon these external libraries to meet the needs of the projects, the code just ended up becoming quite convoluted - especially when working with multi-ranges. As such, I set out to craft my own library that streamlined the use of ranges; and, while the original use case for this library was procedural generation, any programming working with highly complex RNG could benefit from its use.",
-            "The core of the library is focused on the abstract Range class, which has two concrete subclasses of SingleRange and MultiRange - with the MultiRange class being composed of multiple SingleRange instances. By having the abstract Range class, any use cases for a range can be built without having to worry about any conflicts between the two subclasses - whether single or multi. This is because the single and multi-range classes handle the same method calls slightly differently, but the programs using them only need to know that it is a range - a great case of a blackbox. Additionally, when creating a multi-range based on multiple single-ranges, the class constructor will create a union to remove any overlaps that occur - increasing efficiency upon method calls to the instances.",
-            "Getting further into the details, it must be understood that in order to create a range, the expected order of elements must be understood. This is because a range truly only has start and end points, and does not store the values in between. As such, there are Orderable and Oderator classes to help with this, which allow a user to create a custom set of rules of ordering for their own classes. However, this would be quite frustrating to do with primitive data types, such as integers. As such, there are static factory methods that help to construct ranges for the wrapper classes of primitive data types - as well as for enums. By doing so, a user only has to call the factory method and provide start and end points for the range, without having to create or provide their own Orderator. However, as previously alluded to, creating instances of the Orderator interface will allow you to also use any custom classes within ranges, as well.",
-            "As with other data structures, this library allows us to determine the size of the range, the index that a value would be within a range, whether the range contains a specific value, and many more. Additionally, both single and multi-ranges are iterable via the Java standard library Iterable interface. However, more range-specific methods are also included, such as unions and intersections, along with other various methods such as creating splices of ranges before and after certain values.",
-            "A great example of the use of this library is the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> project - also found within this portfolio - which uses procedural generation in order to create character descriptions. Due to the extensive amount of factors used for the procedural generation within the project, dozens of ranges had to be used - thus, helping to save an extensive amount of time, and significantly reducing repeated code."
-        ],
-        screenshots: []
     },
     "ku907nk45s6af8u00z3jnsdm": {
         index: 4,
@@ -209,25 +224,25 @@ export const projectDict = {
             require("../images/screenshots/koala-toolkit-4.png")
         ]
     },
-    "mx02wdoi7vxbvy75t2kk39h1": {
+    "iri9r76qdpfi0iqmywcr8308": {
         index: 5,
-        projectID: "mx02wdoi7vxbvy75t2kk39h1",
+        projectID: "iri9r76qdpfi0iqmywcr8308",
         public: true,
-        name: "Block Breaker",
-        logo: require("../images/block-breaker-logo.png"),
-        logoAlt: "block breaker",
+        name: "Range Data Structures",
+        logo: require("../images/range-ds-logo.png"),
+        logoAlt: "range data structures",
         version: "v0.0.0-alpha",
-        abstract: "Block Breaker is a library that procedurally generates character descriptions, and maintains the information via a node tree - which then allows for changes to be made and properly adapted to. As such, it has two major use cases. The first is the ability to make use of the character generation itself in order to create character sheets. As such, one can generate multiple characters that fit within the specified restrictions, and then use these for creative purposes. However, the second - and more important - use case is the ability for the library to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
+        abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for those programs that may need such complexity.",
         urls: [
             ["Direct Download", ""],
-            ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
+            ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
         ],
         relatedProjects: [
-            "9i90jyxh4g69r9hdpn3izurz",
-            "iri9r76qdpfi0iqmywcr8308"
+            "mx02wdoi7vxbvy75t2kk39h1",
+            "5s6af8u00z3jnsdmmx02wdoi"
         ],
         skills: [
-            "Procedural Generation",
+            "Data Structure Development",
             "Custom Libraries"
         ],
         languages: [
@@ -238,18 +253,13 @@ export const projectDict = {
             "Git"
         ],
         description: [
-            "While generative AI has become an important feature recently within the tech sphere, procedural generation serves just as important of a purpose. As compared to generative AI, the use of controlled algorithms allow procedural generation to be better positioned at resolving possible inconsistencies and ensuring that accidental erasures do not occur during automated updates to a set of information. Additionally, one can have full confidence and control over how those algorithms are shaped. The trade off is that procedural generation cannot scale as easily as generative AI, as humans have to essentially establish each connection themselves. However, for many programs, the increased consistency and control is well worth it in the long-term.",
-            "With this in mind, Blocker Breaker is a library that has positioned itself as an assistive tool for procedurally generating character descriptions - whether entire or partial, as determined by the user. As such, the user can quickly create character descriptions to be used within a variety of products. The use of Java as the language of choice for the project was also two-pronged. The first was to create compability with a Spring-based backend for web apps, while the second made it compatible with my personally-crafted Java Game Engine - which can also be found in this portfolio. As such, it helped place itself within the larger project ecosystem that I have already started to create.",
-            "Overall, there are two main categories of products that could benefit from the use of this library. The first category are those products that can assist users with breaking through writer's block. Writer's block - and, in extension, creator's block - is all too common an occurence. It doesn't matter if you are a novelist, screenwriter, game designer, or dungeon master - there is always going to be a time where you get stumped. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description. As such, this product can help users with a variety fo related tasks. In fact, this attempt at assisting with breaking through writer's block is the use case of the <rp>9i90jyxh4g69r9hdpn3izurz</rp> that is also located in this portfolio.",
-            "The second main category for use of this library is also its greatest advantage over generative AI. This is because, unlike generative AI, procedural generation can be used within video games and other interactive programs, and thus allow for high-quality emergent experiences. This advantage is extremely important in such a sphere, because emergent experiences adapt their generation to the actions of the user. As such, the node system of information used by the library allows one to prune and grow characters depending on those actions - all the while ensuring consistency and avoiding accidental erasure of details."
+            "While creating projects that relied on procedural generation within the Java-based backend, it became apparent that much of the repeated code could be reused under a specified range-based class. However, when looking for such an external library to use, all of the available options proved to be limited. In fact, while attempting to build upon these external libraries to meet the needs of the projects, the code just ended up becoming quite convoluted - especially when working with multi-ranges. As such, I set out to craft my own library that streamlined the use of ranges; and, while the original use case for this library was procedural generation, any programming working with highly complex RNG could benefit from its use.",
+            "The core of the library is focused on the abstract Range class, which has two concrete subclasses of SingleRange and MultiRange - with the MultiRange class being composed of multiple SingleRange instances. By having the abstract Range class, any use cases for a range can be built without having to worry about any conflicts between the two subclasses - whether single or multi. This is because the single and multi-range classes handle the same method calls slightly differently, but the programs using them only need to know that it is a range - a great case of a blackbox. Additionally, when creating a multi-range based on multiple single-ranges, the class constructor will create a union to remove any overlaps that occur - increasing efficiency upon method calls to the instances.",
+            "Getting further into the details, it must be understood that in order to create a range, the expected order of elements must be understood. This is because a range truly only has start and end points, and does not store the values in between. As such, there are Orderable and Oderator classes to help with this, which allow a user to create a custom set of rules of ordering for their own classes. However, this would be quite frustrating to do with primitive data types, such as integers. As such, there are static factory methods that help to construct ranges for the wrapper classes of primitive data types - as well as for enums. By doing so, a user only has to call the factory method and provide start and end points for the range, without having to create or provide their own Orderator. However, as previously alluded to, creating instances of the Orderator interface will allow you to also use any custom classes within ranges, as well.",
+            "As with other data structures, this library allows us to determine the size of the range, the index that a value would be within a range, whether the range contains a specific value, and many more. Additionally, both single and multi-ranges are iterable via the Java standard library Iterable interface. However, more range-specific methods are also included, such as unions and intersections, along with other various methods such as creating splices of ranges before and after certain values.",
+            "A great example of the use of this library is the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> project - also found within this portfolio - which uses procedural generation in order to create character descriptions. Due to the extensive amount of factors used for the procedural generation within the project, dozens of ranges had to be used - thus, helping to save an extensive amount of time, and significantly reducing repeated code."
         ],
-        screenshots: [
-            require("../images/screenshots/block-breaker-0.png"),
-            require("../images/screenshots/block-breaker-1.png"),
-            require("../images/screenshots/block-breaker-2.png"),
-            require("../images/screenshots/block-breaker-3.png"),
-            require("../images/screenshots/block-breaker-4.png")
-        ]
+        screenshots: []
     },
     "f0htbt1xaye2aebjv5bcizvf": {
         index: 6,
@@ -335,51 +345,47 @@ export const projectDict = {
             require("../images/screenshots/tcg-maker-advanced-welcome-page-4.png")
         ]
     },
-    "ecs7ospx0apqw3zkv8mzvoag": {
+    "nl1gx1y68jxy5c8t3gu84wip": {
         index: 8,
-        projectID: "ecs7ospx0apqw3zkv8mzvoag",
+        projectID: "nl1gx1y68jxy5c8t3gu84wip",
         public: true,
-        name: "Celtic Tactics - Game Website",
+        name: "Celtic Tactics",
         logo: require("../images/celtic-tactics-logo.png"),
-        logoAlt: "celtic tactics game website",
+        logoAlt: "celtic tactics",
         version: "v0.0.0-alpha",
-        abstract: "The Game Website for Celtic Tactics is an attempt at representing a production-ready version of the landing page for the Celtics Tactics video game - which is also contained inside of this portfolio. As such, it is meant as a means of quickly providing quality information to the user in an engaging manner, and to then entice the user into purchasing the video game. A huge focus was placed onto the Celtic-styled aesthetic of the webpage, with the webpage itself also providing everything from a video and screenshots to links for soundtracks and merchandise.",
+        abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         urls: [
-            ["Live Demo", ""],
-            ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
+            ["Direct Download", ""],
+            ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics"]
         ],
         relatedProjects: [
-            "nl1gx1y68jxy5c8t3gu84wip"
+            "ecs7ospx0apqw3zkv8mzvoag",
+            "f0htbt1xaye2aebjv5bcizvf"
         ],
         skills: [
+            "Game Development",
+            "Game AI",
             "UI/UX Design",
-            "Web Development",
-            "Frontend"
+            "Procedural Generation"
         ],
         languages: [
-            "HTML",
-            "CSS",
-            "Javascript"
+            "Java"
         ],
         technologies: [
-            "React",
-            "Next.js",
-            "VS Code",
+            "IntelliJ",
             "Git"
         ],
         description: [
-            "The Game Website for Celtic Tactics is a fully-crafted landing page that uses mockup images to represent a hypothetical end result product for the <rp>nl1gx1y68jxy5c8t3gu84wip</rp> project - which can also be found inside of this portfolio. As such, it is used to demonstrate my skills at crafting a landing page for a product, and ensuring that all vital information is presented well, and in an engaging manner. As such, a lot of effort went into ensuring an appropriate aesthetic, with the majority of the information appearing to take place on a medieval manuscript that has marginalia text and images on the edges - similar to those found on actual medieval manuscripts. Additionally, while no other pages currently exist for the website, this was intentional so that the focus would be on my abilities of crafting a singular highly-detailed webpage. Not only that, but a landing page was chosen in particular, due to its importance of engaging users and drawing them into the product. Thus, a lot of information has to be presented in an engaging and simplified manner.",
-            "Upon opening the landing page, the entire screen is taken up by a singular image, with Celtic warriors on the left, and monsters on the right. As such, it quickly demonstrates the main struggle in the game: a battle between humans and monsters. Additionally, between them is the title text for the game. Of critical importance is how this main image and title text were set up. Due to various screen and window sizes, it was important to ensure that the title text was always centered on the screen, while the main image always took up the entire width and length. As such, not only does the main image adjust in size, but also only shows a limited scope of the image in order to maintain the intended effect - all while keeping it centered. Additionally, the main image and title text were also kept separate, as well, in order to maintain this effect.",
-            "At the top of the landing page is also a navigation bar, with buttons that hypothetically link to other pages. Each of these links will glow green when hovered over - with the color green being chosen due to the Celtic aesthetic. Additionally, the game's logo is placed at the center of the navigation bar in order to center the game's imagery. Finally, the background color of the navigation bar is partially transparent, which allows for part of the main image to still be seen behind it - and thus fulfilling the visual effect of the main image taking up the entire screen. If one has not yet scrolled, they will also notice a different bar at the bottom of the screen, which provides buttons that link to various purchase options for the game. Similar to the navigation bar, the background color is partially transparent, and its button options also glow green when hovered over in order to maintain the same aesthetic throughout.",
-            "If one begins to scroll down, a few important aspects can be noticed. Firstly, once the navigation bar is no longer visible, a button appears in the bottom-right corner of the screen. Due to the length of this particular screen, the button was added so that the user can quickly move back to the top of the screen at any point - particularly if they wish to use the navigation bar. However, why not keep the navigation bar always placed at the top of the screen, then? Well, if one would scroll down just a little further until when the purchase options bar would no longer be visible, it would be noticed that the bar with the purchase options will now always stay at the top of the screen. This is because we want the user - if they like what they see of the product - to be able to easily purchase the game for the system of their own choosing. Since the end result for the website is the user purchasing a copy of the game, I felt it was important to make performing this action as easy as possible. Finally, when starting to scroll, you will first notice a decorative border below the main image, and then the appearance of the main portion of the landing page, which appears as if to be on a manuscript. As such, we have a clear distinction between initial imagery and the information section of the landing page.",
-            "This information section then provides a variety of details about the game that have been given in a specific order as to maximize engagement. With video content providing the greatest level of engagement, it was placed at the top of this information section (note that the video is a mockup, and does not play an actual video). Next, we see a features section that describes what a player can expect from this game. The features section also ensures that not too much information is displayed at once by having an arc with icons that trigger which specific feature's information is displayed. Finally, this is followed up by screenshots, a newsletter subscription, soundtrack, a store link, and page footer."
+            "The game prototype for Celtic Tactics is focused exclusively on the tactics-based combat intended for the final product. It was crafted using the <rp>f0htbt1xaye2aebjv5bcizvf</rp> project - also included in this portfolio. In its current state, the graphics are very pixelated and simplistic, as the focus for this project is on the actual gameplay. The initial screen allows the player to choose whether or not to play against another player or against a CPU opponent, and then allows for the player(s) to choose their units. Afterwards, the actual combat begins.",
+            "The gameplay takes place on a procedurally generated grid, which allows for the combat to take place on a unique map every single time. Each space can be either grass (a space that any unit can move onto), a stone wall (a space that no unit can move onto), or a chasm (a space that only certain units can move onto). Additionally, it's possible for a grass space to have a wooden box on top of it, and which can be moved or destroyed. Lastly, the procedural generation also ensures that there is always a path where units are able to reach each other - and thus can engage in combat.",
+            "Combat is then based on 6v6 combat within this grid. However, each team may only have 3 combat units on the field at any given time. Once a unit is exhausted (upon losing all HP), then a different remaining unit in the troop may be placed onto the field to replace them. Additionally, a unit may be swapped out for another during that given unit's turn. Overall, combat takes place over a series of rounds. Each unit has a given priority - based on their stats - with a unit of higher priority going first in that round. During a unit's turn for that round, they have a given amount of movement points (which allow them to move around the grid) and action points (which allow them to use combat moves). Rounds then continue to progress until either - or both - parties have no units remaining."
         ],
         screenshots: [
-            require("../images/screenshots/celtic-tactics-game-website-0.png"),
-            require("../images/screenshots/celtic-tactics-game-website-1.png"),
-            require("../images/screenshots/celtic-tactics-game-website-2.png"),
-            require("../images/screenshots/celtic-tactics-game-website-3.png"),
-            require("../images/screenshots/celtic-tactics-game-website-4.png")
+            require("../images/screenshots/celtic-tactics-0.png"),
+            require("../images/screenshots/celtic-tactics-1.png"),
+            require("../images/screenshots/celtic-tactics-2.png"),
+            require("../images/screenshots/celtic-tactics-3.png"),
+            require("../images/screenshots/celtic-tactics-4.png")
         ]
     },
     "gfj838t22dfhct3ynbcraenu": {
@@ -427,52 +433,46 @@ export const projectDict = {
             require("../images/screenshots/ptcgp-simulator-analysis-website-4.png")
         ]
     },
-    "9i90jyxh4g69r9hdpn3izurz": {
+    "mx02wdoi7vxbvy75t2kk39h1": {
         index: 10,
-        projectID: "9i90jyxh4g69r9hdpn3izurz",
+        projectID: "mx02wdoi7vxbvy75t2kk39h1",
         public: true,
-        name: "Character Generator Website",
-        logo: require("../images/character-generator-website-logo.png"),
-        logoAlt: "character generator website",
+        name: "Block Breaker",
+        logo: require("../images/block-breaker-logo.png"),
+        logoAlt: "block breaker",
         version: "v0.0.0-alpha",
-        abstract: "The Character Generator Website is a project intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. It does so by using the Block Breaker library - also found in this portfolio - in order to generate those descriptions on the backend.",
+        abstract: "Block Breaker is a library that procedurally generates character descriptions, and maintains the information via a node tree - which then allows for changes to be made and properly adapted to. As such, it has two major use cases. The first is the ability to make use of the character generation itself in order to create character sheets. As such, one can generate multiple characters that fit within the specified restrictions, and then use these for creative purposes. However, the second - and more important - use case is the ability for the library to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         urls: [
-            ["Live Demo", ""],
-            ["GitHub", "https://github.com/mpdillingerOSU/character-generator-website"]
+            ["Direct Download", ""],
+            ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
         ],
         relatedProjects: [
-            "mx02wdoi7vxbvy75t2kk39h1",
-            "5s6af8u00z3jnsdmmx02wdoi"
+            "9i90jyxh4g69r9hdpn3izurz",
+            "iri9r76qdpfi0iqmywcr8308"
         ],
         skills: [
-            "UI/UX Design",
-            "Web Development",
-            "Frontend",
-            "Backend",
-            "Fullstack"
+            "Procedural Generation",
+            "Custom Libraries"
         ],
         languages: [
-            "HTML",
-            "CSS",
-            "Javascript",
             "Java"
         ],
         technologies: [
-            "React",
-            "Next.js",
-            "Spring",
-            "VS Code",
+            "IntelliJ",
             "Git"
         ],
         description: [
-            "The character generator website is simply meant as a means to demonstrate the basic procedural generation of characters via the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> library - a project which can also be found inside of this portfolio. As such, it has a very simple UI design using a React frontend that allows for the generation of entire characters. On the backend, Spring is used, as it is Java-based and integrates seamlessly with the Block Breaker library."
+            "While generative AI has become an important feature recently within the tech sphere, procedural generation serves just as important of a purpose. As compared to generative AI, the use of controlled algorithms allow procedural generation to be better positioned at resolving possible inconsistencies and ensuring that accidental erasures do not occur during automated updates to a set of information. Additionally, one can have full confidence and control over how those algorithms are shaped. The trade off is that procedural generation cannot scale as easily as generative AI, as humans have to essentially establish each connection themselves. However, for many programs, the increased consistency and control is well worth it in the long-term.",
+            "With this in mind, Blocker Breaker is a library that has positioned itself as an assistive tool for procedurally generating character descriptions - whether entire or partial, as determined by the user. As such, the user can quickly create character descriptions to be used within a variety of products. The use of Java as the language of choice for the project was also two-pronged. The first was to create compability with a Spring-based backend for web apps, while the second made it compatible with my personally-crafted Java Game Engine - which can also be found in this portfolio. As such, it helped place itself within the larger project ecosystem that I have already started to create.",
+            "Overall, there are two main categories of products that could benefit from the use of this library. The first category are those products that can assist users with breaking through writer's block. Writer's block - and, in extension, creator's block - is all too common an occurence. It doesn't matter if you are a novelist, screenwriter, game designer, or dungeon master - there is always going to be a time where you get stumped. With the assistance of procedural generation, users can quickly brainstorm ideas for either entire characters, or for specific character elements - depending on the user's needs. The information is also written in a prose style, which allows for an easy starting point when building a fuller description. As such, this product can help users with a variety fo related tasks. In fact, this attempt at assisting with breaking through writer's block is the use case of the <rp>9i90jyxh4g69r9hdpn3izurz</rp> that is also located in this portfolio.",
+            "The second main category for use of this library is also its greatest advantage over generative AI. This is because, unlike generative AI, procedural generation can be used within video games and other interactive programs, and thus allow for high-quality emergent experiences. This advantage is extremely important in such a sphere, because emergent experiences adapt their generation to the actions of the user. As such, the node system of information used by the library allows one to prune and grow characters depending on those actions - all the while ensuring consistency and avoiding accidental erasure of details."
         ],
         screenshots: [
-            require("../images/screenshots/character-generator-website-0.png"),
-            require("../images/screenshots/character-generator-website-1.png"),
-            require("../images/screenshots/character-generator-website-2.png"),
-            require("../images/screenshots/character-generator-website-3.png"),
-            require("../images/screenshots/character-generator-website-4.png")
+            require("../images/screenshots/block-breaker-0.png"),
+            require("../images/screenshots/block-breaker-1.png"),
+            require("../images/screenshots/block-breaker-2.png"),
+            require("../images/screenshots/block-breaker-3.png"),
+            require("../images/screenshots/block-breaker-4.png")
         ]
     },
     "5s6af8u00z3jnsdmmx02wdoi": {
