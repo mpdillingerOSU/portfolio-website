@@ -7,7 +7,7 @@ export const projectDict = {
         logo: require("../images/project-logos/tcg-maker-logo.png"),
         logoAlt: "trading card game maker",
         version: "v0.0.0-alpha",
-        abstract: "TCG Maker is a platform that allows users to create, customize, and play their own trading card games. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides both professionals and hobbyists with the creative freedom to design their own rulesets, craft unique cards, and play their own creations.",
+        abstract: "TCG Maker is a website that allows users to prototype their own trading card games, by providing them a single platform that allows them to create, customize, and play their own creations. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides a highly flexible rule construction system that enables both professionals and hobbyists alike with the creative freedom to design their own rulesets and to craft unique cards. As such, users are not only capable of creating the aesthetic elements of their games, but are also able to play and prototype the actual rules themselves.",
         urls: [
             ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
