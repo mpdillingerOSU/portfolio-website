@@ -271,7 +271,7 @@ export const projectDict = {
         logo: require("../images/project-logos/java-game-engine-logo.png"),
         logoAlt: "java game engine",
         version: "v0.3.1-alpha",
-        abstract: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games to be run locally on a device.",
+        abstract: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games that have been built using the engine to be run locally on a device.",
         urls: [
             ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/koala-engine"]
