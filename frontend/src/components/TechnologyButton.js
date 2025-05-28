@@ -1,26 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaReact, FaBootstrap, FaNodeJs, FaUnity, FaQuestion, FaGitAlt } from "react-icons/fa";
 import { SiNextdotjs, SiExpress, SiSpring, SiFlutter, SiIntellijidea, SiMongodb } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiVisualstudio, DiMysql } from "react-icons/di";
 
-function TechnologyButton({technology, onToggle}) {
-    const [isInactive, setIsInactive] = useState(false);
-    
+function TechnologyButton({technology, isInactive, onToggle}) {    
     const toggleIsInactive = (e) => {
         e.preventDefault();
 
         if(onToggle !== undefined){
             const newIsInactive = !isInactive;
-            setIsInactive(newIsInactive);
+            onToggle(newIsInactive);
         }
     }
-
-    useEffect(() => {
-        if(onToggle !== undefined){
-            onToggle(isInactive);
-        }
-    }, [isInactive]); 
 
     const getColor = (technology) => {
         if(technology === "React"){
@@ -91,7 +83,7 @@ function TechnologyButton({technology, onToggle}) {
     }
 
     return (
-        <div className="project-feature-container" onClick={(e) =>{if(onToggle !== undefined){onToggle(e);}}}>
+        <div className="project-feature-container">
             <div className="project-feature" style={{backgroundColor: getColor(technology), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
                 {getIcon(technology)}
             </div>
