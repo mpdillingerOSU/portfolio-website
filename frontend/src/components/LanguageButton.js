@@ -1,24 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJava, FaJsSquare, FaDatabase, FaQuestion } from "react-icons/fa";
 import { SiDart } from "react-icons/si";
 
-function LanguageButton({language, onToggle}) {
-    const [isInactive, setIsInactive] = useState(false);
-    
+function LanguageButton({language, isInactive, onToggle}) {    
     const toggleIsInactive = (e) => {
         e.preventDefault();
 
         if(onToggle !== undefined){
             const newIsInactive = !isInactive;
-            setIsInactive(newIsInactive);
+            onToggle(newIsInactive);
         }
     }
-
-    useEffect(() => {
-        if(onToggle !== undefined){
-            onToggle(isInactive);
-        }
-    }, [isInactive]); 
 
     const getColor = (language) => {
         if(language === "HTML"){
@@ -57,7 +49,7 @@ function LanguageButton({language, onToggle}) {
     }
 
     return (
-        <div className="project-feature-container" onClick={(e) => {if(onToggle !== undefined){onToggle(e);}}}>
+        <div className="project-feature-container">
             <div className="project-feature" style={{backgroundColor: getColor(language), filter: isInactive ? "brightness(50%)" : undefined, cursor: onToggle !== undefined ? "pointer" : undefined}} onClick={(e) => toggleIsInactive(e)} >
                 {getIcon(language)}
             </div>

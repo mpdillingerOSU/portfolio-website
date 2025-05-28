@@ -734,6 +734,9 @@
 }
 
 .selection-input-caret {
+    color: white;
+    font-size: 20px;
+    margin-right: 4px;
     transition: transform .20s ease-in-out;
     -webkit-transition: transform .20s ease-in-out; /** Chrome; Safari **/
     -ms-transition: transform .20s ease-in-out; /** Opera **/
@@ -747,6 +750,8 @@
 
 .selection-options-container {
     position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
     visibility: hidden;
     border-radius: 10px;
     padding: 6px;
@@ -896,7 +901,77 @@ input:checked + .toggle:before {
 
 .feature-filter-lead-text {
     font-size: 16px;
-    margin: 0 0 12px 3px;
+    margin: 0 0 6px 3px;
+}
+
+.feature-filter-button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.feature-filter-button {
+    cursor: pointer;
+    height: 40px;
+    width: 180px;
+    margin: 0px;
+    padding: 5px 5px 5px 15px;
+    background-color: var(--standard-background);
+    box-sizing: border-box;
+    border: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 50vh;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.feature-filter-button-caret,
+.feature-filter-button-select-all {
+    color: white;
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.feature-filter-button-caret {
+    transition: transform .20s ease-in-out;
+    -webkit-transition: transform .20s ease-in-out; /** Chrome; Safari **/
+    -ms-transition: transform .20s ease-in-out; /** Opera **/
+}
+
+.rotated-feature-filter-button-caret {
+    -ms-transform: rotate(-180deg); /* IE 9 */
+    -webkit-transform: rotate(-180deg); /* Safari */
+    transform: rotate(-180deg);
+}
+
+.feature-filter-options-container {
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 32px;
+    z-index: 1;
+    width: fit-content;
+    background-color: var(--dark-emboss);
+    box-shadow: var(--standard-shadow);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.feature-filter-options-container-displayed {
+    visibility: visible;
 }
 
 .feature-filter-options {
@@ -905,6 +980,84 @@ input:checked + .toggle:before {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.feature-filter-options-header {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-decoration: underline;
+}
+
+.feature-filter-options-selectors {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.feature-filter-options-button-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.feature-filter-options-button-container {
+    height: 40px;
+    width: 122px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.feature-filter-select-all-button,
+.feature-filter-clear-button,
+.feature-filter-done-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.feature-filter-select-all-button,
+.feature-filter-clear-button {
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    color: #4663e4;
+    align-items: flex-start;
+}
+
+.feature-filter-select-all-button:hover,
+.feature-filter-clear-button:hover {
+    color: var(--purple-accent);
+}
+
+.feature-filter-done-button {
+    height: 100%;
+    width: 100%;
+    background-color: var(--purple-accent);
+    color: white;
+    align-items: center;
+    border-radius: 9px;
+    box-shadow: var(--standard-shadow);
+}
+
+.feature-filter-done-button:hover {
+    background-color: #738cff;
 }
 
 .projects-page-filter-underline {
