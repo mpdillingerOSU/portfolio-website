@@ -754,10 +754,11 @@
     left: 0;
     visibility: hidden;
     border-radius: 10px;
+    border: solid 2px white;
     padding: 6px;
     z-index: 1;
     width: 100%;
-    background-color: #eef1f4;
+    background-color: var(--dark-emboss);
     overflow: hidden;
     box-shadow: var(--standard-shadow);
     -webkit-box-sizing: border-box;
@@ -778,11 +779,11 @@
     width: 100%;
     text-align: left;
     border-radius: 8px;
-    color: black;
+    color: white;
 }
 
 .selection-option:hover {
-    background-color: #9cacc6;
+    background-color: #223177;
 }
 
 .toggle-box {
