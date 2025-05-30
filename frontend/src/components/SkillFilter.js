@@ -88,9 +88,9 @@ function SkillFilter({activeSkills, onChange}) {
             <div className="feature-filter-button-container">
                 <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
                     <span>
-                        {"Skills " + (activeCount < 8 ? `(${activeCount})` : "")}
+                        {"Skills " + (activeCount < allSkills.length ? `(${activeCount})` : "")}
                     </span>
-                    {(activeCount === 8 || displayOptions) ? (
+                    {(activeCount === allSkills.length || displayOptions) ? (
                         <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
                     ) : (
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
