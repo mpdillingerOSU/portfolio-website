@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
-import { projectList } from '../data/ProjectData';
+import { allSkills, initActiveSkills, projectList } from '../data/ProjectData';
 import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
 import SortDirectionToggle from '../components/SortDirectionToggle';
+import SkillFilter from '../components/SkillFilter';
 import LanguageFilter from '../components/LanguageFilter';
 import TechnologyFilter from '../components/TechnologyFilter';
 import AppFooter from '../components/AppFooter';
@@ -11,6 +12,7 @@ import AppFooter from '../components/AppFooter';
 function ProjectsPage() {
     const [sortType, setSortType] = useState("featured");
     const [isSortInversed, setIsSortInversed] = useState(false);
+    const [activeSkills, setActiveSkills] = useState(initActiveSkills());
     const [activeLanguages, setActiveLanguages] = useState(
         {
             "HTML": true,
@@ -40,6 +42,16 @@ function ProjectsPage() {
         backToTop();
     }, []);
 
+    const projectHasSkill = (project) => {
+        for(let skill of project.skills){
+            if(activeSkills[skill]){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     const projectHasLanguage = (project) => {
         for(let language of project.languages){
             if(activeLanguages[language]){
@@ -64,7 +76,9 @@ function ProjectsPage() {
         const newProjects = [];
 
         for(let project of projectList){
-            if(projectHasLanguage(project) && projectHasTechnology(project)){
+            if(projectHasSkill(project)
+                && projectHasLanguage(project)
+                && projectHasTechnology(project)){
                 newProjects.push(project);
             }
         }
@@ -102,7 +116,7 @@ function ProjectsPage() {
         }
 
         setProjects(newProjects);
-    }, [sortType, isSortInversed, activeLanguages, activeTechnologies]);
+    }, [sortType, isSortInversed, activeSkills, activeLanguages, activeTechnologies]);
 
     const updateSortType = (type) => {
         setSortType(type);
@@ -121,6 +135,9 @@ function ProjectsPage() {
                         <SelectionInput options={[["featured", "Featured"], ["alphabetic", "Alphabetic"], ["skills", "# of Skills"], ["languages", "# of Languages"], ["technologies", "# of Technologies"]]} value={["featured", "Featured"]} onChange={(val) => updateSortType(val)} />
                     </div>
                     <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
+                </div>
+                <div className="sort-section">
+                    <SkillFilter activeSkills={activeSkills} onChange={(activeSkills) => setActiveSkills(activeSkills)} />
                 </div>
                 <div className="sort-section">
                     <LanguageFilter activeLanguages={activeLanguages} onChange={(activeLanguages) => setActiveLanguages(activeLanguages)} />

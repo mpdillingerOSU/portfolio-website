@@ -24,7 +24,8 @@ export const projectDict = {
             "Frontend",
             "Backend",
             "Fullstack",
-            "Databases"
+            "Databases",
+            "Procedural Generation"
         ],
         languages: [
             "HTML",
@@ -72,7 +73,8 @@ export const projectDict = {
             "Web Development",
             "Frontend",
             "Backend",
-            "Fullstack"
+            "Fullstack",
+            "Procedural Generation"
         ],
         languages: [
             "HTML",
@@ -204,7 +206,7 @@ export const projectDict = {
             "Mobile App Development",
             "Dev Tool Development",
             "UI/UX Design",
-            "Database Management"
+            "Databases"
         ],
         languages: [
             "Dart",
@@ -765,6 +767,7 @@ export const projectDict = {
         skills: [
             "Mobile App Development",
             "UI/UX Design",
+            "Procedural Generation"
         ],
         languages: [
             "Dart"
@@ -790,6 +793,7 @@ export const projectDict = {
         ],
         relatedProjects: [],
         skills: [
+            "Procedural Generation",
             "Custom Libraries"
         ],
         languages: [],
@@ -887,4 +891,36 @@ for (const project of Object.values(projectDict)){
     
         projectList.splice(project.index <= projectList[lo] ? lo : project.index <= projectList[hi] ? hi : projectList.length, 0, project);    
     }
+}
+
+export const allSkills = [
+    "Backend",
+    "Custom Libraries",
+    "Databases",
+    "Data Structure Development",
+    "Dev Tool Development",
+    "Educational Technology",
+    "Frontend",
+    "Fullstack",
+    "Game AI",
+    "Game Development",
+    "Game Engine Development",
+    "Mobile App Development",
+    "Natural Language Generation",
+    "Procedural Generation",
+    "Prototyping Tool Development",
+    "Simulator Analysis",
+    "Simulators",
+    "UI/UX Design",
+    "Web Development"
+];
+
+export function initActiveSkills(){
+    const newActiveSkills = {};
+
+    for(let i = 0; i < allSkills.length; i++){
+        newActiveSkills[allSkills[i]] = true;
+    }
+    
+    return newActiveSkills;
 }
