@@ -98,7 +98,7 @@ function SkillFilter({activeSkills, onChange}) {
                 </button>
                 <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
                     <div className="feature-filter-options-header">
-                        Selections
+                        Filter Selections
                     </div>
                     <div className="feature-filter-options-selectors">
                         {Array.from({ length: allSkills.length }, (_, i) => (
