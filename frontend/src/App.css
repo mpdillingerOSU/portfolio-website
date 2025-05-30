@@ -33,8 +33,9 @@
 }
 
 .page {
-    position: relative;
     width: 100vw;
+    min-height: calc(100vh - 59.6px);
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
