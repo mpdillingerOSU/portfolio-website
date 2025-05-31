@@ -831,6 +831,7 @@
     text-align: left;
     border-radius: 8px;
     color: white;
+    font-size: 16px;
 }
 
 .selection-option:hover {
