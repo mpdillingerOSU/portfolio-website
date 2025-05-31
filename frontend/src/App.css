@@ -661,14 +661,33 @@
 
 .sort-and-filters-section {
     margin-top: 56px;
-    width: 778px;
+    width: 826px;
     max-width: 80vw;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 24px;
+}
+
+.sort-and-filters-subsection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+@media only screen and (max-width: 540px) {
+    .sort-and-filters-subsection {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 1033px) {
+    .sort-and-filters-section {
+        flex-direction: column;
+    }
 }
 
 .sort-section {
