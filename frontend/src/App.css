@@ -168,6 +168,10 @@
     border: none;
 }
 
+.app-footer-buffer {
+    flex: 1;
+}
+
 .app-footer {
     width: 100%;
     padding: 84px 9% 48px 9%;
