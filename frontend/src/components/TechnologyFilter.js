@@ -2,18 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import TechnologyButton from './TechnologyButton';
 import { RxCaretDown } from 'react-icons/rx';
 import { IoMdClose } from "react-icons/io";
+import { allTechnologies } from '../data/ProjectData';
 
 function TechnologyFilter({activeTechnologies, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
-    const [isReactInactive, setIsReactInactive] = useState(!activeTechnologies["React"] ?? true);
-    const [isNextInactive, setIsNextInactive] = useState(!activeTechnologies["Next.js"] ?? true);
-    const [isSpringInactive, setIsSpringInactive] = useState(!activeTechnologies["Spring"] ?? true);
-    const [isVsCodeInactive, setIsVsCodeInactive] = useState(!activeTechnologies["VS Code"] ?? true);
-    const [isFlutterInactive, setIsFlutterInactive] = useState(!activeTechnologies["Flutter"] ?? true);
-    const [isIntelliJInactive, setIsIntelliJInactive] = useState(!activeTechnologies["IntelliJ"] ?? true);
-    const [isMySqlInactive, setIsMySqlInactive] = useState(!activeTechnologies["MySQL"] ?? true);
-    const [isGitInactive, setIsGitInactive] = useState(!activeTechnologies["Git"] ?? true);
-    const [activeCount, setActiveCount] = useState(8);
+    const [inactiveTechnologies, setInactiveTechnologies] = useState({});
+    const [activeCount, setActiveCount] = useState();
+
+    useEffect(() => {
+        const newInactiveTechnologies = {};
+        for(let i = 0; i < allTechnologies.length; i++) {
+            newInactiveTechnologies[allTechnologies[i]] = !activeTechnologies[allTechnologies[i]] ?? true;
+        }
+        setInactiveTechnologies(newInactiveTechnologies);
+    }, []);
 
     const updateOptionsVisibility = (val) => {
         setDisplayOptions(val);
@@ -22,80 +24,37 @@ function TechnologyFilter({activeTechnologies, onChange}) {
     const clear = (e) => {
         e.preventDefault();
 
-        setIsReactInactive(true);
-        setIsNextInactive(true);
-        setIsSpringInactive(true);
-        setIsVsCodeInactive(true);
-        setIsFlutterInactive(true);
-        setIsIntelliJInactive(true);
-        setIsMySqlInactive(true);
-        setIsGitInactive(true);
+        const newInactiveTechnologies = {};
+        for (const key in activeTechnologies) {
+            newInactiveTechnologies[key] = true;
+        }
+        setInactiveTechnologies(newInactiveTechnologies);
     }
 
     const selectAll = (e) => {
         e.preventDefault();
 
-        setIsReactInactive(false);
-        setIsNextInactive(false);
-        setIsSpringInactive(false);
-        setIsVsCodeInactive(false);
-        setIsFlutterInactive(false);
-        setIsIntelliJInactive(false);
-        setIsMySqlInactive(false);
-        setIsGitInactive(false);
+        const newInactiveTechnologies = {};
+        for (const key in activeTechnologies) {
+            newInactiveTechnologies[key] = false;
+        }
+        setInactiveTechnologies(newInactiveTechnologies);
     }
     
     useEffect(() => {
-        onChange(
-            {
-                "React": !isReactInactive,
-                "Next.js": !isNextInactive,
-                "Spring": !isSpringInactive,
-                "VS Code": !isVsCodeInactive,
-                "Flutter": !isFlutterInactive,
-                "IntelliJ": !isIntelliJInactive,
-                "MySQL": !isMySqlInactive,
-                "Git": !isGitInactive
+        const newActiveTechnologies = {};
+        let newActiveCount = 0;
+
+        for(const key in inactiveTechnologies) {
+            newActiveTechnologies[key] = !inactiveTechnologies[key];
+            if(newActiveTechnologies[key]){
+                newActiveCount++;
             }
-        );
-
-        let newActiveCount = 8;
-
-        if(isReactInactive){
-            newActiveCount--;
         }
 
-        if(isNextInactive){
-            newActiveCount--;
-        }
-
-        if(isSpringInactive){
-            newActiveCount--;
-        }
-
-        if(isVsCodeInactive){
-            newActiveCount--;
-        }
-
-        if(isFlutterInactive){
-            newActiveCount--;
-        }
-
-        if(isIntelliJInactive){
-            newActiveCount--;
-        }
-
-        if(isMySqlInactive){
-            newActiveCount--;
-        }
-
-        if(isGitInactive){
-            newActiveCount--;
-        }
-
+        onChange(newActiveTechnologies);
         setActiveCount(newActiveCount);
-
-    }, [isReactInactive, isNextInactive, isSpringInactive, isVsCodeInactive, isFlutterInactive, isIntelliJInactive, isMySqlInactive, isGitInactive]);
+    }, [inactiveTechnologies]);
 
     const optionsRef = useRef(null);
     //Check of selection ref also ensures that we don't get an open and close double effect when clicking on the actual selection box
@@ -117,15 +76,21 @@ function TechnologyFilter({activeTechnologies, onChange}) {
         };
     }, []);
 
+    const updateIsTechnologyInactive = (technology, isInactive) => {
+        const newInactiveTechnologies = {...inactiveTechnologies};
+        newInactiveTechnologies[technology] = isInactive;
+        setInactiveTechnologies(newInactiveTechnologies);
+    }
+
     return (
         <div className="feature-filter-container">
             <span className="feature-filter-lead-text">Technologies</span>
             <div className="feature-filter-button-container">
                 <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
                     <span>
-                        {"Technologies " + (activeCount < 8 ? `(${activeCount})` : "")}
+                        {"Technologies " + (activeCount < allTechnologies.length ? `(${activeCount})` : "")}
                     </span>
-                    {(activeCount === 8 || displayOptions) ? (
+                    {(activeCount === allTechnologies.length || displayOptions) ? (
                         <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
                     ) : (
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
@@ -136,14 +101,9 @@ function TechnologyFilter({activeTechnologies, onChange}) {
                         Filter Selections
                     </div>
                     <div className="feature-filter-options-selectors">
-                        <TechnologyButton technology={"React"} isInactive={isReactInactive} onToggle={(isInactive) => setIsReactInactive(isInactive)} />
-                        <TechnologyButton technology={"Next.js"} isInactive={isNextInactive} onToggle={(isInactive) => setIsNextInactive(isInactive)} />
-                        <TechnologyButton technology={"Spring"} isInactive={isSpringInactive} onToggle={(isInactive) => setIsSpringInactive(isInactive)} />
-                        <TechnologyButton technology={"VS Code"} isInactive={isVsCodeInactive} onToggle={(isInactive) => setIsVsCodeInactive(isInactive)} />
-                        <TechnologyButton technology={"Flutter"} isInactive={isFlutterInactive} onToggle={(isInactive) => setIsFlutterInactive(isInactive)} />
-                        <TechnologyButton technology={"IntelliJ"} isInactive={isIntelliJInactive} onToggle={(isInactive) => setIsIntelliJInactive(isInactive)} />
-                        <TechnologyButton technology={"MySQL"} isInactive={isMySqlInactive} onToggle={(isInactive) => setIsMySqlInactive(isInactive)} />
-                        <TechnologyButton technology={"Git"} isInactive={isGitInactive} onToggle={(isInactive) => setIsGitInactive(isInactive)} />
+                        {Array.from({ length: allTechnologies.length }, (_, i) => (
+                            <TechnologyButton key={i} technology={allTechnologies[i]} isInactive={inactiveTechnologies[allTechnologies[i]]} onToggle={(isInactive) => updateIsTechnologyInactive(allTechnologies[i], isInactive)} />
+                        ))}
                     </div>
                     <div className="feature-filter-options-button-row">
                         <div className="feature-filter-options-button-container">

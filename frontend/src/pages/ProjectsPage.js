@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
-import { initActiveSkills, initActiveLanguages, projectList } from '../data/ProjectData';
+import { initActiveSkills, initActiveLanguages, initActiveTechnologies, projectList } from '../data/ProjectData';
 import ProjectContainer from '../components/ProjectContainer';
 import SelectionInput from '../components/SelectionInput';
 import SortDirectionToggle from '../components/SortDirectionToggle';
@@ -14,18 +14,7 @@ function ProjectsPage() {
     const [isSortInversed, setIsSortInversed] = useState(false);
     const [activeSkills, setActiveSkills] = useState(initActiveSkills());
     const [activeLanguages, setActiveLanguages] = useState(initActiveLanguages());
-    const [activeTechnologies, setActiveTechnologies] = useState(
-        {
-            "React": true,
-            "Next.js": true,
-            "Spring": true,
-            "VS Code": true,
-            "Flutter": true,
-            "IntelliJ": true,
-            "MySQL": true,
-            "Git": true
-        }
-    );
+    const [activeTechnologies, setActiveTechnologies] = useState(initActiveTechnologies());
     const [projects, setProjects] = useState([...projectList]);
 
     useEffect(() => {
