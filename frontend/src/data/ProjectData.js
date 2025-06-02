@@ -879,6 +879,8 @@ export const projectDict = {
 
 export const projectList = [];
 
+export const allSkills = [];
+
 for (const project of Object.values(projectDict)){
     if(project.public){
         let lo = 0;
@@ -893,31 +895,16 @@ for (const project of Object.values(projectDict)){
             }
         }
     
-        projectList.splice(project.index <= projectList[lo] ? lo : project.index <= projectList[hi] ? hi : projectList.length, 0, project);    
+        projectList.splice(project.index <= projectList[lo] ? lo : project.index <= projectList[hi] ? hi : projectList.length, 0, project);
+        
+        for(let i = 0; i < project.skills.length; i++){
+            if(!allSkills.includes(project.skills[i])){
+                allSkills.push(project.skills[i]);
+            }
+        }
+        allSkills.sort();
     }
 }
-
-export const allSkills = [
-    "Backend",
-    "Custom Libraries",
-    "Databases",
-    "Data Structure Development",
-    "Dev Tool Development",
-    //"Educational Technology",
-    "Frontend",
-    "Fullstack",
-    "Game AI",
-    "Game Development",
-    "Game Engine Development",
-    "Mobile App Development",
-    "Natural Language Generation",
-    "Procedural Generation",
-    "Prototyping Tool Development",
-    "Simulator Analysis",
-    "Simulators",
-    "UI/UX Design",
-    "Web Development"
-];
 
 export function initActiveSkills(){
     const newActiveSkills = {};
