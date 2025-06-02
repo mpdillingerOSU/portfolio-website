@@ -903,7 +903,7 @@ export const allSkills = [
     "Databases",
     "Data Structure Development",
     "Dev Tool Development",
-    "Educational Technology",
+    //"Educational Technology",
     "Frontend",
     "Fullstack",
     "Game AI",
