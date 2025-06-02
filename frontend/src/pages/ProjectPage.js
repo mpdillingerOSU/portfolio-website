@@ -176,11 +176,11 @@ function ProjectPage() {
                     </div>
                 </div>
             </div>
+            <AppFooter />
             <button className="project-page-back-button" onClick={(e) => toProjects()}>
                 <IoReturnUpBack className="project-page-back-button-icon"/>
                 <span className="project-page-back-button-text">Projects</span>
             </button>
-            <AppFooter />
         </div>
     );
 }
