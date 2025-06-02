@@ -2,16 +2,20 @@ import React, { useEffect, useRef, useState } from 'react';
 import LanguageButton from './LanguageButton';
 import { RxCaretDown } from 'react-icons/rx';
 import { IoMdClose } from "react-icons/io";
+import { allLanguages } from '../data/ProjectData';
 
 function LanguageFilter({activeLanguages, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
-    const [isHtmlInactive, setIsHtmlInactive] = useState(!activeLanguages["HTML"] ?? true);
-    const [isCssInactive, setIsCssInactive] = useState(!activeLanguages["CSS"] ?? true);
-    const [isJavascriptInactive, setIsJavascriptInactive] = useState(!activeLanguages["Javascript"] ?? true);
-    const [isJavaInactive, setIsJavaInactive] = useState(!activeLanguages["Java"] ?? true);
-    const [isSqlInactive, setIsSqlInactive] = useState(!activeLanguages["SQL"] ?? true);
-    const [isDartInactive, setIsDartInactive] = useState(!activeLanguages["Dart"] ?? true);
-    const [activeCount, setActiveCount] = useState(6);
+    const [inactiveLanguages, setInactiveLanguages] = useState({});
+    const [activeCount, setActiveCount] = useState();
+
+    useEffect(() => {
+        const newInactiveLanguages = {};
+        for(let i = 0; i < allLanguages.length; i++) {
+            newInactiveLanguages[allLanguages[i]] = !activeLanguages[allLanguages[i]] ?? true;
+        }
+        setInactiveLanguages(newInactiveLanguages);
+    }, []);
 
     const updateOptionsVisibility = (val) => {
         setDisplayOptions(val);
@@ -20,66 +24,37 @@ function LanguageFilter({activeLanguages, onChange}) {
     const clear = (e) => {
         e.preventDefault();
 
-        setIsHtmlInactive(true);
-        setIsCssInactive(true);
-        setIsJavascriptInactive(true);
-        setIsJavaInactive(true);
-        setIsSqlInactive(true);
-        setIsDartInactive(true);
+        const newInactiveLanguages = {};
+        for (const key in activeLanguages) {
+            newInactiveLanguages[key] = true;
+        }
+        setInactiveLanguages(newInactiveLanguages);
     }
 
     const selectAll = (e) => {
         e.preventDefault();
 
-        setIsHtmlInactive(false);
-        setIsCssInactive(false);
-        setIsJavascriptInactive(false);
-        setIsJavaInactive(false);
-        setIsSqlInactive(false);
-        setIsDartInactive(false);
+        const newInactiveLanguages = {};
+        for (const key in activeLanguages) {
+            newInactiveLanguages[key] = false;
+        }
+        setInactiveLanguages(newInactiveLanguages);
     }
     
     useEffect(() => {
-        onChange(
-            {
-                "HTML": !isHtmlInactive,
-                "CSS": !isCssInactive,
-                "Javascript": !isJavascriptInactive,
-                "Java": !isJavaInactive,
-                "SQL": !isSqlInactive,
-                "Dart": !isDartInactive
+        const newActiveLanguages = {};
+        let newActiveCount = 0;
+
+        for(const key in inactiveLanguages) {
+            newActiveLanguages[key] = !inactiveLanguages[key];
+            if(newActiveLanguages[key]){
+                newActiveCount++;
             }
-        );
-
-        let newActiveCount = 6;
-
-        if(isHtmlInactive){
-            newActiveCount--;
         }
 
-        if(isCssInactive){
-            newActiveCount--;
-        }
-
-        if(isJavascriptInactive){
-            newActiveCount--;
-        }
-
-        if(isJavaInactive){
-            newActiveCount--;
-        }
-
-        if(isSqlInactive){
-            newActiveCount--;
-        }
-
-        if(isDartInactive){
-            newActiveCount--;
-        }
-
+        onChange(newActiveLanguages);
         setActiveCount(newActiveCount);
-
-    }, [isHtmlInactive, isCssInactive, isJavascriptInactive, isJavaInactive, isSqlInactive, isDartInactive]);
+    }, [inactiveLanguages]);
 
     const optionsRef = useRef(null);
     //Check of selection ref also ensures that we don't get an open and close double effect when clicking on the actual selection box
@@ -101,15 +76,21 @@ function LanguageFilter({activeLanguages, onChange}) {
         };
     }, []);
 
+    const updateIsLanguageInactive = (language, isInactive) => {
+        const newInactiveLanguages = {...inactiveLanguages};
+        newInactiveLanguages[language] = isInactive;
+        setInactiveLanguages(newInactiveLanguages);
+    }
+
     return (
         <div className="feature-filter-container">
             <span className="feature-filter-lead-text">Languages</span>
             <div className="feature-filter-button-container">
                 <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
                     <span>
-                        {"Languages " + (activeCount < 6 ? `(${activeCount})` : "")}
+                        {"Languages " + (activeCount < allLanguages.length ? `(${activeCount})` : "")}
                     </span>
-                    {(activeCount === 6 || displayOptions) ? (
+                    {(activeCount === allLanguages.length || displayOptions) ? (
                         <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
                     ) : (
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
@@ -120,12 +101,9 @@ function LanguageFilter({activeLanguages, onChange}) {
                         Filter Selections
                     </div>
                     <div className="feature-filter-options-selectors">
-                        <LanguageButton language={"HTML"} isInactive={isHtmlInactive} onToggle={(isInactive) => setIsHtmlInactive(isInactive)} />
-                        <LanguageButton language={"CSS"} isInactive={isCssInactive} onToggle={(isInactive) => setIsCssInactive(isInactive)} />
-                        <LanguageButton language={"Javascript"} isInactive={isJavascriptInactive} onToggle={(isInactive) => setIsJavascriptInactive(isInactive)} />
-                        <LanguageButton language={"Java"} isInactive={isJavaInactive} onToggle={(isInactive) => setIsJavaInactive(isInactive)} />
-                        <LanguageButton language={"SQL"} isInactive={isSqlInactive} onToggle={(isInactive) => setIsSqlInactive(isInactive)} />
-                        <LanguageButton language={"Dart"} isInactive={isDartInactive} onToggle={(isInactive) => setIsDartInactive(isInactive)} />
+                        {Array.from({ length: allLanguages.length }, (_, i) => (
+                            <LanguageButton key={i} language={allLanguages[i]} isInactive={inactiveLanguages[allLanguages[i]]} onToggle={(isInactive) => updateIsLanguageInactive(allLanguages[i], isInactive)} />
+                        ))}
                     </div>
                     <div className="feature-filter-options-button-row">
                         <div className="feature-filter-options-button-container">

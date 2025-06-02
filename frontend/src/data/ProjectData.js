@@ -878,8 +878,8 @@ export const projectDict = {
 };
 
 export const projectList = [];
-
 export const allSkills = [];
+export const allLanguages = [];
 
 for (const project of Object.values(projectDict)){
     if(project.public){
@@ -903,6 +903,13 @@ for (const project of Object.values(projectDict)){
             }
         }
         allSkills.sort();
+
+        for(let i = 0; i < project.languages.length; i++){
+            if(!allLanguages.includes(project.languages[i])){
+                allLanguages.push(project.languages[i]);
+            }
+        }
+        allLanguages.sort();
     }
 }
 
@@ -914,4 +921,14 @@ export function initActiveSkills(){
     }
 
     return newActiveSkills;
+}
+
+export function initActiveLanguages(){
+    const newActiveLanguages = {};
+
+    for(let i = 0; i < allLanguages.length; i++){
+        newActiveLanguages[allLanguages[i]] = true;
+    }
+
+    return newActiveLanguages;
 }
