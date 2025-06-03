@@ -23,23 +23,32 @@ function ProjectContainer({projectID}) {
             <div className="project-container-info">
                 <span className="project-container-name">{project.name}</span>
                 <div className="project-container-features">
-                    <div className="project-features-row">
-                        {Array.from({ length: project.skills.length }, (_, i) => (
-                            <div key={i} className="project-skill">
-                                {project.skills[i]}
-                            </div>
-                        ))}
-                    </div>
-                    <div className="project-container-split-row">
+                    <div className="project-container-features-section">
+                        <span className="project-contaner-lead-text">Skills</span>
                         <div className="project-features-row">
-                            {Array.from({ length: project.languages.length }, (_, i) => (
-                                <LanguageButton key={i} language={project.languages[i]}/>
+                            {Array.from({ length: project.skills.length }, (_, i) => (
+                                <div key={i} className="project-skill">
+                                    {project.skills[i]}
+                                </div>
                             ))}
                         </div>
-                        <div className="project-features-row">
-                            {Array.from({ length: project.technologies.length }, (_, i) => (
-                                <TechnologyButton key={i} technology={project.technologies[i]}/>
-                            ))}
+                    </div>
+                    <div className="project-container-split-row">
+                        <div className="project-container-features-section">
+                            <span className="project-contaner-lead-text">Languages</span>
+                            <div className="project-features-row">
+                                {Array.from({ length: project.languages.length }, (_, i) => (
+                                    <LanguageButton key={i} language={project.languages[i]}/>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="project-container-features-section">
+                            <span className="project-contaner-lead-text">Technologies</span>
+                            <div className="project-features-row">
+                                {Array.from({ length: project.technologies.length }, (_, i) => (
+                                    <TechnologyButton key={i} technology={project.technologies[i]}/>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
