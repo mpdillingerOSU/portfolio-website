@@ -8,6 +8,7 @@
     --page-background: linear-gradient(to bottom, #17191b 55%, rgb(10, 5, 67));
     --featured-project-transition: all 0.15s linear;
     --project-page-gap: 24px;
+    --project-container-features-gap: 12px;
 }
 
 .app {
@@ -545,22 +546,27 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: var(--project-container-features-gap);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: var(--standard-background);
-    padding: 32px;
-    border-radius: 16px;
+    background-color: transparent;
+    padding: 0;
 }
 
 .project-container-features-section {
     width: 100%;
+    padding: 24px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 8px 8px;
+    background-color: var(--standard-background);
+    border-radius: 12px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .project-contaner-lead-text {
@@ -583,7 +589,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    gap: 32px;
+    gap: var(--project-container-features-gap);
 }
 
 .project-container-split-row .project-feature-row {
