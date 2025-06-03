@@ -137,12 +137,14 @@ function ProjectPage() {
                                 <div className="project-page-url-header">
                                     {project.urls[i][0]}:
                                 </div>
-                                {project.urls[i][1] !== "" ? (
+                                {project.urls[i][1] === "private" ? (
+                                    <span className="project-page-private-url-link">Private</span>
+                                ) : project.urls[i][1] !== "" ? (
                                     <a className="project-page-public-url-link" href={project.urls[i][1]} target="_blank" rel="noopener noreferrer">
                                         {project.urls[i][1]}
                                     </a>
                                 ) : (
-                                    <span className="project-page-private-url-link">Private</span>
+                                    <></>
                                 )}
                             </div>
                         ))}

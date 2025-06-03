@@ -9,7 +9,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "TCG Maker is a website that allows users to prototype their own trading card games, by providing them a single platform that allows them to create, customize, and play their own creations. Unlike existing platforms that focus on pre-existing games and intellectual properties, this site provides a highly flexible rule construction system that enables both professionals and hobbyists alike with the creative freedom to design their own rulesets and to craft unique cards. As such, users are not only capable of creating the aesthetic elements of their games, but are also able to play and prototype the actual rules themselves.",
         urls: [
-            ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/online-tcg-maker"]
         ],
         relatedProjects: [
@@ -62,7 +61,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Character Generator project is a website intended to help users break through their writer's block - whether that be as a novelist, screenwriter, game designer, or even a dungeon master. By being able to generate entire descriptions - or only select parts of a description - the user is capable of establishing new elements within a new or existing story. As such, this project is an assistive tool that is able to eleveate some of the pressures on the creative side for many projects.",
         urls: [
-            ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/character-generator-website"]
         ],
         relatedProjects: [
@@ -113,7 +111,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Game Website for Celtic Tactics is an attempt at representing a production-ready version of the landing page for the Celtics Tactics video game - which is also contained inside of this portfolio. As such, it is meant as a means of quickly providing quality information to the user in an engaging manner, and to then entice the user into purchasing the video game. A huge focus was placed onto the Celtic-styled aesthetic of the webpage, with the webpage itself also providing everything from a video and screenshots to links for soundtracks and merchandise.",
         urls: [
-            ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics-website"]
         ],
         relatedProjects: [
@@ -160,7 +157,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "PTCGP Simulator is a program intended to simulate the number of packs required to obtain all standard cards for each expansion in the Pokémon Trading Card Game Pocket video game. It does so by allowing the user to control various factors: the specific expansion to be simulated, the number of simulations to be made for a given set, whether or not to use Pack Points, and whether or not to use Wonder Picks. Upon completion of a set of simulations, the user is then able to see results as it relates to the completion milestones for the specified expansion.",
         urls: [
-            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator"]
         ],
         relatedProjects: [
@@ -199,7 +195,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Koala Toolkit is a game development toolkit intended for use on Android and iOS. Users are able to create projects, either as empty templates or based on one of the pre-made templates. In each project, users are able to create combat moves such as attacks or support moves, as well as create combat units who can be given their own attributes and a list of combat moves to use. Users are also able to download each project either as a spreadsheet, JSON, or as code files - with the currently supported languages being C#, Python, Java, and Dart.",
         urls: [
-            ["App Store", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/koala-toolkit"]
         ],
         relatedProjects: [],
@@ -240,7 +235,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Range Data Stuctures project is a Java library intended to represent ranges of integer-based values - including enums - within Java programs. While possibly appearing simple and frivolous at first glance, the lack of a true range data structure in Java is especially hand-tying for many types of programs, especially those relying heavily on procedural generation. Additionally, those similar libraries that are already available (via Apache and Guava) are insufficient in terms of functionality - lacking necessary methods, and a multi-range class. As such, this library bridges those gaps for any such program that may need the extra complexity that this library provides.",
         urls: [
-            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/range-ds"]
         ],
         relatedProjects: [
@@ -277,7 +271,6 @@ export const projectDict = {
         version: "v0.3.1-alpha",
         abstract: "The Java Game Engine project is an unnamed Java-based video game engine, which allows users to build and play pixel-based video games. Initially starting off as a project intended to handle video games on the backend of web apps that use the Java-based Spring framework, the game engine was eventually expanded to also allow for video games that have been built using the engine to be run locally on a device.",
         urls: [
-            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/koala-engine"]
         ],
         relatedProjects: [
@@ -313,7 +306,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Advanced Welcome Page is an attempt to create a much more production-ready version of the welcome page for the TCG Maker project - which can also be found in this portfolio. As such, the page has been much more greatly developed in order to show the expectations for the final product, and to also demonstrate skills related to creating a more complex page that engages the user. Additionally, by focusing on a single page, the project is better at demonstrating my ability to focus in on the small details of UI/UX design and frontend development that were not possible in the initial prototype - due to its larger scope.",
         urls: [
-            ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/tcg-maker"]
         ],
         relatedProjects: [
@@ -363,7 +355,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         urls: [
-            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics"]
         ],
         relatedProjects: [
@@ -407,7 +398,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Analysis Website for the PTCGP Simulator project was created in order to share and analyze the data that was obtained from the simulations made by the PTCGP Simulator project - which can also be found in this portfolio. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
         urls: [
-            ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/ptcgp-simulator-website"]
         ],
         relatedProjects: [
@@ -452,7 +442,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Block Breaker is a library that procedurally generates character descriptions, and maintains the information via a node tree - which then allows for changes to be made and properly adapted to. As such, it has two major use cases. The first is the ability to make use of the character generation itself in order to create character sheets. As such, one can generate multiple characters that fit within the specified restrictions, and then use these for creative purposes. However, the second - and more important - use case is the ability for the library to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         urls: [
-            ["Direct Download", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
         ],
         relatedProjects: [
@@ -494,8 +483,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Language Constructor project is a library that allows for the procedural generation of written text through natural language generation. At the most basic level, it allows for a user to create their own language, and to then provide the rules for their language - or, if desired, to emulate an existing language. Of particular interest, however, is that the library also makes use of the Interpretable interface that any other class can inherit from, and then allows the user to create custom algorithms in order to control the possibilities for how to interpret a given object. As such, rather than focusing on the writing itself, a user only needs to focus on the aspects of the object that are to be represented.",
         urls: [
-            ["Direct Download", ""],
-            ["GitHub", ""]
+            ["GitHub", "private"]
         ],
         relatedProjects: [
             "9i90jyxh4g69r9hdpn3izurz",
@@ -537,7 +525,6 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
         urls: [
-            ["Live Demo", ""],
             ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
         ],
         relatedProjects: [],
