@@ -355,7 +355,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Celtic Tactics is a tactical RPG combined with a village simulator set in the Celtic past. Play as a band of five characters, and help them take their group of nomads out of the swamps and build their empire. Take part in engaging and dynamic tactics-based combat. Upgrade buildings to improve technologies and troops. Negotiate with others to establish trade routes and obtain resources. Conquer lands to grow your presence, and spread your influence.",
         urls: [
-            ["GitHub", "https://github.com/mpdillingerOSU/celtic-tactics"]
+            ["GitHub", "private"]
         ],
         relatedProjects: [
             "ecs7ospx0apqw3zkv8mzvoag",
@@ -442,7 +442,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "Block Breaker is a library that procedurally generates character descriptions, and maintains the information via a node tree - which then allows for changes to be made and properly adapted to. As such, it has two major use cases. The first is the ability to make use of the character generation itself in order to create character sheets. As such, one can generate multiple characters that fit within the specified restrictions, and then use these for creative purposes. However, the second - and more important - use case is the ability for the library to be used within interactive programs - such as videogames - in order to not only procedurally generate characters, but also to help create emergent experiences.",
         urls: [
-            ["GitHub", "https://github.com/mpdillingerOSU/block-breaker"]
+            ["GitHub", "private"]
         ],
         relatedProjects: [
             "9i90jyxh4g69r9hdpn3izurz",
