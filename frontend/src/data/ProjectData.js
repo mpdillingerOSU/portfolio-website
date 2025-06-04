@@ -259,7 +259,13 @@ export const projectDict = {
             "As with other data structures, this library allows us to determine the size of the range, the index that a value would be within a range, whether the range contains a specific value, and many more. Additionally, both single and multi-ranges are iterable via the Java standard library Iterable interface. However, it should also be noted that more range-specific methods are also included, such as unions and intersections, along with other various methods such as creating splices of ranges before and after certain values.",
             "A great example of the use of this library is the <rp>mx02wdoi7vxbvy75t2kk39h1</rp> library - also found within this portfolio - which uses procedural generation in order to create the JSON-able details of character descriptions. Another great example is the <rp>5s6af8u00z3jnsdmmx02wdoi</rp> library, which uses the range data structures in order to help generate prose-style descriptions of objects. Due to the extensive amount of factors used for the procedural generation within both projects, dozens of ranges had to be used for each - thus, helping to save an extensive amount of time, and significantly reducing repeated code."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/range-ds-0.png"),
+            require("../images/screenshots/range-ds-1.png"),
+            require("../images/screenshots/range-ds-2.png"),
+            require("../images/screenshots/range-ds-3.png"),
+            require("../images/screenshots/range-ds-4.png")
+        ]
     },
     "f0htbt1xaye2aebjv5bcizvf": {
         index: 6,
