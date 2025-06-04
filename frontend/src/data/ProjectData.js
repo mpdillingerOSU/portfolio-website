@@ -399,7 +399,7 @@ export const projectDict = {
         projectID: "gfj838t22dfhct3ynbcraenu",
         public: true,
         name: "PTCGP Simulator - Analysis Website",
-        logo: require("../images/project-logos/ptcgp-sim-logo.png"),
+        logo: require("../images/project-logos/ptcgp-sim-analysis-website-logo.png"),
         logoAlt: "pokemon trading card game simulator analysis website",
         version: "v0.0.0-alpha",
         abstract: "The Analysis Website for the PTCGP Simulator project was created in order to share and analyze the data that was obtained from the simulations made by the PTCGP Simulator project - which can also be found in this portfolio. In particular, the ethics related to the ability for users to obtain all standard cards was given heavy emphasize - both as a means to ensure from a business perspective that users were retained, and from a consumer perspective in order to maximize product enjoyability.",
