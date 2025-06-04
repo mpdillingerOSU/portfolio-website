@@ -49,7 +49,13 @@ export const projectDict = {
             "Back on the Portal page, if a user selects a game from either the Library or Discover row, they will be redirected to the Game Overview page. Here, users can see all of the details of the game, the cards of the game, and also the ruleset (which has been generated in a prose style based on the attributes of the game itself). From here, they can select the Play button at the top of the screen, which will then take the user to the Play page. On this page, a user can select from three buttons: to battle, check out the game’s collection of cards, and to view the ruleset of the game. Once our hypothetical user has seen all of the cards in the game and checked out the ruleset, they will then choose to battle. On the Battle page, there are options for both Solo (single-player) and Versus (multiplayer) modes. As of right now, multiplayer is not yet available, so let us assume that the player chooses Solo. From here, the user can choose either a random match, or choose to play a campaign. However, similar to multiplayer, campaigns are also not yet available. As such, upon selecting a random match, a player will have a deck constructed for them, which uses basic procedural generation in order to ensure proper card type ratios and a single energy type. The user can then play against an AI opponent, until either they themself or the AI has zero life points remaining, or they have reached the maximum number of turns.",
             "Additionally, even though the scope of the functionality for this project made it improbable to create a production-ready version of the UI/UX  the entire website, the related <rp>c91f92cj77yo7nv5t5vyg761</rp> project does provide a high level of detail that would be expected of the welcome page for the final product. This related project provides greatly improved visuals, a more thorough navigation bar, much improved versions for logging in and signing up, and many more additional features."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/tcg-maker-0.png"),
+            require("../images/screenshots/tcg-maker-1.png"),
+            require("../images/screenshots/tcg-maker-2.png"),
+            require("../images/screenshots/tcg-maker-3.png"),
+            require("../images/screenshots/tcg-maker-4.png")
+        ]
     },
     "9i90jyxh4g69r9hdpn3izurz": {
         index: 1,
