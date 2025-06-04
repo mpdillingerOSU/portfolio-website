@@ -294,7 +294,13 @@ export const projectDict = {
             "The game engine itself is intended to be downloaded as a library, or used as module that the game is dependent upon. As it currently stands, the development of the engine is still in the earlier stages. However, as previously mentioned, there is still a large amount of depth currently within the project. The interactions take place in Theatres, where the objects placed into them are divided into being either GameObjects or UIObjects - with GameObjects being placed directly into the Theatres themselves, while the UIObjects are overlaid onto the screen. In fact, this separation of GameObject and UIObject objects also makes it much easier to also use the engine purely for its UI elements, such as building an app - with much of the UI design being based on the principles of web design itself.",
             "As an extra aside, it should be noted that the <rp>nl1gx1y68jxy5c8t3gu84wip</rp> project within this portfolio was actually built using this game engine - which, although low in fidelity, has a high level of depth in regards to combat move type, movement types, destruction of the environment, and much more."
         ],
-        screenshots: []
+        screenshots: [
+            require("../images/screenshots/java-game-engine-0.png"),
+            require("../images/screenshots/java-game-engine-1.png"),
+            require("../images/screenshots/java-game-engine-2.png"),
+            require("../images/screenshots/java-game-engine-3.png"),
+            require("../images/screenshots/java-game-engine-4.png")
+        ]
     },
     "c91f92cj77yo7nv5t5vyg761":{
         index: 7,
