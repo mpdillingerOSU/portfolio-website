@@ -10,7 +10,7 @@ function TextInput({inputRef, id, name, tabIndex, title, value, onChange, onEnte
                 <textarea className={"textarea-input-field" + (isErrored ? " textarea-input-field-errored" : "")} id={id} name={name} ref={inputRef} tabIndex={tabIndex} placeholder="" value={value} onChange={e => onChange(e)}
                     onKeyDown={
                         e => {
-                            if (e.key === "Enter") {                       
+                            if (onEnter && e.key === "Enter") {                       
                                 e.preventDefault();
                                 onEnter(e);
                             }

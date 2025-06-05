@@ -8,8 +8,10 @@ import SkillFilter from '../components/SkillFilter';
 import LanguageFilter from '../components/LanguageFilter';
 import TechnologyFilter from '../components/TechnologyFilter';
 import AppFooter from '../components/AppFooter';
+import SearchBar from '../components/SearchBar';
 
 function ProjectsPage() {
+    const [search, setSearch] = useState("");
     const [sortType, setSortType] = useState("featured");
     const [isSortInversed, setIsSortInversed] = useState(false);
     const [activeSkills, setActiveSkills] = useState(initActiveSkills());
@@ -21,6 +23,10 @@ function ProjectsPage() {
         highlightNavButton("projects");
         backToTop();
     }, []);
+
+    const projectHasSearch = (project) => {
+        return search === "" || project.name.toLowerCase().trim().replace(/\s+/g, " ").includes(search.toLowerCase().trim().replace(/\s+/g, " "));
+    }
 
     const projectHasSkill = (project) => {
         for(let skill of project.skills){
@@ -56,7 +62,8 @@ function ProjectsPage() {
         const newProjects = [];
 
         for(let project of projectList){
-            if(projectHasSkill(project)
+            if(projectHasSearch(project)
+                && projectHasSkill(project)
                 && projectHasLanguage(project)
                 && projectHasTechnology(project)){
                 newProjects.push(project);
@@ -96,7 +103,7 @@ function ProjectsPage() {
         }
 
         setProjects(newProjects);
-    }, [sortType, isSortInversed, activeSkills, activeLanguages, activeTechnologies]);
+    }, [search, sortType, isSortInversed, activeSkills, activeLanguages, activeTechnologies]);
 
     const updateSortType = (type) => {
         setSortType(type);
@@ -109,6 +116,7 @@ function ProjectsPage() {
     return (
         <div id="projects-page" className="page">
             <div className="sort-and-filters-section">
+                <SearchBar value={search} onChange={(e) => setSearch(e.target.value)} onButtonClick={(e) => setSearch("")}/>
                 <div className="sort-and-filters-subsection">
                     <div className="sort-section">
                         <div className="input-container">
