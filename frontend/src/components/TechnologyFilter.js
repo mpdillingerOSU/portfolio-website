@@ -96,7 +96,7 @@ function TechnologyFilter({activeTechnologies, onChange}) {
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
                     )}
                 </button>
-                <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
+                <div className={"feature-filter-options-container technologies-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
                     <div className="feature-filter-options-header">
                         Filter Selections
                     </div>
