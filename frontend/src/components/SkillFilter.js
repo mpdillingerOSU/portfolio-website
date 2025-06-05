@@ -9,13 +9,26 @@ function SkillFilter({activeSkills, onChange}) {
     const [inactiveSkills, setInactiveSkills] = useState({});
     const [activeCount, setActiveCount] = useState();
 
-    useEffect(() => {
+    const shiftSkills = () => {
         const newInactiveSkills = {};
         for(let i = 0; i < allSkills.length; i++) {
             newInactiveSkills[allSkills[i]] = !activeSkills[allSkills[i]] ?? true;
         }
         setInactiveSkills(newInactiveSkills);
+    }
+
+    useEffect(() => {
+        shiftSkills();
     }, []);
+
+    useEffect(() => {
+        for(let i = 0; i < allSkills.length; i++) {
+            if(inactiveSkills[allSkills[i]] === activeSkills[allSkills[i]]){
+                shiftSkills();
+                break;
+            }
+        }
+    }, [activeSkills]);
 
     const updateOptionsVisibility = (val) => {
         setDisplayOptions(val);
@@ -81,10 +94,16 @@ function SkillFilter({activeSkills, onChange}) {
         newInactiveSkills[skill] = isInactive;
         setInactiveSkills(newInactiveSkills);
     }
+    
+    window.addEventListener("resize", function() {
+        if(!document.getElementById("skill-filter").checkVisibility()) {
+            setDisplayOptions(false);
+        }
+    });
 
     return (
-        <div className="feature-filter-container">
-            <span className="feature-filter-lead-text">Skills</span>
+        <div id="skill-filter" className="feature-filter-container">
+            <span className="feature-filter-lead-text">Filters</span>
             <div className="feature-filter-button-container">
                 <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
                     <span>

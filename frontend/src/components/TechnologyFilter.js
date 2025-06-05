@@ -9,13 +9,26 @@ function TechnologyFilter({activeTechnologies, onChange}) {
     const [inactiveTechnologies, setInactiveTechnologies] = useState({});
     const [activeCount, setActiveCount] = useState();
 
-    useEffect(() => {
+    const shiftTechnologies = () => {
         const newInactiveTechnologies = {};
         for(let i = 0; i < allTechnologies.length; i++) {
             newInactiveTechnologies[allTechnologies[i]] = !activeTechnologies[allTechnologies[i]] ?? true;
         }
         setInactiveTechnologies(newInactiveTechnologies);
+    }
+    
+    useEffect(() => {
+        shiftTechnologies();
     }, []);
+
+    useEffect(() => {
+        for(let i = 0; i < allTechnologies.length; i++) {
+            if(inactiveTechnologies[allTechnologies[i]] === activeTechnologies[allTechnologies[i]]){
+                shiftTechnologies();
+                break;
+            }
+        }
+    }, [activeTechnologies]);
 
     const updateOptionsVisibility = (val) => {
         setDisplayOptions(val);
@@ -82,9 +95,14 @@ function TechnologyFilter({activeTechnologies, onChange}) {
         setInactiveTechnologies(newInactiveTechnologies);
     }
 
+    window.addEventListener("resize", function() {
+        if(!document.getElementById("technology-filter").checkVisibility()) {
+            setDisplayOptions(false);
+        }
+    });
+
     return (
-        <div className="feature-filter-container">
-            <span className="feature-filter-lead-text">Technologies</span>
+        <div id="technology-filter" className="feature-filter-container">
             <div className="feature-filter-button-container">
                 <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
                     <span>
@@ -96,7 +114,7 @@ function TechnologyFilter({activeTechnologies, onChange}) {
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
                     )}
                 </button>
-                <div className={"feature-filter-options-container technologies-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
+                <div className={"feature-filter-options-container technology-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
                     <div className="feature-filter-options-header">
                         Filter Selections
                     </div>

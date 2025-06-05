@@ -708,7 +708,7 @@
     gap: 24px;
 }
 
-.sort-and-filters-subsection {
+.sort-and-filters-secondary-section {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -716,14 +716,36 @@
     gap: 24px;
 }
 
-@media only screen and (max-width: 540px) {
-    .sort-and-filters-subsection {
+.filters-subsection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.all-features-filter {
+    display: none;
+}
+
+@media only screen and (max-width: 1250px) {
+    .filters-subsection {
+        display: none;
+    }
+
+    .all-features-filter {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 816px) {
+    .sort-and-filters-section {
         flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 1250px) {
-    .sort-and-filters-section {
+@media only screen and (max-width: 458px) {
+    .sort-and-filters-secondary-section {
         flex-direction: column;
     }
 }
@@ -1086,7 +1108,7 @@ input:checked + .toggle:before {
 }
 
 @media only screen and (max-width: 1505px) {
-    .technologies-filter-options-container {
+    .technology-filter-options-container {
         left: auto;
         right: 0;
     }
@@ -1102,6 +1124,38 @@ input:checked + .toggle:before {
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.feature-tab-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.feature-tab-button {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.feature-tab-button-inactive {
+    color: grey;
+    text-decoration: none;
+}
+
+.feature-tab-button-inactive:hover {
+    color: lightgrey;
+    text-decoration: underline;
 }
 
 .feature-filter-options-header {
@@ -1922,4 +1976,12 @@ input:checked + .toggle:before {
     border: none;
     font-size: 20px;
     cursor: pointer;
+}
+
+.all-filters-button-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
 }

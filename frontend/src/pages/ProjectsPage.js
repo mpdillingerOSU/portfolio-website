@@ -9,6 +9,7 @@ import LanguageFilter from '../components/LanguageFilter';
 import TechnologyFilter from '../components/TechnologyFilter';
 import AppFooter from '../components/AppFooter';
 import SearchBar from '../components/SearchBar';
+import AllFiltersFilter from '../components/AllFiltersFilter';
 
 function ProjectsPage() {
     const [search, setSearch] = useState("");
@@ -113,11 +114,17 @@ function ProjectsPage() {
         setIsSortInversed(isInversed);
     }
 
+    const updateFeatures = (updatedFeatures) => {
+        setActiveSkills(updatedFeatures["skills"]);
+        setActiveLanguages(updatedFeatures["languages"]);
+        setActiveTechnologies(updatedFeatures["technologies"]);
+    }
+
     return (
         <div id="projects-page" className="page">
             <div className="sort-and-filters-section">
                 <SearchBar value={search} onChange={(e) => setSearch(e.target.value)} onButtonClick={(e) => setSearch("")}/>
-                <div className="sort-and-filters-subsection">
+                <div className="sort-and-filters-secondary-section">
                     <div className="sort-section">
                         <div className="input-container">
                             <span className="input-lead-text">Sort</span>
@@ -125,17 +132,18 @@ function ProjectsPage() {
                         </div>
                         <SortDirectionToggle isOn={isSortInversed} onToggle={(val) => updateSortDirection(val)} />
                     </div>
-                    <div className="sort-section">
-                        <SkillFilter activeSkills={activeSkills} onChange={(activeSkills) => setActiveSkills(activeSkills)} />
+                    <div className="filters-subsection">
+                        <div className="sort-section">
+                            <SkillFilter activeSkills={activeSkills} onChange={(activeSkills) => setActiveSkills(activeSkills)} />
+                        </div>
+                        <div className="sort-section">
+                            <LanguageFilter activeLanguages={activeLanguages} onChange={(activeLanguages) => setActiveLanguages(activeLanguages)} />
+                        </div>
+                        <div className="sort-section">
+                            <TechnologyFilter activeTechnologies={activeTechnologies} onChange={(activeTechnologies) => setActiveTechnologies(activeTechnologies)} />
+                        </div>
                     </div>
-                </div>
-                <div className="sort-and-filters-subsection">
-                    <div className="sort-section">
-                        <LanguageFilter activeLanguages={activeLanguages} onChange={(activeLanguages) => setActiveLanguages(activeLanguages)} />
-                    </div>
-                    <div className="sort-section">
-                        <TechnologyFilter activeTechnologies={activeTechnologies} onChange={(activeTechnologies) => setActiveTechnologies(activeTechnologies)} />
-                    </div>
+                    <AllFiltersFilter activeSkills={activeSkills} activeLanguages={activeLanguages} activeTechnologies={activeTechnologies} onChange={(updatedFeatures) => updateFeatures(updatedFeatures)} />
                 </div>
             </div>
             <div className="projects-page-filter-underline" />

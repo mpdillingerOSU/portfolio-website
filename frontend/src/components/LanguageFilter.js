@@ -9,13 +9,26 @@ function LanguageFilter({activeLanguages, onChange}) {
     const [inactiveLanguages, setInactiveLanguages] = useState({});
     const [activeCount, setActiveCount] = useState();
 
-    useEffect(() => {
+    const shiftLanguages = () => {
         const newInactiveLanguages = {};
         for(let i = 0; i < allLanguages.length; i++) {
             newInactiveLanguages[allLanguages[i]] = !activeLanguages[allLanguages[i]] ?? true;
         }
         setInactiveLanguages(newInactiveLanguages);
+    }
+
+    useEffect(() => {
+        shiftLanguages();
     }, []);
+
+    useEffect(() => {
+        for(let i = 0; i < allLanguages.length; i++) {
+            if(inactiveLanguages[allLanguages[i]] === activeLanguages[allLanguages[i]]){
+                shiftLanguages();
+                break;
+            }
+        }
+    }, [activeLanguages]);
 
     const updateOptionsVisibility = (val) => {
         setDisplayOptions(val);
@@ -82,9 +95,14 @@ function LanguageFilter({activeLanguages, onChange}) {
         setInactiveLanguages(newInactiveLanguages);
     }
 
+    window.addEventListener("resize", function() {
+        if(!document.getElementById("language-filter").checkVisibility()) {
+            setDisplayOptions(false);
+        }
+    });
+
     return (
-        <div className="feature-filter-container">
-            <span className="feature-filter-lead-text">Languages</span>
+        <div id="language-filter" className="feature-filter-container">
             <div className="feature-filter-button-container">
                 <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
                     <span>
