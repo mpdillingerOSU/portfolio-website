@@ -700,7 +700,7 @@
 
 .sort-and-filters-section {
     margin-top: 42px;
-    width: 85vw;
+    width: 90vw;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -722,7 +722,7 @@
     }
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1250px) {
     .sort-and-filters-section {
         flex-direction: column;
     }
@@ -1024,7 +1024,7 @@ input:checked + .toggle:before {
 .feature-filter-button {
     cursor: pointer;
     height: 40px;
-    width: 180px;
+    width: 172px;
     margin: 0px;
     padding: 5px 5px 5px 15px;
     background-color: var(--standard-background);
@@ -1870,7 +1870,7 @@ input:checked + .toggle:before {
 }
 
 .search-bar-inner-container {
-    width: 312px;
+    width: 300px;
     height: 40px;
     display: flex;
     flex-direction: row;
