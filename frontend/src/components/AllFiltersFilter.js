@@ -9,6 +9,7 @@ import { allSkills, allLanguages, allTechnologies } from '../data/ProjectData';
 
 function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
+    const [isOnScreenRight, setIsOnScreenRight] = useState(false);
     const [inactiveSkills, setInactiveSkills] = useState({});
     const [activeSkillCount, setActiveSkillCount] = useState();
     const [inactiveLanguages, setInactiveLanguages] = useState({});
@@ -45,6 +46,7 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
         shiftSkills();
         shiftLanguages();
         shiftTechnologies();
+        checkIsOnScreenRight();
     }, []);
 
     useEffect(() => {
@@ -74,8 +76,13 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
         }
     }, [activeTechnologies]);
 
-    const updateOptionsVisibility = (val) => {
-        setDisplayOptions(val);
+    const updateOptionsVisibility = (isVisible) => {
+        setDisplayOptions(isVisible);
+        if(isVisible){
+            checkIsOnScreenRight();
+        } else {
+            setIsOnScreenRight(false);
+        }
         setDisplayedFilter(0);
     }
 
@@ -225,10 +232,25 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
     }
 
     window.addEventListener("resize", function() {
-        if(!document.getElementById("all-filters-filter").checkVisibility()) {
-            updateOptionsVisibility(false);
+        if(displayOptions){
+            if(!document.getElementById("all-filters-filter").checkVisibility()) {
+                updateOptionsVisibility(false);
+            } else {
+                checkIsOnScreenRight();
+            }
         }
     });
+
+    const checkIsOnScreenRight = () => {
+        if(optionsRef.current){
+            const oldIsOnScreenRight = isOnScreenRight;
+            const newIsOnScreenRight = (optionsRef.current.parentElement.getBoundingClientRect().x + optionsRef.current.getBoundingClientRect().width) <= (window.innerWidth *.95);
+
+            if(oldIsOnScreenRight !== newIsOnScreenRight){
+                setIsOnScreenRight(newIsOnScreenRight);
+            }
+        }
+    }
 
     return (
         <div id="all-filters-filter" className="all-features-filter">
@@ -248,7 +270,7 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
                             <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAllSkills(e); selectAllLanguages(e); selectAllTechnologies(e);}}/>
                         )}
                     </button>
-                    <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
+                    <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "") + (isOnScreenRight ? "" : " left-aligned-feature-filter-options-container")} ref={optionsRef}>
                         <div className="feature-tab-bar">
                             <button className={"feature-tab-button" + (displayedFilter !== 0 ? " feature-tab-button-inactive" : "")} onClick={(e) => {updateDisplayedFilter(e, 0)}}>
                                 Skills

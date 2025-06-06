@@ -6,6 +6,7 @@ import { allLanguages } from '../data/ProjectData';
 
 function LanguageFilter({activeLanguages, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
+    const [isOnScreenRight, setIsOnScreenRight] = useState(false);
     const [inactiveLanguages, setInactiveLanguages] = useState({});
     const [activeCount, setActiveCount] = useState();
 
@@ -19,6 +20,7 @@ function LanguageFilter({activeLanguages, onChange}) {
 
     useEffect(() => {
         shiftLanguages();
+        checkIsOnScreenRight();
     }, []);
 
     useEffect(() => {
@@ -30,15 +32,20 @@ function LanguageFilter({activeLanguages, onChange}) {
         }
     }, [activeLanguages]);
 
-    const updateOptionsVisibility = (val) => {
-        setDisplayOptions(val);
+    const updateOptionsVisibility = (isVisible) => {
+        setDisplayOptions(isVisible);
+        if(isVisible){
+            checkIsOnScreenRight();
+        } else {
+            setIsOnScreenRight(false);
+        }
     }
 
     const clear = (e) => {
         e.preventDefault();
 
         const newInactiveLanguages = {};
-        for (const key in activeLanguages) {
+        for(const key in activeLanguages) {
             newInactiveLanguages[key] = true;
         }
         setInactiveLanguages(newInactiveLanguages);
@@ -48,7 +55,7 @@ function LanguageFilter({activeLanguages, onChange}) {
         e.preventDefault();
 
         const newInactiveLanguages = {};
-        for (const key in activeLanguages) {
+        for(const key in activeLanguages) {
             newInactiveLanguages[key] = false;
         }
         setInactiveLanguages(newInactiveLanguages);
@@ -96,10 +103,25 @@ function LanguageFilter({activeLanguages, onChange}) {
     }
 
     window.addEventListener("resize", function() {
-        if(!document.getElementById("language-filter").checkVisibility()) {
-            setDisplayOptions(false);
+        if(displayOptions){
+            if(!document.getElementById("language-filter").checkVisibility()) {
+                updateOptionsVisibility(false);
+            } else {
+                checkIsOnScreenRight();
+            }
         }
     });
+
+    const checkIsOnScreenRight = () => {
+        if(optionsRef.current){
+            const oldIsOnScreenRight = isOnScreenRight;
+            const newIsOnScreenRight = (optionsRef.current.parentElement.getBoundingClientRect().x + optionsRef.current.getBoundingClientRect().width) <= (window.innerWidth *.95);
+
+            if(oldIsOnScreenRight !== newIsOnScreenRight){
+                setIsOnScreenRight(newIsOnScreenRight);
+            }
+        }
+    }
 
     return (
         <div id="language-filter" className="feature-filter-container">
@@ -114,7 +136,7 @@ function LanguageFilter({activeLanguages, onChange}) {
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
                     )}
                 </button>
-                <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
+                <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "") + (isOnScreenRight ? "" : " left-aligned-feature-filter-options-container")} ref={optionsRef}>
                     <div className="feature-filter-options-header">
                         Filter Selections
                     </div>

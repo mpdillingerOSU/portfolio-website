@@ -1107,11 +1107,9 @@ input:checked + .toggle:before {
     box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1505px) {
-    .technology-filter-options-container {
-        left: auto;
-        right: 0;
-    }
+.left-aligned-feature-filter-options-container {
+    left: auto;
+    right: 0;
 }
 
 .feature-filter-options-container-displayed {
