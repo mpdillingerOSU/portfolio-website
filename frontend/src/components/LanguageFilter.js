@@ -7,6 +7,8 @@ import { allLanguages } from '../data/ProjectData';
 function LanguageFilter({activeLanguages, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
     const [isOnScreenRight, setIsOnScreenRight] = useState(false);
+    const [isOnScreenLeft, setIsOnScreenLeft] = useState(false);
+    const [dropdownAlignment, setDropdownAlignment] = useState("right");
     const [inactiveLanguages, setInactiveLanguages] = useState({});
     const [activeCount, setActiveCount] = useState();
 
@@ -20,7 +22,7 @@ function LanguageFilter({activeLanguages, onChange}) {
 
     useEffect(() => {
         shiftLanguages();
-        checkIsOnScreenRight();
+        checkDropdownAlignment();
     }, []);
 
     useEffect(() => {
@@ -35,9 +37,11 @@ function LanguageFilter({activeLanguages, onChange}) {
     const updateOptionsVisibility = (isVisible) => {
         setDisplayOptions(isVisible);
         if(isVisible){
-            checkIsOnScreenRight();
+            checkDropdownAlignment();
         } else {
             setIsOnScreenRight(false);
+            setIsOnScreenLeft(false);
+            setDropdownAlignment("right");
         }
     }
 
@@ -107,18 +111,29 @@ function LanguageFilter({activeLanguages, onChange}) {
             if(!document.getElementById("language-filter").checkVisibility()) {
                 updateOptionsVisibility(false);
             } else {
-                checkIsOnScreenRight();
+                checkDropdownAlignment();
             }
         }
     });
 
-    const checkIsOnScreenRight = () => {
+    const checkDropdownAlignment = () => {
         if(optionsRef.current){
             const oldIsOnScreenRight = isOnScreenRight;
             const newIsOnScreenRight = (optionsRef.current.parentElement.getBoundingClientRect().x + optionsRef.current.getBoundingClientRect().width) <= (window.innerWidth *.95);
-
             if(oldIsOnScreenRight !== newIsOnScreenRight){
                 setIsOnScreenRight(newIsOnScreenRight);
+            }
+
+            const oldIsOnScreenLeft = isOnScreenLeft;
+            const newIsOnScreenLeft = (optionsRef.current.parentElement.getBoundingClientRect().x + optionsRef.current.parentElement.getBoundingClientRect().width - optionsRef.current.getBoundingClientRect().width) >= (window.innerWidth *.05);
+            if(oldIsOnScreenLeft !== newIsOnScreenLeft){
+                setIsOnScreenLeft(newIsOnScreenLeft);
+            }
+
+            const oldDropdownAlignment = dropdownAlignment;
+            const newDropdownAlignment = newIsOnScreenRight ? "right" : newIsOnScreenLeft ? "left" : "center";
+            if(oldDropdownAlignment !== newDropdownAlignment){
+                setDropdownAlignment(newDropdownAlignment);
             }
         }
     }
@@ -136,7 +151,7 @@ function LanguageFilter({activeLanguages, onChange}) {
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
                     )}
                 </button>
-                <div className={"feature-filter-options-container" + (displayOptions ? " feature-filter-options-container-displayed" : "") + (isOnScreenRight ? "" : " left-aligned-feature-filter-options-container")} ref={optionsRef}>
+                <div className={"feature-filter-options-container " + (dropdownAlignment + "-aligned-feature-filter-options-container") + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
                     <div className="feature-filter-options-header">
                         Filter Selections
                     </div>

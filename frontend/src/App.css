@@ -1089,7 +1089,6 @@ input:checked + .toggle:before {
     visibility: hidden;
     position: absolute;
     top: calc(100% + 8px);
-    left: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1107,9 +1106,18 @@ input:checked + .toggle:before {
     box-sizing: border-box;
 }
 
+.right-aligned-feature-filter-options-container {
+    left: 0;
+}
+
 .left-aligned-feature-filter-options-container {
-    left: auto;
     right: 0;
+}
+
+.center-aligned-feature-filter-options-container {
+    /* Next two lines combine to allow us to center an absolutely positioned child element to parent */
+    left: 50%; /*positions left-side horizontally centered in parent element*/
+    transform: translateX(-50%); /* moves element left by 50% of its own width */
 }
 
 .feature-filter-options-container-displayed {
