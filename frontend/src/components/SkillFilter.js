@@ -152,7 +152,7 @@ function SkillFilter({activeSkills, onChange}) {
                         <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
                     )}
                 </button>
-                <div className={"feature-filter-options-container " + (dropdownAlignment + "-aligned-feature-filter-options-container") + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
+                <div className={"feature-filter-options-container dropdown-feature-filter-options-container " + (dropdownAlignment + "-aligned-feature-filter-options-container") + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
                     <div className="feature-filter-options-header">
                         Filter Selections
                     </div>

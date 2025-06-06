@@ -1086,9 +1086,6 @@ input:checked + .toggle:before {
 
 .feature-filter-options-container {
     width: 433.2px;
-    visibility: hidden;
-    position: absolute;
-    top: calc(100% + 8px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1098,7 +1095,6 @@ input:checked + .toggle:before {
     border-radius: 10px;
     padding: 32px;
     z-index: 1;
-    width: fit-content;
     background-color: var(--dark-emboss);
     box-shadow: var(--standard-shadow);
     -webkit-box-sizing: border-box;
@@ -1120,8 +1116,22 @@ input:checked + .toggle:before {
     transform: translateX(-50%); /* moves element left by 50% of its own width */
 }
 
+.dropdown-feature-filter-options-container {
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 8px);
+}
+
 .feature-filter-options-container-displayed {
     visibility: visible;
+}
+
+.overlayed-feature-filter-options-container {
+    width: 465.2px;
+    padding: 40px 48px;
+    max-width: 90vw;
+    box-shadow: var(--standard-shadow);
+    z-index: 21;
 }
 
 .feature-filter-options {
@@ -1181,15 +1191,16 @@ input:checked + .toggle:before {
 }
 
 .feature-filter-options-button-row {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .feature-filter-options-button-container {
     height: 40px;
-    width: 122px;
+    width: fit-content;
     margin: 0;
     padding: 0;
     display: flex;
@@ -1230,7 +1241,7 @@ input:checked + .toggle:before {
 
 .feature-filter-done-button {
     height: 100%;
-    width: 100%;
+    width: 122px;
     background-color: var(--purple-accent);
     color: white;
     align-items: center;

@@ -9,9 +9,6 @@ import { allSkills, allLanguages, allTechnologies } from '../data/ProjectData';
 
 function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
-    const [isOnScreenRight, setIsOnScreenRight] = useState(false);
-    const [isOnScreenLeft, setIsOnScreenLeft] = useState(false);
-    const [dropdownAlignment, setDropdownAlignment] = useState("right");
     const [inactiveSkills, setInactiveSkills] = useState({});
     const [activeSkillCount, setActiveSkillCount] = useState();
     const [inactiveLanguages, setInactiveLanguages] = useState({});
@@ -48,7 +45,6 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
         shiftSkills();
         shiftLanguages();
         shiftTechnologies();
-        checkDropdownAlignment();
     }, []);
 
     useEffect(() => {
@@ -80,13 +76,6 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
 
     const updateOptionsVisibility = (isVisible) => {
         setDisplayOptions(isVisible);
-        if(isVisible){
-            checkDropdownAlignment();
-        } else {
-            setIsOnScreenRight(false);
-            setIsOnScreenLeft(false);
-            setDropdownAlignment("right");
-        }
         setDisplayedFilter(0);
     }
 
@@ -235,57 +224,31 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
         setDisplayedFilter(index);
     }
 
-    window.addEventListener("resize", function() {
-        if(displayOptions){
-            if(!document.getElementById("all-filters-filter").checkVisibility()) {
-                updateOptionsVisibility(false);
-            } else {
-                checkDropdownAlignment();
-            }
-        }
-    });
-
-    const checkDropdownAlignment = () => {
-        if(optionsRef.current){
-            const oldIsOnScreenRight = isOnScreenRight;
-            const newIsOnScreenRight = (optionsRef.current.parentElement.getBoundingClientRect().x + optionsRef.current.getBoundingClientRect().width) <= (window.innerWidth *.95);
-            if(oldIsOnScreenRight !== newIsOnScreenRight){
-                setIsOnScreenRight(newIsOnScreenRight);
-            }
-
-            const oldIsOnScreenLeft = isOnScreenLeft;
-            const newIsOnScreenLeft = (optionsRef.current.parentElement.getBoundingClientRect().x + optionsRef.current.parentElement.getBoundingClientRect().width - optionsRef.current.getBoundingClientRect().width) >= (window.innerWidth *.05);
-            if(oldIsOnScreenLeft !== newIsOnScreenLeft){
-                setIsOnScreenLeft(newIsOnScreenLeft);
-            }
-
-            const oldDropdownAlignment = dropdownAlignment;
-            const newDropdownAlignment = newIsOnScreenRight ? "right" : newIsOnScreenLeft ? "left" : "center";
-            if(oldDropdownAlignment !== newDropdownAlignment){
-                setDropdownAlignment(newDropdownAlignment);
-            }
-        }
-    }
-
     return (
-        <div id="all-filters-filter" className="all-features-filter">
-            <div className="feature-filter-container">
-                <span className="feature-filter-lead-text">Filters</span>
-                <div className="feature-filter-button-container">
-                    <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
-                        <div className="all-filters-button-text">
-                            <BsSliders />
-                            <span>
-                                All Filters
-                            </span>
-                        </div>
-                        {((activeSkillCount === allSkills.length && activeLanguageCount === allLanguages.length && activeTechnologyCount === allTechnologies.length) || displayOptions) ? (
-                            <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
-                        ) : (
-                            <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAllSkills(e); selectAllLanguages(e); selectAllTechnologies(e);}}/>
-                        )}
-                    </button>
-                    <div className={"feature-filter-options-container " + (dropdownAlignment + "-aligned-feature-filter-options-container") + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>
+        <>
+            <div id="all-filters-filter" className="all-features-filter">
+                <div className="feature-filter-container">
+                    <span className="feature-filter-lead-text">Filters</span>
+                    <div className="feature-filter-button-container">
+                        <button className="feature-filter-button" onClick={() => updateOptionsVisibility(!displayOptions)} ref={selectionRef}>
+                            <div className="all-filters-button-text">
+                                <BsSliders />
+                                <span>
+                                    All Filters
+                                </span>
+                            </div>
+                            {((activeSkillCount === allSkills.length && activeLanguageCount === allLanguages.length && activeTechnologyCount === allTechnologies.length) || displayOptions) ? (
+                                <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
+                            ) : (
+                                <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAllSkills(e); selectAllLanguages(e); selectAllTechnologies(e);}}/>
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {displayOptions && (
+                <div className="overlay-background">
+                    <div className="feature-filter-options-container feature-filter-options-container-displayed overlayed-feature-filter-options-container" ref={optionsRef}>
                         <div className="feature-tab-bar">
                             <button className={"feature-tab-button" + (displayedFilter !== 0 ? " feature-tab-button-inactive" : "")} onClick={(e) => {updateDisplayedFilter(e, 0)}}>
                                 Skills
@@ -375,8 +338,8 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
                         )}
                     </div>
                 </div>
-            </div>
-        </div>
+            )}
+        </>
     );
 }
 
