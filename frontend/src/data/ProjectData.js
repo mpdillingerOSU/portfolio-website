@@ -926,31 +926,31 @@ for (const project of Object.values(projectDict)){
     }
 }
 
-export function initActiveSkills(){
+export function mapSkills(isActive){
     const newActiveSkills = {};
 
     for(let i = 0; i < allSkills.length; i++){
-        newActiveSkills[allSkills[i]] = true;
+        newActiveSkills[allSkills[i]] = isActive;
     }
 
     return newActiveSkills;
 }
 
-export function initActiveLanguages(){
+export function mapLanguages(isActive){
     const newActiveLanguages = {};
 
     for(let i = 0; i < allLanguages.length; i++){
-        newActiveLanguages[allLanguages[i]] = true;
+        newActiveLanguages[allLanguages[i]] = isActive;
     }
 
     return newActiveLanguages;
 }
 
-export function initActiveTechnologies(){
+export function mapTechnologies(isActive){
     const newActiveTechnologies = {};
 
     for(let i = 0; i < allTechnologies.length; i++){
-        newActiveTechnologies[allTechnologies[i]] = true;
+        newActiveTechnologies[allTechnologies[i]] = isActive;
     }
 
     return newActiveTechnologies;

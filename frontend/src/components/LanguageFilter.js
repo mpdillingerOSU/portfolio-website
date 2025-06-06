@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import LanguageButton from './LanguageButton';
 import { RxCaretDown } from 'react-icons/rx';
 import { IoMdClose } from "react-icons/io";
-import { allLanguages } from '../data/ProjectData';
+import { allLanguages, mapLanguages } from '../data/ProjectData';
 
 function LanguageFilter({activeLanguages, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
     const [isOnScreenRight, setIsOnScreenRight] = useState(false);
     const [isOnScreenLeft, setIsOnScreenLeft] = useState(false);
     const [dropdownAlignment, setDropdownAlignment] = useState("right");
-    const [inactiveLanguages, setInactiveLanguages] = useState({});
-    const [activeCount, setActiveCount] = useState();
+    const [inactiveLanguages, setInactiveLanguages] = useState(mapLanguages(false));
+    const [activeCount, setActiveCount] = useState(allLanguages.length);
 
     const shiftLanguages = () => {
         const newInactiveLanguages = {};

@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import SkillButton from './SkillButton';
 import { RxCaretDown } from 'react-icons/rx';
 import { IoMdClose } from "react-icons/io";
-import { allSkills } from '../data/ProjectData';
+import { allSkills, mapSkills } from '../data/ProjectData';
 
 function SkillFilter({activeSkills, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
     const [isOnScreenRight, setIsOnScreenRight] = useState(false);
     const [isOnScreenLeft, setIsOnScreenLeft] = useState(false);
     const [dropdownAlignment, setDropdownAlignment] = useState("right");
-    const [inactiveSkills, setInactiveSkills] = useState({});
-    const [activeCount, setActiveCount] = useState();
+    const [inactiveSkills, setInactiveSkills] = useState(mapSkills(false));
+    const [activeCount, setActiveCount] = useState(allSkills.length);
 
     const shiftSkills = () => {
         const newInactiveSkills = {};

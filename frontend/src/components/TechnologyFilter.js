@@ -2,15 +2,15 @@ import React, { useEffect, useRef, useState } from 'react';
 import TechnologyButton from './TechnologyButton';
 import { RxCaretDown } from 'react-icons/rx';
 import { IoMdClose } from "react-icons/io";
-import { allTechnologies } from '../data/ProjectData';
+import { allTechnologies, mapTechnologies } from '../data/ProjectData';
 
 function TechnologyFilter({activeTechnologies, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
     const [isOnScreenRight, setIsOnScreenRight] = useState(false);
     const [isOnScreenLeft, setIsOnScreenLeft] = useState(false);
     const [dropdownAlignment, setDropdownAlignment] = useState("right");
-    const [inactiveTechnologies, setInactiveTechnologies] = useState({});
-    const [activeCount, setActiveCount] = useState();
+    const [inactiveTechnologies, setInactiveTechnologies] = useState(mapTechnologies(false));
+    const [activeCount, setActiveCount] = useState(allTechnologies.length);
 
     const shiftTechnologies = () => {
         const newInactiveTechnologies = {};

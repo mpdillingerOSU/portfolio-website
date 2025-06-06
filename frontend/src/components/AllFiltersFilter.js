@@ -10,11 +10,11 @@ import { allSkills, allLanguages, allTechnologies } from '../data/ProjectData';
 function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
     const [inactiveSkills, setInactiveSkills] = useState({});
-    const [activeSkillCount, setActiveSkillCount] = useState();
+    const [activeSkillCount, setActiveSkillCount] = useState(allSkills.length);
     const [inactiveLanguages, setInactiveLanguages] = useState({});
-    const [activeLanguageCount, setActiveLanguageCount] = useState();
+    const [activeLanguageCount, setActiveLanguageCount] = useState(allLanguages.length);
     const [inactiveTechnologies, setInactiveTechnologies] = useState({});
-    const [activeTechnologyCount, setActiveTechnologyCount] = useState();
+    const [activeTechnologyCount, setActiveTechnologyCount] = useState(allTechnologies.length);
     const [displayedFilter, setDisplayedFilter] = useState(0);
 
     const shiftSkills = () => {
