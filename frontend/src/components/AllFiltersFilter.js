@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsSliders } from "react-icons/bs";
-import { RxCaretDown } from 'react-icons/rx';
-import { IoMdClose } from "react-icons/io";
 import SkillButton from './SkillButton';
 import LanguageButton from './LanguageButton';
 import TechnologyButton from './TechnologyButton';
@@ -10,11 +8,9 @@ import { allSkills, allLanguages, allTechnologies } from '../data/ProjectData';
 function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, onChange}) {
     const [displayOptions, setDisplayOptions] = useState(false);
     const [inactiveSkills, setInactiveSkills] = useState({});
-    const [activeSkillCount, setActiveSkillCount] = useState(allSkills.length);
     const [inactiveLanguages, setInactiveLanguages] = useState({});
-    const [activeLanguageCount, setActiveLanguageCount] = useState(allLanguages.length);
     const [inactiveTechnologies, setInactiveTechnologies] = useState({});
-    const [activeTechnologyCount, setActiveTechnologyCount] = useState(allTechnologies.length);
+    const [activeFiltersCount, setActiveFiltersCount] = useState(0);
     const [displayedFilter, setDisplayedFilter] = useState(0);
 
     const shiftSkills = () => {
@@ -140,34 +136,42 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
     }
     
     useEffect(() => {
+        let newActiveFilters = 0;
+
         const newActiveSkills = {};
         let newActiveSkillCount = 0;
-
         for(const key in inactiveSkills) {
             newActiveSkills[key] = !inactiveSkills[key];
             if(newActiveSkills[key]){
                 newActiveSkillCount++;
             }
         }
+        if(newActiveSkillCount !== allSkills.length){
+            newActiveFilters++;
+        }
 
         const newActiveLanguages = {};
         let newActiveLanguageCount = 0;
-
         for(const key in inactiveLanguages) {
             newActiveLanguages[key] = !inactiveLanguages[key];
             if(newActiveLanguages[key]){
                 newActiveLanguageCount++;
             }
         }
+        if(newActiveLanguageCount !== allLanguages.length){
+            newActiveFilters++;
+        }
 
         const newActiveTechnologies = {};
         let newActiveTechnologyCount = 0;
-
         for(const key in inactiveTechnologies) {
             newActiveTechnologies[key] = !inactiveTechnologies[key];
             if(newActiveTechnologies[key]){
                 newActiveTechnologyCount++;
             }
+        }
+        if(newActiveTechnologyCount !== allTechnologies.length){
+            newActiveFilters++;
         }
 
         onChange({
@@ -175,9 +179,7 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
             "languages": newActiveLanguages,
             "technologies": newActiveTechnologies
         });
-        setActiveSkillCount(newActiveSkillCount);
-        setActiveLanguageCount(newActiveLanguageCount);
-        setActiveTechnologyCount(newActiveTechnologyCount);
+        setActiveFiltersCount(newActiveFilters);
     }, [inactiveSkills, inactiveLanguages, inactiveTechnologies]);
 
     const optionsRef = useRef(null);
@@ -237,10 +239,12 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
                                     All Filters
                                 </span>
                             </div>
-                            {((activeSkillCount === allSkills.length && activeLanguageCount === allLanguages.length && activeTechnologyCount === allTechnologies.length) || displayOptions) ? (
-                                <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
-                            ) : (
-                                <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAllSkills(e); selectAllLanguages(e); selectAllTechnologies(e);}}/>
+                            {activeFiltersCount !== 0 && (
+                                <div className="all-filters-count-container">
+                                    <div className="all-filters-count">
+                                        {activeFiltersCount}
+                                    </div>
+                                </div>
                             )}
                         </button>
                     </div>

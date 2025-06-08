@@ -2011,3 +2011,24 @@ input:checked + .toggle:before {
     justify-content: center;
     gap: 9px;
 }
+
+.all-filters-count-container {
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+    background-color: var(--purple-accent);
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.all-filters-count {
+    margin-top: -1px;
+}
