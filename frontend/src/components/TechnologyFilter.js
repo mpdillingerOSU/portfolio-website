@@ -148,7 +148,7 @@ function TechnologyFilter({activeTechnologies, onChange}) {
                     {(activeCount === allTechnologies.length || displayOptions) ? (
                         <RxCaretDown className={"feature-filter-button-caret" + (displayOptions ? " rotated-feature-filter-button-caret" : "")}/>
                     ) : (
-                        <IoMdClose className="feature-filter-button-select-all" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
+                        <IoMdClose className="feature-filter-button-close" onClick={(e) => {e.stopPropagation(); selectAll(e);}}/>
                     )}
                 </button>
                 <div className={"feature-filter-options-container dropdown-feature-filter-options-container " + (dropdownAlignment + "-aligned-feature-filter-options-container") + (displayOptions ? " feature-filter-options-container-displayed" : "")} ref={optionsRef}>

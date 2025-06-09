@@ -1067,7 +1067,7 @@ input:checked + .toggle:before {
 }
 
 .feature-filter-button-caret,
-.feature-filter-button-select-all {
+.feature-filter-button-close {
     color: white;
     font-size: 20px;
     margin-right: 4px;
