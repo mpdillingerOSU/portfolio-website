@@ -27,7 +27,7 @@ function LanguageButton({language, isInactive, onToggle}) {
         } else if(language === "Dart"){
             return "#2cb7f6"
         } else if(language === "C#"){
-            return "#6e4Aac7"
+            return "#6e4ac7"
         }
 
         return "red";
