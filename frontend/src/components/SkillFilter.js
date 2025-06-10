@@ -48,21 +48,25 @@ function SkillFilter({activeSkills, onChange}) {
     const clear = (e) => {
         e.preventDefault();
 
-        const newInactiveSkills = {};
-        for (const key in activeSkills) {
-            newInactiveSkills[key] = true;
+        if(activeCount !== 0){
+            const newInactiveSkills = {};
+            for(const key in activeSkills) {
+                newInactiveSkills[key] = true;
+            }
+            setInactiveSkills(newInactiveSkills);
         }
-        setInactiveSkills(newInactiveSkills);
     }
 
     const selectAll = (e) => {
         e.preventDefault();
 
-        const newInactiveSkills = {};
-        for (const key in activeSkills) {
-            newInactiveSkills[key] = false;
+        if(activeCount !== allSkills.length){
+            const newInactiveSkills = {};
+            for(const key in activeSkills) {
+                newInactiveSkills[key] = false;
+            }
+            setInactiveSkills(newInactiveSkills);
         }
-        setInactiveSkills(newInactiveSkills);
     }
     
     useEffect(() => {
@@ -163,12 +167,12 @@ function SkillFilter({activeSkills, onChange}) {
                     </div>
                     <div className="feature-filter-options-button-row">
                         <div className="feature-filter-options-button-container">
-                            <button className="feature-filter-select-all-button" onClick={(e) => selectAll(e)}>
+                            <button className={"feature-filter-select-all-button" + (activeCount === allSkills.length ? " feature-filter-inactive-text-button" : "")} onClick={(e) => selectAll(e)}>
                                 Select All
                             </button>
                         </div>
                         <div className="feature-filter-options-button-container">
-                            <button className="feature-filter-clear-button" onClick={(e) => clear(e)}>
+                            <button className={"feature-filter-clear-button" + (activeCount === 0 ? " feature-filter-inactive-text-button" : "")} onClick={(e) => clear(e)}>
                                 Clear
                             </button>
                         </div>

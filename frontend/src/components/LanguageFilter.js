@@ -48,21 +48,25 @@ function LanguageFilter({activeLanguages, onChange}) {
     const clear = (e) => {
         e.preventDefault();
 
-        const newInactiveLanguages = {};
-        for(const key in activeLanguages) {
-            newInactiveLanguages[key] = true;
+        if(activeCount !== 0){
+            const newInactiveLanguages = {};
+            for(const key in activeLanguages) {
+                newInactiveLanguages[key] = true;
+            }
+            setInactiveLanguages(newInactiveLanguages);
         }
-        setInactiveLanguages(newInactiveLanguages);
     }
 
     const selectAll = (e) => {
         e.preventDefault();
 
-        const newInactiveLanguages = {};
-        for(const key in activeLanguages) {
-            newInactiveLanguages[key] = false;
+        if(activeCount !== allLanguages.length){
+            const newInactiveLanguages = {};
+            for(const key in activeLanguages) {
+                newInactiveLanguages[key] = false;
+            }
+            setInactiveLanguages(newInactiveLanguages);
         }
-        setInactiveLanguages(newInactiveLanguages);
     }
     
     useEffect(() => {
@@ -162,12 +166,12 @@ function LanguageFilter({activeLanguages, onChange}) {
                     </div>
                     <div className="feature-filter-options-button-row">
                         <div className="feature-filter-options-button-container">
-                            <button className="feature-filter-select-all-button" onClick={(e) => selectAll(e)}>
+                            <button className={"feature-filter-select-all-button" + (activeCount === allLanguages.length ? " feature-filter-inactive-text-button" : "")} onClick={(e) => selectAll(e)}>
                                 Select All
                             </button>
                         </div>
                         <div className="feature-filter-options-button-container">
-                            <button className="feature-filter-clear-button" onClick={(e) => clear(e)}>
+                            <button className={"feature-filter-clear-button" + (activeCount === 0 ? " feature-filter-inactive-text-button" : "")} onClick={(e) => clear(e)}>
                                 Clear
                             </button>
                         </div>

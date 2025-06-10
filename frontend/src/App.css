@@ -1254,6 +1254,15 @@ input:checked + .toggle:before {
     background-color: #738cff;
 }
 
+.feature-filter-inactive-text-button {
+    color: grey;
+    cursor: auto;
+}
+
+.feature-filter-inactive-text-button:hover {
+    color: grey;
+}
+
 .projects-page-filter-underline {
     width: 845px;
     max-width: 90vw;

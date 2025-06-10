@@ -10,6 +10,9 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
     const [inactiveSkills, setInactiveSkills] = useState({});
     const [inactiveLanguages, setInactiveLanguages] = useState({});
     const [inactiveTechnologies, setInactiveTechnologies] = useState({});
+    const [activeSkillCount, setActiveSkillCount] = useState(allSkills.length);
+    const [activeLanguageCount, setActiveLanguageCount] = useState(allLanguages.length);
+    const [activeTechnologyCount, setActiveTechnologyCount] = useState(allTechnologies.length);
     const [activeFiltersCount, setActiveFiltersCount] = useState(0);
     const [displayedFilter, setDisplayedFilter] = useState(0);
 
@@ -78,61 +81,73 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
     const clearSkills = (e) => {
         e.preventDefault();
 
-        const newInactiveSkills = {};
-        for(const key in activeSkills) {
-            newInactiveSkills[key] = true;
+        if(activeSkillCount !== 0){
+            const newInactiveSkills = {};
+            for(const key in activeSkills) {
+                newInactiveSkills[key] = true;
+            }
+            setInactiveSkills(newInactiveSkills);
         }
-        setInactiveSkills(newInactiveSkills);
     }
 
     const clearLanguages = (e) => {
         e.preventDefault();
 
-        const newInactiveLanguages = {};
-        for(const key in activeLanguages) {
-            newInactiveLanguages[key] = true;
+        if(activeLanguageCount !== 0){
+            const newInactiveLanguages = {};
+            for(const key in activeLanguages) {
+                newInactiveLanguages[key] = true;
+            }
+            setInactiveLanguages(newInactiveLanguages);
         }
-        setInactiveLanguages(newInactiveLanguages);
     }
 
     const clearTechnologies = (e) => {
         e.preventDefault();
 
-        const newInactiveTechnologies = {};
-        for(const key in activeTechnologies) {
-            newInactiveTechnologies[key] = true;
+        if(activeTechnologyCount !== 0){
+            const newInactiveTechnologies = {};
+            for(const key in activeTechnologies) {
+                newInactiveTechnologies[key] = true;
+            }
+            setInactiveTechnologies(newInactiveTechnologies);
         }
-        setInactiveTechnologies(newInactiveTechnologies);
     }
 
     const selectAllSkills = (e) => {
         e.preventDefault();
 
-        const newInactiveSkills = {};
-        for(const key in activeSkills) {
-            newInactiveSkills[key] = false;
+        if(activeSkillCount !== allSkills.length){
+            const newInactiveSkills = {};
+            for(const key in activeSkills) {
+                newInactiveSkills[key] = false;
+            }
+            setInactiveSkills(newInactiveSkills);
         }
-        setInactiveSkills(newInactiveSkills);
     }
 
     const selectAllLanguages = (e) => {
         e.preventDefault();
 
-        const newInactiveLanguages = {};
-        for(const key in activeLanguages) {
-            newInactiveLanguages[key] = false;
+        if(activeLanguageCount !== allLanguages.length){
+            const newInactiveLanguages = {};
+            for(const key in activeLanguages) {
+                newInactiveLanguages[key] = false;
+            }
+            setInactiveLanguages(newInactiveLanguages);
         }
-        setInactiveLanguages(newInactiveLanguages);
     }
 
     const selectAllTechnologies = (e) => {
         e.preventDefault();
 
-        const newInactiveTechnologies = {};
-        for(const key in activeTechnologies) {
-            newInactiveTechnologies[key] = false;
+        if(activeTechnologyCount !== allTechnologies.length){
+            const newInactiveTechnologies = {};
+            for(const key in activeTechnologies) {
+                newInactiveTechnologies[key] = false;
+            }
+            setInactiveTechnologies(newInactiveTechnologies);
         }
-        setInactiveTechnologies(newInactiveTechnologies);
     }
     
     useEffect(() => {
@@ -179,6 +194,9 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
             "languages": newActiveLanguages,
             "technologies": newActiveTechnologies
         });
+        setActiveSkillCount(newActiveSkillCount);
+        setActiveLanguageCount(newActiveLanguageCount);
+        setActiveTechnologyCount(newActiveTechnologyCount);
         setActiveFiltersCount(newActiveFilters);
     }, [inactiveSkills, inactiveLanguages, inactiveTechnologies]);
 
@@ -273,12 +291,12 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
                                 </div>
                                 <div className="feature-filter-options-button-row">
                                     <div className="feature-filter-options-button-container">
-                                        <button className="feature-filter-select-all-button" onClick={(e) => selectAllLanguages(e)}>
+                                        <button className={"feature-filter-select-all-button" + (activeLanguageCount === allLanguages.length ? " feature-filter-inactive-text-button" : "")} onClick={(e) => selectAllLanguages(e)}>
                                             Select All
                                         </button>
                                     </div>
                                     <div className="feature-filter-options-button-container">
-                                        <button className="feature-filter-clear-button" onClick={(e) => clearLanguages(e)}>
+                                        <button className={"feature-filter-clear-button" + (activeLanguageCount === 0 ? " feature-filter-inactive-text-button" : "")} onClick={(e) => clearLanguages(e)}>
                                             Clear
                                         </button>
                                     </div>
@@ -298,12 +316,12 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
                                 </div>
                                 <div className="feature-filter-options-button-row">
                                     <div className="feature-filter-options-button-container">
-                                        <button className="feature-filter-select-all-button" onClick={(e) => selectAllTechnologies(e)}>
+                                        <button className={"feature-filter-select-all-button" + (activeTechnologyCount === allTechnologies.length ? " feature-filter-inactive-text-button" : "")} onClick={(e) => selectAllTechnologies(e)}>
                                             Select All
                                         </button>
                                     </div>
                                     <div className="feature-filter-options-button-container">
-                                        <button className="feature-filter-clear-button" onClick={(e) => clearTechnologies(e)}>
+                                        <button className={"feature-filter-clear-button" + (activeTechnologyCount === 0 ? " feature-filter-inactive-text-button" : "")} onClick={(e) => clearTechnologies(e)}>
                                             Clear
                                         </button>
                                     </div>
@@ -323,12 +341,12 @@ function AllFiltersFilter({activeSkills, activeLanguages, activeTechnologies, on
                                 </div>
                                 <div className="feature-filter-options-button-row">
                                     <div className="feature-filter-options-button-container">
-                                        <button className="feature-filter-select-all-button" onClick={(e) => selectAllSkills(e)}>
+                                        <button className={"feature-filter-select-all-button" + (activeSkillCount === allSkills.length ? " feature-filter-inactive-text-button" : "")} onClick={(e) => selectAllSkills(e)}>
                                             Select All
                                         </button>
                                     </div>
                                     <div className="feature-filter-options-button-container">
-                                        <button className="feature-filter-clear-button" onClick={(e) => clearSkills(e)}>
+                                        <button className={"feature-filter-clear-button" + (activeSkillCount === 0 ? " feature-filter-inactive-text-button" : "")} onClick={(e) => clearSkills(e)}>
                                             Clear
                                         </button>
                                     </div>
