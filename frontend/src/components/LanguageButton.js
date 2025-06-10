@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJava, FaJsSquare, FaDatabase, FaQuestion } from "react-icons/fa";
 import { SiDart } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
 
 function LanguageButton({language, isInactive, onToggle}) {    
     const toggleIsInactive = (e) => {
@@ -25,6 +26,8 @@ function LanguageButton({language, isInactive, onToggle}) {
             return "#00bdf2"
         } else if(language === "Dart"){
             return "#2cb7f6"
+        } else if(language === "C#"){
+            return "#6e4Aac7"
         }
 
         return "red";
@@ -43,6 +46,8 @@ function LanguageButton({language, isInactive, onToggle}) {
             return <FaDatabase className="project-feature-icon" />
         } else if(language === "Dart"){
             return <SiDart className="project-feature-icon" />
+        } else if(language === "C#"){
+            return <TbBrandCSharp className="project-feature-icon" />
         }
 
         return <FaQuestion className="project-feature-icon" />
