@@ -87,6 +87,7 @@ function AboutPage() {
                         <div className="about-knowledge-icon-row">
                             <FeatureAboutIcon feature="MySQL" imgSrc={require("../images/about-icons/mysql-about-icon.png")} imgAlt="mysql icon" />
                             <FeatureAboutIcon feature="MongoDB" imgSrc={require("../images/about-icons/mongodb-about-icon.png")} imgAlt="mongodb icon" />
+                            <FeatureAboutIcon feature="Blender" imgSrc={require("../images/about-icons/blender-about-icon.png")} imgAlt="blendericon" />
                             <FeatureAboutIcon feature="Git" imgSrc={require("../images/about-icons/git-about-icon.png")} imgAlt="git icon" />
                         </div>
                     </div>

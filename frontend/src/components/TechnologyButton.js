@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaReact, FaBootstrap, FaNodeJs, FaUnity, FaQuestion, FaGitAlt } from "react-icons/fa";
-import { SiNextdotjs, SiExpress, SiSpring, SiFlutter, SiIntellijidea, SiMongodb } from "react-icons/si";
+import { SiNextdotjs, SiExpress, SiSpring, SiFlutter, SiIntellijidea, SiMongodb, SiBlender } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiVisualstudio, DiMysql } from "react-icons/di";
 
@@ -41,6 +41,8 @@ function TechnologyButton({technology, isInactive, onToggle}) {
             return "#00608c"
         } else if(technology === "MongoDB"){
             return "#71b35e"
+        } else if(technology === "Blender"){
+            return "#eb7700"
         } else if(technology === "Git"){
             return "#de4c36"
         }
@@ -75,6 +77,8 @@ function TechnologyButton({technology, isInactive, onToggle}) {
             return <DiMysql className="project-feature-icon" />
         } else if(technology === "MongoDB"){
             return <SiMongodb className="project-feature-icon" />
+        } else if(technology === "Blender"){
+            return <SiBlender className="project-feature-icon" />
         } else if(technology === "Git"){
             return <FaGitAlt className="project-feature-icon" />
         }
