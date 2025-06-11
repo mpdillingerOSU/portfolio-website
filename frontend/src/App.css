@@ -610,21 +610,26 @@
 }
 
 .project-feature {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
-    height: fit-content;
     box-shadow: var(--standard-shadow);
 }
 
 .project-feature-icon {
-    padding: 6px;
     height: 18px;
     width: 18px;
+}
+
+.project-feature-text-icon {
+    font-size: 8px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .project-feature-popup-container {

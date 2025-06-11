@@ -34,6 +34,7 @@ function AboutPage() {
                             <FeatureAboutIcon feature="SQL" imgSrc={require("../images/about-icons/sql-about-icon.png")} imgAlt="sql icon" />
                             <FeatureAboutIcon feature="Dart" imgSrc={require("../images/about-icons/dart-about-icon.png")} imgAlt="dart icon" />
                             <FeatureAboutIcon feature="C#" imgSrc={require("../images/about-icons/c-sharp-about-icon.png")} imgAlt="c-sharp icon" />
+                            <FeatureAboutIcon feature="HLSL" imgSrc={require("../images/about-icons/hlsl-about-icon.png")} imgAlt="hlsl icon" />
                         </div>
                     </div>
                     <div className="about-knowledge-section">

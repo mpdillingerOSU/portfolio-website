@@ -28,6 +28,8 @@ function LanguageButton({language, isInactive, onToggle}) {
             return "#2cb7f6"
         } else if(language === "C#"){
             return "#6e4ac7"
+        } else if(language === "HLSL"){
+            return "#136ad4"
         }
 
         return "red";
@@ -48,6 +50,8 @@ function LanguageButton({language, isInactive, onToggle}) {
             return <SiDart className="project-feature-icon" />
         } else if(language === "C#"){
             return <TbBrandCSharp className="project-feature-icon" />
+        } else if(language === "HLSL"){
+            return <span className="project-feature-text-icon">HLSL</span>
         }
 
         return <FaQuestion className="project-feature-icon" />
