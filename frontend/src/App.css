@@ -1886,6 +1886,7 @@ input:checked + .toggle:before {
 }
 
 .project-page-selected-screenshot-container {
+    position: relative;
     aspect-ratio: 16/9;
     flex: 1;
     margin: 0;
@@ -1906,23 +1907,45 @@ input:checked + .toggle:before {
 }
 
 .project-page-screenshot-rotate-button {
-    width: 6%;
-    min-width: 32px;
+    width: 32px;
+    height: 32px;
     aspect-ratio: 1;
-    background-color: rgb(22, 0, 109);
-    border: solid 3.5px var(--purple-accent);
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    border: none;
     border-radius: 50%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     box-shadow: var(--standard-shadow);
 }
 
+.rotate-left-button,
+.rotate-right-button {
+    position: absolute;
+
+    /* Next two lines combine to allow us to center an absolutely positioned child element to parent */
+    top: 50%; /*positions top-side vertically centered in parent element*/
+    transform: translateY(-50%); /* moves element up by 50% of its own width */
+}
+
+.rotate-left-button {
+    left: 3%;
+}
+
+.rotate-right-button {
+    right: 3%;
+}
+
 .project-page-screenshot-rotate-button .icon {
-    height: 90%;
-    width: 90%;
-    color: var(--purple-accent);
-    text-align: center;
     width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1937,12 +1960,7 @@ input:checked + .toggle:before {
 }
 
 .project-page-screenshot-rotate-button:hover {
-    background-color: rgb(38, 12, 144);
-    border-color: #738dff;
-}
-
-.project-page-screenshot-rotate-button:hover .icon {
-    color: #738dff;
+    background-color: rgba(0, 0, 0, .85);
 }
 
 .project-page-screenshot-overlay-counter {

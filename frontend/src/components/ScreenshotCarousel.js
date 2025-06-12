@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
+import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 import { projectDict } from '../data/ProjectData';
 
 function ScreenshotCarousel({projectID}) {
@@ -49,15 +49,15 @@ function ScreenshotCarousel({projectID}) {
                 <div className="overlay-background">
                     <div className="project-page-screenshot-overlay" ref={overlayRef}>
                         <div className="project-page-screenshot-overlay-main-info">
-                            <button className="project-page-screenshot-rotate-button" onClick={(e) => updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1)}>
-                                <FaAngleLeft className="icon push-left"/>
-                            </button>
                             <div className="project-page-selected-screenshot-container">
                                 <img className="project-page-screenshot" src={project.screenshots[selectedScreenshot]} alt="project screenshot" />
+                                <button className="project-page-screenshot-rotate-button rotate-left-button" onClick={(e) => updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1)}>
+                                    <RxCaretLeft className="icon push-left"/>
+                                </button>
+                                <button className="project-page-screenshot-rotate-button rotate-right-button" onClick={(e) => updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length)}>
+                                    <RxCaretRight className="icon push-right" />
+                                </button>
                             </div>
-                            <button className="project-page-screenshot-rotate-button" onClick={(e) => updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length)}>
-                                <FaAngleRight className="icon push-right" />
-                            </button>
                         </div>
                         <div className="project-page-screenshot-overlay-counter">
                             {(selectedScreenshot + 1) + "/" + project.screenshots.length}
