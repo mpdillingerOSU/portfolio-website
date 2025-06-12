@@ -9,25 +9,28 @@ function ScreenshotCarousel({projectID}) {
     const project = projectDict[projectID];
 
     const [isVisible, setIsVisible] = useState(true);
-    let timeoutId;
+    // ref used to resetting of timer through various possible conflicting means, which led
+    // to rotating through screenshots not caused some old ones to not be properly cleared
+    let timeoutRef = useRef(null);
 
-    const handleMouseMove = () => {
-        clearTimeout(timeoutId);
-        setIsVisible(true); // Show the element
+    const resetVisibilityTimer = () => {
+        clearTimeout(timeoutRef.current);
+        setIsVisible(true);
 
-        timeoutId = setTimeout(() => {
-            if(navigator.maxTouchPoints === 0){ //if touch-enabled (i.e., mobile or tablet), then do not make elements invisible
+        timeoutRef.current = setTimeout(() => {
+            // if touch-enabled (i.e., mobile or tablet), then do not make elements invisible either
+            if(navigator.maxTouchPoints === 0){
                 setIsVisible(false);
             }
         }, 1500); // 1.5 seconds of inactivity
     };
 
     useEffect(() => {
-        document.addEventListener("mousemove", handleMouseMove);
+        document.addEventListener("mousemove", resetVisibilityTimer);
 
         return () => {
-            document.removeEventListener("mousemove", handleMouseMove); // Cleanup
-            clearTimeout(timeoutId);
+            document.removeEventListener("mousemove", resetVisibilityTimer); // Cleanup
+            clearTimeout(timeoutRef.current);
         };
     }, []);
 
@@ -57,6 +60,19 @@ function ScreenshotCarousel({projectID}) {
         e.preventDefault();
 
         setSelectedScreenshot(i);
+        resetVisibilityTimer();
+    }
+
+    const rotateLeft = (e) => {
+        if(isVisible){
+            updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1);
+        }
+    }
+
+    const rotateRight = (e) => {
+        if(isVisible){
+            updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length);
+        }
     }
 
     return (
@@ -73,10 +89,10 @@ function ScreenshotCarousel({projectID}) {
                     <div className="project-page-screenshot-overlay" ref={overlayRef}>
                         <div className="project-page-selected-screenshot-container">
                             <img className="project-page-screenshot" src={project.screenshots[selectedScreenshot]} alt="project screenshot" />
-                            <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => {if(isVisible){updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1);}}}>
+                            <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateLeft(e)}>
                                 <RxCaretLeft className="icon push-left"/>
                             </button>
-                            <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => {if(isVisible){updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length)};}}>
+                            <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateRight(e)}>
                                 <RxCaretRight className="icon push-right" />
                             </button>
                             <div className={"project-page-screenshot-overlay-counter" + (!isVisible ? " invisibile-screenshot-element" : "")}>
