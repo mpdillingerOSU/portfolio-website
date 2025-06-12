@@ -1914,6 +1914,11 @@ input:checked + .toggle:before {
     justify-content: center;
     cursor: pointer;
     box-shadow: var(--standard-shadow);
+
+    opacity: 1;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear; /** Chrome; Safari **/
+    -ms-transition: all 0.5s linear; /** Opera **/
 }
 
 .rotate-left-button,
@@ -1973,6 +1978,17 @@ input:checked + .toggle:before {
     background-color: rgba(0, 0, 0, .5);
     border: none;
     border-radius: 50vh;
+
+    opacity: 1;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear; /** Chrome; Safari **/
+    -ms-transition: all 0.5s linear; /** Opera **/
+}
+
+.invisibile-screenshot-element {
+    opacity: 0;
+    visibility: 0;
+    cursor: auto;
 }
 
 .project-page-back-button {

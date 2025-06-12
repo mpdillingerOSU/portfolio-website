@@ -8,6 +8,29 @@ function ScreenshotCarousel({projectID}) {
 
     const project = projectDict[projectID];
 
+    const [isVisible, setIsVisible] = useState(true);
+    let timeoutId;
+
+    const handleMouseMove = () => {
+        clearTimeout(timeoutId);
+        setIsVisible(true); // Show the element
+
+        timeoutId = setTimeout(() => {
+            if(navigator.maxTouchPoints === 0){ //if touch-enabled (i.e., mobile or tablet), then do not make elements invisible
+                setIsVisible(false);
+            }
+        }, 1500); // 1.5 seconds of inactivity
+    };
+
+    useEffect(() => {
+        document.addEventListener("mousemove", handleMouseMove);
+
+        return () => {
+            document.removeEventListener("mousemove", handleMouseMove); // Cleanup
+            clearTimeout(timeoutId);
+        };
+    }, []);
+
     const overlayRef = useRef(null);
     useEffect(() => {
         function handleClickOutside(event) {
@@ -50,13 +73,13 @@ function ScreenshotCarousel({projectID}) {
                     <div className="project-page-screenshot-overlay" ref={overlayRef}>
                         <div className="project-page-selected-screenshot-container">
                             <img className="project-page-screenshot" src={project.screenshots[selectedScreenshot]} alt="project screenshot" />
-                            <button className="project-page-screenshot-rotate-button rotate-left-button" onClick={(e) => updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1)}>
+                            <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => {if(isVisible){updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1);}}}>
                                 <RxCaretLeft className="icon push-left"/>
                             </button>
-                            <button className="project-page-screenshot-rotate-button rotate-right-button" onClick={(e) => updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length)}>
+                            <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => {if(isVisible){updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length)};}}>
                                 <RxCaretRight className="icon push-right" />
                             </button>
-                            <div className="project-page-screenshot-overlay-counter">
+                            <div className={"project-page-screenshot-overlay-counter" + (!isVisible ? " invisibile-screenshot-element" : "")}>
                                 {(selectedScreenshot + 1) + "/" + project.screenshots.length}
                             </div>
                         </div>
