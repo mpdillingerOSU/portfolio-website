@@ -1816,16 +1816,17 @@ input:checked + .toggle:before {
     width: 18.75%;
     height: fit-content;
     margin: 0;
-    padding: 0.65%;
+    padding: 0;
     line-height: 0;
-    border: none;
+    border: solid white 2px;
+    border-radius: .75rem;
     box-shadow: var(--standard-shadow);
-    background-color: white;
     filter: brightness(65%);
     cursor: pointer;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .project-page-carouseled-screenshot-container:hover {
@@ -1880,13 +1881,15 @@ input:checked + .toggle:before {
 .project-page-selected-screenshot-container {
     flex: 1;
     margin: 0;
-    padding: 0.65%;
+    padding: 0;
     line-height: 0;
+    border: solid white 2px;
+    border-radius: .75rem;
     box-shadow: var(--standard-shadow);
-    background-color: white;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .project-page-screenshot-rotate-button {
