@@ -1820,6 +1820,7 @@ input:checked + .toggle:before {
     line-height: 0;
     border: solid white 2px;
     border-radius: .75rem;
+    background-color: #606060;
     box-shadow: var(--standard-shadow);
     filter: brightness(65%);
     cursor: pointer;
@@ -1885,6 +1886,7 @@ input:checked + .toggle:before {
     line-height: 0;
     border: solid white 2px;
     border-radius: .75rem;
+    background-color: #606060;
     box-shadow: var(--standard-shadow);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
