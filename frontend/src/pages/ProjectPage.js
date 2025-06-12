@@ -93,7 +93,7 @@ function ProjectPage() {
             </div>
             <div className="project-page-header-underline" />
             {project.screenshots.length > 0 && (
-                <ScreenshotCarousel projectID={projectID} />
+                <ScreenshotCarousel project={project} />
             )}
             <div className="project-page-body">
                 <div className="project-page-overview">

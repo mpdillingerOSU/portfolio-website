@@ -1,108 +1,24 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
-import { projectDict } from '../data/ProjectData';
+import React, { useState } from 'react';
+import ScreenshotOverlay from '../overlays/ScreenshotOverlay';
 
-function ScreenshotCarousel({projectID}) {
-    const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-    const [selectedScreenshot, setSelectedScreenshot] = useState(0);
-
-    const project = projectDict[projectID];
-
-    const [isVisible, setIsVisible] = useState(true);
-    // ref used to resetting of timer through various possible conflicting means, which led
-    // to rotating through screenshots not caused some old ones to not be properly cleared
-    let timeoutRef = useRef(null);
-
-    const resetVisibilityTimer = () => {
-        clearTimeout(timeoutRef.current);
-        setIsVisible(true);
-
-        timeoutRef.current = setTimeout(() => {
-            // if touch-enabled (i.e., mobile or tablet), then do not make elements invisible either
-            if(navigator.maxTouchPoints === 0){
-                setIsVisible(false);
-            }
-        }, 1500); // 1.5 seconds of inactivity
-    };
-
-    useEffect(() => {
-        document.addEventListener("mousemove", resetVisibilityTimer);
-
-        return () => {
-            document.removeEventListener("mousemove", resetVisibilityTimer); // Cleanup
-            clearTimeout(timeoutRef.current);
-        };
-    }, []);
-
-    const overlayRef = useRef(null);
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if(overlayRef.current && !overlayRef.current.contains(event.target)) {
-                setIsOverlayOpen(false);
-            }
-        }
-
-        //Bind event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        
-        return () => {
-            //Unbind event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, []);
-
-    const openOverlay = (e, i) => {
-        updateScreenshot(e, i);
-        setIsOverlayOpen(true);
-    }
-
-    const updateScreenshot = (e, i) => {
-        e.preventDefault();
-
-        setSelectedScreenshot(i);
-        resetVisibilityTimer();
-    }
-
-    const rotateLeft = (e) => {
-        if(isVisible){
-            updateScreenshot(e, selectedScreenshot === 0 ? project.screenshots.length - 1 : selectedScreenshot - 1);
-        }
-    }
-
-    const rotateRight = (e) => {
-        if(isVisible){
-            updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length);
-        }
-    }
+function ScreenshotCarousel({project}) {
+    const [overlayIndex, setOverlayIndex] = useState();
 
     return (
-        <div className="project-page-screenshots-section">
-            <div className="project-page-screenshot-carousel">
-                {Array.from({ length: project.screenshots.length }, (_, i) => (
-                    <button key={i} className="project-page-carouseled-screenshot-container" onClick={(e) => openOverlay(e, i)}>
-                        <img className="project-page-screenshot" src={project.screenshots[i]} alt="project screenshot" />
-                    </button>
-                ))}
-            </div>
-            {isOverlayOpen && (
-                <div className="overlay-background">
-                    <div className="project-page-screenshot-overlay" ref={overlayRef}>
-                        <div className="project-page-selected-screenshot-container">
-                            <img className="project-page-screenshot" src={project.screenshots[selectedScreenshot]} alt="project screenshot" />
-                            <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateLeft(e)}>
-                                <RxCaretLeft className="icon push-left"/>
-                            </button>
-                            <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateRight(e)}>
-                                <RxCaretRight className="icon push-right" />
-                            </button>
-                            <div className={"project-page-screenshot-overlay-counter" + (!isVisible ? " invisibile-screenshot-element" : "")}>
-                                {(selectedScreenshot + 1) + "/" + project.screenshots.length}
-                            </div>
-                        </div>
-                    </div>
+        <>
+            <div className="project-page-screenshots-section">
+                <div className="project-page-screenshot-carousel">
+                    {Array.from({ length: project.screenshots.length }, (_, i) => (
+                        <button key={i} className="project-page-carouseled-screenshot-container" onClick={(e) => setOverlayIndex(i)}>
+                            <img className="project-page-screenshot" src={project.screenshots[i]} alt="project screenshot" />
+                        </button>
+                    ))}
                 </div>
+            </div>
+            {overlayIndex !== undefined && (
+                <ScreenshotOverlay project={project} overlayIndex={overlayIndex} setOverlayIndex={setOverlayIndex}/>
             )}
-        </div>
+        </>
   );
 }
 
