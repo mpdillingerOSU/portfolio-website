@@ -1964,17 +1964,23 @@ input:checked + .toggle:before {
 }
 
 .project-page-screenshot-overlay-counter {
-    margin-top: 12px;
+    position: absolute;
+    bottom: 3%;
+
+    /* Next two lines combine to allow us to center an absolutely positioned child element to parent */
+    left: 50%; /*positions left-side horizontally centered in parent element*/
+    transform: translateX(-50%); /* moves element left by 50% of its own width */
+
+    height: fit-content;
+    width: fit-content;
+    line-height: normal;
     padding: 2px 18px 4px 18px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
-    color: #6b82e7;
-    background-color: transparent;
-    border: solid 2px #0d1224;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    border: none;
     border-radius: 50vh;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 .project-page-back-button {

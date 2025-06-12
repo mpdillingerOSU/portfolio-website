@@ -57,10 +57,10 @@ function ScreenshotCarousel({projectID}) {
                                 <button className="project-page-screenshot-rotate-button rotate-right-button" onClick={(e) => updateScreenshot(e, (selectedScreenshot + 1) % project.screenshots.length)}>
                                     <RxCaretRight className="icon push-right" />
                                 </button>
+                                <div className="project-page-screenshot-overlay-counter">
+                                    {(selectedScreenshot + 1) + "/" + project.screenshots.length}
+                                </div>
                             </div>
-                        </div>
-                        <div className="project-page-screenshot-overlay-counter">
-                            {(selectedScreenshot + 1) + "/" + project.screenshots.length}
                         </div>
                     </div>
                 </div>
