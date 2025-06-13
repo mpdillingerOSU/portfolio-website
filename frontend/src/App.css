@@ -2047,7 +2047,7 @@ input:checked + .toggle:before {
     height: 40px;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     margin: 0;
     padding: 8px 8px 9px 15px;
     background-color: transparent;
@@ -2064,7 +2064,7 @@ input:checked + .toggle:before {
 .search-bar-input-box {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: flex-start;
     margin: 0px;
     padding: 0px;
     width: 100%;
