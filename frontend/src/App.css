@@ -501,6 +501,13 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.project-container:hover {
+    text-decoration: none;
 }
 
 .project-container-header {
@@ -527,9 +534,8 @@
 .project-container-name {
     color: white;
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: left;
-
 }
 
 .project-container-header .project-container-name {
@@ -599,6 +605,7 @@
 }
 
 .project-skill {
+    font-size: 13.3px;
     color: white;
     padding: 4px 16px;
     background-color: #22b9f5;
@@ -837,6 +844,7 @@
 }
 
 .skill-button-text {
+    font-size: 12px;
     width: calc(100% - 30px);
     overflow: hidden;
     text-overflow: ellipsis;

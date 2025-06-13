@@ -1,21 +1,15 @@
 import React from 'react';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from './LanguageButton';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import TechnologyButton from './TechnologyButton';
 import ProjectHexagon from './ProjectHexagon';
 
 function ProjectContainer({projectID}) {
-    const navigate = useNavigate();
-
     const project = projectDict[projectID];
 
-    const toProject = (projectID) => {
-        navigate(`/projects/${projectID}`);
-    }
-
     return (
-        <button className="project-container" onClick={(e) => toProject(projectID)}>
+        <Link className="project-container" to={`/projects/${projectID}`}>
             <div className="project-container-header">
                 <ProjectHexagon projectID={projectID} width="96px" borderWidth={4} />
                 <span className="project-container-name">{project.name}</span>
@@ -53,7 +47,7 @@ function ProjectContainer({projectID}) {
                     </div>
                 </div>
             </div>
-        </button>
+        </Link>
     );
 }
 
