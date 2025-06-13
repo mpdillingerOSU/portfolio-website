@@ -85,13 +85,13 @@ function ScreenshotOverlay({project, initialIndex, onClose}) {
             <div className="project-page-screenshot-overlay" ref={overlayRef}>
                 <div className="project-page-selected-screenshot-container">
                     <img className="project-page-screenshot" src={project.screenshots[overlayIndex]} alt="project screenshot" />
-                    <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateLeft(e)} onMouseEnter={(e) => setIsHoveringLeftRotate(true)} onMouseLeave={(e) => setIsHoveringLeftRotate(false)}>
+                    <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isMetaElementsVisible ? " invisible-screenshot-element" : "")} onClick={(e) => rotateLeft(e)} onMouseEnter={(e) => setIsHoveringLeftRotate(true)} onMouseLeave={(e) => setIsHoveringLeftRotate(false)}>
                         <RxCaretLeft className="icon push-left"/>
                     </button>
-                    <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateRight(e)} onMouseEnter={(e) => setIsHoveringRightRotate(true)} onMouseLeave={(e) => setIsHoveringRightRotate(false)}>
+                    <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isMetaElementsVisible ? " invisible-screenshot-element" : "")} onClick={(e) => rotateRight(e)} onMouseEnter={(e) => setIsHoveringRightRotate(true)} onMouseLeave={(e) => setIsHoveringRightRotate(false)}>
                         <RxCaretRight className="icon push-right" />
                     </button>
-                    <div className={"project-page-screenshot-overlay-counter" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")}>
+                    <div className={"project-page-screenshot-overlay-counter" + (!isMetaElementsVisible ? " invisible-screenshot-element" : "")}>
                         {(overlayIndex + 1) + "/" + project.screenshots.length}
                     </div>
                 </div>

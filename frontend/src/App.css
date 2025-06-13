@@ -1985,7 +1985,7 @@ input:checked + .toggle:before {
     -ms-transition: all 0.5s linear; /** Opera **/
 }
 
-.invisibile-screenshot-element {
+.invisible-screenshot-element {
     opacity: 0;
     visibility: 0;
     cursor: auto;
