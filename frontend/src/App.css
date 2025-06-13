@@ -318,24 +318,24 @@
     -ms-transition: var(--featured-project-transition); /** Opera **/
 }
 
-.hexagon-button {
+.enabled-hexagon-button {
     cursor: pointer;
 }
 
-.hexagon-button:hover .inner-hexagon {
+.enabled-hexagon-button:hover .inner-hexagon {
     width: calc(100% - 16px);
     background-color: rgb(16, 18, 43);
 }
 
-.hexagon-button:hover .featured-project-logo {
+.enabled-hexagon-button:hover .featured-project-logo {
     width: 85%;
 }
 
-.hexagon-button:hover + .featured-project-name-outer-container {
+.enabled-hexagon-button:hover + .featured-project-name-outer-container {
     opacity: 100%;
 }
 
-.hexagon-button:hover + .featured-project-name-outer-container .featured-project-name-inner-container {
+.enabled-hexagon-button:hover + .featured-project-name-outer-container .featured-project-name-inner-container {
     background-color: rgb(16, 18, 43);
 }
 
