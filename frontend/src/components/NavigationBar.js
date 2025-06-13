@@ -1,31 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function NavigationBar() {
-    const navigate = useNavigate();
-
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-    const toHome = () => {
-        setIsDropdownOpen(false);
-        navigate("/");
-    }
-
-    const toProjects = () => {
-        setIsDropdownOpen(false);
-        navigate("/projects");
-    }
-
-    const toAbout = () => {
-        setIsDropdownOpen(false);
-        navigate("/about");
-    }
-
-    const toContact = () => {
-        setIsDropdownOpen(false);
-        navigate("/contact");
-    }
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -68,28 +46,28 @@ function NavigationBar() {
                     Michael Dillinger
                 </span>
                 <div className="nav-text-buttons-container">
-                    <button id="nav-home" className="nav-text-button" onClick={() => toHome()}>HOME</button>
-                    <button id="nav-projects" className="nav-text-button" onClick={() => toProjects()}>PROJECTS</button>
-                    <button id="nav-about" className="nav-text-button" onClick={() => toAbout()}>ABOUT</button>
-                    <button id="nav-contact" className="nav-text-button" onClick={() => toContact()}>CONTACT</button>
+                    <Link id="nav-home" className="nav-text-button" to="/">HOME</Link>
+                    <Link id="nav-projects" className="nav-text-button" to="/projects">PROJECTS</Link>
+                    <Link id="nav-about" className="nav-text-button" to="/about">ABOUT</Link>
+                    <Link id="nav-contact" className="nav-text-button" to="/contact">CONTACT</Link>
                     <button id="nav-hamburger-button" className="nav-hamburger-button" ref={selectionRef} onClick={() => toggleDropdown()}>
                         <GiHamburgerMenu />
                     </button>
                 </div>
                 {isDropdownOpen && (
                     <div className="nav-dropdown-menu" ref={optionsRef}>
-                        <button className="nav-dropdown-menu-option" onClick={() => toHome()}>
+                        <Link className="nav-dropdown-menu-option" to="/" onClick={() => setIsDropdownOpen(false)}>
                             HOME
-                        </button>
-                        <button className="nav-dropdown-menu-option" onClick={() => toProjects()}>
+                        </Link>
+                        <Link className="nav-dropdown-menu-option" to="/projects" onClick={() => setIsDropdownOpen(false)}>
                             PROJECTS
-                        </button>
-                        <button className="nav-dropdown-menu-option" onClick={() => toAbout()}>
+                        </Link>
+                        <Link className="nav-dropdown-menu-option" to="/about" onClick={() => setIsDropdownOpen(false)}>
                             ABOUT
-                        </button>
-                        <button className="nav-dropdown-menu-option" onClick={() => toContact()}>
+                        </Link>
+                        <Link className="nav-dropdown-menu-option" to="/contact" onClick={() => setIsDropdownOpen(false)}>
                             CONTACT
-                        </button>
+                        </Link>
                     </div>
                 )}
             </nav>

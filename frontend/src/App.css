@@ -105,6 +105,8 @@
 .nav-text-button {
     display: block;
     font-size: 15px;
+    font-style: inherit;
+    font-family: inherit;
 }
 
 .nav-hamburger-button {
@@ -152,6 +154,10 @@
     border-left: solid 2px darkblue;
     border-radius: 0px 0px 15px 15px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .nav-dropdown-menu-option {
@@ -164,6 +170,9 @@
     width: 100%;
     text-align: left;
     cursor: pointer;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
 }
 
 .nav-dropdown-menu-option:hover {
