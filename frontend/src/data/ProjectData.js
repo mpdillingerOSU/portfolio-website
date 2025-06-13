@@ -533,8 +533,46 @@ export const projectDict = {
             require("../images/screenshots/language-constructor-4.png")
         ]
     },
-    "tqiwpjt0oof5o4cm9lcewomi":{
+    "j6yd609g44vvektcqcs5d53z": {
         index: 12,
+        projectID: "j6yd609g44vvektcqcs5d53z",
+        public: true,
+        name: "Top-Down Shooter",
+        logo: require("../images/project-logos/top-down-shooter-logo.png"),
+        logoAlt: "top-down shooter",
+        version: "v0.0.0-alpha",
+        abstract: "The Top-Down Shooter project is an unnamed game prototype developed using the Unity Game Engine, which demonstrates gameplay for a shooter videogame from the three-quarters perspective. The prototype has a sci-fi theme and features several weapons variants, such as a rifle, shotgun, and grenade. Additionally, the player's character is also in control of a jetpack that allows for boosting both forwards and upwards, as well as the ability to hover. The prototype itself also has infinite gameplay, with spawning for not only enemies, but also for health packs and ammunition.",
+        urls: [
+            ["GitHub", "private"]
+        ],
+        relatedProjects: [],
+        skills: [
+            "Game Development",
+            "Game AI",
+            "UI/UX Design",
+            "Shaders",
+            "3D Modeling"
+        ],
+        languages: [
+            "C#",
+            "HLSL"
+        ],
+        technologies: [
+            "Unity",
+            "VS",
+            "Blender",
+            "Git"
+        ],
+        description: [
+            "The Top-Down Shooter project was created in order to demonstrate my skills at programming a video game with the Unity Game Engine. The gameplay for this prototype is centered around being a sci-fi shooter-adventure game that takes on a three-quarters visual perspective - similar to old-school, pixel-based adventure games, such as The Legend of Zelda. A variety of skills were demonstrated in this project, with a heavy emphasis placed on creating multi-layered systems for both combat and movement - which will be detailed further below. Additionally, because the focus of the prototype is on these programming skills, then most of the graphics are very simple - though I did use Blender in order to provide some of the objects with greater visual detail.",
+            "The combat system is focused around the use of multiple ranged weapons, along with the use of a short-ranged melee weapon. The ranged weapons come in a variety of types, such as a rifle, shotgun, and grenade - each with their own use cases, and each with their own ammunition. The selection of each weapon is provided through a quick selection menu, and takes the form of a selection wheel - which allows for quicker toggling for the user. This wheel also ensures a delay from exiting the menu before gameplay resumes, in order to allow the user to re-establish themselves and properly react to the environment - a small, but necessary, detail. Additionally, because of the ammunition limits, an electric baton was added as a melee weapon. This allows the user to both limit ammo usage when necessary, as well as for use as a last resort in other cases. Lastly, similar to old-school adventure games, knockback and invincibility frames were also added for when the player's character is damaged. This combat system is also testable through a small combat-zone within the sandbox, which has turrets at the front leading up to it, and which upon passing have you face off against enemies, which can spawn infinitely. However, these enemy spawners were created to ensure that there is an enemy limit, as well as an acceptable time gap between spawns. Additionally, health packs and ammunition also spawn here. Gameplay-wise, these are intended as restorations, and not inventory items. As such, in order to improve the user experience, neither will be picked upon by the player's character when at full health or full ammunition, respectively. Lastly, it should be noted that the ammunition that is spawned is chosen at random from only those weapons of the player's character that is not at full ammo - unless all weapons are at full ammo, at which point the ammo type is chosen at random. As such, a player will only receive ammunition that they actually need, and an ammunition spawn is not wasted - and thus improving the player's experience.",
+            "Because the game is also an adventure game, the movement system was also given heavy consideration. There is both a standard movement speed, and a button allowing for even quicker movement. Additionally, there are also three vertical positionings. These are standing, crouching, and crawling, which allow for hiding behind cover, crawling under obstacles, and remaining undetected - among other possibilities. The player's character is also capable of both making a simple jump, as well as a double jump. On top of this, jumping capabilities are also accentuated even further by the player's character coming equipped with a jetpack. However, this jetpack is not meant as a flying mechanism per se, but rather is mostly intended to provide short bursts of movement. For example, a forward boost will allow for both quick evasion from enemies, as well as crossing short gaps more quickly. Conversely, the vertical boost is slower to initiate and can leave the player's character initially vulnerable to attack, but will allow the player's character to both avoid ground-based attacks and to reach higher ledges. Lastly, the jetpack also allows for hovering, which increases the distance traveled while in the air. Each of the three mentioned skills of the jetpack then use up power, which is replenished over time when not using the jetpack - similar to a stamina system. In order to limit UI clutter, the power level of the jetpack is only indicated at less than 100%. This indicator takes the place of a wheel near the player's character, and is generated using HLSL in order to program the shaders for the display. Lastly, it should be noted that the jumping and jetpack systems were balanced in order to ensure that each has their own pros and cons. For example, forward boosting is more for evasion and crossing small gaps, as vertical height here is essentially non-existent and makes crossing larger gaps impossible. Comparatively, vertical boosting is slow and causes the player to be more vulnerable in combat, but can cross the greatest distance when paired with hovering (due to the height obtained). Lastly, double jumping with hovering provides somewhat of a middle-ground for crossing gaps, while also providing the quickest movement for situations where the player's character must move across moderate distances quickly. As a final note on the movement skills provided within the prototype, it should also be noted that there are other lesser-used movement skills, each of which are also important in their own right. They are ledge grabbing, ledge movement, wall jumping, wall running, and rail grinding - the last of which is equivalent to the action of the same name in skateboarding. However, as it currently stands, it should be noted that the demonstrations of these lesser-relied upon movement skills are limited to only a couple of places within the sandbox - a couple of cubes, and a grind rail. However, a fuller, more distinct area that takes the form of an obstacle course is intended in a later update.",
+            "Other than the combat and movement systems, there are a couple of other systems that are still worth mentioning. For example, the UI system is minimalist, and shows both health and ammunition levels for the user - with ammunition levels also visible when selecting a weapon from the weapon wheel. For the pause menu system, we can see buttons allowing for the ability to either exit to the main screen or to restart the sandbox, as well as a W.I.P for a key-binding system. Lastly, it should be noted that there is also a gate system, which shows the ability to have the player's character enter the same area from different locations - and thus not be restricted to only a singular access point."
+        ],
+        screenshots: []
+    },
+    "tqiwpjt0oof5o4cm9lcewomi":{
+        index: 13,
         projectID: "tqiwpjt0oof5o4cm9lcewomi",
         public: true,
         name: "Portfolio Website",
@@ -579,7 +617,7 @@ export const projectDict = {
         ]
     },
     "h38lrj52215uz4fyx813yfzk": {
-        index: 13,
+        index: 14,
         projectID: "h38lrj52215uz4fyx813yfzk",
         public: false,
         name: "Procedural Generation Website",
@@ -606,35 +644,6 @@ export const projectDict = {
             "React",
             "Next.js",
             "VS Code",
-            "Git"
-        ],
-        description: [],
-        screenshots: []
-    },
-    "j6yd609g44vvektcqcs5d53z": {
-        index: 14,
-        projectID: "j6yd609g44vvektcqcs5d53z",
-        public: false,
-        name: "Shooter Game Prototype",
-        logo: "",
-        logoAlt: "shooter game prototype",
-        version: "v0.1.8-alpha",
-        abstract: "Small shooter game prototype developed using the Unity Game Engine. (Describe all features, and give the controls.)",
-        urls: [
-            ["Live Demo", ""],
-            ["GitHub", ""]
-        ],
-        relatedProjects: [],
-        skills: [
-            "Game Development",
-            "UI/UX Design"
-        ],
-        languages: [
-            "C#"
-        ],
-        technologies: [
-            "Unity",
-            "VS",
             "Git"
         ],
         description: [],
