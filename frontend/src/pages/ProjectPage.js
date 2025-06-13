@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from '../components/LanguageButton';
 import ProjectHexagon from '../components/ProjectHexagon';
@@ -10,8 +10,6 @@ import AppFooter from '../components/AppFooter';
 import ScreenshotCarousel from '../components/ScreenshotCarousel';
 
 function ProjectPage() {
-    const navigate = useNavigate();
-
     const splitPath = useLocation().pathname.split("/");
 
     const [projectID, setProjectID] = useState();
@@ -27,13 +25,6 @@ function ProjectPage() {
         backToTop();
     }, [projectID]);
 
-    const toProject = (e, projectID) => {
-        e.preventDefault();
-        
-        navigate(`/projects/${projectID}`);
-        backToTop();
-    }
-
     const generateParagraph = (project, i) => {
         const arr = [];
         let start = 0;
@@ -44,9 +35,9 @@ function ProjectPage() {
                 if(project.description[i].slice(end, end + 5) === "</rp>"){
                     const relatedProjectID = project.description[i].slice(start, end);
                     arr.push(
-                        <button className="related-projects-link" onClick={(e) => toProject(e, relatedProjectID)}>
+                        <Link className="related-projects-link" to={`/projects/${relatedProjectID}`}>
                             {projectDict[relatedProjectID].name}
-                        </button>
+                        </Link>
                     );
                     isParsingRelatedProject = false;
                     end += 5;
