@@ -16,7 +16,7 @@ function ScreenshotCarousel({project}) {
                 </div>
             </div>
             {overlayIndex !== undefined && (
-                <ScreenshotOverlay project={project} overlayIndex={overlayIndex} setOverlayIndex={setOverlayIndex}/>
+                <ScreenshotOverlay project={project} initialIndex={overlayIndex} onClose={() => setOverlayIndex()}/>
             )}
         </>
   );

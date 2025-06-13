@@ -1,52 +1,59 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { RxCaretLeft, RxCaretRight } from "react-icons/rx";
 
-function ScreenshotOverlay({project, overlayIndex, setOverlayIndex}) {
+function ScreenshotOverlay({project, initialIndex, onClose}) {
+    const [overlayIndex, setOverlayIndex] = useState(initialIndex);
     const [isMetaElementsVisible, setIsMetaElementsVisible] = useState(true);
+    const [isHoveringLeftRotate, setIsHoveringLeftRotate] = useState(false);
+    const [isHoveringRightRotate, setIsHoveringRightRotate] = useState(false);
 
-    // ref used to resetting of timer through various possible conflicting means, which led
-    // to rotating through screenshots not caused some old ones to not be properly cleared
-    const timeoutRef = useRef(null);
+    const [startTime, setStartTime] = useState(null);
+    const [elapsedTime, setElapsedTime] = useState(0);
 
-    const resetVisibilityTimer = () => {
-        clearTimeout(timeoutRef.current);
-        setIsMetaElementsVisible(true);
-
-        timeoutRef.current = setTimeout(() => {
-            fadeMetaElements();
-        }, 1500); // 1.5 seconds of inactivity
-    };
-
-    const fadeMetaElements = () => {
-        // if touch-enabled (i.e., mobile or tablet), then do not make elements invisible either
-        if(navigator.maxTouchPoints === 0){
-            setIsMetaElementsVisible(false);
+    const overlayRef = useRef(null);
+    const onClickOutside = (e) => {
+        if(overlayRef.current && !overlayRef.current.contains(e.target)) {
+            onClose();
         }
     }
 
+    const resetVisibilityTimer = () => {
+        setStartTime(performance.now());
+        setIsMetaElementsVisible(true);
+    };
+
+    // due to multiple re-renders occurring (and thus conflicts), an interval with
+    // a counter was used instead of a timeout
+    let intervalId = undefined;
     useEffect(() => {
+        if(startTime) {
+            intervalId = setInterval(() => {
+                const now = performance.now();
+                setElapsedTime(now - startTime);
+            }, 100);
+
+            return () => clearInterval(intervalId);
+        }
+    }, [startTime]);
+
+    useEffect(() => {
+        if(elapsedTime >= 1500 && !isHoveringLeftRotate && !isHoveringRightRotate && navigator.maxTouchPoints === 0){
+            setStartTime();
+            clearInterval(intervalId);
+            setIsMetaElementsVisible(false);
+        }
+    }, [elapsedTime]);
+
+    useEffect(() => {
+        resetVisibilityTimer();
+        document.addEventListener("mousedown", onClickOutside);
         document.addEventListener("mousemove", resetVisibilityTimer);
 
         return () => {
-            document.removeEventListener("mousemove", resetVisibilityTimer); // Cleanup
-            clearTimeout(timeoutRef.current);
-        };
-    }, []);
-
-    const overlayRef = useRef(null);
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if(overlayRef.current && !overlayRef.current.contains(event.target)) {
-                setOverlayIndex();
-            }
-        }
-
-        //Bind event listener
-        document.addEventListener("mousedown", handleClickOutside);
-        
-        return () => {
-            //Unbind event listener on clean up
-            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("mousedown", onClickOutside);
+            document.removeEventListener("mousemove", resetVisibilityTimer);
+            clearInterval(intervalId);
+            intervalId = undefined;
         };
     }, []);
 
@@ -58,12 +65,16 @@ function ScreenshotOverlay({project, overlayIndex, setOverlayIndex}) {
     }
 
     const rotateLeft = (e) => {
+        e.preventDefault();
+
         if(isMetaElementsVisible){
             updateScreenshot(e, overlayIndex === 0 ? project.screenshots.length - 1 : overlayIndex - 1);
         }
     }
 
     const rotateRight = (e) => {
+        e.preventDefault();
+
         if(isMetaElementsVisible){
             updateScreenshot(e, (overlayIndex + 1) % project.screenshots.length);
         }
@@ -74,10 +85,10 @@ function ScreenshotOverlay({project, overlayIndex, setOverlayIndex}) {
             <div className="project-page-screenshot-overlay" ref={overlayRef}>
                 <div className="project-page-selected-screenshot-container">
                     <img className="project-page-screenshot" src={project.screenshots[overlayIndex]} alt="project screenshot" />
-                    <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateLeft(e)}>
+                    <button className={"project-page-screenshot-rotate-button rotate-left-button" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateLeft(e)} onMouseEnter={(e) => setIsHoveringLeftRotate(true)} onMouseLeave={(e) => setIsHoveringLeftRotate(false)}>
                         <RxCaretLeft className="icon push-left"/>
                     </button>
-                    <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateRight(e)}>
+                    <button className={"project-page-screenshot-rotate-button rotate-right-button" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")} onClick={(e) => rotateRight(e)} onMouseEnter={(e) => setIsHoveringRightRotate(true)} onMouseLeave={(e) => setIsHoveringRightRotate(false)}>
                         <RxCaretRight className="icon push-right" />
                     </button>
                     <div className={"project-page-screenshot-overlay-counter" + (!isMetaElementsVisible ? " invisibile-screenshot-element" : "")}>
