@@ -1899,7 +1899,7 @@ input:checked + .toggle:before {
 .project-page-selected-screenshot-container {
     position: relative;
     aspect-ratio: 16/9;
-    flex: 1;
+    width: 100%;
     margin: 0;
     padding: 0;
     line-height: 0;
