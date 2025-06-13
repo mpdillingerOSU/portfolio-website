@@ -324,6 +324,7 @@ export const projectDict = {
         version: "v0.0.0-alpha",
         abstract: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
         urls: [
+            ["Live Demo", "https://dillinger.dev"],
             ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
         ],
         relatedProjects: [],
