@@ -314,8 +314,91 @@ export const projectDict = {
             require("../images/screenshots/java-game-engine-4.png")
         ]
     },
-    "c91f92cj77yo7nv5t5vyg761":{
+    "tqiwpjt0oof5o4cm9lcewomi":{
         index: 7,
+        projectID: "tqiwpjt0oof5o4cm9lcewomi",
+        public: true,
+        name: "Portfolio Website",
+        logo: require("../images/project-logos/portfolio-website-logo.png"),
+        logoAlt: "portfolio website",
+        version: "v0.0.0-alpha",
+        abstract: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
+        urls: [
+            ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
+        ],
+        relatedProjects: [],
+        skills: [
+            "UI/UX Design",
+            "Web Development",
+            "Frontend"
+        ],
+        languages: [
+            "CSS",
+            "HTML",
+            "Javascript"
+        ],
+        technologies: [
+            "React",
+            "Next.js",
+            "VS Code",
+            "Git"
+        ],
+        description: [
+            "A strong portfolio website is important for any programmer, regardless of whether or not they are working on the frontend. Not only is it used to demonstrate one's own skills, knowledge, and aptitudes, but also their work ethos and personality. As such, I have put in considerable time in order to ensure that my website clearly reflects who I am as a programmer - with attention paid to small details, and a cohesive sci-fi-ish aesthetic.",
+            "You will note that each of the pages has a navigation bar at the top that is aesthetically simple so as to not intrude upon the actual pages themselves. The navigation bar's use of the same background color as the actual pages makes for a seamless look, which is only broken by a thin blue border. The specific page that you are currently on will also cause its associated navigation button to be lit up on the navigation bar, while the others are darkened. The other navigation buttons will then slightly brighten upon hovering, but not to the level of the button for the current page - so as to maintain the necessary distinction. The pages themselves then each also share a gradient background that goes from near black to a dark very blue. This, especially when paired with the star-like pattern in the background, provides a sort of cosmic feel to each page.",
+            "The landing page is simple in order to drive the focus to the featured projects, which are each placed inside of hexagon-shaped containers and then arranged in a honeycomb pattern. The use of only logos for each project here is intended to reduce the appearance of clutter that would come if each project's title was readily available - as well as for other details. However, upon hovering over a featured project, the title of the given project does then become displayed in order to bring focus to it - which is then further aided by other small details, such as a thicker border, a larger logo, and a shift in the background color of the container.",
+            "When visiting the projects page via the associated navigation bar button, you will then notice an increase in complexity - with various text, colors, and icons used throughout. This is because each project has a container that contains an overview of the features and characteristics for the given project, as it is important for others to be able to quickly distinguish between these features and characteristics. However, even with that said, an attempt at simplicity is still readily recognizable on this page. For example, each language and technology used by a project is still only represented by a white icon inside of a container that has a color associated with that feature. Those who know the feature will thus be able to quickly recognize it, without being overloaded by text. Additionally, for those who do not recognize the icons, hovering over the icon does create a popup to display the name of the associated feature. A similar attempt at icons was also made regarding the skills used for a given project. However, the lack of universal symbols for most of these would have created issues - and could have also possibly created an icon overload itself - so simplified naming conventions were used, instead. Other than that, the only text found inside of each project container is the title of the project itself. Finally, at the very top of page, the user is presented with a means for sorting and filtering through projects.",
+            "If one were to then click on either a featured project from the landing page or a project container from the projects page, you would then be taken to the individual project page for that specific project - with each project having a specific ID that can be found in its URL. Once here, you will notice many of the same details that have already been noted beforehand, with the project title, logo, skills, languages, and technologies all being present - though accompanied by headers. However, in addition to these previous details, there is also an abstract for each project, links to both GitHub repositories and live versions of each project, and a description of the project (such as the one that you have been reading). Each description is then provided as a means for breaking down the most important elements of each project, while also providing some insight into my own thoughts and design process. In the top-left corner of each page is then a button to quickly return to the projects page - even if having come from the landing page, direct link, or otherwise.",
+            "The last two pages are then quite simple. The about page provides a quick blurb about my work ethos and background, while also listing all relevant languages and technologies that I am adept at using. As with the other pages, there is an attempt at simplicity. However, because the emphasis is now specifically on my skillset, each language and technology is shown via a larger and more complete logo. Finally, the contact page allows for an easy means of contacting me via a simple message form directly built into the website itself. That being said, if the information is incomplete - or an email is formatted incorrectly - then error messages that have been individualized for each input field will appear upon clicking the submit button. However, in order to maintain the simplified and unassuming aesthetic of the website, the overall appearance of the color red was minimized for warnings, by only having it shown on the left border of the errored field, along with the small red warning icon. Lastly, the submit button was designed in a simple - yet dynamic - manner, by having its underlined appearance shift to a complete background upon hovering over the button."
+        ],
+        screenshots: [
+            require("../images/screenshots/portfolio-website-0.png"),
+            require("../images/screenshots/portfolio-website-1.png"),
+            require("../images/screenshots/portfolio-website-2.png"),
+            require("../images/screenshots/portfolio-website-3.png"),
+            require("../images/screenshots/portfolio-website-4.png")
+        ]
+    },
+    "j6yd609g44vvektcqcs5d53z": {
+        index: 8,
+        projectID: "j6yd609g44vvektcqcs5d53z",
+        public: true,
+        name: "Top-Down Shooter",
+        logo: require("../images/project-logos/top-down-shooter-logo.png"),
+        logoAlt: "top-down shooter",
+        version: "v0.0.0-alpha",
+        abstract: "The Top-Down Shooter project is an unnamed game prototype developed using the Unity Game Engine, which demonstrates gameplay for a shooter videogame from the three-quarters perspective. The prototype has a sci-fi theme and features several weapons variants, such as a rifle, shotgun, and grenade. Additionally, the player's character is also in control of a jetpack that allows for boosting both forwards and upwards, as well as the ability to hover. The prototype itself also has infinite gameplay, with spawning for not only enemies, but also for health packs and ammunition.",
+        urls: [
+            ["GitHub", "private"]
+        ],
+        relatedProjects: [],
+        skills: [
+            "Game Development",
+            "Game AI",
+            "UI/UX Design",
+            "Shaders",
+            "3D Modeling"
+        ],
+        languages: [
+            "C#",
+            "HLSL"
+        ],
+        technologies: [
+            "Unity",
+            "VS",
+            "Blender",
+            "Git"
+        ],
+        description: [
+            "The Top-Down Shooter project was created in order to demonstrate my skills at programming a video game with the Unity Game Engine. The gameplay for this prototype is centered around being a sci-fi shooter-adventure game that takes on a three-quarters visual perspective - similar to old-school, pixel-based adventure games, such as The Legend of Zelda. A variety of skills were demonstrated in this project, with a heavy emphasis placed on creating multi-layered systems for both combat and movement - which will be detailed further below. Additionally, because the focus of the prototype is on these programming skills, then most of the graphics are very simple - though I did use Blender in order to provide some of the objects with greater visual detail.",
+            "The combat system is focused around the use of multiple ranged weapons, along with the use of a short-ranged melee weapon. The ranged weapons come in a variety of types, such as a rifle, shotgun, and grenade - each with their own use cases, and each with their own ammunition. The selection of each weapon is provided through a quick selection menu, and takes the form of a selection wheel - which allows for quicker toggling for the user. This wheel also ensures a delay from exiting the menu before gameplay resumes, in order to allow the user to re-establish themselves and properly react to the environment - a small, but necessary, detail. Additionally, because of the ammunition limits, an electric baton was added as a melee weapon. This allows the user to both limit ammo usage when necessary, as well as for use as a last resort in other cases. Lastly, similar to old-school adventure games, knockback and invincibility frames were also added for when the player's character is damaged. This combat system is also testable through a small combat-zone within the sandbox, which has turrets at the front leading up to it, and which upon passing have you face off against enemies, which can spawn infinitely. However, these enemy spawners were created to ensure that there is an enemy limit, as well as an acceptable time gap between spawns. Additionally, health packs and ammunition also spawn here. Gameplay-wise, these are intended as restorations, and not inventory items. As such, in order to improve the user experience, neither will be picked upon by the player's character when at full health or full ammunition, respectively. Lastly, it should be noted that the ammunition that is spawned is chosen at random from only those weapons of the player's character that is not at full ammo - unless all weapons are at full ammo, at which point the ammo type is chosen at random. As such, a player will only receive ammunition that they actually need, and an ammunition spawn is not wasted - and thus improving the player's experience.",
+            "Because the game is also an adventure game, the movement system was also given heavy consideration. There is both a standard movement speed, and a button allowing for even quicker movement. Additionally, there are also three vertical positionings. These are standing, crouching, and crawling, which allow for hiding behind cover, crawling under obstacles, and remaining undetected - among other possibilities. The player's character is also capable of both making a simple jump, as well as a double jump. On top of this, jumping capabilities are also accentuated even further by the player's character coming equipped with a jetpack. However, this jetpack is not meant as a flying mechanism per se, but rather is mostly intended to provide short bursts of movement. For example, a forward boost will allow for both quick evasion from enemies, as well as crossing short gaps more quickly. Conversely, the vertical boost is slower to initiate and can leave the player's character initially vulnerable to attack, but will allow the player's character to both avoid ground-based attacks and to reach higher ledges. Lastly, the jetpack also allows for hovering, which increases the distance traveled while in the air. Each of the three mentioned skills of the jetpack then use up power, which is replenished over time when not using the jetpack - similar to a stamina system. In order to limit UI clutter, the power level of the jetpack is only indicated at less than 100%. This indicator takes the place of a wheel near the player's character, and is generated using HLSL in order to program the shaders for the display. Lastly, it should be noted that the jumping and jetpack systems were balanced in order to ensure that each has their own pros and cons. For example, forward boosting is more for evasion and crossing small gaps, as vertical height here is essentially non-existent and makes crossing larger gaps impossible. Comparatively, vertical boosting is slow and causes the player to be more vulnerable in combat, but can cross the greatest distance when paired with hovering (due to the height obtained). Lastly, double jumping with hovering provides somewhat of a middle-ground for crossing gaps, while also providing the quickest movement for situations where the player's character must move across moderate distances quickly. As a final note on the movement skills provided within the prototype, it should also be noted that there are other lesser-used movement skills, each of which are also important in their own right. They are ledge grabbing, ledge movement, wall jumping, wall running, and rail grinding - the last of which is equivalent to the action of the same name in skateboarding. However, as it currently stands, it should be noted that the demonstrations of these lesser-relied upon movement skills are limited to only a couple of places within the sandbox - a couple of cubes, and a grind rail. However, a fuller, more distinct area that takes the form of an obstacle course is intended in a later update.",
+            "Other than the combat and movement systems, there are a couple of other systems that are still worth mentioning. For example, the UI system is minimalist, and shows both health and ammunition levels for the user - with ammunition levels also visible when selecting a weapon from the weapon wheel. For the pause menu system, we can see buttons allowing for the ability to either exit to the main screen or to restart the sandbox, as well as a W.I.P for a key-binding system. Lastly, it should be noted that there is also a gate system, which shows the ability to have the player's character enter the same area from different locations - and thus not be restricted to only a singular access point."
+        ],
+        screenshots: []
+    },
+    "c91f92cj77yo7nv5t5vyg761":{
+        index: 9,
         projectID: "c91f92cj77yo7nv5t5vyg761",
         public: true,
         name: "TCG Maker - Advanced Welcome Page",
@@ -364,7 +447,7 @@ export const projectDict = {
         ]
     },
     "nl1gx1y68jxy5c8t3gu84wip": {
-        index: 8,
+        index: 10,
         projectID: "nl1gx1y68jxy5c8t3gu84wip",
         public: true,
         name: "Celtic Tactics",
@@ -407,7 +490,7 @@ export const projectDict = {
         ]
     },
     "gfj838t22dfhct3ynbcraenu": {
-        index: 9,
+        index: 11,
         projectID: "gfj838t22dfhct3ynbcraenu",
         public: true,
         name: "PTCGP Simulator - Analysis Website",
@@ -451,7 +534,7 @@ export const projectDict = {
         ]
     },
     "mx02wdoi7vxbvy75t2kk39h1": {
-        index: 10,
+        index: 12,
         projectID: "mx02wdoi7vxbvy75t2kk39h1",
         public: true,
         name: "Block Breaker",
@@ -492,7 +575,7 @@ export const projectDict = {
         ]
     },
     "5s6af8u00z3jnsdmmx02wdoi": {
-        index: 11,
+        index: 13,
         projectID: "5s6af8u00z3jnsdmmx02wdoi",
         public: true,
         name: "Language Constructor",
@@ -531,89 +614,6 @@ export const projectDict = {
             require("../images/screenshots/language-constructor-2.png"),
             require("../images/screenshots/language-constructor-3.png"),
             require("../images/screenshots/language-constructor-4.png")
-        ]
-    },
-    "j6yd609g44vvektcqcs5d53z": {
-        index: 12,
-        projectID: "j6yd609g44vvektcqcs5d53z",
-        public: true,
-        name: "Top-Down Shooter",
-        logo: require("../images/project-logos/top-down-shooter-logo.png"),
-        logoAlt: "top-down shooter",
-        version: "v0.0.0-alpha",
-        abstract: "The Top-Down Shooter project is an unnamed game prototype developed using the Unity Game Engine, which demonstrates gameplay for a shooter videogame from the three-quarters perspective. The prototype has a sci-fi theme and features several weapons variants, such as a rifle, shotgun, and grenade. Additionally, the player's character is also in control of a jetpack that allows for boosting both forwards and upwards, as well as the ability to hover. The prototype itself also has infinite gameplay, with spawning for not only enemies, but also for health packs and ammunition.",
-        urls: [
-            ["GitHub", "private"]
-        ],
-        relatedProjects: [],
-        skills: [
-            "Game Development",
-            "Game AI",
-            "UI/UX Design",
-            "Shaders",
-            "3D Modeling"
-        ],
-        languages: [
-            "C#",
-            "HLSL"
-        ],
-        technologies: [
-            "Unity",
-            "VS",
-            "Blender",
-            "Git"
-        ],
-        description: [
-            "The Top-Down Shooter project was created in order to demonstrate my skills at programming a video game with the Unity Game Engine. The gameplay for this prototype is centered around being a sci-fi shooter-adventure game that takes on a three-quarters visual perspective - similar to old-school, pixel-based adventure games, such as The Legend of Zelda. A variety of skills were demonstrated in this project, with a heavy emphasis placed on creating multi-layered systems for both combat and movement - which will be detailed further below. Additionally, because the focus of the prototype is on these programming skills, then most of the graphics are very simple - though I did use Blender in order to provide some of the objects with greater visual detail.",
-            "The combat system is focused around the use of multiple ranged weapons, along with the use of a short-ranged melee weapon. The ranged weapons come in a variety of types, such as a rifle, shotgun, and grenade - each with their own use cases, and each with their own ammunition. The selection of each weapon is provided through a quick selection menu, and takes the form of a selection wheel - which allows for quicker toggling for the user. This wheel also ensures a delay from exiting the menu before gameplay resumes, in order to allow the user to re-establish themselves and properly react to the environment - a small, but necessary, detail. Additionally, because of the ammunition limits, an electric baton was added as a melee weapon. This allows the user to both limit ammo usage when necessary, as well as for use as a last resort in other cases. Lastly, similar to old-school adventure games, knockback and invincibility frames were also added for when the player's character is damaged. This combat system is also testable through a small combat-zone within the sandbox, which has turrets at the front leading up to it, and which upon passing have you face off against enemies, which can spawn infinitely. However, these enemy spawners were created to ensure that there is an enemy limit, as well as an acceptable time gap between spawns. Additionally, health packs and ammunition also spawn here. Gameplay-wise, these are intended as restorations, and not inventory items. As such, in order to improve the user experience, neither will be picked upon by the player's character when at full health or full ammunition, respectively. Lastly, it should be noted that the ammunition that is spawned is chosen at random from only those weapons of the player's character that is not at full ammo - unless all weapons are at full ammo, at which point the ammo type is chosen at random. As such, a player will only receive ammunition that they actually need, and an ammunition spawn is not wasted - and thus improving the player's experience.",
-            "Because the game is also an adventure game, the movement system was also given heavy consideration. There is both a standard movement speed, and a button allowing for even quicker movement. Additionally, there are also three vertical positionings. These are standing, crouching, and crawling, which allow for hiding behind cover, crawling under obstacles, and remaining undetected - among other possibilities. The player's character is also capable of both making a simple jump, as well as a double jump. On top of this, jumping capabilities are also accentuated even further by the player's character coming equipped with a jetpack. However, this jetpack is not meant as a flying mechanism per se, but rather is mostly intended to provide short bursts of movement. For example, a forward boost will allow for both quick evasion from enemies, as well as crossing short gaps more quickly. Conversely, the vertical boost is slower to initiate and can leave the player's character initially vulnerable to attack, but will allow the player's character to both avoid ground-based attacks and to reach higher ledges. Lastly, the jetpack also allows for hovering, which increases the distance traveled while in the air. Each of the three mentioned skills of the jetpack then use up power, which is replenished over time when not using the jetpack - similar to a stamina system. In order to limit UI clutter, the power level of the jetpack is only indicated at less than 100%. This indicator takes the place of a wheel near the player's character, and is generated using HLSL in order to program the shaders for the display. Lastly, it should be noted that the jumping and jetpack systems were balanced in order to ensure that each has their own pros and cons. For example, forward boosting is more for evasion and crossing small gaps, as vertical height here is essentially non-existent and makes crossing larger gaps impossible. Comparatively, vertical boosting is slow and causes the player to be more vulnerable in combat, but can cross the greatest distance when paired with hovering (due to the height obtained). Lastly, double jumping with hovering provides somewhat of a middle-ground for crossing gaps, while also providing the quickest movement for situations where the player's character must move across moderate distances quickly. As a final note on the movement skills provided within the prototype, it should also be noted that there are other lesser-used movement skills, each of which are also important in their own right. They are ledge grabbing, ledge movement, wall jumping, wall running, and rail grinding - the last of which is equivalent to the action of the same name in skateboarding. However, as it currently stands, it should be noted that the demonstrations of these lesser-relied upon movement skills are limited to only a couple of places within the sandbox - a couple of cubes, and a grind rail. However, a fuller, more distinct area that takes the form of an obstacle course is intended in a later update.",
-            "Other than the combat and movement systems, there are a couple of other systems that are still worth mentioning. For example, the UI system is minimalist, and shows both health and ammunition levels for the user - with ammunition levels also visible when selecting a weapon from the weapon wheel. For the pause menu system, we can see buttons allowing for the ability to either exit to the main screen or to restart the sandbox, as well as a W.I.P for a key-binding system. Lastly, it should be noted that there is also a gate system, which shows the ability to have the player's character enter the same area from different locations - and thus not be restricted to only a singular access point."
-        ],
-        screenshots: []
-    },
-    "tqiwpjt0oof5o4cm9lcewomi":{
-        index: 13,
-        projectID: "tqiwpjt0oof5o4cm9lcewomi",
-        public: true,
-        name: "Portfolio Website",
-        logo: require("../images/project-logos/portfolio-website-logo.png"),
-        logoAlt: "portfolio website",
-        version: "v0.0.0-alpha",
-        abstract: "The Portfolio Website project is the website that you are currently on. It is intended to host all of my public (and partially-public) projects in order to demonstrate my knowledge, aptitude, and skills as a programmer. It contains sorting and filtering for these projects, has an about page with a quick blurb about my background, and also provides an easy means of contacting me via a simple messaging system on the contact page.",
-        urls: [
-            ["GitHub", "https://github.com/mpdillingerOSU/portfolio-website"]
-        ],
-        relatedProjects: [],
-        skills: [
-            "UI/UX Design",
-            "Web Development",
-            "Frontend"
-        ],
-        languages: [
-            "CSS",
-            "HTML",
-            "Javascript"
-        ],
-        technologies: [
-            "React",
-            "Next.js",
-            "VS Code",
-            "Git"
-        ],
-        description: [
-            "A strong portfolio website is important for any programmer, regardless of whether or not they are working on the frontend. Not only is it used to demonstrate one's own skills, knowledge, and aptitudes, but also their work ethos and personality. As such, I have put in considerable time in order to ensure that my website clearly reflects who I am as a programmer - with attention paid to small details, and a cohesive sci-fi-ish aesthetic.",
-            "You will note that each of the pages has a navigation bar at the top that is aesthetically simple so as to not intrude upon the actual pages themselves. The navigation bar's use of the same background color as the actual pages makes for a seamless look, which is only broken by a thin blue border. The specific page that you are currently on will also cause its associated navigation button to be lit up on the navigation bar, while the others are darkened. The other navigation buttons will then slightly brighten upon hovering, but not to the level of the button for the current page - so as to maintain the necessary distinction. The pages themselves then each also share a gradient background that goes from near black to a dark very blue. This, especially when paired with the star-like pattern in the background, provides a sort of cosmic feel to each page.",
-            "The landing page is simple in order to drive the focus to the featured projects, which are each placed inside of hexagon-shaped containers and then arranged in a honeycomb pattern. The use of only logos for each project here is intended to reduce the appearance of clutter that would come if each project's title was readily available - as well as for other details. However, upon hovering over a featured project, the title of the given project does then become displayed in order to bring focus to it - which is then further aided by other small details, such as a thicker border, a larger logo, and a shift in the background color of the container.",
-            "When visiting the projects page via the associated navigation bar button, you will then notice an increase in complexity - with various text, colors, and icons used throughout. This is because each project has a container that contains an overview of the features and characteristics for the given project, as it is important for others to be able to quickly distinguish between these features and characteristics. However, even with that said, an attempt at simplicity is still readily recognizable on this page. For example, each language and technology used by a project is still only represented by a white icon inside of a container that has a color associated with that feature. Those who know the feature will thus be able to quickly recognize it, without being overloaded by text. Additionally, for those who do not recognize the icons, hovering over the icon does create a popup to display the name of the associated feature. A similar attempt at icons was also made regarding the skills used for a given project. However, the lack of universal symbols for most of these would have created issues - and could have also possibly created an icon overload itself - so simplified naming conventions were used, instead. Other than that, the only text found inside of each project container is the title of the project itself. Finally, at the very top of page, the user is presented with a means for sorting and filtering through projects.",
-            "If one were to then click on either a featured project from the landing page or a project container from the projects page, you would then be taken to the individual project page for that specific project - with each project having a specific ID that can be found in its URL. Once here, you will notice many of the same details that have already been noted beforehand, with the project title, logo, skills, languages, and technologies all being present - though accompanied by headers. However, in addition to these previous details, there is also an abstract for each project, links to both GitHub repositories and live versions of each project, and a description of the project (such as the one that you have been reading). Each description is then provided as a means for breaking down the most important elements of each project, while also providing some insight into my own thoughts and design process. In the top-left corner of each page is then a button to quickly return to the projects page - even if having come from the landing page, direct link, or otherwise.",
-            "The last two pages are then quite simple. The about page provides a quick blurb about my work ethos and background, while also listing all relevant languages and technologies that I am adept at using. As with the other pages, there is an attempt at simplicity. However, because the emphasis is now specifically on my skillset, each language and technology is shown via a larger and more complete logo. Finally, the contact page allows for an easy means of contacting me via a simple message form directly built into the website itself. That being said, if the information is incomplete - or an email is formatted incorrectly - then error messages that have been individualized for each input field will appear upon clicking the submit button. However, in order to maintain the simplified and unassuming aesthetic of the website, the overall appearance of the color red was minimized for warnings, by only having it shown on the left border of the errored field, along with the small red warning icon. Lastly, the submit button was designed in a simple - yet dynamic - manner, by having its underlined appearance shift to a complete background upon hovering over the button."
-        ],
-        screenshots: [
-            require("../images/screenshots/portfolio-website-0.png"),
-            require("../images/screenshots/portfolio-website-1.png"),
-            require("../images/screenshots/portfolio-website-2.png"),
-            require("../images/screenshots/portfolio-website-3.png"),
-            require("../images/screenshots/portfolio-website-4.png")
         ]
     },
     "h38lrj52215uz4fyx813yfzk": {
