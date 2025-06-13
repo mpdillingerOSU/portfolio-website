@@ -2012,11 +2012,16 @@ input:checked + .toggle:before {
     cursor: pointer;
 }
 
+.project-page-back-button {
+    text-decoration: none;
+}
+
 .project-page-back-button-icon {
     color: white;
 }
 
 .project-page-back-button-text {
+    font-size: 14px;
     color: white;
 }
 

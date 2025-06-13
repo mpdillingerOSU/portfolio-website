@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { highlightNavButton, backToTop } from '../scripts/NavigationActions';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { projectDict } from '../data/ProjectData';
 import LanguageButton from '../components/LanguageButton';
 import ProjectHexagon from '../components/ProjectHexagon';
@@ -20,10 +20,6 @@ function ProjectPage() {
         highlightNavButton("projects");
         backToTop();
     }, []);
-
-    const toProjects = () => {
-        navigate("/projects");
-    }
 
     const toProject = (e, projectID) => {
         e.preventDefault();
@@ -179,10 +175,10 @@ function ProjectPage() {
                 </div>
             </div>
             <AppFooter />
-            <button className="project-page-back-button" onClick={(e) => toProjects()}>
+            <Link className="project-page-back-button" to="/projects">
                 <IoReturnUpBack className="project-page-back-button-icon"/>
                 <span className="project-page-back-button-text">Projects</span>
-            </button>
+            </Link>
         </div>
     );
 }
