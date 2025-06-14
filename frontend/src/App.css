@@ -18,7 +18,7 @@
     text-align: left;
     font-size: 16px;
     color: white;
-    background-color: red;
+    background-color: var(--standard-background);
     overflow: auto;
 }
 
