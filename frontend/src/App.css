@@ -1518,7 +1518,7 @@ input:checked + .toggle:before {
 }
 
 .about-blurb-text {
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 32px;
     width: 100%;
     text-align: justify;
