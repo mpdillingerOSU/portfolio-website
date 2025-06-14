@@ -1609,8 +1609,8 @@ input:checked + .toggle:before {
 }
 
 .feature-about-icon {
-    height: 50%;
-    width: auto;
+    width: 50%;
+    object-fit: cover;
 }
 
 .project-page-header {
